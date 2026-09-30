@@ -1,5 +1,6 @@
 import { parseComboFile, toComboFile } from './core/combos'
 import { BUILTIN_GLYPHS } from './core/glyphs'
+import { isDesktop, saveTextFile } from './platform'
 import { useStore } from './store/useStore'
 
 export function useLoadCombos() {
@@ -21,15 +22,14 @@ export function useLoadCombos() {
   }
 }
 
-/** Downloads the current player's combos in the desktop app's file format. */
-export function exportCurrentList() {
+/** Saves the current player's combos in the original app's file format. */
+export async function exportCurrentList() {
   const s = useStore.getState()
-  const blob = new Blob([JSON.stringify(toComboFile(s.lists[s.player], s.glyph.name), null, 2)], {
-    type: 'application/json',
-  })
-  const a = document.createElement('a')
-  a.href = URL.createObjectURL(blob)
-  a.download = `combos-${s.player}.json`
-  a.click()
-  URL.revokeObjectURL(a.href)
+  const text = JSON.stringify(toComboFile(s.lists[s.player], s.glyph.name), null, 2)
+  try {
+    const path = await saveTextFile(`combos-${s.player}.json`, text)
+    if (path && isDesktop) s.notify(`Saved ${path}`)
+  } catch (e) {
+    s.notify(`Couldn't save: ${e instanceof Error ? e.message : String(e)}`, 'error')
+  }
 }

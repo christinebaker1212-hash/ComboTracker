@@ -3,6 +3,7 @@ import { emptyList, makeCombo, MAX_SLOTS, type Combo } from '../core/combos'
 import type { EditState } from '../core/editor'
 import { BUILTIN_GLYPHS, type GlyphPack } from '../core/glyphs'
 import { DEFAULT_THEME, type Theme } from '../core/theme'
+import { broadcastState } from '../platform'
 
 export type Player = 'P1' | 'P2'
 export const PLAYERS: Player[] = ['P1', 'P2']
@@ -279,6 +280,7 @@ useStore.subscribe((s, prev) => {
     }
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+      broadcastState()
     } catch {
       // Storage full or blocked (private mode): the session still works, it just won't persist.
     }

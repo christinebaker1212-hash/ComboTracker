@@ -1,12 +1,13 @@
 import {
-  BookOpen, Download, Gamepad2, Layers, MonitorUp, Palette as PaletteIcon, Redo2, Swords, Undo2, Upload,
+  BookOpen, Download, Lock, LockOpen, Gamepad2, Layers, MonitorUp, Palette as PaletteIcon, Redo2, Swords, Undo2, Upload,
 } from 'lucide-react'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import { fetchPreset, presetName, useAssets } from '../assets'
 import { BUILTIN_GLYPHS } from '../core/glyphs'
 import { compileTheme, type ThemeFile } from '../core/theme'
 import { useStore } from '../store/useStore'
 import { exportCurrentList, useLoadCombos } from '../actions'
+import { isDesktop, openOverlay, setOverlayLocked } from '../platform'
 import { Menu } from './Menu'
 import { treeFromPaths } from './menuTree'
 
@@ -36,10 +37,15 @@ export function TopBar({ pad }: { pad: string | null }) {
       .then((json) => setTheme(compileTheme(presetName(path), json as ThemeFile), path))
       .catch((e: Error) => notify(e.message, 'error'))
 
-  const openOverlay = () => {
-    const url = `${location.pathname}?view=overlay&p=${player}`
-    const w = window.open(url, `overlay-${player}`, 'width=720,height=420')
-    if (!w) notify('Your browser blocked the overlay window. Allow pop-ups for this page.', 'error')
+  const [locked, setLocked] = useState(false)
+  const openOverlayWindow = async () => {
+    const ok = await openOverlay(player)
+    if (!ok) notify('Your browser blocked the overlay window. Allow pop-ups for this page.', 'error')
+  }
+  const toggleLock = () => {
+    setLocked(!locked)
+    setOverlayLocked(player, !locked)
+    notify(!locked ? 'Overlay locked: clicks now pass through to your game.' : 'Overlay unlocked: drag it to move, scroll to resize.')
   }
 
   return (
@@ -93,9 +99,18 @@ export function TopBar({ pad }: { pad: string | null }) {
         <button className="btn" onClick={exportCurrentList} title="Save this player's combos (Ctrl+S)">
           <Download size={15} /> Save
         </button>
-        <button className="btn btn-accent" onClick={openOverlay} title="Open pinned combos in a separate window">
+        <button className="btn btn-accent" onClick={openOverlayWindow} title="Open pinned combos in a separate window">
           <MonitorUp size={15} /> Overlay
         </button>
+        {isDesktop && (
+          <button
+            className={`icon-btn${locked ? ' is-on' : ''}`}
+            onClick={toggleLock}
+            title={locked ? 'Unlock overlay (make it movable)' : 'Lock overlay (clicks pass through to the game)'}
+          >
+            {locked ? <Lock size={16} /> : <LockOpen size={16} />}
+          </button>
+        )}
         <input
           ref={fileRef}
           type="file"

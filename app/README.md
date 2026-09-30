@@ -1,7 +1,7 @@
 # ComboTracker (new app)
 
 The modern rewrite of ComboTracker: React + TypeScript, running in the browser
-today and packaged as a desktop app with Tauri in the next milestone. The
+or as a Windows desktop app built with Tauri. The
 Python app in the repo root keeps working until this one does everything it does.
 
 It reads the same `icons/` and `Presets/` folders and the same combo, command
@@ -28,6 +28,24 @@ Other commands:
 `npm run dev` and `npm run build` first copy `../icons` and `../Presets` into
 `public/` and index them, so add icons and presets in the repo-root folders as usual.
 
+## Desktop app (Windows)
+
+The desktop build adds a real game overlay: pinned combos float see-through
+and always on top, and can be locked so clicks pass through to the game.
+
+**Get a build without installing anything:** on GitHub, open Actions →
+"Windows build" → Run workflow (or push a tag like `v0.2.1`). When it
+finishes, download the `ComboTracker-windows` artifact. It contains:
+
+- `ComboTracker-windows-portable.zip`: one `.exe`, no install. Upload this to itch.io.
+- `ComboTracker_x.y.z_x64-setup.exe`: a regular installer.
+
+**Build it yourself:** install [Rust](https://rustup.rs), then in `app/` run
+`npx tauri dev` (live-reloading app) or `npx tauri build`.
+
+Overlays show over games running in **borderless windowed** mode, not
+exclusive fullscreen.
+
 ## Using it
 
 - **Click** palette buttons, or **hold** one for the held/charge version.
@@ -35,8 +53,10 @@ Other commands:
   `623P`, `qcf+lp`, or a shortcut name like `DRC`.
 - **Controller**: plug one in and press a button; input goes into the selected combo.
 - **Click inside a combo** to place the caret and insert in the middle.
-- **Pin** combos and press **Overlay** for a live-updating window you can
-  capture in OBS (switch its backdrop to green screen for chroma key).
+- **Pin** combos and press **Overlay**. On desktop it floats see-through over
+  your game: drag to move, scroll to resize, hover for options, and use the
+  lock button in the main window to make it click-through. It can also use a
+  green-screen backdrop for OBS.
 - Everything autosaves in the browser. **Save/Open** read and write the same
   JSON files as the desktop app.
 

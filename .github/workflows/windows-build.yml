@@ -1,0 +1,49 @@
+name: Windows build
+
+# Builds the desktop app for Windows. Run it from the Actions tab
+# ("Run workflow"), or push a tag like v0.2.0. Download the result from the
+# run's "Artifacts" section and upload the zip to itch.io.
+on:
+  workflow_dispatch:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: app/src-tauri
+
+      - run: npm ci
+      - run: npm test
+      - run: npx tauri build
+
+      - name: Package for itch.io
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force out/ComboTracker | Out-Null
+          Copy-Item src-tauri/target/release/combotracker.exe out/ComboTracker/ComboTracker.exe
+          Compress-Archive -Path out/ComboTracker -DestinationPath out/ComboTracker-windows-portable.zip
+          Copy-Item src-tauri/target/release/bundle/nsis/*.exe out/
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ComboTracker-windows
+          path: |
+            app/out/ComboTracker-windows-portable.zip
+            app/out/*-setup.exe
