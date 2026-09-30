@@ -1,0 +1,182 @@
+{
+    "name": "WiiU Pro Controller",
+    "bg_image": "D:/Tools/ComboTracker (Source)/icons/WiiUPro.png",
+    "elements": [
+        {
+            "id": "LT",
+            "type": "rect",
+            "token": "any_k",
+            "x": 80,
+            "y": 11,
+            "w": 35,
+            "h": 15,
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "LEFT_SHOULDER",
+            "type": "rect",
+            "token": "any_p",
+            "x": 80,
+            "y": 33,
+            "w": 35,
+            "h": 10
+        },
+        {
+            "id": "RT",
+            "type": "rect",
+            "token": "hk",
+            "x": 282,
+            "y": 11,
+            "w": 35,
+            "h": 15
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "rect",
+            "token": "hp",
+            "x": 282,
+            "y": 33,
+            "w": 35,
+            "h": 10
+        },
+        {
+            "id": "LEFT_THUMB",
+            "type": "stick",
+            "x": 92,
+            "y": 102,
+            "size": 20,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "RIGHT_THUMB",
+            "type": "stick",
+            "x": 305,
+            "y": 102,
+            "size": 20,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 124,
+            "y": 133,
+            "w": 15,
+            "h": 18,
+            "token": "",
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 124,
+            "y": 166,
+            "w": 15,
+            "h": 18,
+            "token": "",
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 106,
+            "y": 151,
+            "w": 18,
+            "h": 15,
+            "token": "",
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 139,
+            "y": 151,
+            "w": 18,
+            "h": 15,
+            "token": "",
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "mp",
+            "x": 265,
+            "y": 137,
+            "size": 12
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "lp",
+            "x": 241,
+            "y": 160,
+            "size": 12
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "hk",
+            "x": 290,
+            "y": 160,
+            "size": 12
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "lk",
+            "x": 265,
+            "y": 183,
+            "size": 12
+        },
+        {
+            "id": "BACK",
+            "type": "circle",
+            "x": 168,
+            "y": 115,
+            "size": 8,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "START",
+            "type": "circle",
+            "x": 228,
+            "y": 115,
+            "size": 8,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        }
+    ]
+}

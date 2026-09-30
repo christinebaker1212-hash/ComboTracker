@@ -1,0 +1,105 @@
+{
+    "name": "Genesis (3-Btn)",
+    "bg_image": "D:/Tools/ComboTracker (Source)/icons/Genesis3b.png",
+    "elements": [
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 95,
+            "y": 73,
+            "w": 14,
+            "h": 20,
+            "token": "",
+            "size": 15,
+            "fill_color": "#353636",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 95,
+            "y": 109,
+            "w": 14,
+            "h": 20,
+            "token": "",
+            "size": 15,
+            "fill_color": "#353636",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 74,
+            "y": 94,
+            "w": 20,
+            "h": 14,
+            "token": "",
+            "size": 15,
+            "fill_color": "#353636",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 110,
+            "y": 94,
+            "w": 20,
+            "h": 14,
+            "token": "",
+            "size": 15,
+            "fill_color": "#353636",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "START",
+            "type": "rect",
+            "x": 257,
+            "y": 49,
+            "w": 14,
+            "h": 8
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lk",
+            "x": 256,
+            "y": 118,
+            "size": 15,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "mk",
+            "x": 290,
+            "y": 99,
+            "size": 16,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "hk",
+            "x": 326,
+            "y": 85,
+            "size": 16,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        }
+    ]
+}

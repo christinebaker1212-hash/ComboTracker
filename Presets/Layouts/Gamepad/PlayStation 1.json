@@ -1,0 +1,142 @@
+{
+    "name": "PlayStation 1",
+    "bg_image": "D:/Tools/ComboTracker (Source)/icons/PlayStation.png",
+    "elements": [
+        {
+            "id": "LT",
+            "type": "rect",
+            "token": "any_k",
+            "x": 81,
+            "y": 6,
+            "w": 35,
+            "h": 10
+        },
+        {
+            "id": "LEFT_SHOULDER",
+            "type": "rect",
+            "token": "any_p",
+            "x": 81,
+            "y": 20,
+            "w": 35,
+            "h": 10,
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "RT",
+            "type": "rect",
+            "token": "hk",
+            "x": 263,
+            "y": 6,
+            "w": 35,
+            "h": 10
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "rect",
+            "token": "hp",
+            "x": 263,
+            "y": 20,
+            "w": 35,
+            "h": 10,
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 91,
+            "y": 58,
+            "w": 17,
+            "h": 14,
+            "token": "",
+            "size": 15
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 91,
+            "y": 98,
+            "w": 17,
+            "h": 14,
+            "token": "",
+            "size": 15
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 72,
+            "y": 76,
+            "w": 15,
+            "h": 17,
+            "token": "",
+            "size": 15
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 112,
+            "y": 76,
+            "w": 14,
+            "h": 17,
+            "token": "",
+            "size": 15
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "mp",
+            "x": 281,
+            "y": 59,
+            "size": 13
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 252,
+            "y": 84,
+            "size": 13
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "mk",
+            "x": 308,
+            "y": 84,
+            "size": 13
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 280,
+            "y": 110,
+            "size": 13
+        },
+        {
+            "id": "BACK",
+            "type": "rect",
+            "x": 162,
+            "y": 99,
+            "w": 16,
+            "h": 10,
+            "token": "",
+            "size": 18
+        },
+        {
+            "id": "START",
+            "type": "rect",
+            "x": 201,
+            "y": 99,
+            "w": 16,
+            "h": 10,
+            "token": "",
+            "size": 15
+        }
+    ]
+}

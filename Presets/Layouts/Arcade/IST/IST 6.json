@@ -1,0 +1,73 @@
+{
+    "name": "IST 6",
+    "bg_image": "",
+    "elements": [
+        {
+            "id": "joystick",
+            "type": "stick",
+            "x": 55,
+            "y": 85,
+            "size": 30
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 128,
+            "y": 68,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 136,
+            "y": 107,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "mp",
+            "x": 162,
+            "y": 49,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "mk",
+            "x": 170,
+            "y": 86,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "glyph",
+            "token": "hp",
+            "x": 200,
+            "y": 38,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "RT",
+            "type": "glyph",
+            "token": "hk",
+            "x": 207,
+            "y": 77,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        }
+    ]
+}

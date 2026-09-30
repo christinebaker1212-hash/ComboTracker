@@ -1,0 +1,73 @@
+{
+    "name": "Namco Noir 6",
+    "bg_image": "",
+    "elements": [
+        {
+            "id": "joystick",
+            "type": "stick",
+            "x": 55,
+            "y": 85,
+            "size": 30
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 138,
+            "y": 66,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 134,
+            "y": 110,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "mp",
+            "x": 176,
+            "y": 53,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "mk",
+            "x": 172,
+            "y": 97,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "glyph",
+            "token": "hp",
+            "x": 215,
+            "y": 58,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "RT",
+            "type": "glyph",
+            "token": "hk",
+            "x": 211,
+            "y": 102,
+            "size": 18,
+            "w": 20,
+            "h": 20
+        }
+    ]
+}

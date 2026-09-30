@@ -1,0 +1,142 @@
+{
+    "name": "SNES",
+    "bg_image": "D:\\Tools\\ComboTracker (Source)\\icons\\SNES.png",
+    "elements": [
+        {
+            "id": "LEFT_SHOULDER",
+            "type": "rect",
+            "token": "any_p",
+            "x": 33,
+            "y": 20,
+            "w": 40,
+            "h": 10,
+            "size": 15,
+            "fill_color": "#C4C5CA",
+            "hl_color": ""
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "rect",
+            "token": "hp",
+            "x": 151,
+            "y": 20,
+            "w": 40,
+            "h": 10,
+            "size": 15,
+            "fill_color": "#C4C5CA",
+            "hl_color": ""
+        },
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 44,
+            "y": 60,
+            "w": 14,
+            "h": 13,
+            "token": "",
+            "size": 15,
+            "fill_color": "#64666A",
+            "hl_color": ""
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 44,
+            "y": 87,
+            "w": 14,
+            "h": 13,
+            "token": "",
+            "size": 15,
+            "fill_color": "#64666A",
+            "hl_color": ""
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 31,
+            "y": 73,
+            "w": 13,
+            "h": 14,
+            "token": "",
+            "size": 15,
+            "fill_color": "#64666A",
+            "hl_color": ""
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 58,
+            "y": 73,
+            "w": 13,
+            "h": 14,
+            "token": "",
+            "size": 15,
+            "fill_color": "#64666A",
+            "hl_color": ""
+        },
+        {
+            "id": "BACK",
+            "type": "rect",
+            "x": 87,
+            "y": 83,
+            "w": 12,
+            "h": 6,
+            "token": "",
+            "size": 15,
+            "fill_color": "#64666A",
+            "hl_color": ""
+        },
+        {
+            "id": "START",
+            "type": "rect",
+            "x": 112,
+            "y": 83,
+            "w": 12,
+            "h": 6,
+            "token": "",
+            "size": 15,
+            "fill_color": "#64666A",
+            "hl_color": ""
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 152,
+            "y": 79,
+            "size": 9,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "mp",
+            "x": 172,
+            "y": 64,
+            "size": 9,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 172,
+            "y": 95,
+            "size": 9,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "mk",
+            "x": 192,
+            "y": 79,
+            "size": 9,
+            "w": 20,
+            "h": 20
+        }
+    ]
+}

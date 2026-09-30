@@ -1,0 +1,169 @@
+{
+    "name": "N64",
+    "bg_image": "D:\\Tools\\ComboTracker (Source)\\icons\\N64.png",
+    "elements": [
+        {
+            "id": "LEFT_SHOULDER",
+            "type": "rect",
+            "x": 94,
+            "y": 7,
+            "w": 35,
+            "h": 10,
+            "token": "",
+            "size": 15,
+            "fill_color": "#727481",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "rect",
+            "token": "any_p",
+            "x": 289,
+            "y": 9,
+            "w": 35,
+            "h": 10,
+            "size": 15,
+            "fill_color": "#727481",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "RT",
+            "type": "rect",
+            "token": "any_k",
+            "x": 194,
+            "y": 224,
+            "w": 30,
+            "h": 15,
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 96,
+            "y": 74,
+            "w": 19,
+            "h": 18,
+            "token": "",
+            "size": 15,
+            "fill_color": "#727481",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 96,
+            "y": 111,
+            "w": 19,
+            "h": 18,
+            "token": "",
+            "size": 15,
+            "fill_color": "#727481",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 78,
+            "y": 92,
+            "w": 18,
+            "h": 19,
+            "token": "",
+            "size": 15,
+            "fill_color": "#727481",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 115,
+            "y": 92,
+            "w": 18,
+            "h": 19,
+            "token": "",
+            "size": 15,
+            "fill_color": "#727481",
+            "hl_color": "#A4A8B4"
+        },
+        {
+            "id": "LEFT_THUMB",
+            "type": "stick",
+            "x": 208,
+            "y": 178,
+            "size": 16
+        },
+        {
+            "id": "START",
+            "type": "circle",
+            "x": 208,
+            "y": 112,
+            "size": 13,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "#D92429",
+            "hl_color": "#3F1219"
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 271,
+            "y": 110,
+            "size": 14,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 295,
+            "y": 134,
+            "size": 14,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "R_STICK_UP",
+            "type": "glyph",
+            "token": "hp",
+            "x": 320,
+            "y": 71,
+            "size": 11,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "R_STICK_DOWN",
+            "type": "glyph",
+            "token": "mk",
+            "x": 320,
+            "y": 109,
+            "size": 11,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "R_STICK_LEFT",
+            "type": "glyph",
+            "token": "mp",
+            "x": 300,
+            "y": 90,
+            "size": 11,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "R_STICK_RIGHT",
+            "type": "glyph",
+            "token": "hk",
+            "x": 341,
+            "y": 89,
+            "size": 11,
+            "w": 20,
+            "h": 20
+        }
+    ]
+}

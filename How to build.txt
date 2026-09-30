@@ -1,0 +1,4 @@
+click on address bar type cmd
+
+paste this
+python -m PyInstaller --noconsole --onefile --icon="assets/Any_P.ico" "ComboTracker.py"

@@ -1,0 +1,70 @@
+{
+    "name": "NES",
+    "bg_image": "",
+    "elements": [
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 35,
+            "y": 45,
+            "w": 14,
+            "h": 16
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 35,
+            "y": 75,
+            "w": 14,
+            "h": 16
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 19,
+            "y": 61,
+            "w": 16,
+            "h": 14
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 49,
+            "y": 61,
+            "w": 16,
+            "h": 14
+        },
+        {
+            "id": "BACK",
+            "type": "rect",
+            "x": 86,
+            "y": 77,
+            "w": 18,
+            "h": 6
+        },
+        {
+            "id": "START",
+            "type": "rect",
+            "x": 116,
+            "y": 77,
+            "w": 18,
+            "h": 6
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 168,
+            "y": 79,
+            "size": 12
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 199,
+            "y": 79,
+            "size": 12
+        }
+    ]
+}

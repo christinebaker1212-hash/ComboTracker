@@ -1,0 +1,178 @@
+{
+    "name": "Xbox (OG)",
+    "bg_image": "D:/Tools/ComboTracker (Source)/icons/duke.png",
+    "elements": [
+        {
+            "id": "LT",
+            "type": "rect",
+            "token": "any_k",
+            "x": 59,
+            "y": 9,
+            "w": 35,
+            "h": 15
+        },
+        {
+            "id": "RT",
+            "type": "rect",
+            "token": "any_p",
+            "x": 268,
+            "y": 8,
+            "w": 35,
+            "h": 15,
+            "size": 15,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "LEFT_THUMB",
+            "type": "stick",
+            "x": 75,
+            "y": 98,
+            "size": 22,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 94,
+            "y": 149,
+            "w": 12,
+            "h": 14
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 94,
+            "y": 186,
+            "w": 12,
+            "h": 14
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 75,
+            "y": 168,
+            "w": 14,
+            "h": 12
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 111,
+            "y": 168,
+            "w": 14,
+            "h": 12
+        },
+        {
+            "id": "BACK",
+            "type": "circle",
+            "x": 158,
+            "y": 205,
+            "size": 6
+        },
+        {
+            "id": "START",
+            "type": "circle",
+            "x": 204,
+            "y": 205,
+            "size": 6
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "mp",
+            "x": 264,
+            "y": 84,
+            "size": 13,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 264,
+            "y": 114,
+            "size": 13,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "mk",
+            "x": 292,
+            "y": 99,
+            "size": 13,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 293,
+            "y": 130,
+            "size": 13,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "RIGHT_SHOULDER",
+            "type": "glyph",
+            "token": "hk",
+            "x": 303,
+            "y": 73,
+            "size": 10,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "LEFT_SHOULDER",
+            "type": "glyph",
+            "token": "hp",
+            "x": 276,
+            "y": 57,
+            "size": 10,
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "RIGHT_THUMB",
+            "type": "stick",
+            "x": 264,
+            "y": 172,
+            "size": 22,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "",
+            "hl_color": "",
+            "base_color": ""
+        }
+    ]
+}

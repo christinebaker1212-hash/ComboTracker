@@ -1,0 +1,141 @@
+{
+    "name": "Dreamcast",
+    "bg_image": "D:\\Tools\\ComboTracker (Source)\\icons\\Dreamcast.png",
+    "elements": [
+        {
+            "id": "LT",
+            "type": "rect",
+            "token": "hk",
+            "x": 27,
+            "y": 41,
+            "w": 35,
+            "h": 15,
+            "size": 15,
+            "fill_color": "#B9BBB8",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "RT",
+            "type": "rect",
+            "token": "hp",
+            "x": 229,
+            "y": 41,
+            "w": 35,
+            "h": 15,
+            "size": 15,
+            "fill_color": "#B9BBB8",
+            "hl_color": "",
+            "base_color": ""
+        },
+        {
+            "id": "LEFT_THUMB",
+            "type": "stick",
+            "x": 44,
+            "y": 107,
+            "size": 20,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "#B9BBB8",
+            "hl_color": "#E7E9E4",
+            "base_color": "#7D8185"
+        },
+        {
+            "id": "DPAD_UP",
+            "type": "rect",
+            "x": 58,
+            "y": 147,
+            "w": 12,
+            "h": 14,
+            "token": "",
+            "size": 15,
+            "fill_color": "#B9BBB8",
+            "hl_color": "#E7E9E4"
+        },
+        {
+            "id": "DPAD_DOWN",
+            "type": "rect",
+            "x": 57,
+            "y": 176,
+            "w": 12,
+            "h": 14,
+            "token": "",
+            "size": 15,
+            "fill_color": "#B9BBB8",
+            "hl_color": "#E7E9E4"
+        },
+        {
+            "id": "DPAD_LEFT",
+            "type": "rect",
+            "x": 43,
+            "y": 162,
+            "w": 14,
+            "h": 12,
+            "token": "",
+            "size": 15,
+            "fill_color": "#B9BBB8",
+            "hl_color": "#E7E9E4"
+        },
+        {
+            "id": "DPAD_RIGHT",
+            "type": "rect",
+            "x": 70,
+            "y": 162,
+            "w": 14,
+            "h": 12,
+            "token": "",
+            "size": 15,
+            "fill_color": "#B9BBB8",
+            "hl_color": "#E7E9E4"
+        },
+        {
+            "id": "START",
+            "type": "circle",
+            "x": 145,
+            "y": 218,
+            "size": 18,
+            "token": "",
+            "w": 20,
+            "h": 20,
+            "fill_color": "#B9BBB8",
+            "hl_color": "#E7E9E4"
+        },
+        {
+            "id": "Y",
+            "type": "glyph",
+            "token": "mp",
+            "x": 235,
+            "y": 109,
+            "size": 14
+        },
+        {
+            "id": "X",
+            "type": "glyph",
+            "token": "lp",
+            "x": 210,
+            "y": 131,
+            "size": 14,
+            "w": 20,
+            "h": 20
+        },
+        {
+            "id": "B",
+            "type": "glyph",
+            "token": "mk",
+            "x": 259,
+            "y": 131,
+            "size": 14
+        },
+        {
+            "id": "A",
+            "type": "glyph",
+            "token": "lk",
+            "x": 235,
+            "y": 154,
+            "size": 14,
+            "w": 20,
+            "h": 20
+        }
+    ]
+}
