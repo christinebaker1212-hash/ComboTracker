@@ -28,8 +28,9 @@ on stream.
 
 ## Download
 
-Get the latest Windows version from itch.io. Unzip it and run
-`ComboTracker.exe`; there's nothing to install.
+**[Download the latest Windows build](https://github.com/christinebaker1212-hash/ComboTracker/releases/tag/latest)**:
+grab `ComboTracker-windows-portable.zip`, unzip it and run `ComboTracker.exe`;
+there's nothing to install. This download updates automatically with every change.
 
 > **"Windows protected your PC"?** The app isn't code-signed yet. Click
 > **More info → Run anyway**.
@@ -119,8 +120,11 @@ npx tauri dev        # as the desktop app (needs Rust: https://rustup.rs)
 npm test             # core logic tests
 ```
 
-Windows builds are made automatically by GitHub Actions (**Actions → Windows
-build**). Download the `ComboTracker-windows` artifact when the run finishes.
+Every push that changes `app/`, `icons/` or `Presets/` builds the Windows app
+with GitHub Actions and replaces the files on the
+[`latest` release](https://github.com/christinebaker1212-hash/ComboTracker/releases/tag/latest).
+It can also push to itch.io: see the setup notes at the bottom of
+`.github/workflows/windows-build.yml`.
 See [`app/README.md`](app/README.md) for the code layout.
 
 ## Roadmap

@@ -10,6 +10,14 @@ on:
     tags: ['v*']
     paths: ['app/**', 'icons/**', 'Presets/**', '.github/workflows/windows-build.yml']
 
+permissions:
+  contents: write
+
+# A newer push cancels an older build still in progress.
+concurrency:
+  group: windows-build-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: windows-latest
@@ -49,3 +57,32 @@ jobs:
           path: |
             app/out/ComboTracker-windows-portable.zip
             app/out/*-setup.exe
+
+      # Keeps one GitHub Release, "latest", pointing at the newest build.
+      - name: Publish to the "latest" GitHub Release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $version = (Get-Content src-tauri/tauri.conf.json | ConvertFrom-Json).version
+          $sha = "${{ github.sha }}".Substring(0, 7)
+          $notes = "Automatic build of ComboTracker $version from ``$sha`` on ${{ github.ref_name }}.`n`n**ComboTracker-windows-portable.zip**: unzip and run ComboTracker.exe, no install.`n**-setup.exe**: regular installer.`n`nIf Windows shows 'Windows protected your PC', click More info, then Run anyway."
+          gh release delete latest --yes --cleanup-tag 2>$null
+          $files = @("out/ComboTracker-windows-portable.zip") + (Get-ChildItem out/*-setup.exe).FullName
+          gh release create latest @files --title "ComboTracker $version (latest build)" --notes $notes --target ${{ github.sha }} --latest
+
+      # Optional: pushes the portable build to itch.io. Set it up once:
+      #   1. Get an API key at https://itch.io/user/settings/api-keys
+      #   2. Repo Settings > Secrets and variables > Actions:
+      #        secret   BUTLER_API_KEY = the key
+      #        variable ITCH_GAME      = your-itch-username/your-game-slug
+      - name: Push to itch.io
+        if: ${{ vars.ITCH_GAME != '' }}
+        shell: pwsh
+        env:
+          BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
+        run: |
+          Invoke-WebRequest https://broth.itch.zone/butler/windows-amd64/LATEST/archive/default -OutFile butler.zip
+          Expand-Archive butler.zip -DestinationPath butler
+          $version = (Get-Content src-tauri/tauri.conf.json | ConvertFrom-Json).version
+          ./butler/butler.exe push out/ComboTracker "${{ vars.ITCH_GAME }}:windows" --userversion "$version-${{ github.run_number }}"
