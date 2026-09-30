@@ -8,7 +8,7 @@ on:
   push:
     branches: ['**']
     tags: ['v*']
-    paths: ['app/**', '.github/workflows/windows-build.yml']
+    paths: ['app/**', 'icons/**', 'Presets/**', '.github/workflows/windows-build.yml']
 
 jobs:
   build:
