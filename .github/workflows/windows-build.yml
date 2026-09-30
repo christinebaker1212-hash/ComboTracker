@@ -1,12 +1,13 @@
 name: Windows build
 
-# Builds the desktop app for Windows. Run it from the Actions tab
-# ("Run workflow"), or push a tag like v0.2.0. Download the result from the
+# Builds the desktop app for Windows whenever the app changes. You can also
+# run it from the Actions tab ("Run workflow") or by pushing a tag like v0.2.0. Download the result from the
 # run's "Artifacts" section and upload the zip to itch.io.
 on:
   workflow_dispatch:
   push:
     tags: ['v*']
+    paths: ['app/**', '.github/workflows/windows-build.yml']
 
 jobs:
   build:
