@@ -6,6 +6,7 @@ name: Windows build
 on:
   workflow_dispatch:
   push:
+    branches: ['**']
     tags: ['v*']
     paths: ['app/**', '.github/workflows/windows-build.yml']
 
