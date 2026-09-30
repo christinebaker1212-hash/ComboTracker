@@ -1,0 +1,70 @@
+{
+    "glyph": "Default",
+    "slot_count": 9,
+    "slots": [
+        {
+            "name": "Lariat confirm",
+            "tokens": [
+                "down",
+                "plus",
+                "mp",
+                "goes_into",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "3 piecer\n(Level 3 with OD)\n(Use 2HP for jumpins)",
+            "tokens": [
+                "right",
+                "plus",
+                "hp",
+                "goes_into",
+                "downright",
+                "plus",
+                "mp",
+                "goes_into",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Charge HP is +3 OB",
+            "tokens": []
+        },
+        {
+            "name": "Headbutt is +4 OB",
+            "tokens": []
+        },
+        {
+            "name": "HK is +1 OB",
+            "tokens": []
+        },
+        {
+            "name": "Pokes: MK, cr.MP",
+            "tokens": []
+        },
+        {
+            "name": "Close Siberian > Drive rush after",
+            "tokens": []
+        },
+        {
+            "name": "SA1 - Anti Air Grab",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2 - Anti Projectile",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        }
+    ]
+}

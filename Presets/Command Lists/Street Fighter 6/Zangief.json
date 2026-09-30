@@ -1,0 +1,176 @@
+{
+    "glyph": "Default",
+    "slot_count": 18,
+    "slots": [
+        {
+            "name": "Double Lariat",
+            "tokens": [
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Screw Piledriver\n(When near opponent)",
+            "tokens": [
+                "360",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Borscht Dynamite\n(During a jump) (When near opponent)",
+            "tokens": [
+                "360",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Russian Suplex\n(When near opponent)",
+            "tokens": [
+                "right",
+                "downright",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Siberian Express\n(When far from opponent)",
+            "tokens": [
+                "right",
+                "downright",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Tundra Storm",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "SA1: Aerial Russian Slam",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Cyclone Lariat\n(Hold the button to change effect)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Bolshoi Storm Buster\n(When near opponent) (More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "360",
+                "360",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Hellstab",
+            "tokens": [
+                "downright",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Knee Hammer",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Headbutt",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Cyclone Wheel Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Smetana Dropkick",
+            "tokens": [
+                "downright",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Flying Body Press\n(During a jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Flying Headbutt\n(During a neutral jump)",
+            "tokens": [
+                "up",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Machine Gun Chops",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        },
+        {
+            "name": "Power Stomps",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "mk",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "mk"
+            ]
+        }
+    ]
+}

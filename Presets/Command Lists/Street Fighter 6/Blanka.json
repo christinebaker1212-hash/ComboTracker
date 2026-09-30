@@ -1,0 +1,202 @@
+{
+    "glyph": "Default",
+    "slot_count": 21,
+    "slots": [
+        {
+            "name": "Electric Thunder",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Rolling Attack",
+            "tokens": [
+                "c_left",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Vertical Rolling Attack",
+            "tokens": [
+                "c_down",
+                "up",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Backstep Rolling Attack",
+            "tokens": [
+                "right",
+                "downright",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Aerial Rolling Attack\n(During a forward jump)",
+            "tokens": [
+                "c_left",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Wild Hunt",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Blanka-chan Bomb",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Rolling Cannon\n(When performing a rolling-type special move, press any direction) \n(During Lightning Beast)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Shout of Earth",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2: Lightning Beast",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Ground Shave Cannonball\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Rock Crusher",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Double Knee Bombs",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Wild Edge",
+            "tokens": [
+                "left",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Wild Nail",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Amazon River Run",
+            "tokens": [
+                "downright",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Coward Crouch",
+            "tokens": [
+                "down",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Wild Lift\n(During Coward Crouch)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Raid Jump\n(During Coward Crouch)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "Surprise Forward Hop",
+            "tokens": [
+                "right",
+                "plus",
+                "any_k",
+                "any_k",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Surprise Back Hop",
+            "tokens": [
+                "left",
+                "plus",
+                "any_k",
+                "any_k",
+                "any_k"
+            ]
+        }
+    ]
+}

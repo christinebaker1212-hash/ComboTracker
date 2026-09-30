@@ -1,0 +1,173 @@
+{
+    "theme": "Dark",
+    "glyph": "Default",
+    "slot_count": 17,
+    "slots": [
+        {
+            "name": "Hadoken",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shoryuken",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Tatsumaki Senpu-kyaku",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Aerial Tatsumaki Senpu-kyaku\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "High Blade Kick",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Hashogeki \n(Effect changes with Denjin Charge state)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Denjin Charge",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1 - Shinku Hadouken\n(Effect changes with Denjin Charge state)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Shin Hashogeki\n(Hold the button to change effect) \n(Effect changes with Denjin Charge state)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3 - Shin Shoryuken\n(More powerful when vitality at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Collarbone Breaker",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Solar Plexus Strike",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Short Uppercut",
+            "tokens": [
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Axe Kick",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Whirlwind Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "High Double Strike\n(Can be canceled into Denjin Charge)",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Fuwa Triple Strike\n(Can be canceled into Denjin Charge)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "lk",
+                "goes_into",
+                "hk"
+            ]
+        }
+    ]
+}

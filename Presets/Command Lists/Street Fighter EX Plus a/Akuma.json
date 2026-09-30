@@ -1,0 +1,121 @@
+{
+    "glyph": "EX Plus a",
+    "slot_count": 12,
+    "slots": [
+        {
+            "name": "Gohadoken",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shakunetsu Hadoken",
+            "tokens": [
+                "hcb",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Zanku Hadoken\n(Air OK)",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Goshoryuken",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Tatsumaki Zankukyaku",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_k",
+                "goes_into",
+                "qcb",
+                "plus",
+                "any_k",
+                "goes_into",
+                "qcb",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Zenpou Tenshin",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Ashura Senku",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1 - Messatsu Gohado",
+            "tokens": [
+                "qcb",
+                "qcb",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Messatsu Goshoryu",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3 - Tenma Gozanku\n(In air)",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shun Goku Satsu",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "right",
+                "plus",
+                "lk",
+                "goes_into",
+                "hp"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,273 @@
+{
+    "glyph": "Default",
+    "slot_count": 31,
+    "slots": [
+        {
+            "name": "Bunshin Senpukyaku\n(Air OK)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Sprint",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]Emergency Stop",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>]Torso Cleaver",
+            "tokens": [
+                "lk"
+            ]
+        },
+        {
+            "name": "[>]Shadow Slide",
+            "tokens": [
+                "mk"
+            ]
+        },
+        {
+            "name": "[>]Neck Hunter\n",
+            "tokens": [
+                "hk"
+            ]
+        },
+        {
+            "name": "Arc Step\n(Automatically activates after getting close with sprint)",
+            "tokens": []
+        },
+        {
+            "name": "[>]Bushin Izuna Otoshi",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>]Bushin Hojin Kick",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "Vagabond Edge\n",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Hidden Variable",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Genius at Play",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>]Shuriken Bomb\n(With at least 1 Shuriken Bomb stock)",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>]Shuriken Bomb Spread\n(With at least 2 Shuriken Bomb stocks)",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Nue Twister\n(During jump)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1 - Bunshin Beats",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]Bushin Thunderous Beats\n(Hold button)\n(With at least 1 Shuriken Bomb stock) \n(During Bushin Beats)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2  - Bunshin Scramble\n(Air OK)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Bunshin Ninjastar Cypher",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Water Slicer Slide",
+            "tokens": [
+                "downright",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Windmill Kick",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Hisen Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Step Up\n(After Hisen)\n",
+            "tokens": []
+        },
+        {
+            "name": "[>]",
+            "tokens": [
+                "upleft"
+            ]
+        },
+        {
+            "name": "[>]\n",
+            "tokens": [
+                "up"
+            ]
+        },
+        {
+            "name": "[>]",
+            "tokens": [
+                "upright"
+            ]
+        },
+        {
+            "name": "Elbow Drop\n(Peak of jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Bushin Tiger Fangs",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Bushin Prism Strikes",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Bushin Hellchain",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "down",
+                "plus",
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Bushin Hellchain Throw",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "down",
+                "plus",
+                "hp",
+                "goes_into",
+                "down",
+                "plus",
+                "hk"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,74 @@
+{
+    "glyph": "EX Plus a",
+    "slot_count": 8,
+    "slots": [
+        {
+            "name": "Flying Body Attack\n(In Air)",
+            "tokens": [
+                "down",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Stomach Block\n(From behind)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Double Lariat",
+            "tokens": [
+                "any_p",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Spinning Pile Driver",
+            "tokens": [
+                "360",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Russian Suplex",
+            "tokens": [
+                "360",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Quick Double Lariat",
+            "tokens": [
+                "any_k",
+                "any_k",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Final Atomic Buster",
+            "tokens": [
+                "360",
+                "360",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Final Atomic Buster Lv3",
+            "tokens": [
+                "360",
+                "360",
+                "plus",
+                "any_p",
+                "any_p",
+                "any_p"
+            ]
+        }
+    ]
+}

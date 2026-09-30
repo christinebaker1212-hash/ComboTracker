@@ -1,0 +1,120 @@
+{
+    "glyph": "BlazBlue",
+    "slot_count": 15,
+    "slots": [
+        {
+            "name": "Fuumajin",
+            "tokens": []
+        },
+        {
+            "name": "[>] Cut projectile",
+            "tokens": []
+        },
+        {
+            "name": "Guren\n(1 Magatama)",
+            "tokens": [
+                "qcb",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "Kishuu\n(1 Magatama)",
+            "tokens": [
+                "dp",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "[>]Enma",
+            "tokens": [
+                "lp"
+            ]
+        },
+        {
+            "name": "Renka\n(2 Magatama)",
+            "tokens": [
+                "qcf",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Zantetsu\n(3 Magatama)",
+            "tokens": [
+                "hcf",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Yanagi\n(2 Magatama)",
+            "tokens": [
+                "qcb",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Agito\n(1 Magatama)\n(During jump)",
+            "tokens": [
+                "qcb",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "Hotaru\n(2 Magatama)\n(During jump)",
+            "tokens": [
+                "qcb",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Tsubaki\n(3 Magatama)\n(During jump)",
+            "tokens": [
+                "qcb",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Kok\u016bjin: Shippu\n(4 Magatama)\n(Hold OK)\n",
+            "tokens": [
+                "hcb",
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Kok\u016bjin: Yukikaze\n(4 Magatama)",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Kok\u016bjin O\u016bgi: Mugen\n(8 Magatama)",
+            "tokens": [
+                "qcb",
+                "qcb",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Astral - Kok\u016bjin O\u016bgi: Akumetsu",
+            "tokens": [
+                "c_down",
+                "up",
+                "plus",
+                "lk"
+            ]
+        }
+    ]
+}

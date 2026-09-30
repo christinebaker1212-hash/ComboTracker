@@ -1,0 +1,147 @@
+{
+    "glyph": "SuperCombo",
+    "slot_count": 17,
+    "slots": [
+        {
+            "name": "Jet Uppercut",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Machine Gun Blow",
+            "tokens": [
+                "hcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Ducking Rush",
+            "tokens": [
+                "hcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]Ducking Straight",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>]Ducking Upper",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "Cross Counter",
+            "tokens": [
+                "hcb",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Short Swing Blow",
+            "tokens": [
+                "hcb",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1 - Rocket Uppercut",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Rolling Thunder\n(Hold OK)",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3 - Corkscrew Blow",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Slipping Jab",
+            "tokens": [
+                "right",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "Stomach Blow",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Step Straight",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Liver Blow",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Dart Shot",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Target Combo",
+            "tokens": [
+                "right",
+                "plus",
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "mk"
+            ]
+        },
+        {
+            "name": "Target Combo\n",
+            "tokens": [
+                "down",
+                "plus",
+                "lk",
+                "goes_into",
+                "mk"
+            ]
+        }
+    ]
+}

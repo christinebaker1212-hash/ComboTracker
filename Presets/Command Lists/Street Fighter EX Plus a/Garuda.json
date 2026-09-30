@@ -1,0 +1,99 @@
+{
+    "theme": "Dark",
+    "glyph": "EX Plus a",
+    "slot_count": 11,
+    "slots": [
+        {
+            "name": "Zanki",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Kyoja",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Bu",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shuki\n(Air Throw)",
+            "tokens": [
+                "down",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Kizan",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Jazan",
+            "tokens": [
+                "rdp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shuga",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Raiga",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Gouga",
+            "tokens": [
+                "hcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1 - Kienbu",
+            "tokens": [
+                "qcb",
+                "qcb",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Kiensyo",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        }
+    ]
+}

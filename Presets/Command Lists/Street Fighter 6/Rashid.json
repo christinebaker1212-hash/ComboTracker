@@ -1,0 +1,210 @@
+{
+    "glyph": "Default",
+    "slot_count": 23,
+    "slots": [
+        {
+            "name": "Spinning Mixer\n(Effect changes when in contact with air current)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Eagle Spike\n(Effect changes when in contact with air current)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Whirlwind Shot\n(Hold the button to change effect)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Arabian Cyclone",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Wing Stroke\n(During Arabian Cyclone)",
+            "tokens": [
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Rolling Assault\n(During Arabian Cyclone)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Nail Assault\n(During Rolling Assault)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "Arabian Skyhigh\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1: Super Rashid Kick",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Ysaar",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3: Altair\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Run",
+            "tokens": [
+                "right",
+                "c_right"
+            ]
+        },
+        {
+            "name": "[>] Backup\n(During Run)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Tempest Moon\n(During Run) (Effect changes when in contact with air current)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Flapping Spin",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Beak Assault",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Crescent Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Blitz Strike\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Aerial Shot\n(During a neutral jump)",
+            "tokens": [
+                "up",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Rising Kick",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Side Flip",
+            "tokens": [
+                "right",
+                "plus",
+                "any_k",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Front Flip\n(During Side Flip)",
+            "tokens": [
+                "any_k",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Wall Jump\n(During a jump) (Must be near a wall)",
+            "tokens": [
+                "upright"
+            ]
+        }
+    ]
+}

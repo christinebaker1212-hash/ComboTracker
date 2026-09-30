@@ -1,0 +1,15 @@
+{
+    "bg_grad": [
+        "#096AB9",
+        "#17358B",
+        "#096AB9",
+        "#17358B"
+    ],
+    "grad_main_bg": true,
+    "grad_panels": false,
+    "grad_highlight": false,
+    "grad_btns": false,
+    "grad_combos": true,
+    "grad_pinned": true,
+    "ui_bg_mode": "Auto"
+}

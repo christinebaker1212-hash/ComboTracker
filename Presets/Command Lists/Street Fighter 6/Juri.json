@@ -1,0 +1,155 @@
+{
+    "glyph": "Default",
+    "slot_count": 15,
+    "slots": [
+        {
+            "name": "Fuhajin",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Saihasho\n(Can be followed up with an Ankensatsu or \nGo Ohsatsu when a Fuha is stocked)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Ankensatsu\n(Can be followed up with a Saihasho or \nGo Ohsatsu when a Fuha is stocked)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Go Ohsatsu\n(Can be followed up with a Saihasho or \nAnkensatsu when a Fuha is stocked)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Tensenrin",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shiku-sen (During a forward jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Shiren-sen (After Shiku-sen)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1: Sakkai Fuhazan",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Feng Shui Engine",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Kaisen Dankai Raku",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Kyosesho",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Senkai Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Renko Kicks",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Korenzan",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Death Crest",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "left",
+                "plus",
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        }
+    ]
+}

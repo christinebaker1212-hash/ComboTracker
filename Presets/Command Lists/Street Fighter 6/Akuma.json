@@ -1,0 +1,258 @@
+{
+    "glyph": "Default",
+    "slot_count": 26,
+    "slots": [
+        {
+            "name": "Gou Hadoken\n(Hold the button to change effect)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Zanku Hadoken\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Gou Shoryuken",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Tatsumaki Zanku-kyaku",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Aerial Tatsumaki Zanku-kyaku\n(During a jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Adamant Flame",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p",
+                "goes_into",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Demon Raid",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Demon Low Slash\n(No input) (During Demon Raid)",
+            "tokens": []
+        },
+        {
+            "name": "[>] Demon Guillotine\n(During Demon Raid)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Demon Blade Kick\n(During Demon Raid)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Demon Swoop\n(During Demon Raid)",
+            "tokens": [
+                "c_down"
+            ]
+        },
+        {
+            "name": "[>] Demon Gou Zanku\n(During Overdrive Demon Raid)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Demon Gou Rasen\n(During Overdrive Demon Raid)\n",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Ashura Senku",
+            "tokens": [
+                "any_p",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Messatsu Gohado",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Tenma Gozanku\n(During a neutral or forward jump)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Empyrean's End",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Sip of Calamity\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Shun Goku Satsu\n(Only when vitality is at 25% or below)",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "right",
+                "goes_into",
+                "lk",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Skull Splitter",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Resso Snap Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Rago High Kick",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Viscera Piercer",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        },
+        {
+            "name": "Bone Crusher Axe Kick",
+            "tokens": [
+                "mk",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Kikoku Combination",
+            "tokens": [
+                "right",
+                "plus",
+                "hp",
+                "goes_into",
+                "right",
+                "plus",
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Tenmaku Blade Kick\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "mk"
+            ]
+        }
+    ]
+}

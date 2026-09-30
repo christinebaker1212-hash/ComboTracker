@@ -1,0 +1,305 @@
+{
+    "glyph": "Default",
+    "slot_count": 28,
+    "slots": [
+        {
+            "name": "Air Slasher",
+            "tokens": [
+                "c_left",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Jackknife Maximum",
+            "tokens": [
+                "c_down",
+                "up",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Roll Through Feint",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Quick Rolling Sobat",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Double Rolling Sobat",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Machine Gun Uppercut",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Jus Cool",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Funky Slicer\n(During Jus Cool)",
+            "tokens": [
+                "lk"
+            ]
+        },
+        {
+            "name": "[>] Waning Moon\n(During Jus Cool)",
+            "tokens": [
+                "mk"
+            ]
+        },
+        {
+            "name": "[>] Maximum Strike\n(During Jus Cool)",
+            "tokens": [
+                "hk"
+            ]
+        },
+        {
+            "name": "[>] Juggling Dash\n(During Jus Cool)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Juggling Sway\n(During Juggling Dash)",
+            "tokens": [
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: The Greatest Sobat",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Lowkey Sunrise Festival",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "lp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp",
+                "newline",
+                "lk",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "SA2: Marvelous Sunrise Festival",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp",
+                "newline",
+                "lk",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "SA2: Headliner Sunrise Festival",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp",
+                "newline",
+                "lk",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "[>] Climactic Strike\n(After Marvelous or Headliner Sunrise Festival connects)",
+            "tokens": [
+                "hp"
+            ]
+        },
+        {
+            "name": "[>] Encore Beat\n(After Marvelous or Headliner Sunrise Festival connects)",
+            "tokens": [
+                "hk"
+            ]
+        },
+        {
+            "name": "SA3: Weekend Pleasure\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Knee Shot\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Sunrise Heel",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Face Breaker",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Threebeat Combo",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "mk"
+            ]
+        },
+        {
+            "name": "Dee Jay Special",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Funky Dance",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "[>]Funky Dance Feint",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Party in the Air\n(During a jump)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Speedy Maracas\n(Hold the button to extend the move's duration)",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        }
+    ]
+}

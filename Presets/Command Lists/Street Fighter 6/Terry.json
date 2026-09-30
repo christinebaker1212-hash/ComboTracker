@@ -1,0 +1,195 @@
+{
+    "glyph": "Default",
+    "slot_count": 20,
+    "slots": [
+        {
+            "name": "Power Wave\n(Light / Medium)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "Round Wave\n(Heavy)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Quick Burn\n(Light)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "Burning Knuckle\n(Medium / Heavy)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Power Charge",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Crack Shoot",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Rising Tackle",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Buster Wolf",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Power Geyser",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Twin Geyser\n(After Power Geyser connects)",
+            "tokens": [
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Triple Geyser\n(After Twin Geyser connects)",
+            "tokens": [
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Rising Fang\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Hammer Punch",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Power Drive",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Power Shoot",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Power Dunk",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hk",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Passing Sway",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mk"
+            ]
+        },
+        {
+            "name": "[>] Jumping Lariat\n(After Passing Sway connects)",
+            "tokens": [
+                "mp"
+            ]
+        },
+        {
+            "name": "[>] Jumping Knee\n(After Passing Sway connects)",
+            "tokens": [
+                "mk"
+            ]
+        },
+        {
+            "name": "Fire Kick",
+            "tokens": [
+                "down",
+                "plus",
+                "mk",
+                "goes_into",
+                "down",
+                "plus",
+                "hk"
+            ]
+        }
+    ]
+}

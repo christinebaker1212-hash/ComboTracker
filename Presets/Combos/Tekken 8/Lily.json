@@ -1,0 +1,89 @@
+{
+    "glyph": "Tekken",
+    "slot_count": 18,
+    "slots": [
+        {
+            "name": "Combo 1",
+            "tokens": [
+                "mk",
+                "lp",
+                "lk",
+                "mk",
+                "mk",
+                "mk",
+                "lk",
+                "mk",
+                "mk",
+                "hk"
+            ]
+        },
+        {
+            "name": "Combo 2",
+            "tokens": []
+        },
+        {
+            "name": "Combo 3",
+            "tokens": []
+        },
+        {
+            "name": "Combo 4",
+            "tokens": []
+        },
+        {
+            "name": "Combo 5",
+            "tokens": []
+        },
+        {
+            "name": "Combo 6",
+            "tokens": []
+        },
+        {
+            "name": "Combo 7",
+            "tokens": []
+        },
+        {
+            "name": "Combo 8",
+            "tokens": []
+        },
+        {
+            "name": "Combo 9",
+            "tokens": []
+        },
+        {
+            "name": "Combo 10",
+            "tokens": []
+        },
+        {
+            "name": "Combo 11",
+            "tokens": []
+        },
+        {
+            "name": "Combo 12",
+            "tokens": []
+        },
+        {
+            "name": "Combo 13",
+            "tokens": []
+        },
+        {
+            "name": "Combo 14",
+            "tokens": []
+        },
+        {
+            "name": "Combo 15",
+            "tokens": []
+        },
+        {
+            "name": "Combo 16",
+            "tokens": []
+        },
+        {
+            "name": "Combo 17",
+            "tokens": []
+        },
+        {
+            "name": "Combo 18",
+            "tokens": []
+        }
+    ]
+}

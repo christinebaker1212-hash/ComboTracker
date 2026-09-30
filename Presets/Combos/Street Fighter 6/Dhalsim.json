@@ -1,0 +1,127 @@
+{
+    "glyph": "Default",
+    "slot_count": 15,
+    "slots": [
+        {
+            "name": "Cashout 1\n(Punish Counter)",
+            "tokens": [
+                "mp",
+                "plus",
+                "mk",
+                "plus",
+                "right",
+                "right",
+                "plus",
+                "hk",
+                "newline",
+                "down",
+                "plus",
+                "any_k",
+                "any_k",
+                "goes_into",
+                "right",
+                "plus",
+                "hp",
+                "newline",
+                "downleft",
+                "plus",
+                "hp",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk",
+                "goes_into",
+                "hk",
+                "newline",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mk",
+                "goes_into",
+                "left",
+                "plus",
+                "mk",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk",
+                "goes_into",
+                "downleft",
+                "plus",
+                "hp",
+                "newline",
+                "left",
+                "plus",
+                "mk",
+                "goes_into",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "hk",
+                "goes_into",
+                "qcf",
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Combo 2",
+            "tokens": []
+        },
+        {
+            "name": "Combo 3",
+            "tokens": []
+        },
+        {
+            "name": "Combo 4",
+            "tokens": []
+        },
+        {
+            "name": "Combo 5",
+            "tokens": []
+        },
+        {
+            "name": "Combo 6",
+            "tokens": []
+        },
+        {
+            "name": "Combo 7",
+            "tokens": []
+        },
+        {
+            "name": "Combo 8",
+            "tokens": []
+        },
+        {
+            "name": "Combo 9",
+            "tokens": []
+        },
+        {
+            "name": "Combo 10",
+            "tokens": []
+        },
+        {
+            "name": "Combo 11",
+            "tokens": []
+        },
+        {
+            "name": "Combo 12",
+            "tokens": []
+        },
+        {
+            "name": "Combo 13",
+            "tokens": []
+        },
+        {
+            "name": "Combo 14",
+            "tokens": []
+        },
+        {
+            "name": "Combo 15",
+            "tokens": []
+        }
+    ]
+}

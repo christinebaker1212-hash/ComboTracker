@@ -1,0 +1,155 @@
+{
+    "glyph": "Default",
+    "slot_count": 15,
+    "slots": [
+        {
+            "name": "Condor Wind\n(Hold the button to charge the attack)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Condor Spire\n(Effect changes when Windclad)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Tomahawk Buster\n(Effect changes when Windclad)",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Condor Dive\n(During a neutral or forward jump) \n(Effect changes when Windclad)",
+            "tokens": [
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "OD Condor Dive\n(During a neutral jump, forward jump, or OD Tomahawk Buster) \n(Effect changes when Windclad)",
+            "tokens": [
+                "any_p",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Mexican Typhoon\n(When near opponent)",
+            "tokens": [
+                "360",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Breezing Hawk",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2: Thunderbird\n(Effect changes when Windclad)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Soaring Thunderbird\n(During a jump) \n(Effect changes when Windclad)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3: Raging Typhoon\n(When near opponent) \n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Ridge Thrust",
+            "tokens": [
+                "downright",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Horn Breaker",
+            "tokens": [
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Great Spin\n(During a jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Double Arrow\n(During a jump)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        },
+        {
+            "name": "Desert Storm",
+            "tokens": [
+                "right",
+                "plus",
+                "hp",
+                "goes_into",
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        }
+    ]
+}

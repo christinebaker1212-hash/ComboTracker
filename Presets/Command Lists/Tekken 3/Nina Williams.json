@@ -1,0 +1,161 @@
+{
+    "theme": "Dark",
+    "glyph": "Tekken 3",
+    "slot_count": 15,
+    "slots": [
+        {
+            "name": "Panther Claw",
+            "tokens": [
+                "right",
+                "c_right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Double Slap",
+            "tokens": [
+                "left",
+                "plus",
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        },
+        {
+            "name": "Shut Up",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "c_downright",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Liftshot - During Sidestep",
+            "tokens": [
+                "mp"
+            ]
+        },
+        {
+            "name": "Spiral Explosion - During Sidestep",
+            "tokens": [
+                "hp"
+            ]
+        },
+        {
+            "name": "Bad Habit",
+            "tokens": [
+                "right",
+                "right",
+                "plus",
+                "lk",
+                "newline",
+                "down",
+                "downright",
+                "c_right",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Geyser Cannon Combo",
+            "tokens": [
+                "downleft",
+                "plus",
+                "mk",
+                "goes_into",
+                "lk"
+            ]
+        },
+        {
+            "name": "Heel Slicer - During Sidestep,",
+            "tokens": [
+                "mk"
+            ]
+        },
+        {
+            "name": "Elbow Smash",
+            "tokens": [
+                "downright",
+                "c_downright",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "Back Hand Slap (1)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Triple Slaps (2)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "lk",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        },
+        {
+            "name": "Neck Crusher (3)",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "hk",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Betrayer (3)",
+            "tokens": [
+                "down",
+                "downleft",
+                "c_left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Twisted Nightmare (4)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "hp",
+                "goes_into",
+                "hcb"
+            ]
+        },
+        {
+            "name": "Arm Breaker (5)",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lk",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "lp"
+            ]
+        }
+    ]
+}

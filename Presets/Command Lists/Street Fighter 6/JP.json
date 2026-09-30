@@ -1,0 +1,78 @@
+{
+    "glyph": "Default",
+    "slot_count": 18,
+    "slots": [
+        {
+            "name": "Triglav",
+            "tokens": ["down", "down", "plus", "any_p"]
+        },
+        {
+            "name": "Stribog",
+            "tokens": ["down", "downright", "right", "plus", "any_p"]
+        },
+        {
+            "name": "Departure",
+            "tokens": ["down", "downleft", "left", "plus", "any_p"]
+        },
+        {
+            "name": "[>] Departure: Window\n(While Departure is active)",
+            "tokens": ["down", "downleft", "left", "plus", "lp"]
+        },
+        {
+            "name": "[>] Departure: Shadow\n(While Departure is active)",
+            "tokens": ["down", "downleft", "left", "plus", "hp"]
+        },
+        {
+            "name": "Amnesia",
+            "tokens": ["down", "down", "plus", "any_k"]
+        },
+        {
+            "name": "Torbalan\n(Hold the button to feint)",
+            "tokens": ["down", "downright", "right", "plus", "any_k"]
+        },
+        {
+            "name": "Embrace",
+            "tokens": ["down", "downleft", "left", "plus", "any_k"]
+        },
+        {
+            "name": "SA1: Chornobog",
+            "tokens": ["down", "downright", "right", "down", "downright", "right", "plus", "any_p"]
+        },
+        {
+            "name": "SA2: Lovushka",
+            "tokens": ["down", "downleft", "left", "down", "downleft", "left", "plus", "any_p"]
+        },
+        {
+            "name": "SA3: Interdiction\n(More powerful when vitality is at 25% or below)",
+            "tokens": ["down", "downright", "right", "down", "downright", "right", "plus", "any_k"]
+        },
+        {
+            "name": "Guillotinna",
+            "tokens": ["right", "plus", "mk"]
+        },
+        {
+            "name": "Malice",
+            "tokens": ["downright", "plus", "hp"]
+        },
+        {
+            "name": "Bylina",
+            "tokens": ["right", "plus", "hk"]
+        },
+        {
+            "name": "Grom Strelka",
+            "tokens": ["left", "plus", "mp", "goes_into", "mp"]
+        },
+        {
+            "name": "Zilant",
+            "tokens": ["hk", "goes_into", "hp"]
+        },
+        {
+            "name": "Zilant Mid",
+            "tokens": ["hk", "goes_into", "hp", "goes_into", "hp"]
+        },
+        {
+            "name": "Zilant Low",
+            "tokens": ["hk", "goes_into", "hp", "goes_into", "hk"]
+        }
+    ]
+}

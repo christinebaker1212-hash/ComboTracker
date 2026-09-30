@@ -1,0 +1,190 @@
+{
+    "glyph": "Default",
+    "slot_count": 20,
+    "slots": [
+        {
+            "name": "Nightshade Pulse",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "lp"
+            ]
+        },
+        {
+            "name": "[>] Nightshade Chaser\n(During Nightshade Pulse) (Triggers Toxic Blossom)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Orchid Spring",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Toxic Wreath",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Serpent Lash\n(Triggers Toxic Blossom)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Cruel Fate",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Snake Step",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Sinister Slide\n(Can be canceled with up)",
+            "tokens": [
+                "down",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Venomous Fang\n(During Sinister Slide) (Triggers Toxic Blossom)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Heel Strike\n(During Sinister Slide)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Entrapment\n(When near opponent) (During Sinister Slide)",
+            "tokens": [
+                "lp",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "SA1: Deadly Implication",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Tainted Talons",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Claws of Ya Zi\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Pu Lao",
+            "tokens": [
+                "downright",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Chi Wen",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Qiu Niu",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Gong Fu\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Hun Dun",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lp"
+            ]
+        },
+        {
+            "name": "Qiong Qi\n(Triggers Toxic Blossom)",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        }
+    ]
+}

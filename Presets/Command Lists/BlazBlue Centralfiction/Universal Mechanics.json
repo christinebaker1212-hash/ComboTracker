@@ -1,0 +1,94 @@
+{
+    "glyph": "BlazBlue",
+    "slot_count": 13,
+    "slots": [
+        {
+            "name": "Dash",
+            "tokens": [
+                "right",
+                "right"
+            ]
+        },
+        {
+            "name": "High Jump",
+            "tokens": [
+                "down",
+                "up"
+            ]
+        },
+        {
+            "name": "Ground Recovery",
+            "tokens": []
+        },
+        {
+            "name": "[>]Forward Roll",
+            "tokens": [
+                "right",
+                "lp"
+            ]
+        },
+        {
+            "name": "[>]Back Roll",
+            "tokens": [
+                "left",
+                "lp"
+            ]
+        },
+        {
+            "name": "[>]Quick Tech",
+            "tokens": [
+                "down",
+                "lp"
+            ]
+        },
+        {
+            "name": "Normal Throw\n(Air OK)",
+            "tokens": [
+                "mp",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Crush Trigger\n(Chargable)\n(25% Heat)",
+            "tokens": [
+                "lp",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Rapid Cancel\n(After attack hits)\n(Air OK)\n(50% Heat)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "Counter Assault\n",
+            "tokens": [
+                "right",
+                "lp",
+                "goes_into",
+                "mp"
+            ]
+        },
+        {
+            "name": "Burst\n(While being hit)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "Overdrive\n(Air OK)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]Exceed Accel\n(During Overdrive)",
+            "tokens": [
+                "any_k"
+            ]
+        }
+    ]
+}

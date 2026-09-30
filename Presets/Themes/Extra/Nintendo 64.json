@@ -1,0 +1,19 @@
+{
+    "palette_style": "Classic",
+    "bg_grad": [
+        "#D8B32E",
+        "#C64645",
+        "#189367",
+        "#21629A"
+    ],
+    "grad_btns_and_highlights": false,
+    "grad_standard_btns": false,
+    "grad_combos": true,
+    "grad_pinned": true,
+    "ui_bg_mode": "Custom",
+    "bg": "#7E7499",
+    "highlight": "#21629A",
+    "font": "#FFFFFF",
+    "entry_bg": "#C64645",
+    "btn_bg": "#189367"
+}

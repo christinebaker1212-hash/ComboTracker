@@ -1,0 +1,180 @@
+{
+    "glyph": "Default",
+    "slot_count": 19,
+    "slots": [
+        {
+            "name": "Hadoken",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shoryuken",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Tatsumaki Senpu-kyaku",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Aerial Tatsumaki Senpu-kyaku\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Dragonlash Kick",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Jinrai Kick",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Kazekama Shin Kick\n(During Jinrai Kick)",
+            "tokens": [
+                "right",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "[>] Gorai Axe Kick\n(During Jinrai Kick)",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "[>] Senka Snap Kick\n(During Jinrai Kick)",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "[>] Kasai Thrust Kick\n(During OD Kazekama Shin Kick, OD Gorai Axe Kick, or OD Senka Snap Kick)",
+            "tokens": [
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1: Dragonlash Flame",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Shippu Jinrai-kyaku",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3: Shinryu Reppa",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Quick Dash",
+            "tokens": [
+                "any_k",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Emergency Stop\n(During Quick Dash)",
+            "tokens": [
+                "lk"
+            ]
+        },
+        {
+            "name": "[>] Thunder Kick\n(During Quick Dash)",
+            "tokens": [
+                "mk"
+            ]
+        },
+        {
+            "name": "[>] Forward Step Kick\n(During Quick Dash)",
+            "tokens": [
+                "hk"
+            ]
+        },
+        {
+            "name": "Chin Buster",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Triple Flash Kicks",
+            "tokens": [
+                "mk",
+                "goes_into",
+                "mk",
+                "goes_into",
+                "hk"
+            ]
+        }
+    ]
+}

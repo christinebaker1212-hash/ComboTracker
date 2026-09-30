@@ -1,0 +1,169 @@
+{
+    "glyph": "Persona 4",
+    "slot_count": 20,
+    "slots": [
+        {
+            "name": "Dash\n(Air OK)",
+            "tokens": [
+                "right",
+                "right"
+            ]
+        },
+        {
+            "name": "Backdash\n(Air OK)",
+            "tokens": [
+                "left",
+                "left"
+            ]
+        },
+        {
+            "name": "Superjump",
+            "tokens": [
+                "down",
+                "up"
+            ]
+        },
+        {
+            "name": "Air Turn\n(In Air)",
+            "tokens": [
+                "right",
+                "plus",
+                "lp",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Hop\n(On ground)",
+            "tokens": [
+                "down",
+                "plus",
+                "lp",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Evasive Action\n(On Ground)",
+            "tokens": [
+                "lp",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "All Out Attack",
+            "tokens": [
+                "lp",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Furious Action",
+            "tokens": [
+                "lk",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "One More!\n(After attack hits)\n(50SP cost)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "Sweep",
+            "tokens": [
+                "down",
+                "plus",
+                "lp",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Skill Boost\n(Any Command)",
+            "tokens": [
+                "lp",
+                "plus",
+                "lk",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Auto Combo",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "lp"
+            ]
+        },
+        {
+            "name": "Normal Throw",
+            "tokens": [
+                "mp",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Guard Cancel Attack\n(During blockstun)\n(50SP cost)",
+            "tokens": [
+                "right",
+                "plus",
+                "lp",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "Guard Cancel Evasive Action\n(During blockstun)\n(50SP cost)",
+            "tokens": [
+                "right",
+                "plus",
+                "lp",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Instant Kill",
+            "tokens": [
+                "down",
+                "down",
+                "down",
+                "plus",
+                "mp",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Burst\n(Air OK)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]MAX Burst\n(In Neutral)",
+            "tokens": []
+        },
+        {
+            "name": "[>]One More Burst\n(While attacking)",
+            "tokens": []
+        },
+        {
+            "name": "Shadow Frenzy\n(Air OK)\n(Shadow only)\n",
+            "tokens": [
+                "any_k"
+            ]
+        }
+    ]
+}

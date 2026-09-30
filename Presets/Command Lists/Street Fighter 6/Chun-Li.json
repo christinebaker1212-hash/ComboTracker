@@ -1,0 +1,222 @@
+{
+    "glyph": "Default",
+    "slot_count": 25,
+    "slots": [
+        {
+            "name": "Kikoken",
+            "tokens": [
+                "c_left",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Hundred Lightning Kicks/Barrage",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]Lightning Kick Barrage\n(After an OD Hundred Lightning Kicks)",
+            "tokens": [
+                "any_k",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Aerial Hundred Lightning Kicks",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Spinning Bird Kick",
+            "tokens": [
+                "c_down",
+                "up",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Hazanshu",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Tensho Kicks",
+            "tokens": [
+                "down",
+                "down",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1 - Kikosho\n(Air OK)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Hoyoku-sen",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3 - Soten Ranka",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Swift Thrust",
+            "tokens": [
+                "left",
+                "plus",
+                "mp",
+                "newline",
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Hakkei",
+            "tokens": [
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Water Lotus Fist",
+            "tokens": [
+                "downright",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Yokusen Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Falling Crane",
+            "tokens": [
+                "downright",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Yoso Kick",
+            "tokens": [
+                "down",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Wall Jump",
+            "tokens": [
+                "upright"
+            ]
+        },
+        {
+            "name": "Soaring Eagle Punches",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Serenity Stream",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p",
+                "newline"
+            ]
+        },
+        {
+            "name": "[>]Orchid Palm",
+            "tokens": [
+                "lp"
+            ]
+        },
+        {
+            "name": "[>]Snake Strike",
+            "tokens": [
+                "mp"
+            ]
+        },
+        {
+            "name": "[>]Lotus Fist",
+            "tokens": [
+                "hp"
+            ]
+        },
+        {
+            "name": "[>]Forward Strike",
+            "tokens": [
+                "lk"
+            ]
+        },
+        {
+            "name": "[>]Senpu Kick",
+            "tokens": [
+                "mk"
+            ]
+        },
+        {
+            "name": "[>]Tenku Kick",
+            "tokens": [
+                "hk"
+            ]
+        }
+    ]
+}

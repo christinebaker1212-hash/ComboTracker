@@ -1,0 +1,84 @@
+{
+    "glyph": "EX Plus a",
+    "slot_count": 9,
+    "slots": [
+        {
+            "name": "Chop",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Step Side Kick",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Lightning Knee",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Shoot Kick",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>]",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_k",
+                "goes_into",
+                "qcb",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Sliding Arrow",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Shoot Upper",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1 - Mirage Combo Kick",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Spin Side Shoot",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        }
+    ]
+}

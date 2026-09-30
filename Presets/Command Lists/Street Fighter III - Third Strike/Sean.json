@@ -1,0 +1,105 @@
+{
+    "glyph": "SuperCombo",
+    "slot_count": 12,
+    "slots": [
+        {
+            "name": "Sean Roll",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Ryuubi Kyaku",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Tornado Kick",
+            "tokens": [
+                "qcb",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Sean Tackle",
+            "tokens": [
+                "hcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Dragon Smash",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Sean Pachiki",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Rolling Sobat",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Target Combo",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Target Combo 2",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "SA1 - Hadou Burst",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Shoryuu Cannon",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3 - Hyper Tornado",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        }
+    ]
+}

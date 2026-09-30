@@ -1,0 +1,145 @@
+{
+    "glyph": "Default",
+    "slot_count": 14,
+    "slots": [
+        {
+            "name": "Manege Dore\n(When near opponent) \n(Effect depends on medal level)",
+            "tokens": [
+                "right",
+                "downright",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Rond-point",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Degage",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Renverse\n(Hold the button to feint) \n(Effect depends on medal level)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Grand Fouette\n(During Renverse)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1: Arabesque",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Eoile",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3: Pas de Deux\n(When near opponent) \n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Reverence",
+            "tokens": [
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Tomoe Derriere",
+            "tokens": [
+                "downright",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "A Terre",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mk"
+            ]
+        },
+        {
+            "name": "En Haut",
+            "tokens": [
+                "left",
+                "plus",
+                "mk",
+                "goes_into",
+                "mk"
+            ]
+        },
+        {
+            "name": "Temps Lie",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Allonge",
+            "tokens": [
+                "down",
+                "plus",
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,190 @@
+{
+    "glyph": "Default",
+    "slot_count": 20,
+    "slots": [
+        {
+            "name": "Spiral Arrow",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Cannon Spike",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Quick Spin Knuckle\n(Hold the button to charge the attack)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Cannon Strike\n(During a forward jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Hooligan Combination",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Razor Edge Slicer\n(No input)",
+            "tokens": []
+        },
+        {
+            "name": "[>] Cannon Strike",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Reverse Edge",
+            "tokens": [
+                "down",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Fatal Leg Twister",
+            "tokens": [
+                "lp",
+                "plus",
+                "lk"
+            ]
+        },
+        {
+            "name": "[>] Silent Step",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Spin Drive Smasher",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Killer Bee Spin",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2: Aerial Killer Bee Spin\n(During a jump)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3: Delta Red Assault\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Lift Uppercut",
+            "tokens": [
+                "left",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Delayed Ripper",
+            "tokens": [
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Assault Blade",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Lift Combination",
+            "tokens": [
+                "left",
+                "plus",
+                "mp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Swing Combination",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Leg Throw\n(During a jump)",
+            "tokens": [
+                "lp",
+                "plus",
+                "lk"
+            ]
+        }
+    ]
+}

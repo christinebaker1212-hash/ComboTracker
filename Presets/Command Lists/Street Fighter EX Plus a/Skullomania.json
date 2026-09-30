@@ -1,0 +1,109 @@
+{
+    "theme": "Dark",
+    "glyph": "EX Plus a",
+    "slot_count": 12,
+    "slots": [
+        {
+            "name": "Step In Upper",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Heel Stomp",
+            "tokens": [
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Skullo Dash",
+            "tokens": [
+                "right",
+                "right"
+            ]
+        },
+        {
+            "name": "Skullo Backflip",
+            "tokens": [
+                "left",
+                "left"
+            ]
+        },
+        {
+            "name": "Skullo Head",
+            "tokens": [
+                "dp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Skullo Crasher",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Skullo Slider",
+            "tokens": [
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Skullo Dive",
+            "tokens": [
+                "rdp",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Skullo Face Slam",
+            "tokens": [
+                "rdp",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA1 - Super Skullo Crasher",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Super Skullo Slider",
+            "tokens": [
+                "qcf",
+                "qcf",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3 - Skullo Dream",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "right",
+                "plus",
+                "lk",
+                "goes_into",
+                "hp"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,182 @@
+{
+    "theme": "Dark",
+    "glyph": "Default",
+    "slot_count": 15,
+    "slots": [
+        {
+            "name": "Sand Blast / Fatal Shot\n(Extension after OD)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p",
+                "newline",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Flash Knuckle / DDT\n(Extension after OD)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p",
+                "newline",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Aerial Flash Knuckle\n(Vertical or forward jump)\n(Hold button to change effect)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Avenger",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k",
+                "newline",
+                "plus",
+                "any_p",
+                "newline",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Rising Uppercut\n(Extension after OD)\n",
+            "tokens": [
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "any_p",
+                "newline",
+                "plus",
+                "any_p",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1 - Vulcan Blast",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA2 - Eraser",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA3 - Pale Rider",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Rawhide",
+            "tokens": [
+                "right",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "Supressor",
+            "tokens": [
+                "left",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Outlaw Kick",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Double Impact",
+            "tokens": [
+                "right",
+                "plus",
+                "hp",
+                "goes_into",
+                "hk"
+            ]
+        },
+        {
+            "name": "Triple Impact",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Nose Breaker",
+            "tokens": [
+                "down",
+                "plus",
+                "mp",
+                "goes_into",
+                "down",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Snapback Combo",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        }
+    ]
+}

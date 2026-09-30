@@ -1,0 +1,188 @@
+{
+    "glyph": "Default",
+    "slot_count": 9,
+    "slots": [
+        {
+            "name": "2 Lights > Spiral Arrow\n(Causes knockdown)",
+            "tokens": [
+                "lp",
+                "goes_into",
+                "lp",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Heavy Punch > Spiral Arrow\n(When opponent is pressing buttons)\n(Causes knockdown)\n(Good corner carry)",
+            "tokens": [
+                "down",
+                "plus",
+                "mp",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Basic Jump-in Combo\n(Can substitute first HP for HK to hit from further away)",
+            "tokens": [
+                "upright",
+                "plus",
+                "hp",
+                "goes_into",
+                "down",
+                "plus",
+                "hp",
+                "goes_into",
+                "down",
+                "plus",
+                "mp",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Drive Rush Extension 1\n(After 2MP/2MK)",
+            "tokens": [
+                "down",
+                "plus",
+                "hp",
+                "goes_into",
+                "hp"
+            ]
+        },
+        {
+            "name": "Drive Rush Extension 2\n(After 2MP)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "down",
+                "plus",
+                "hp",
+                "goes_into",
+                "down",
+                "plus",
+                "mp"
+            ]
+        },
+        {
+            "name": "4HK Air Juggle 1\n(Can substitute MK for SA3)",
+            "tokens": [
+                "downleft",
+                "plus",
+                "hk",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "4HK Air Juggle 2\n(Corner only)",
+            "tokens": [
+                "downleft",
+                "plus",
+                "hk",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "mk",
+                "goes_into",
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Drive Rush Combo 1 \n(3240 damage)",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk",
+                "goes_into",
+                "downleft",
+                "plus",
+                "hk",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk",
+                "goes_into",
+                "hp",
+                "goes_into",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "lp",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "lk",
+                "goes_into",
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "mk"
+            ]
+        },
+        {
+            "name": "Drive Rush Combo 2 \n(3357 damage)\n(Corner only)",
+            "tokens": [
+                "hp",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk",
+                "goes_into",
+                "downleft",
+                "plus",
+                "hk",
+                "goes_into",
+                "downleft",
+                "plus",
+                "hk",
+                "goes_into",
+                "mp",
+                "plus",
+                "mk",
+                "goes_into",
+                "hp",
+                "goes_into",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "hk",
+                "goes_into",
+                "right",
+                "down",
+                "downright",
+                "plus",
+                "hk"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+{
+    "glyph": "Default",
+    "slot_count": 16,
+    "slots": [
+        {
+            "name": "Psycho Crusher Attack",
+            "tokens": [
+                "c_left",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Double Knee Press",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "Backfist Combo\n(Plants a Psycho Mine on hit)",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Shadow Rise",
+            "tokens": [
+                "c_down",
+                "up",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Head Press\n(During Shadow Rise)",
+            "tokens": [
+                "any_k"
+            ]
+        },
+        {
+            "name": "[>] Devil Reverse\n(During Shadow Rise)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "[>] Somersault Skull Diver\n(After Head Press hits)",
+            "tokens": [
+                "any_p"
+            ]
+        },
+        {
+            "name": "SA1: Knee Press Nightmare",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA2: Psycho Punisher",
+            "tokens": [
+                "down",
+                "downleft",
+                "left",
+                "down",
+                "downleft",
+                "left",
+                "plus",
+                "any_k"
+            ]
+        },
+        {
+            "name": "SA3: Ultimate Psycho Crusher\n(More powerful when vitality is at 25% or below)",
+            "tokens": [
+                "down",
+                "downright",
+                "right",
+                "down",
+                "downright",
+                "right",
+                "plus",
+                "any_p"
+            ]
+        },
+        {
+            "name": "Psycho Hammer",
+            "tokens": [
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Evil Knee",
+            "tokens": [
+                "left",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Hover Kick",
+            "tokens": [
+                "downright",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Shadow Hammer",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "right",
+                "plus",
+                "hp"
+            ]
+        },
+        {
+            "name": "Shadow Spear",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "down",
+                "plus",
+                "hk"
+            ]
+        },
+        {
+            "name": "Hell Attack\n(During a jump)",
+            "tokens": [
+                "mp",
+                "goes_into",
+                "mp"
+            ]
+        }
+    ]
+}
