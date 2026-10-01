@@ -78,7 +78,7 @@ src/
   overlays.ts   Show/hide/lock overlays and saved scenes
   hotkeys.ts    Global hotkeys (desktop)
 src-tauri/src/
-  pads.rs       XInput polling on a background thread, sent to every window
+  pads.rs       XInput and PlayStation (HID) polling on a background thread, sent to every window
 scripts/
   sync-assets.mjs           Copies icons/ and Presets/ into public/ (skips User folders)
   derive-icons.py           Makes the left shoulder/trigger and other derived icons from existing art

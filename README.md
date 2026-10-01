@@ -33,8 +33,9 @@ on stream.
 - **Themes:** 38 colour themes, including gradients, or make your own.
 - **Controller support:** Xbox, PlayStation, Switch and most others. Hold a
   direction for a charge input, or a button for a held press. On the desktop
-  app, Xbox-style (XInput) controllers keep working in the input viewer,
-  practice mode and editor while your game has focus.
+  app, Xbox-style (XInput) and PlayStation controllers (DualShock 4,
+  DualSense, PS4-mode sticks) keep working in the input viewer, practice mode
+  and editor while your game has focus.
 - **Every kind of input:** held presses `[HP]`, releases `]HP[` (negative
   edge), charge, neutral (`5`, Tekken's ★), and notes like `j.`, `CH`, `dl.`
   or any text you like. Each icon style uses its game's own button names

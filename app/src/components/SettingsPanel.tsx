@@ -76,7 +76,7 @@ export function SettingsPanel() {
             {pads.map((p, i) => (
               <option key={p.index} value={p.index}>
                 {i + 1}: {p.id.replace(/\(.*?\)/g, '').trim() || 'Controller'}
-                {p.index >= NATIVE_INDEX_BASE ? ` · player ${p.index - NATIVE_INDEX_BASE + 1}, works while your game has focus` : ''}
+                {p.index >= NATIVE_INDEX_BASE ? ' · works while your game has focus' : ''}
               </option>
             ))}
           </select>
