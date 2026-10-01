@@ -7,7 +7,6 @@ export type Dialog =
   | { kind: 'glyph'; edit?: string }
   | { kind: 'settings' }
   | { kind: 'layout'; ref?: string }
-  | { kind: 'practice'; comboId: string }
   | { kind: 'share'; code?: string }
   | { kind: 'savePreset' }
   | { kind: 'help' }

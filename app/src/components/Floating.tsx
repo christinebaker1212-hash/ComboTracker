@@ -109,7 +109,7 @@ export function FloatingShell({ prefKey, title, theme, extraTools, children, def
           {extraTools}
           {isDesktop && <button className="icon-btn" onClick={() => void closeWindow()} title="Close"><X size={14} /></button>}
         </div>
-        <div className={`overlay-body${prefs.backdrop === 'clear' ? ' is-clear' : ''}`}>{children(prefs.scale)}</div>
+        <div className={`overlay-body is-${prefs.backdrop}`}>{children(prefs.scale)}</div>
       </div>
     </div>
   )

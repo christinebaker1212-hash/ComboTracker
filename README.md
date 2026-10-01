@@ -23,11 +23,12 @@ on stream.
 - **Controller support:** Xbox, PlayStation, Switch and most others. Hold a
   direction for a charge input, or a button for a held press.
 - **Two players:** separate combo lists for P1 and P2.
-- **Practice mode:** checks your controller inputs against a combo step by step,
-  tells you exactly where you dropped it, and shows your timing in frames.
+- **Practice mode:** a window on top of your game that checks your controller
+  inputs against a combo as you play, tells you exactly where you dropped it,
+  and shows your timing in frames.
 - **Input viewer:** shows your controller on screen and lights up buttons as you
-  press them. Comes with 20+ layouts (pads, arcade sticks, leverless), or design
-  your own by dragging buttons around.
+  press them. Comes with 20+ layouts (pads, arcade sticks, leverless), drawn in
+  your theme's colours, or design your own by dragging buttons around.
 - **Make it yours:** build your own icon styles (mix icons from any style or
   upload pictures, and map controller buttons by pressing them), themes with a
   live preview, and controller layouts.
@@ -102,6 +103,8 @@ The built-in presets live in this repo's `Presets/` folder:
 - `Presets/Command Lists/<Game>/<Character>.json`: move lists
 - `Presets/Themes/<Folder>/<Name>.json`: colour themes
 - `Presets/Layouts/<Folder>/<Name>.json`: input viewer layouts
+
+Folders named `User` are personal and are left out of the app build.
 
 A theme needs just a few colours:
 

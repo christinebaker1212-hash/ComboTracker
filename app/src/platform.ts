@@ -48,6 +48,21 @@ export function openOverlay(p: Player, comboId?: string): Promise<boolean> {
 
 export const closeOverlay = (p: Player, comboId?: string) => closeFloating(overlayLabel(p, comboId))
 
+export const PRACTICE_HEARTBEAT_KEY = 'combotracker:practice-heartbeat'
+
+/** True while a practice window is open (it refreshes a heartbeat twice a second). */
+export function practiceActive(): boolean {
+  try {
+    return Date.now() - Number(localStorage.getItem(PRACTICE_HEARTBEAT_KEY) ?? 0) < 1500
+  } catch {
+    return false
+  }
+}
+
+/** Opens practice mode for one combo as an always-on-top window. */
+export const openPractice = (p: Player, comboId: string) =>
+  openFloating(`overlay-practice-${p}`, `view=practice&p=${p}&combo=${comboId}`, 'ComboTracker practice', { width: 520, height: 220 })
+
 /** Opens the live input viewer. */
 export const openViewer = () => openFloating('viewer-main', 'view=viewer', 'ComboTracker input viewer', { width: 420, height: 280 })
 

@@ -6,7 +6,7 @@ import { memo, useEffect, useRef, useState, type DragEvent, type MouseEvent } fr
 import type { Combo } from '../core/combos'
 import { exportCombo, importIntoCombo } from '../actions'
 import { tokenLabel } from '../core/tokens'
-import { closeOverlay, openOverlay } from '../platform'
+import { closeOverlay, openOverlay, openPractice } from '../platform'
 import { PLAYERS, useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
 import { Menu } from './Menu'
@@ -153,9 +153,9 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
             </button>
             <button
               className="icon-btn"
-              title="Practice this combo with your controller"
+              title="Practice this combo in-game: opens a window on top of your game that checks your inputs"
               disabled={!combo.tokens.length}
-              onClick={() => openDialog({ kind: 'practice', comboId: combo.id })}
+              onClick={() => void openPractice(useStore.getState().player, combo.id)}
             >
               <Target size={15} />
             </button>

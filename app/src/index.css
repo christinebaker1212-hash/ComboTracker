@@ -549,3 +549,12 @@ button.pad-status { background: transparent; }
 .row:has(.menu-list) { z-index: 20; }
 .btn-label { max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 @media (max-width: 1500px) { .search input { width: 110px; } }
+
+/* Practice overlay */
+.practice-overlay { display: flex; flex-direction: column; gap: 8px; min-width: 260px; }
+.practice-head { display: flex; justify-content: space-between; gap: 16px; }
+.practice-gaps { font-size: 0.8em; opacity: 0.8; }
+.overlay-body.is-clear .practice-head, .overlay-body.is-clear .practice-status, .overlay-body.is-clear .practice-gaps { text-shadow: 0 0 3px #000, 0 1px 2px #000; color: #fff; }
+
+/* Dark and green-screen backdrops always get light text, whatever the theme. */
+.overlay-body.is-dark, .overlay-body.is-chroma, .overlay-body.is-clear { color: #fff; }

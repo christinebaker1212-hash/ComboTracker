@@ -51,7 +51,7 @@ export function InputViewer() {
       theme={theme}
       defaults={{ scale: 1.5 }}
       extraTools={
-        <button className={`icon-btn${showImage ? ' is-on' : ''}`} onClick={toggleImage} title="Show the controller picture">
+        <button className={`icon-btn${showImage ? ' is-on' : ''}`} onClick={toggleImage} title="Show the controller body">
           <ImageIcon size={14} />
         </button>
       }

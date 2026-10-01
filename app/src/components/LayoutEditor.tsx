@@ -1,9 +1,9 @@
-import { Copy, Gamepad2, Image as ImageIcon, Trash2, Upload } from 'lucide-react'
+import { Copy, Gamepad2, Trash2, Upload } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { iconUrl, presetName, useAssets } from '../assets'
+import { presetName } from '../assets'
 import type { PadButton } from '../core/input'
 import {
-  defaultElement, INPUT_IDS, inputLabel, type ElementType, type Layout, type LayoutElement,
+  defaultElement, INPUT_IDS, inputLabel, layoutBody, layoutPicture, type BodyShape, type ElementType, type Layout, type LayoutElement,
 } from '../core/layouts'
 import { tokenLabel } from '../core/tokens'
 import { inputBus } from '../inputBus'
@@ -22,13 +22,11 @@ const PAD_TO_ID: Record<PadButton, string> = {
   BACK: 'BACK', START: 'START', L3: 'LEFT_THUMB', R3: 'RIGHT_THUMB',
 }
 const TOKENS = ['', 'lp', 'mp', 'hp', 'lk', 'mk', 'hk', 'any_p', 'any_k', 'up', 'down', 'left', 'right', 'start', 'select']
-const CONTROLLER_PICTURES = ['xboxone', 'playstation', 'playstation5', 'wiiupro', 'gamecube', 'dreamcast', 'n64', 'snes', 'nes', 'genesis3b', 'genesis6b', 'duke', 'leverlessg13', 'qanba']
 
-const blank = (): Layout => ({ name: 'My controller', bg_image: '', elements: [defaultElement('joystick', 50, 80)] })
+const blank = (): Layout => ({ name: 'My controller', bg_image: '', body: 'arcade', elements: [defaultElement('joystick', 50, 80)] })
 
 export function LayoutEditor({ initialRef }: { initialRef?: string }) {
   const close = useUI((s) => s.close)
-  const { icons } = useAssets()
   const glyph = useStore((s) => s.glyph)
   const theme = useStore((s) => s.theme)
   const settings = useStore((s) => s.settings)
@@ -165,27 +163,32 @@ export function LayoutEditor({ initialRef }: { initialRef?: string }) {
             <input type="range" min={1} max={4} step={0.25} value={zoom} onChange={(e) => setZoom(Number(e.target.value))} />
           </Field>
 
-          <details className="disclosure">
-            <summary><ImageIcon size={14} /> Controller picture</summary>
-            <div className="pic-grid">
-              <button className={`pic-cell${!layout.bg_image ? ' is-on' : ''}`} onClick={() => setLayout((l) => ({ ...l, bg_image: '' }))}>None</button>
-              {CONTROLLER_PICTURES.filter((p) => icons.has(p)).map((p) => (
-                <button key={p} className={`pic-cell${layout.bg_image?.toLowerCase().includes(p) ? ' is-on' : ''}`} onClick={() => setLayout((l) => ({ ...l, bg_image: `${p}.png` }))}>
-                  <img src={iconUrl(p)} alt={p} />
-                </button>
-              ))}
-              <button className="pic-cell" onClick={async () => {
-                const f = await pickFile('image/*')
-                if (!f) return
-                try {
-                  const url = await readImageFile(f, 800)
-                  setLayout((l) => ({ ...l, bg_image: url }))
-                } catch (e) {
-                  notify(e instanceof Error ? e.message : String(e), 'error')
-                }
-              }}><Upload size={14} /> Upload</button>
-            </div>
-          </details>
+          <Field label="Controller body" hint="Drawn in your theme's colours.">
+            <Segmented<BodyShape>
+              value={layoutBody(layout)}
+              onChange={(body) => setLayout((l) => ({ ...l, body }))}
+              options={[
+                { value: 'gamepad', label: 'Gamepad' },
+                { value: 'arcade', label: 'Arcade panel' },
+                { value: 'none', label: 'None' },
+              ]}
+            />
+          </Field>
+          <div className="row-gap">
+            <button className="btn btn-small" onClick={async () => {
+              const f = await pickFile('image/*')
+              if (!f) return
+              try {
+                const url = await readImageFile(f, 800)
+                setLayout((l) => ({ ...l, bg_image: url, body: 'none' }))
+              } catch (e) {
+                notify(e instanceof Error ? e.message : String(e), 'error')
+              }
+            }}><Upload size={14} /> Use my own picture</button>
+            {layoutPicture(layout) && (
+              <button className="btn btn-small" onClick={() => setLayout((l) => ({ ...l, bg_image: '', body: undefined }))}>Remove picture</button>
+            )}
+          </div>
 
           <div className="layout-add">
             <button className={`btn${listening ? ' btn-accent' : ''}`} onClick={() => setListening((v) => !v)}>

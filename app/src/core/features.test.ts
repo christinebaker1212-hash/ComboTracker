@@ -3,7 +3,7 @@ import { BUILTIN_GLYPHS, iconSource, packFromFile } from './glyphs'
 import {
   InputInterpreter, INPUT_PROFILES, parsePadCombo, profileFromMappings, type Frame, type PadButton,
 } from './input'
-import { defaultElement, layoutBackground, parseLayout } from './layouts'
+import { defaultElement, layoutBody, layoutPicture, parseLayout } from './layouts'
 import { feedPractice, startPractice, stepsFor } from './practice'
 import { decodeShare, encodeShare } from './share'
 import { compileTheme, upgradeTheme } from './theme'
@@ -62,9 +62,12 @@ describe('user glyph packs', () => {
 })
 
 describe('layouts', () => {
-  it('maps old absolute background paths back to shipped icons', () => {
-    const l = parseLayout({ name: 'Xbox One', bg_image: 'D:/Tools/ComboTracker (Source)/icons/XboxOne.png', elements: [] }, 'x')
-    expect(layoutBackground(l, new Set(['xboxone']))).toEqual({ icon: 'xboxone' })
+  it('draws its own controller body instead of old picture paths', () => {
+    const pad = parseLayout({ name: 'Xbox One', bg_image: 'D:/Tools/ComboTracker (Source)/icons/XboxOne.png', elements: [] }, 'x')
+    expect(layoutPicture(pad)).toBeNull()
+    expect(layoutBody(pad)).toBe('gamepad')
+    expect(layoutBody(parseLayout({ name: 'Vewlix 8', elements: [defaultElement('joystick')] }, 'x'))).toBe('arcade')
+    expect(layoutBody(parseLayout({ name: 'Mine', bg_image: 'data:image/png;base64,AA', elements: [] }, 'x'))).toBe('none')
   })
   it('creates sensible default elements', () => {
     expect(defaultElement('X')).toMatchObject({ type: 'glyph', token: 'lp' })

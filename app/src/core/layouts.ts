@@ -18,10 +18,14 @@ export interface LayoutElement {
   base_color?: string
 }
 
+/** The drawn controller shape behind the buttons. Original artwork, coloured by the theme. */
+export type BodyShape = 'gamepad' | 'arcade' | 'none'
+
 export interface Layout {
   name: string
-  /** Icon name from icons/, a data: URL, or (old files) an absolute path we map back to an icon. */
+  /** Optional picture the user uploaded (a data: URL). Old files hold a path here, which is ignored. */
   bg_image?: string
+  body?: BodyShape
   elements: LayoutElement[]
 }
 
@@ -60,18 +64,32 @@ export function defaultElement(id: string, x = 100, y = 100): LayoutElement {
   return { id, type: 'rect', x, y, w: 14, h: 14 }
 }
 
-/**
- * Resolves a layout's background to an icon name we ship, fixing up absolute
- * paths saved on the author's PC ("D:/Tools/…/icons/XboxOne.png" → "xboxone").
- */
-export function layoutBackground(layout: Layout, icons: ReadonlySet<string>): { icon?: string; url?: string } {
-  const bg = layout.bg_image ?? ''
-  if (bg.startsWith('data:')) return { url: bg }
-  const base = bg.split(/[\\/]/).pop()?.replace(/\.[a-z]+$/i, '').toLowerCase()
-  if (base && icons.has(base)) return { icon: base }
-  const guess = layout.name.toLowerCase().replace(/[^a-z0-9]/g, '')
-  if (icons.has(guess)) return { icon: guess }
-  return {}
+/** The user's own uploaded picture, if any. Paths from older files (pictures of real controllers) are ignored. */
+export const layoutPicture = (layout: Layout): string | null =>
+  layout.bg_image?.startsWith('data:') ? layout.bg_image : null
+
+/** Which drawn body to show: the layout's own choice, or a guess from its inputs and name. */
+export function layoutBody(layout: Layout): BodyShape {
+  if (layout.body) return layout.body
+  if (layoutPicture(layout)) return 'none'
+  const arcade = /arcade|leverless|vewlix|sega|noir|ist|sf2|mvs|mortal|hitbox|stick/i.test(layout.name)
+  return arcade || layout.elements.some((e) => e.id === 'joystick') ? 'arcade' : 'gamepad'
+}
+
+/** Area covered by the elements, including how much they grow when pressed. */
+export function elementBox(elements: LayoutElement[]) {
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity
+  for (const el of elements) {
+    if (el.type === 'rect') {
+      x0 = Math.min(x0, el.x); y0 = Math.min(y0, el.y)
+      x1 = Math.max(x1, el.x + (el.w ?? 14)); y1 = Math.max(y1, el.y + (el.h ?? 14))
+    } else {
+      const r = (el.size ?? 14) * 1.25
+      x0 = Math.min(x0, el.x - r); y0 = Math.min(y0, el.y - r)
+      x1 = Math.max(x1, el.x + r); y1 = Math.max(y1, el.y + r)
+    }
+  }
+  return elements.length ? { x0, y0, x1, y1 } : { x0: 0, y0: 0, x1: 100, y1: 60 }
 }
 
 /** Bounding box of the elements, for sizing the viewer window. */
@@ -97,6 +115,24 @@ export function parseLayout(json: unknown, fallbackName: string): Layout {
   return {
     name: typeof d.name === 'string' && d.name ? d.name : fallbackName,
     bg_image: typeof d.bg_image === 'string' ? d.bg_image : '',
+    body: d.body === 'gamepad' || d.body === 'arcade' || d.body === 'none' ? d.body : undefined,
     elements: d.elements.filter((e) => e && typeof e.id === 'string' && typeof e.x === 'number'),
   }
 }
+
+export interface BodyBox { x: number; y: number; w: number; h: number }
+
+/** Extra room the body leaves around the buttons. */
+const PAD = 18
+
+/** Where the drawn body goes for a given element area, and how far it extends. */
+export function bodyBox(shape: BodyShape, box: { x0: number; y0: number; x1: number; y1: number }): BodyBox | null {
+  if (shape === 'none') return null
+  const x = box.x0 - PAD
+  const y = box.y0 - PAD
+  const w = box.x1 - box.x0 + PAD * 2
+  const h = box.y1 - box.y0 + PAD * 2
+  // The gamepad's grips hang below the button area.
+  return { x, y, w, h: shape === 'gamepad' ? h * 1.45 : h }
+}
+

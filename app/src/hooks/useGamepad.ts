@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { insertTokens, mutateLast } from '../core/editor'
 import { frameFromGamepad, InputInterpreter, pickPad, profileFor, profileFromMappings } from '../core/input'
 import { inputBus } from '../inputBus'
+import { practiceActive } from '../platform'
 import { useStore } from '../store/useStore'
 
 /** Poll interval. Independent of screen redraws, so a slow frame never swallows a quick input. */
@@ -43,7 +44,7 @@ export function useGamepad(): string | null {
       const { edit, settings } = useStore.getState()
       for (const ev of events) {
         inputBus.emit(ev, now)
-        if (inputBus.captured || !settings.padInput) continue
+        if (inputBus.captured || !settings.padInput || practiceActive()) continue
         if (ev.type === 'insert') edit((s, g) => insertTokens(s, ev.tokens, g))
         else edit((s) => mutateLast(s, ev.from, ev.to))
       }

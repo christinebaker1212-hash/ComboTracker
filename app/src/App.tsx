@@ -8,7 +8,7 @@ import { InputViewer } from './components/InputViewer'
 import { LayoutEditor } from './components/LayoutEditor'
 import { Overlay } from './components/Overlay'
 import { Palette } from './components/Palette'
-import { PracticePanel } from './components/PracticePanel'
+import { PracticeOverlay } from './components/PracticeOverlay'
 import { SavePresetDialog } from './components/SavePresetDialog'
 import { SettingsPanel } from './components/SettingsPanel'
 import { ShareDialog } from './components/ShareDialog'
@@ -44,7 +44,6 @@ function Dialogs() {
     case 'glyph': return <GlyphEditor key={d.edit ?? 'new'} edit={d.edit} />
     case 'settings': return <SettingsPanel />
     case 'layout': return <LayoutEditor initialRef={d.ref} />
-    case 'practice': return <PracticePanel comboId={d.comboId} />
     case 'share': return <ShareDialog code={d.code} />
     case 'savePreset': return <SavePresetDialog />
     case 'help': return <HelpDialog />
@@ -102,6 +101,8 @@ export default function App() {
     <AssetsContext.Provider value={assets}>
       {view === 'overlay' ? (
         <Overlay player={player} comboId={params.get('combo') ?? undefined} />
+      ) : view === 'practice' ? (
+        <PracticeOverlay player={player} comboId={params.get('combo') ?? ''} />
       ) : view === 'viewer' ? (
         <InputViewer />
       ) : (

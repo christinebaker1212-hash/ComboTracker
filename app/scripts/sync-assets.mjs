@@ -19,6 +19,15 @@ function walk(dir) {
 
 const toPosix = (p) => p.split(sep).join('/')
 
+// Not shipped in the app:
+// - photos of real controllers (the input viewer draws its own, in theme colours)
+// - personal presets kept in any folder named "User"
+const CONTROLLER_PHOTOS = new Set([
+  'dreamcast', 'duke', 'gamecube', 'genesis3b', 'genesis6b', 'leverlessg13', 'n64', 'nes',
+  'playstation', 'playstation5', 'qanba', 'snes', 'wiiupro', 'xboxone',
+])
+const isPersonal = (file) => relative(repoDir, file).split(sep).some((part) => part.toLowerCase() === 'user')
+
 // --- Icons ---
 const iconsOut = join(publicDir, 'icons')
 rmSync(iconsOut, { recursive: true, force: true })
@@ -27,6 +36,7 @@ const icons = []
 for (const file of walk(join(repoDir, 'icons'))) {
   if (!file.toLowerCase().endsWith('.png')) continue
   const key = file.split(sep).pop().slice(0, -4).toLowerCase()
+  if (CONTROLLER_PHOTOS.has(key) || isPersonal(file)) continue
   cpSync(file, join(iconsOut, `${key}.png`))
   icons.push(key)
 }
@@ -35,11 +45,11 @@ for (const file of walk(join(repoDir, 'icons'))) {
 const presetsSrc = join(repoDir, 'Presets')
 const presetsOut = join(publicDir, 'presets')
 rmSync(presetsOut, { recursive: true, force: true })
-if (existsSync(presetsSrc)) cpSync(presetsSrc, presetsOut, { recursive: true })
+if (existsSync(presetsSrc)) cpSync(presetsSrc, presetsOut, { recursive: true, filter: (src) => !isPersonal(src) })
 
 const listPresets = (sub) =>
   walk(join(presetsSrc, sub))
-    .filter((f) => f.toLowerCase().endsWith('.json'))
+    .filter((f) => f.toLowerCase().endsWith('.json') && !isPersonal(f))
     .map((f) => toPosix(relative(join(presetsSrc, sub), f)))
     .sort()
 

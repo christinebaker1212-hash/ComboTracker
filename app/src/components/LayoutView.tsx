@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { iconUrl, useAssets } from '../assets'
 import { iconSource, type GlyphPack } from '../core/glyphs'
 import type { PadState } from '../core/input'
-import { shortLabel, layoutBackground, layoutBounds, type Layout, type LayoutElement } from '../core/layouts'
+import { bodyBox, elementBox, layoutBody, layoutPicture, shortLabel, type Layout, type LayoutElement } from '../core/layouts'
+import { ControllerBody } from './ControllerBody'
 import type { Theme } from '../core/theme'
 
 export interface LayoutLook {
@@ -55,12 +56,18 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
   }
 }) {
   const { icons } = useAssets()
-  const bg = layoutBackground(layout, icons)
-  const bgSrc = bg.url ?? (bg.icon ? iconUrl(bg.icon) : null)
-  const img = useImageSize(look.showImage ? bgSrc : null)
-  const bounds = layoutBounds(layout.elements)
-  const width = Math.max(bounds.width, img?.w ?? 0, editing ? 320 : 0)
-  const height = Math.max(bounds.height, img?.h ?? 0, editing ? 200 : 0)
+  const picture = look.showImage ? layoutPicture(layout) : null
+  const img = useImageSize(picture)
+  const shape = look.showImage ? layoutBody(layout) : 'none'
+  const ebox = elementBox(layout.elements)
+  const body = bodyBox(shape, ebox)
+  // Everything drawn: elements, body and any uploaded picture.
+  const minX = Math.min(0, ebox.x0, body?.x ?? 0) - 6
+  const minY = Math.min(0, ebox.y0, body?.y ?? 0) - 6
+  const maxX = Math.max(ebox.x1, body ? body.x + body.w : 0, img?.w ?? 0, editing ? 320 : 0) + 6
+  const maxY = Math.max(ebox.y1, body ? body.y + body.h : 0, img?.h ?? 0, editing ? 200 : 0) + 12
+  const width = maxX - minX
+  const height = maxY - minY
   const idle = theme.btnBg
   const hl = theme.highlight
 
@@ -73,12 +80,13 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
   return (
     <svg
       className="layout-svg"
-      viewBox={`0 0 ${width} ${height}`}
+      viewBox={`${minX} ${minY} ${width} ${height}`}
       width={width * scale}
       height={height * scale}
       onPointerDown={(e) => e.target === e.currentTarget && editing?.onBackground()}
     >
-      {img && bgSrc && <image href={bgSrc} x={0} y={0} width={img.w} height={img.h} pointerEvents="none" />}
+      {body && <ControllerBody shape={shape} box={body} theme={theme} />}
+      {img && picture && <image href={picture} x={0} y={0} width={img.w} height={img.h} pointerEvents="none" />}
       {layout.elements.map((el, i) => {
         const on = state.pressed.has(el.id) || (el.type === 'stick' && state.pressed.has(el.id))
         const stroke = on ? el.hl_color || hl : idle
