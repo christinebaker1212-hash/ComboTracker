@@ -746,3 +746,7 @@ button.pad-status { background: transparent; }
 .history li:nth-child(n + 12) { opacity: 0.7; }
 .viewer-row { display: flex; gap: 12px; align-items: flex-start; }
 .viewer-history { min-width: 120px; }
+.viewer-row { transition: opacity 0.6s ease; }
+.viewer-row.is-idle { opacity: 0.15; transition-duration: 1.2s; }
+.viewer-fx { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+.viewer-fx .chip-btn { height: 26px; font-size: 12px; }

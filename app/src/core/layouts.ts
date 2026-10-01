@@ -1,4 +1,5 @@
 // Input viewer layouts: the same JSON the desktop app writes to Presets/Layouts.
+import type { PadState } from './input'
 import type { Token } from './tokens'
 
 export type ElementType = 'glyph' | 'rect' | 'circle' | 'stick'
@@ -144,3 +145,17 @@ const PAD = 18
 export function panelBox(box: { x0: number; y0: number; x1: number; y1: number }) {
   return { x: box.x0 - PAD, y: box.y0 - PAD, w: box.x1 - box.x0 + PAD * 2, h: box.y1 - box.y0 + PAD * 2 }
 }
+
+/** Where a stick's ball sits: its own axes, or (arcade stick) the left stick / D-pad. */
+export function stickOffset(el: LayoutElement, s: PadState): [number, number] {
+  let [dx, dy] = el.id === 'RIGHT_THUMB' ? s.right : s.left
+  if (Math.hypot(dx, dy) < 0.15) [dx, dy] = [0, 0]
+  if (el.id !== 'RIGHT_THUMB' && el.id !== 'LEFT_THUMB' && !dx && !dy && s.dir) {
+    dx = s.dir.includes('left') ? -1 : s.dir.includes('right') ? 1 : 0
+    dy = s.dir.includes('up') ? -1 : s.dir.includes('down') ? 1 : 0
+    if (dx && dy) [dx, dy] = [dx * 0.707, dy * 0.707]
+  }
+  const m = Math.hypot(dx, dy)
+  return m > 1 ? [dx / m, dy / m] : [dx, dy]
+}
+

@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import { iconUrl, useAssets } from '../assets'
 import { iconSource, type GlyphPack } from '../core/glyphs'
 import type { PadState } from '../core/input'
-import { elementBox, layoutBody, layoutPicture, layoutTrace, panelBox, shortLabel, type Layout, type LayoutElement } from '../core/layouts'
+import { elementBox, layoutBody, layoutPicture, layoutTrace, panelBox, shortLabel, stickOffset, type Layout } from '../core/layouts'
 import { ArcadePanel, ControllerTrace } from './ControllerBody'
 import type { Theme } from '../core/theme'
+import type { FxFrame } from '../hooks/useViewerFx'
 
 export interface LayoutLook {
   outline: number
@@ -25,24 +26,17 @@ function useImageSize(src: string | null) {
 
 const IDLE: PadState = { pressed: new Set(), left: [0, 0], right: [0, 0], dir: null }
 
-/** Where a stick's ball sits: its own axes, or (arcade stick) the left stick / D-pad. */
-function stickOffset(el: LayoutElement, s: PadState): [number, number] {
-  let [dx, dy] = el.id === 'RIGHT_THUMB' ? s.right : s.left
-  if (Math.hypot(dx, dy) < 0.15) [dx, dy] = [0, 0]
-  if (el.id !== 'RIGHT_THUMB' && el.id !== 'LEFT_THUMB' && !dx && !dy && s.dir) {
-    dx = s.dir.includes('left') ? -1 : s.dir.includes('right') ? 1 : 0
-    dy = s.dir.includes('up') ? -1 : s.dir.includes('down') ? 1 : 0
-    if (dx && dy) [dx, dy] = [dx * 0.707, dy * 0.707]
-  }
-  const m = Math.hypot(dx, dy)
-  return m > 1 ? [dx / m, dy / m] : [dx, dy]
+/** "Colour by strength": the usual light / medium / heavy colours. */
+const STRENGTH: Record<string, string> = {
+  lp: '#3fa7ff', lk: '#3fa7ff', mp: '#ffd23f', mk: '#ffd23f', hp: '#ff4d4d', hk: '#ff4d4d',
+  any_p: '#d0d0d0', any_k: '#d0d0d0',
 }
 
 /**
  * Draws a controller layout as SVG. Used live by the input viewer and, with
  * `editing`, by the layout editor (labels, selection, dragging).
  */
-export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1, editing }: {
+export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1, editing, fx }: {
   layout: Layout
   state?: PadState
   glyph: GlyphPack
@@ -54,6 +48,8 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
     onPointerDown: (index: number, e: React.PointerEvent) => void
     onBackground: () => void
   }
+  /** Input viewer effects (glow after release, stick trail, colour by strength). */
+  fx?: { frame: FxFrame; strength: boolean }
 }) {
   const { icons } = useAssets()
   const picture = look.showImage ? layoutPicture(layout) : null
@@ -73,7 +69,7 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
   const width = maxX - minX
   const height = maxY - minY
   const idle = theme.btnBg
-  const hl = theme.highlight
+  const themeHl = theme.highlight
 
   const icon = (token: string | undefined, size: number, cx: number, cy: number) => {
     if (!token) return null
@@ -92,9 +88,24 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
       {traceKey && traceSize && <ControllerTrace traceKey={traceKey} size={traceSize} theme={theme} />}
       {panel && <ArcadePanel box={panel} theme={theme} />}
       {img && picture && <image href={picture} x={0} y={0} width={img.w} height={img.h} pointerEvents="none" />}
+      {fx && layout.elements.map((el, i) => {
+        // Glow rings fading out after release, drawn under the buttons.
+        const glow = fx.frame.glow[el.id]
+        const colour = el.hl_color || (fx.strength && el.token && STRENGTH[el.token]) || themeHl
+        if (!glow) return null
+        const cx = el.type === 'rect' ? el.x + (el.w ?? 14) / 2 : el.x
+        const cy = el.type === 'rect' ? el.y + (el.h ?? 14) / 2 : el.y
+        const r = el.type === 'rect' ? Math.max(el.w ?? 14, el.h ?? 14) * 0.6 : (el.size ?? 13) * 1.15
+        return (
+          <circle
+            key={`fx${i}`} cx={cx} cy={cy} r={r * (1.35 - glow * 0.25)} fill={colour} opacity={glow * 0.45} pointerEvents="none"
+          />
+        )
+      })}
       {layout.elements.map((el, i) => {
         const on = state.pressed.has(el.id) || (el.type === 'stick' && state.pressed.has(el.id))
-        const stroke = on ? el.hl_color || hl : idle
+        const hl = el.hl_color || (fx?.strength && el.token && STRENGTH[el.token]) || themeHl
+        const stroke = on ? hl : idle
         const sw = on ? look.highlight : look.outline
         const sel = editing?.selected === i
         const common = {
@@ -111,11 +122,11 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
           const r = el.size ?? 14
           const [dx, dy] = stickOffset(el, state)
           const moved = Math.hypot(dx, dy) > 0.1
-          const ring = on || moved ? el.hl_color || hl : idle
+          const ring = on || moved ? hl : idle
           return (
             <g key={i} {...common} transform={`translate(${el.x} ${el.y})`}>
               <circle r={r} fill={el.base_color || '#111111'} stroke={ring} strokeWidth={on || moved ? look.highlight : look.outline} />
-              <circle cx={dx * r * 0.6} cy={dy * r * 0.6} r={r * 0.6} fill={on ? el.hl_color || hl : el.fill_color || theme.bg} stroke={ring} strokeWidth={look.outline} />
+              <circle cx={dx * r * 0.6} cy={dy * r * 0.6} r={r * 0.6} fill={on ? hl : el.fill_color || theme.bg} stroke={ring} strokeWidth={look.outline} />
               {label}
             </g>
           )
@@ -132,7 +143,7 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
         }
         if (el.type === 'circle') {
           const r = (el.size ?? 6) * (on ? 1.2 : 1)
-          const fill = on ? el.hl_color || hl : el.fill_color || idle
+          const fill = on ? hl : el.fill_color || idle
           return (
             <g key={i} {...common} transform={`translate(${el.x} ${el.y})`}>
               <circle r={r} fill={fill} stroke={fill} strokeWidth={sw} />
@@ -144,7 +155,7 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
         const w = el.w ?? 14
         const h = el.h ?? 14
         const k = on ? 1.2 : 1
-        const fill = on ? el.hl_color || hl : el.fill_color || idle
+        const fill = on ? hl : el.fill_color || idle
         return (
           <g key={i} {...common} transform={`translate(${el.x + w / 2} ${el.y + h / 2})`}>
             <rect x={(-w * k) / 2} y={(-h * k) / 2} width={w * k} height={h * k} rx={Math.min(w, h) * 0.18} fill={fill} stroke={fill} strokeWidth={sw} />
@@ -152,6 +163,26 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
             {label}
           </g>
         )
+      })}
+      {fx && layout.elements.map((el, i) => {
+        // The stick's trail goes on top so the stick base doesn't hide it.
+        const colour = el.hl_color || (fx.strength && el.token && STRENGTH[el.token]) || themeHl
+        const trail = fx.frame.trails[i]
+        if (trail && el.type === 'stick') {
+          const r = (el.size ?? 14) * 0.6
+          return (
+            <g key={`fx${i}`} transform={`translate(${el.x} ${el.y})`} pointerEvents="none">
+              {trail.slice(1).map((p, j) => (
+                <line
+                  key={j}
+                  x1={trail[j].x * r} y1={trail[j].y * r} x2={p.x * r} y2={p.y * r}
+                  stroke={colour} strokeWidth={r * 0.7 * (1 - p.age)} strokeLinecap="round" opacity={(1 - p.age) * 0.8}
+                />
+              ))}
+            </g>
+          )
+        }
+        return null
       })}
     </svg>
   )
