@@ -195,6 +195,7 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
           </div>
         </div>
         {combo.notes && <div className="row-notes">{combo.notes}</div>}
+        {combo.frames && <div className="row-notes row-frames">{combo.frames}</div>}
         <TokenStrip combo={combo} active={active} />
       </div>
     </li>

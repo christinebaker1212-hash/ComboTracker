@@ -8,7 +8,7 @@ import { TokenView } from './TokenView'
  * `comboId` it shows just that combo (one-window-per-combo mode).
  */
 export function Overlay({ player, comboId }: { player: Player; comboId?: string }) {
-  const { lists, glyph, theme } = useShared()
+  const { lists, glyph, theme, settings } = useShared()
   const combos = (lists[player] ?? []).filter((c) => (comboId ? c.id === comboId : c.pinned))
 
   return (
@@ -32,6 +32,9 @@ export function Overlay({ player, comboId }: { player: Player; comboId?: string 
               <li key={c.id} className={c.child && !comboId ? 'is-child' : ''} style={{ ['--s' as string]: scale }}>
                 {c.name && <div className="overlay-name" style={{ fontSize: Math.max(11, size * 0.42) }}>{c.name}</div>}
                 {c.notes && <div className="overlay-notes" style={{ fontSize: Math.max(10, size * 0.3) }}>{c.notes}</div>}
+                {settings.overlayFrames && c.frames && (
+                  <div className="overlay-notes overlay-frames" style={{ fontSize: Math.max(10, size * 0.3) }}>{c.frames}</div>
+                )}
                 <div className="overlay-tokens">
                   {c.tokens.map((t, i) =>
                     t === 'newline' ? <span key={i} className="tok-break" /> : <TokenView key={i} token={t} glyph={glyph} size={size} />,

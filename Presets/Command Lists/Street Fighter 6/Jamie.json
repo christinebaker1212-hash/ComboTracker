@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Jamie",
-  "slot_count": 22,
+  "slot_count": 42,
   "slots": [
     {
       "name": "The Devil Inside",
@@ -13,7 +13,13 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Hold to extend; Also: 2 drinks, 3 drinks, 4 drinks, DR4 activation"
+      "notes": "Hold to extend; Also: 2 drinks, 3 drinks, 4 drinks, DR4 activation",
+      "frames": [
+        {
+          "startup": 48,
+          "recovery": 2
+        }
+      ]
     },
     {
       "name": "Freeflow Strikes",
@@ -25,7 +31,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP; Effect changes at drink level 4"
+      "notes": "OD: 236PP; Effect changes at drink level 4",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 13,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -6,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 315
+        },
+        {
+          "label": "MP",
+          "startup": 16,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -6,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 360
+        },
+        {
+          "label": "HP",
+          "startup": 19,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -6,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 405
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 405
+        }
+      ]
     },
     {
       "name": "Freeflow Strikes 2",
@@ -41,7 +89,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > 6P"
+      "notes": "OD: 236PP > 6P",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 13,
+          "active": 2,
+          "recovery": 28,
+          "onBlock": -13,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 315
+        },
+        {
+          "label": "MP",
+          "startup": 16,
+          "active": 2,
+          "recovery": 28,
+          "onBlock": -11,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 360
+        },
+        {
+          "label": "HP",
+          "startup": 19,
+          "active": 2,
+          "recovery": 28,
+          "onBlock": -9,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 405
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": 2,
+          "recovery": 28,
+          "onBlock": -9,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 405
+        }
+      ]
     },
     {
       "name": "Freeflow Strikes 3",
@@ -61,7 +151,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > 6P > 6P"
+      "notes": "OD: 236PP > 6P > 6P",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 13,
+          "active": 2,
+          "recovery": 30,
+          "onBlock": -17,
+          "onHit": "KD +27",
+          "onPC": "KD +27",
+          "damage": 495
+        },
+        {
+          "label": "MP",
+          "startup": 16,
+          "active": 2,
+          "recovery": 30,
+          "onBlock": -15,
+          "onHit": "KD +27",
+          "onPC": "KD +27",
+          "damage": 540
+        },
+        {
+          "label": "HP",
+          "startup": 19,
+          "active": 2,
+          "recovery": 30,
+          "onBlock": -13,
+          "onHit": "KD +27",
+          "onPC": "KD +27",
+          "damage": 585
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": 2,
+          "recovery": 30,
+          "onBlock": -13,
+          "onHit": "KD +28",
+          "onPC": "KD +28",
+          "damage": 675
+        }
+      ]
     },
     {
       "name": "Freeflow Kicks 2",
@@ -77,7 +209,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > 6K"
+      "notes": "OD: 236PP > 6K",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 14,
+          "active": 2,
+          "recovery": 32,
+          "onBlock": -15,
+          "onHit": -7,
+          "onPC": -3,
+          "damage": 225
+        },
+        {
+          "label": "MP",
+          "startup": 17,
+          "active": 2,
+          "recovery": 32,
+          "onBlock": -15,
+          "onHit": -7,
+          "onPC": -3,
+          "damage": 270
+        },
+        {
+          "label": "HP",
+          "startup": 20,
+          "active": 2,
+          "recovery": 32,
+          "onBlock": -15,
+          "onHit": -7,
+          "onPC": -3,
+          "damage": 270
+        },
+        {
+          "label": "OD",
+          "startup": 16,
+          "active": 2,
+          "recovery": 32,
+          "onBlock": -15,
+          "onHit": -7,
+          "onPC": -3,
+          "damage": 315
+        }
+      ]
     },
     {
       "name": "Freeflow Kicks 3",
@@ -97,7 +271,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > 6K > 6K"
+      "notes": "OD: 236PP > 6K > 6K",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 18,
+          "active": 2,
+          "recovery": 64,
+          "onBlock": -49,
+          "onHit": "KD -1",
+          "onPC": "KD -1",
+          "damage": 405
+        },
+        {
+          "label": "MP",
+          "startup": 21,
+          "active": 2,
+          "recovery": 64,
+          "onBlock": -49,
+          "onHit": "KD -1",
+          "onPC": "KD -1",
+          "damage": 450
+        },
+        {
+          "label": "HP",
+          "startup": 24,
+          "active": 2,
+          "recovery": 64,
+          "onBlock": -49,
+          "onHit": "KD -1",
+          "onPC": "KD -1",
+          "damage": 495
+        },
+        {
+          "label": "OD",
+          "startup": 19,
+          "active": 2,
+          "recovery": 64,
+          "onBlock": -49,
+          "onHit": "KD +1",
+          "onPC": "KD +1",
+          "damage": 540
+        }
+      ]
     },
     {
       "name": "Swagger Step",
@@ -109,7 +325,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP"
+      "notes": "OD: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 17,
+          "active": 9,
+          "recovery": 17,
+          "onBlock": -6,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": 810
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 9,
+          "recovery": 17,
+          "onBlock": -6,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": 900
+        },
+        {
+          "label": "HP",
+          "startup": 25,
+          "active": 9,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": 1080
+        },
+        {
+          "label": "OD",
+          "startup": 20,
+          "active": 9,
+          "recovery": 15,
+          "onBlock": -1,
+          "onHit": "KD +73 (Tumble)",
+          "onPC": "KD +87 Tumble (HKD +155 Wall Splat)",
+          "damage": 990
+        }
+      ]
     },
     {
       "name": "Arrow Kick",
@@ -121,7 +379,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 623KK"
+      "notes": "OD: 623KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 5,
+          "active": 10,
+          "recovery": 52,
+          "onBlock": -44,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": "900 (450*450)"
+        },
+        {
+          "label": "MK",
+          "startup": 8,
+          "active": 9,
+          "recovery": 51,
+          "onBlock": -43,
+          "onHit": "KD +34",
+          "onPC": "KD +34",
+          "damage": "1080 (450*630)"
+        },
+        {
+          "label": "HK",
+          "startup": 10,
+          "active": 9,
+          "recovery": 51,
+          "onBlock": -43,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": "1260 (450*360*450)"
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": 9,
+          "recovery": 51,
+          "onBlock": -43,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "1350 (450*405*495)"
+        }
+      ]
     },
     {
       "name": "Breakin'",
@@ -136,7 +436,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": "2*7(6)5(6)2(7)2(7)2(6)2(6)2(6)2(29)2(9)2(6)2(5)2",
+          "recovery": "74(107)",
+          "onBlock": "-60(-93)",
+          "onHit": "KD +12(4)",
+          "onPC": "KD +12(4)",
+          "damage": "1980(1665)"
+        }
+      ]
     },
     {
       "name": "The Devil's Song",
@@ -151,7 +462,13 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "recovery": 5
+        }
+      ]
     },
     {
       "name": "Getsuga Saiho",
@@ -166,7 +483,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 10,
+          "active": "3(13)3",
+          "recovery": 42,
+          "onBlock": -27,
+          "onHit": "HKD +71",
+          "onPC": "HKD +71",
+          "damage": 2340
+        }
+      ]
     },
     {
       "name": "Falling Star Kick",
@@ -176,7 +504,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 540
+        }
+      ]
     },
     {
       "name": "Hermit's Elbow",
@@ -186,7 +525,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 18,
+          "active": 4,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 720
+        }
+      ]
     },
     {
       "name": "Senei Kick",
@@ -196,7 +546,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 810
+        }
+      ]
     },
     {
       "name": "Phantom Sway",
@@ -208,7 +569,18 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 43,
+          "onBlock": -28,
+          "onHit": "KD +22",
+          "onPC": "KD +22",
+          "damage": 450
+        }
+      ]
     },
     {
       "name": "Phantom Sway + Drink",
@@ -222,7 +594,418 @@
         "any_p"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "9+12+Drink",
+          "active": "2(3)2(17)3 {~}",
+          "recovery": 61,
+          "onBlock": -46,
+          "onHit": "KD +4",
+          "onPC": "KD +4",
+          "damage": 450
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 7,
+          "onBlock": 0,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 270
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 14,
+          "onBlock": 2,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 540
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": "1(1)1(4)3",
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": "810 (90x2*630)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": -1,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 270
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": "17(18)",
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 540
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -5,
+          "onHit": 3,
+          "onPC": "KD +71",
+          "damage": 720
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 225
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": "13(15)",
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 540
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 5,
+          "recovery": 23,
+          "onBlock": -8,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 810
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 180
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -6,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 450
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "2(3)2",
+          "recovery": "28(29)",
+          "onBlock": -11,
+          "onHit": "KD +33",
+          "onPC": "HKD +48",
+          "damage": "720 (360*360)"
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 9,
+          "onBlock": "0~6",
+          "onHit": "4~10",
+          "onPC": "8~14",
+          "damage": 270
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "onBlock": "6~7",
+          "onHit": "10~11 (KD)",
+          "onPC": "14~15 (KD)",
+          "damage": 630
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 6,
+          "onBlock": "4~11",
+          "onHit": "8~15 (KD)",
+          "onPC": "12~19 (KD)",
+          "damage": 720
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 6,
+          "onBlock": "2~5",
+          "onHit": "6~9",
+          "onPC": "10~13",
+          "damage": 270
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 6,
+          "onBlock": "4~9",
+          "onHit": "8~13",
+          "onPC": "12~17",
+          "damage": 450
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": "3(5)4",
+          "onBlock": "7~11",
+          "onHit": "11~15 (KD)",
+          "onPC": "15~19 (KD)",
+          "damage": "810 (405*405)"
+        }
+      ]
+    },
+    {
+      "name": "Indian Step",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "mash",
+      "frames": [
+        {
+          "startup": 5,
+          "active": "2(11)2 ∞",
+          "recovery": 11,
+          "onBlock": -1,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": "270 ∞"
+        }
+      ]
+    },
+    {
+      "name": "Tensei Kick",
+      "tokens": [
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -8,
+          "onHit": "KD +53",
+          "onPC": "KD +53",
+          "damage": 540
+        }
+      ]
     },
     {
       "name": "Back Shaver",
@@ -232,7 +1015,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +23(+7)",
+          "onPC": "HKD +23(+7)",
+          "damage": "1080(1836)"
+        }
+      ]
     },
     {
       "name": "Wheel Punch",
@@ -244,7 +1037,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +26",
+          "onPC": "HKD +26",
+          "damage": "1080(1836)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Vainglory Strike",
@@ -254,7 +1057,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 720
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Leg Sweep",
@@ -266,7 +1080,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 450
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -276,7 +1101,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -286,7 +1118,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Dee Jay",
-  "slot_count": 35,
+  "slot_count": 53,
   "slots": [
     {
       "name": "Speedy Maracas",
@@ -13,7 +13,13 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Hold the button to extend the move's duration"
+      "notes": "Hold the button to extend the move's duration",
+      "frames": [
+        {
+          "startup": "88(95)",
+          "recovery": 38
+        }
+      ]
     },
     {
       "name": "Air Slasher",
@@ -24,7 +30,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 46PP"
+      "notes": "OD: 46PP",
+      "frames": [
+        {
+          "label": "LP",
+          "recovery": 21
+        },
+        {
+          "label": "MP",
+          "startup": 17,
+          "recovery": 27,
+          "onBlock": -5,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 600
+        },
+        {
+          "label": "HP",
+          "startup": "17,34",
+          "recovery": 26,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": "1000 (500*500)"
+        },
+        {
+          "label": "OD",
+          "startup": "10,23",
+          "active": "11(1)~",
+          "recovery": 23,
+          "onBlock": 2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Jackknife Maximum",
@@ -35,7 +75,44 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 28KK"
+      "notes": "OD: 28KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 23,
+          "recovery": 6
+        },
+        {
+          "label": "MK",
+          "startup": 6,
+          "active": "4(9)4",
+          "recovery": "22+10",
+          "onBlock": -32,
+          "onHit": "KD +41",
+          "onPC": "KD +41",
+          "damage": "1100 (600*500)"
+        },
+        {
+          "label": "HK",
+          "startup": 5,
+          "active": "5(7)5(8)4",
+          "recovery": "17+15",
+          "onBlock": -44,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": "1300 (600*200*500)"
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": "6(7)3(9)3",
+          "recovery": "29+15",
+          "onBlock": -55,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": "1500 (300x5)"
+        }
+      ]
     },
     {
       "name": "Double Rolling Sobat",
@@ -47,7 +124,43 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK"
+      "notes": "OD: 236KK",
+      "frames": [
+        {
+          "label": "LK",
+          "recovery": 26
+        },
+        {
+          "label": "MK",
+          "startup": 12,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": "-6(-4)",
+          "onHit": "KD +34",
+          "onPC": "KD +34",
+          "damage": 1000
+        },
+        {
+          "label": "HK",
+          "startup": 15,
+          "active": "3(18)4",
+          "recovery": 24,
+          "onBlock": -10,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": "1400 (700*700)"
+        },
+        {
+          "label": "OD",
+          "startup": 19,
+          "active": "2(9)3",
+          "recovery": 19,
+          "onBlock": -2,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": "1300 (700*600)"
+        }
+      ]
     },
     {
       "name": "Machine Gun Uppercut",
@@ -59,7 +172,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP"
+      "notes": "OD: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 15,
+          "active": 4,
+          "recovery": 35,
+          "onBlock": -19,
+          "onHit": "KD +34",
+          "onPC": "KD +34",
+          "damage": "1650 (800~950)"
+        },
+        {
+          "label": "MP",
+          "startup": 22,
+          "active": 4,
+          "recovery": 35,
+          "onBlock": -19,
+          "onHit": "KD +32",
+          "onPC": "KD +32",
+          "damage": "1900 (800~900)"
+        },
+        {
+          "label": "HP",
+          "startup": 28,
+          "active": 4,
+          "recovery": 35,
+          "onBlock": -19,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "2200 (800~1900)"
+        },
+        {
+          "label": "OD",
+          "startup": 26,
+          "active": 4,
+          "recovery": 35,
+          "onBlock": -19,
+          "onHit": "HKD +23",
+          "onPC": "HKD +23",
+          "damage": "2500 (800)"
+        }
+      ]
     },
     {
       "name": "Jus Cool",
@@ -71,7 +226,23 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK"
+      "notes": "OD: 214KK",
+      "frames": [
+        {
+          "startup": 13,
+          "recovery": 24
+        },
+        {
+          "label": "OD",
+          "startup": 8,
+          "active": 5,
+          "recovery": "36(37)",
+          "onBlock": -18,
+          "onHit": "KD +33",
+          "onPC": "KD +33",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Jus Cool > Funky Slicer",
@@ -85,7 +256,29 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK > LK"
+      "notes": "OD: 214KK > LK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": "13+12",
+          "active": 3,
+          "recovery": "22(20)(25)",
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": "25+9",
+          "active": 3,
+          "recovery": "19(24)",
+          "onBlock": -2,
+          "onHit": 6,
+          "onPC": 16,
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Jus Cool > Waning Moon",
@@ -99,7 +292,29 @@
         "mk"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK > MK"
+      "notes": "OD: 214KK > MK",
+      "frames": [
+        {
+          "label": "MK",
+          "startup": "13+25",
+          "active": 3,
+          "recovery": 16,
+          "onBlock": 1,
+          "onHit": "HKD +27(28)",
+          "onPC": "HKD +51(53) OTG",
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": "25+19(21)",
+          "active": 5,
+          "recovery": 17,
+          "onBlock": -2,
+          "onHit": "6(7)",
+          "onPC": "10(11)",
+          "damage": 1110
+        }
+      ]
     },
     {
       "name": "Jus Cool > Maximum Strike",
@@ -113,7 +328,29 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK > HK"
+      "notes": "OD: 214KK > HK",
+      "frames": [
+        {
+          "label": "HK",
+          "startup": "13+15",
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -10,
+          "onHit": "KD +45",
+          "onPC": "KD +45",
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": "25+11",
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -8,
+          "onHit": "KD +55(57)",
+          "onPC": "KD +65(57)",
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Jus Cool > Juggling Dash",
@@ -129,7 +366,22 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK > 6P"
+      "notes": "OD: 214KK > 6P",
+      "frames": [
+        {
+          "startup": 13,
+          "recovery": 27,
+          "onBlock": -15,
+          "onHit": "KD +40",
+          "onPC": "KD +40"
+        },
+        {
+          "label": "OD",
+          "startup": 19,
+          "recovery": 22,
+          "onBlock": -15
+        }
+      ]
     },
     {
       "name": "Jus Cool > Juggling Dash > Juggling Sway",
@@ -149,7 +401,22 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK > 6P > 4P"
+      "notes": "OD: 214KK > 6P > 4P",
+      "frames": [
+        {
+          "startup": "13+17",
+          "recovery": 29,
+          "onBlock": -31,
+          "onHit": "KD +24",
+          "onPC": "KD +24"
+        },
+        {
+          "label": "OD",
+          "startup": "19+16",
+          "recovery": 22,
+          "onBlock": -31
+        }
+      ]
     },
     {
       "name": "The Greatest Sobat",
@@ -164,7 +431,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "recovery": 33,
+          "onBlock": -12,
+          "onHit": "HKD +44",
+          "onPC": "Crumple +79",
+          "damage": 2000
+        }
+      ]
     },
     {
       "name": "Lowkey Sunrise Festival",
@@ -191,7 +469,18 @@
         "hk"
       ],
       "section": "Super Arts",
-      "notes": "bad"
+      "notes": "bad",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 5,
+          "recovery": 46,
+          "onBlock": -29,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": "1200(2600)"
+        }
+      ]
     },
     {
       "name": "Marvelous Sunrise Festival",
@@ -218,7 +507,18 @@
         "hk"
       ],
       "section": "Super Arts",
-      "notes": "good"
+      "notes": "good",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 5,
+          "recovery": 46,
+          "onBlock": -29,
+          "onHit": "6 / Crumple +46",
+          "onPC": "10 / Crumple +46",
+          "damage": "1300(1700)"
+        }
+      ]
     },
     {
       "name": "Headliner Sunrise Festival",
@@ -245,19 +545,48 @@
         "hk"
       ],
       "section": "Super Arts",
-      "notes": "great"
+      "notes": "great",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 5,
+          "recovery": 46,
+          "onBlock": -29,
+          "onHit": "6 / Crumple +46",
+          "onPC": "10 / Crumple +46",
+          "damage": "1300(1800)"
+        }
+      ]
     },
     {
       "name": "Climactic Strike",
       "tokens": [],
       "section": "Super Arts",
-      "notes": "Input: HP (after Level 2 Super (MP/HP) connects); After Marvelous or Headliner Sunrise Festival connects"
+      "notes": "Input: HP (after Level 2 Super (MP/HP) connects); After Marvelous or Headliner Sunrise Festival connects",
+      "frames": [
+        {
+          "startup": 1,
+          "recovery": 180,
+          "onHit": "HKD +24(+18)",
+          "onPC": "HKD +24(+18)",
+          "damage": "2800(3000)"
+        }
+      ]
     },
     {
       "name": "Encore Beat",
       "tokens": [],
       "section": "Super Arts",
-      "notes": "Input: HK (after Level 2 Super (MP/HP) connects); After Marvelous or Headliner Sunrise Festival connects"
+      "notes": "Input: HK (after Level 2 Super (MP/HP) connects); After Marvelous or Headliner Sunrise Festival connects",
+      "frames": [
+        {
+          "startup": 1,
+          "recovery": 150,
+          "onHit": "HKD +34(+37)",
+          "onPC": "HKD +34(+37)",
+          "damage": "2800(3000)"
+        }
+      ]
     },
     {
       "name": "Weekend Pleasure",
@@ -272,7 +601,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 48,
+          "onBlock": -28,
+          "onHit": "HKD +26",
+          "onPC": "HKD +26",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Sunrise Heel",
@@ -282,7 +622,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "19(21)",
+          "active": 5,
+          "recovery": 16,
+          "onBlock": "1(2)",
+          "onHit": "5(6)",
+          "onPC": "9(10)",
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Face Breaker",
@@ -292,7 +643,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": "2*4",
+          "recovery": 20,
+          "onBlock": -5,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": "800 (500*300)"
+        }
+      ]
     },
     {
       "name": "Knee Shot",
@@ -304,7 +666,18 @@
         "lk"
       ],
       "section": "Target combos",
-      "notes": "During a forward jump"
+      "notes": "During a forward jump",
+      "frames": [
+        {
+          "startup": 6,
+          "active": "until land",
+          "recovery": 3,
+          "onBlock": "2(8)",
+          "onHit": "5(11)",
+          "onPC": "9(15)",
+          "damage": 300
+        }
+      ]
     },
     {
       "name": "Party in the Air",
@@ -318,7 +691,16 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": "During a jump"
+      "notes": "During a jump",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 7,
+          "onHit": "KD",
+          "onPC": "KD",
+          "damage": "1400 (700*700)"
+        }
+      ]
     },
     {
       "name": "Threebeat Combo 1",
@@ -328,7 +710,18 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": "-3(-22)",
+          "onHit": "2(-17)",
+          "onPC": "6(-17)",
+          "damage": 400
+        }
+      ]
     },
     {
       "name": "Threebeat Combo 2",
@@ -340,7 +733,18 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -8,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 625
+        }
+      ]
     },
     {
       "name": "Funky Dance 1",
@@ -350,7 +754,18 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": "17(19)",
+          "onBlock": -2,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Funky Dance 2",
@@ -362,7 +777,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -8,
+          "onHit": "KD +43",
+          "onPC": "KD +43",
+          "damage": 1125
+        }
+      ]
     },
     {
       "name": "Funky Dance Feint",
@@ -376,7 +802,16 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 22,
+          "onBlock": -5,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Dee Jay Special 1",
@@ -386,7 +821,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 7,
+          "recovery": 24,
+          "onBlock": "-11(-7)",
+          "onHit": "-2(2)",
+          "onPC": 2,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Dee Jay Special 2",
@@ -398,7 +844,375 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 3,
+          "recovery": 30,
+          "onBlock": -13,
+          "onHit": "KD +34",
+          "onPC": "KD +34",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 6,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 13,
+          "onBlock": 2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "recovery": 18,
+          "onBlock": "-4(1)",
+          "onHit": "3(8)",
+          "onPC": "7(12)",
+          "damage": "800(700)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": -2,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": "22(26)",
+          "onBlock": -5,
+          "onHit": 1,
+          "onPC": 18,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "recovery": "14(15)",
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 20,
+          "onBlock": -2,
+          "onHit": 6,
+          "onPC": 12,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 10,
+          "onBlock": -2,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 19,
+          "onBlock": -6,
+          "onHit": "KD +29",
+          "onPC": "HKD +29",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 10,
+          "recovery": 15,
+          "onBlock": "-11(-2)",
+          "onHit": "HKD +33(42)",
+          "onPC": "HKD +52(61)",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 7,
+          "onBlock": "0~5",
+          "onHit": "4~9",
+          "onPC": "8~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "onBlock": "6~7",
+          "onHit": "10~11 (KD)",
+          "onPC": "14~15 (KD)",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "onBlock": "4~11",
+          "onHit": "8~15 (KD)",
+          "onPC": "12~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 6,
+          "onBlock": "2~5",
+          "onHit": "6~9",
+          "onPC": "10~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 6,
+          "onBlock": "5~9",
+          "onHit": "9~13",
+          "onPC": "13~17",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Diss Track",
@@ -408,7 +1222,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +34",
+          "onPC": "HKD +34",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Flip Throw",
@@ -420,7 +1244,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +22",
+          "onPC": "HKD +22",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Wild Beat",
@@ -430,7 +1264,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Leg Scratch",
@@ -442,7 +1287,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -452,7 +1308,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -462,7 +1325,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

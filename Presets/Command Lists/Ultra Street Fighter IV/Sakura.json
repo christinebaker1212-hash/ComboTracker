@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Ultra Street Fighter IV",
   "character": "Sakura",
-  "slot_count": 12,
+  "slot_count": 42,
   "slots": [
     {
       "name": "Hadoken (Lv1)",
@@ -14,7 +14,24 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 236PP"
+      "notes": "EX: 236PP",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 71,
+          "recovery": 48,
+          "onBlock": -7,
+          "onHit": -3,
+          "damage": "60[40*60]"
+        },
+        {
+          "label": "EX",
+          "startup": 15,
+          "recovery": 44,
+          "onBlock": -4,
+          "damage": "60*60"
+        }
+      ]
     },
     {
       "name": "Hadoken (Lv2)",
@@ -26,7 +43,24 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "partial hold; EX: 236PP"
+      "notes": "partial hold; EX: 236PP",
+      "frames": [
+        {
+          "startup": 27,
+          "active": 71,
+          "recovery": 56,
+          "onBlock": -3,
+          "onHit": 1,
+          "damage": "80[50*70]"
+        },
+        {
+          "label": "EX",
+          "startup": 27,
+          "recovery": 60,
+          "onBlock": -4,
+          "damage": "60*70"
+        }
+      ]
     },
     {
       "name": "Hadoken (Lv3)",
@@ -38,7 +72,24 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "full hold; EX: 236PP"
+      "notes": "full hold; EX: 236PP",
+      "frames": [
+        {
+          "startup": 39,
+          "active": 44,
+          "recovery": 64,
+          "onBlock": 1,
+          "onHit": 5,
+          "damage": "120[60*80]"
+        },
+        {
+          "label": "EX",
+          "startup": 39,
+          "recovery": 72,
+          "onBlock": -4,
+          "damage": "60*80"
+        }
+      ]
     },
     {
       "name": "Shouoken",
@@ -50,7 +101,38 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 623PP"
+      "notes": "EX: 623PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 6,
+          "active": "2*4",
+          "onBlock": -12,
+          "damage": "90*15"
+        },
+        {
+          "label": "MP",
+          "startup": 7,
+          "active": "2x3*8",
+          "onBlock": -20,
+          "damage": "90*15x3"
+        },
+        {
+          "label": "HP",
+          "startup": 12,
+          "active": "2x5*10",
+          "onBlock": -20,
+          "damage": "80*15x5"
+        },
+        {
+          "label": "EX",
+          "startup": 12,
+          "active": "6(19)19",
+          "recovery": 33,
+          "onBlock": -20,
+          "damage": "45*15+45*15x5"
+        }
+      ]
     },
     {
       "name": "Shunpukyaku",
@@ -62,7 +144,40 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 214KK"
+      "notes": "EX: 214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 16,
+          "active": 6,
+          "onBlock": 0,
+          "onHit": 4,
+          "damage": 60
+        },
+        {
+          "label": "MK",
+          "startup": 17,
+          "active": "3(8)6",
+          "onBlock": -3,
+          "onHit": 1,
+          "damage": "60*60"
+        },
+        {
+          "label": "HK",
+          "startup": 12,
+          "active": "3(6)3(7)2",
+          "onBlock": -2,
+          "onHit": 2,
+          "damage": "60x3"
+        },
+        {
+          "label": "EX",
+          "startup": 12,
+          "active": "11 Total",
+          "onBlock": 2,
+          "damage": "30x3*35"
+        }
+      ]
     },
     {
       "name": "Air Shunpukyaku",
@@ -74,7 +189,20 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 214KK"
+      "notes": "EX: 214KK",
+      "frames": [
+        {
+          "startup": 8,
+          "active": "3(9)3",
+          "damage": 50
+        },
+        {
+          "label": "EX",
+          "startup": 8,
+          "active": "(9)3",
+          "damage": 70
+        }
+      ]
     },
     {
       "name": "Sakura Otoshi",
@@ -86,13 +214,37 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 623KK"
+      "notes": "EX: 623KK",
+      "frames": [
+        {
+          "recovery": "36 land"
+        },
+        {
+          "label": "EX",
+          "recovery": 77
+        }
+      ]
     },
     {
       "name": "Sakura Otoshi (Attack)",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: 623K > P~P~P; EX: 623KK > P~P~P"
+      "notes": "Input: 623K > P~P~P; EX: 623KK > P~P~P",
+      "frames": [
+        {
+          "startup": 18,
+          "active": 3,
+          "recovery": "16 land",
+          "damage": "50*50*60"
+        },
+        {
+          "label": "EX",
+          "startup": 20,
+          "active": 3,
+          "recovery": "16 land",
+          "damage": "60x3"
+        }
+      ]
     },
     {
       "name": "Haru Ichiban",
@@ -107,7 +259,16 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 11,
+          "recovery": 24,
+          "onBlock": -7,
+          "damage": "45x6*80"
+        }
+      ]
     },
     {
       "name": "Flower Kick",
@@ -117,7 +278,556 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 2,
+          "recovery": 15,
+          "onBlock": -3,
+          "onHit": 2,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Close LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 5,
+          "onBlock": 4,
+          "onHit": 7,
+          "damage": 25
+        }
+      ]
+    },
+    {
+      "name": "Close MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 3,
+          "onHit": 6,
+          "damage": 65
+        }
+      ]
+    },
+    {
+      "name": "Close HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 4,
+          "recovery": 20,
+          "onBlock": -6,
+          "onHit": -1,
+          "damage": "90[80]"
+        }
+      ]
+    },
+    {
+      "name": "Close LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 25
+        }
+      ]
+    },
+    {
+      "name": "Close MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -4,
+          "onHit": -1,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Close HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -6,
+          "onHit": -1,
+          "damage": "120[100]"
+        }
+      ]
+    },
+    {
+      "name": "Far LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 5,
+          "onBlock": 4,
+          "onHit": 7,
+          "damage": 25
+        }
+      ]
+    },
+    {
+      "name": "Far MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": -1,
+          "onHit": 2,
+          "damage": 75
+        }
+      ]
+    },
+    {
+      "name": "Far HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": -2,
+          "onHit": 2,
+          "damage": 110
+        }
+      ]
+    },
+    {
+      "name": "Far LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Far MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": 0,
+          "onHit": 3,
+          "damage": 75
+        }
+      ]
+    },
+    {
+      "name": "Far HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": 0,
+          "onHit": 4,
+          "damage": 110
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 6,
+          "onBlock": 3,
+          "onHit": 6,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 11,
+          "onBlock": 0,
+          "onHit": 3,
+          "damage": 65
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "recovery": 23,
+          "onBlock": -10,
+          "onHit": -5,
+          "damage": "90[80]"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": 0,
+          "onHit": 3,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "recovery": 13,
+          "onBlock": -3,
+          "onHit": 0,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -7,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "upleft",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 7,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "upleft",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "upleft",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 5,
+          "damage": 100
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "upleft",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "upleft",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "upleft",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 5,
+          "damage": 100
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 7,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 6,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 5,
+          "damage": 100
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 8,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 6,
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Sailor Shot",
@@ -127,7 +837,15 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 20,
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "Choba Throw",
@@ -139,7 +857,15 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 20,
+          "damage": 135
+        }
+      ]
     }
   ]
 }

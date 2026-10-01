@@ -2,13 +2,18 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Vega",
-  "slot_count": 18,
+  "slot_count": 46,
   "slots": [
     {
       "name": "Wall Jump",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: 9 during jump near wall"
+      "notes": "Input: 9 during jump near wall",
+      "frames": [
+        {
+          "startup": 9
+        }
+      ]
     },
     {
       "name": "Bloody Garden",
@@ -19,7 +24,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9
+        }
+      ]
     },
     {
       "name": "Flying Barcelona Movement",
@@ -31,7 +41,27 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 623KK or 421KK"
+      "notes": "EX: 623KK or 421KK",
+      "frames": [
+        {
+          "label": "LK",
+          "recovery": 31
+        },
+        {
+          "label": "MK",
+          "recovery": 31
+        },
+        {
+          "label": "HK",
+          "recovery": 31
+        },
+        {
+          "label": "EX",
+          "startup": 9,
+          "recovery": 31,
+          "damage": 40
+        }
+      ]
     },
     {
       "name": "Flying Barcelona Attack (no claw)",
@@ -45,7 +75,26 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "no claw; EX: 623KK > P"
+      "notes": "no claw; EX: 623KK > P",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 6,
+          "recovery": "31(9)",
+          "onBlock": "1(3)",
+          "onHit": "7(9)",
+          "damage": 80
+        },
+        {
+          "label": "EX",
+          "startup": 9,
+          "active": 5,
+          "recovery": "31(9)",
+          "onBlock": "1(6)",
+          "onHit": "10(15)",
+          "damage": "30*30*60 (120)"
+        }
+      ]
     },
     {
       "name": "Flying Barcelona Attack (claw)",
@@ -59,7 +108,26 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "claw; EX: 623KK > p"
+      "notes": "claw; EX: 623KK > p",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 6,
+          "recovery": "31(9)",
+          "onBlock": "3(6)",
+          "onHit": "KD",
+          "damage": 120
+        },
+        {
+          "label": "EX",
+          "startup": 9,
+          "active": 5,
+          "recovery": "31(9)",
+          "onBlock": "1(6)",
+          "onHit": "KD",
+          "damage": "30*30*60 (120)"
+        }
+      ]
     },
     {
       "name": "Izuna Drop",
@@ -75,7 +143,27 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": "EX: 623KK > LPLK"
+      "notes": "EX: 623KK > LPLK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 4,
+          "active": 2,
+          "recovery": 31,
+          "onBlock": "KD",
+          "onHit": "KD",
+          "damage": 150
+        },
+        {
+          "label": "EX",
+          "startup": 4,
+          "active": 2,
+          "recovery": 31,
+          "onBlock": "KD",
+          "onHit": "KD",
+          "damage": 160
+        }
+      ]
     },
     {
       "name": "Grand Izuna Drop",
@@ -89,7 +177,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "no claw; EX: 63214PP"
+      "notes": "no claw; EX: 63214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "50*80 (130)"
+        },
+        {
+          "label": "MP",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "50*90 (140)"
+        },
+        {
+          "label": "HP",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "50*100 (150)"
+        },
+        {
+          "label": "EX",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "80*100 (180)"
+        }
+      ]
     },
     {
       "name": "Crimson Terror",
@@ -101,7 +223,45 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 236KK"
+      "notes": "EX: 236KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 8,
+          "active": "3(16)5",
+          "recovery": 12,
+          "onBlock": -6,
+          "onHit": 2,
+          "damage": "20*60 (80)"
+        },
+        {
+          "label": "MK",
+          "startup": 17,
+          "active": "2(10)2(20)5",
+          "recovery": 14,
+          "onBlock": -7,
+          "onHit": 2,
+          "damage": "20*20*60 (100)"
+        },
+        {
+          "label": "HK",
+          "startup": 19,
+          "active": "4(12)3(10)3(22)5",
+          "recovery": 16,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "20x3*60 (120)"
+        },
+        {
+          "label": "EX",
+          "startup": 16,
+          "active": "6(21)5",
+          "recovery": "2+8",
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "20x4 (80)"
+        }
+      ]
     },
     {
       "name": "Aurora Spin Edge",
@@ -113,7 +273,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 214PP"
+      "notes": "EX: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 12,
+          "active": 6,
+          "recovery": 20,
+          "onBlock": -7,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "MP",
+          "startup": 15,
+          "active": 6,
+          "recovery": 18,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "HP",
+          "startup": 12,
+          "active": 6,
+          "recovery": 18,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "EX",
+          "startup": 12,
+          "active": "7(12)4",
+          "recovery": 21,
+          "onBlock": -3,
+          "onHit": "KD",
+          "damage": "50*100 (150)"
+        }
+      ]
     },
     {
       "name": "Sky High Claw",
@@ -124,7 +322,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 28PPP"
+      "notes": "EX: 28PPP",
+      "frames": [
+        {
+          "label": "PP",
+          "startup": 11,
+          "recovery": "18-22+14",
+          "onBlock": "-17(-21)",
+          "onHit": "KD",
+          "damage": "100 (80)"
+        },
+        {
+          "label": "EX",
+          "startup": 13,
+          "recovery": "15-19+12",
+          "onBlock": "-11(-15)",
+          "onHit": "KD",
+          "damage": "120 (100)"
+        }
+      ]
     },
     {
       "name": "Switch Claw",
@@ -136,7 +352,12 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 23
+        }
+      ]
     },
     {
       "name": "Bloody Rain",
@@ -151,7 +372,16 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "recovery": 40,
+          "onBlock": -25,
+          "onHit": "KD",
+          "damage": "20*60*15x13*55 (330)"
+        }
+      ]
     },
     {
       "name": "Buster Claw (claw)",
@@ -161,7 +391,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": "claw"
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -14,
+          "onHit": -3,
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Reverse Claw (claw)",
@@ -171,7 +411,17 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": "claw"
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": "8+10",
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -10,
+          "onHit": "KD",
+          "damage": "80*54 (134)"
+        }
+      ]
     },
     {
       "name": "Matador Blitz (no claw)",
@@ -181,7 +431,532 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": "no claw"
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": "7+9",
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": "KD",
+          "damage": "60*54 (114)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP (no claw)",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 6,
+          "onBlock": 3,
+          "onHit": 6,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP (no claw)",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP (no claw)",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 2,
+          "recovery": 21,
+          "onBlock": -1,
+          "onHit": 4,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Stand LP (claw)",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 1,
+          "onHit": 7,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP (claw)",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 14,
+          "onBlock": 2,
+          "onHit": 6,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Stand HP (claw)",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 21,
+          "onBlock": -2,
+          "onHit": 7,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -1,
+          "onHit": 4,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP (no claw)",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 6,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP (no claw)",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 14,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP (no claw)",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "recovery": 15,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP (claw)",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 6,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP (claw)",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 15,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP (claw)",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 0,
+          "onHit": 4,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 16,
+          "onBlock": 2,
+          "onHit": 7,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 9,
+          "recovery": 18,
+          "onBlock": "-13(-5)",
+          "onHit": "KD",
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Jump LP (no claw)",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 5,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP (no claw)",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HP (no claw)",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "no claw",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LP (claw)",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP (claw)",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 5,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HP (claw)",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "claw",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 7,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Mercury Shard",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -7,
+          "onHit": 0,
+          "damage": 60
+        }
+      ]
     },
     {
       "name": "Rainbow Suplex",
@@ -191,7 +966,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     },
     {
       "name": "Crescent Line",
@@ -203,7 +987,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 150
+        }
+      ]
     },
     {
       "name": "Stardust Shot",
@@ -213,7 +1006,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 6,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     }
   ]
 }

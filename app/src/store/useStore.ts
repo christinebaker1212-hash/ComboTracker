@@ -84,6 +84,8 @@ export interface Settings {
   tips: boolean
   /** Keys that stand in for controller buttons (keyboard players, leverless in keyboard mode). */
   keyboard: KeyboardSettings
+  /** Show a combo's frame data (from the move list) under it on the overlay. */
+  overlayFrames: boolean
   /** Stream links: a local server OBS can load the overlay, viewer and history from (desktop). */
   obs: { enabled: boolean; port: number }
 }
@@ -98,6 +100,7 @@ export const DEFAULT_SETTINGS: Settings = {
   tips: true,
   keyboard: DEFAULT_KEYBOARD,
   obs: { enabled: false, port: 7777 },
+  overlayFrames: false,
 }
 
 const STORAGE_KEY = 'combotracker:v1'

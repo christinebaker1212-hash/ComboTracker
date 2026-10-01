@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "JP",
-  "slot_count": 27,
+  "slot_count": 45,
   "slots": [
     {
       "name": "Triglav",
@@ -13,7 +13,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 22PP"
+      "notes": "OD: 22PP",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 10,
+          "recovery": 34,
+          "onBlock": -2,
+          "onHit": "KD +44",
+          "onPC": "KD +48",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": 20,
+          "active": "10*10",
+          "recovery": 33,
+          "onBlock": 3,
+          "onHit": "KD +53(50)",
+          "onPC": "KD +57(50)",
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Stribog",
@@ -25,7 +46,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP"
+      "notes": "OD: 236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 16,
+          "active": "3*3",
+          "recovery": 28,
+          "onBlock": -10,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": "1000 (300*700)"
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": "3(1)3",
+          "recovery": 27,
+          "onBlock": -8,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": "1200 (400*800)"
+        },
+        {
+          "label": "HP",
+          "startup": 28,
+          "active": "3(9)3",
+          "recovery": 19,
+          "onBlock": 4,
+          "onHit": "KD +67(87)",
+          "onPC": "KD +67(87)",
+          "damage": "800 (300*500)"
+        },
+        {
+          "label": "OD",
+          "startup": 19,
+          "active": "3(6)3",
+          "recovery": 22,
+          "onBlock": 2,
+          "onHit": "KD +56(72)",
+          "onPC": "KD +56(72)",
+          "damage": "1000 (600*400)"
+        }
+      ]
     },
     {
       "name": "Departure",
@@ -37,7 +100,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP"
+      "notes": "OD: 214PP",
+      "frames": [
+        {
+          "startup": 150,
+          "active": 10,
+          "recovery": 50,
+          "onBlock": "~(31)",
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": "110*140",
+          "active": "10(20)10",
+          "recovery": 40,
+          "onBlock": "~(31)",
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Departure: Window",
@@ -55,7 +139,14 @@
         "lp"
       ],
       "section": "Special moves",
-      "notes": "While Departure is active"
+      "notes": "While Departure is active",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 20,
+          "recovery": "16+3"
+        }
+      ]
     },
     {
       "name": "Departure: Shadow",
@@ -73,7 +164,29 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP > 214HP; While Departure is active"
+      "notes": "OD: 214PP > 214HP; While Departure is active",
+      "frames": [
+        {
+          "label": "HP",
+          "startup": "19(21)",
+          "active": 10,
+          "recovery": 21,
+          "onBlock": "9(11)",
+          "onHit": "KD +58(60)",
+          "onPC": "KD +58(60)",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": "19(21)",
+          "active": "10(20)10",
+          "recovery": 21,
+          "onBlock": "39(41)",
+          "onHit": "KD +92(98)",
+          "onPC": "KD +92(98)",
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Torbalan",
@@ -85,7 +198,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK; Hold the button to feint; Also: Feint"
+      "notes": "OD: 236KK; Hold the button to feint; Also: Feint",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 14,
+          "active": 6,
+          "recovery": 36,
+          "onBlock": -6,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": 800
+        },
+        {
+          "label": "MK",
+          "startup": 14,
+          "active": 6,
+          "recovery": 36,
+          "onBlock": -8,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 1000
+        },
+        {
+          "label": "HK",
+          "startup": 14,
+          "active": 6,
+          "recovery": 36,
+          "onBlock": -8,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": 14,
+          "active": "6(14)6",
+          "recovery": 36,
+          "onBlock": 25,
+          "onHit": "KD +66",
+          "onPC": "KD +66",
+          "damage": "800 (400*400)"
+        }
+      ]
     },
     {
       "name": "Embrace",
@@ -97,7 +252,26 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK"
+      "notes": "OD: 214KK",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 3,
+          "recovery": 44,
+          "onHit": "HKD +18",
+          "onPC": "HKD +18",
+          "damage": 1800
+        },
+        {
+          "label": "OD",
+          "startup": 26,
+          "active": 3,
+          "recovery": 44,
+          "onHit": "HKD +18",
+          "onPC": "HKD +18",
+          "damage": 2600
+        }
+      ]
     },
     {
       "name": "Amnesia",
@@ -108,7 +282,22 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 22KK"
+      "notes": "OD: 22KK",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 18,
+          "recovery": "35(18~20)",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": 1,
+          "active": 20,
+          "recovery": "35(17~20)",
+          "damage": "1200 (600*600)"
+        }
+      ]
     },
     {
       "name": "Amnesia: Bomb",
@@ -119,7 +308,24 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "bomb; OD: 22KK"
+      "notes": "bomb; OD: 22KK",
+      "frames": [
+        {
+          "startup": 59,
+          "active": 10,
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": 59,
+          "active": "10(32)10",
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": "1200 (600*600)"
+        }
+      ]
     },
     {
       "name": "Chornobog",
@@ -134,7 +340,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": "14*~",
+          "recovery": 62,
+          "onBlock": "-33(-23)",
+          "onHit": "KD +22(32)",
+          "onPC": "KD +22(32)",
+          "damage": "2000 (400*1600)"
+        }
+      ]
     },
     {
       "name": "Lovushka",
@@ -149,7 +366,15 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "recovery": 12,
+          "onBlock": "~(20)",
+          "damage": "2000 (500x4)"
+        }
+      ]
     },
     {
       "name": "Interdiction",
@@ -164,7 +389,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 18,
+          "active": 6,
+          "recovery": 62,
+          "onBlock": -50,
+          "onHit": "HKD +23",
+          "onPC": "HKD +23",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Guillotinna",
@@ -174,7 +410,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 2,
+          "recovery": 19,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Malice",
@@ -184,7 +431,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 3,
+          "recovery": 31,
+          "onBlock": -14,
+          "onHit": "HKD +17",
+          "onPC": "HKD +39",
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Bylina",
@@ -194,7 +452,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": "2*4",
+          "recovery": 24,
+          "onBlock": "-5(-8)",
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": "900 (300*600)"
+        }
+      ]
     },
     {
       "name": "Grom Strelka First",
@@ -204,7 +473,18 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Grom Strelka",
@@ -216,7 +496,18 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -6,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Zilant",
@@ -226,7 +517,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Zilant Mid",
@@ -238,7 +540,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 21,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -4,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Zilant Low",
@@ -250,7 +563,378 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 21,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -4,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 1000
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -2,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -6,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 22,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 25,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 11,
+          "onBlock": -2,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 4,
+          "recovery": 17,
+          "onBlock": 2,
+          "onHit": 7,
+          "onPC": 11,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "recovery": 14,
+          "onBlock": -2,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "recovery": 20,
+          "onBlock": -6,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 10,
+          "onBlock": -2,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -6,
+          "onHit": "KD +27",
+          "onPC": "HKD +48",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 10,
+          "onBlock": "4~5",
+          "onHit": "8~9",
+          "onPC": "12~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "onBlock": "8~9",
+          "onHit": "12~13",
+          "onPC": "16~17",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "onBlock": "5~11",
+          "onHit": "9~15 (KD)",
+          "onPC": "13~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 8,
+          "onBlock": "1~7",
+          "onHit": "4~10",
+          "onPC": "8~14",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 6,
+          "onBlock": "5~9",
+          "onHit": "9~13 (KD)",
+          "onPC": "13~17 (KD)",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 6,
+          "onBlock": "5~11",
+          "onHit": "9~15",
+          "onPC": "13~19",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Ravina",
@@ -260,7 +944,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +23",
+          "onPC": "HKD +23",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Uragan",
@@ -272,7 +966,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +36",
+          "onPC": "HKD +36",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Tornado",
@@ -282,7 +986,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "onHit": "KD +32",
+          "onPC": "HKD +32",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Espada",
@@ -292,7 +1005,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Exilio",
@@ -304,7 +1028,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -314,7 +1049,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -324,7 +1066,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

@@ -2,13 +2,22 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "G",
-  "slot_count": 34,
+  "slot_count": 52,
   "slots": [
     {
       "name": "Neutral Attack",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: 5"
+      "notes": "Input: 5",
+      "frames": [
+        {
+          "startup": 3867,
+          "active": 15,
+          "onBlock": 16,
+          "onHit": "KD",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Message To The People (Speech 1)",
@@ -21,7 +30,12 @@
         "mk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": "69(1660)"
+        }
+      ]
     },
     {
       "name": "Message To The People (Speech 2)",
@@ -34,7 +48,12 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": "69(1760)"
+        }
+      ]
     },
     {
       "name": "Message To The People (Speech 3)",
@@ -47,7 +66,12 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": "69(1720)"
+        }
+      ]
     },
     {
       "name": "G Charge",
@@ -58,7 +82,12 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Also: Hold"
+      "notes": "Also: Hold",
+      "frames": [
+        {
+          "recovery": 64
+        }
+      ]
     },
     {
       "name": "G Charge (Cancel)",
@@ -66,7 +95,12 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Cancel"
+      "notes": "Cancel",
+      "frames": [
+        {
+          "recovery": 69
+        }
+      ]
     },
     {
       "name": "G Smash Over (Level 1)",
@@ -78,7 +112,36 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Level 1"
+      "notes": "Level 1",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 16,
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "HP",
+          "startup": "22(25)",
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "G Smash Over (Level 2)",
@@ -90,7 +153,36 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Level 2"
+      "notes": "Level 2",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 16,
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 120
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 120
+        },
+        {
+          "label": "HP",
+          "startup": "22(25)",
+          "active": 5,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "G Smash Over (Level 3)",
@@ -102,7 +194,17 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "Level 3"
+      "notes": "Level 3",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 5,
+          "recovery": 22,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        }
+      ]
     },
     {
       "name": "G Smash Over",
@@ -114,7 +216,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 623PP"
+      "notes": "EX: 623PP",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 5,
+          "recovery": 22,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        },
+        {
+          "startup": 13,
+          "active": 5,
+          "recovery": 22,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        }
+      ]
     },
     {
       "name": "G Smash Under (Level 1)",
@@ -126,7 +246,36 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 1"
+      "notes": "Level 1",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 13,
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": 80
+        },
+        {
+          "label": "MK",
+          "startup": 16,
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": 80
+        },
+        {
+          "label": "HK",
+          "startup": "20(23)",
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "G Smash Under (Level 2)",
@@ -138,7 +287,36 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 2"
+      "notes": "Level 2",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 13,
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "MK",
+          "startup": 16,
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "HK",
+          "startup": "20(23)",
+          "active": 5,
+          "recovery": 25,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "G Smash Under (Level 3)",
@@ -150,7 +328,17 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": "Level 3"
+      "notes": "Level 3",
+      "frames": [
+        {
+          "startup": "13(18)",
+          "active": 5,
+          "recovery": 22,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "50*60 (110)"
+        }
+      ]
     },
     {
       "name": "G Smash Under",
@@ -162,7 +350,25 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 623KK"
+      "notes": "EX: 623KK",
+      "frames": [
+        {
+          "startup": "13(18)",
+          "active": 5,
+          "recovery": 22,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "50*60 (110)"
+        },
+        {
+          "startup": "13(18)",
+          "active": 5,
+          "recovery": 22,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "50*60 (110)"
+        }
+      ]
     },
     {
       "name": "G Burst (Level 1)",
@@ -174,7 +380,36 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Level 1"
+      "notes": "Level 1",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 15,
+          "active": 11,
+          "recovery": 34,
+          "onBlock": -11,
+          "onHit": -6,
+          "damage": 50
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 11,
+          "recovery": 29,
+          "onBlock": -6,
+          "onHit": -1,
+          "damage": 50
+        },
+        {
+          "label": "HP",
+          "startup": 25,
+          "active": 11,
+          "recovery": 27,
+          "onBlock": -4,
+          "onHit": 1,
+          "damage": 50
+        }
+      ]
     },
     {
       "name": "G Burst (Level 2)",
@@ -186,7 +421,36 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Level 2"
+      "notes": "Level 2",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 15,
+          "active": 11,
+          "recovery": 34,
+          "onBlock": -8,
+          "onHit": -3,
+          "damage": "40*40 (80)"
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 11,
+          "recovery": 29,
+          "onBlock": -3,
+          "onHit": 2,
+          "damage": "40*40 (80)"
+        },
+        {
+          "label": "HP",
+          "startup": 25,
+          "active": 11,
+          "recovery": 27,
+          "onBlock": -1,
+          "onHit": 4,
+          "damage": "40*40 (80)"
+        }
+      ]
     },
     {
       "name": "G Burst (Level 3)",
@@ -198,7 +462,17 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Level 3"
+      "notes": "Level 3",
+      "frames": [
+        {
+          "startup": 15,
+          "active": "13*16",
+          "recovery": 49,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        }
+      ]
     },
     {
       "name": "G Burst",
@@ -210,7 +484,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 236PP"
+      "notes": "EX: 236PP",
+      "frames": [
+        {
+          "startup": 15,
+          "active": "13*16",
+          "recovery": 49,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        },
+        {
+          "startup": 15,
+          "active": "13*16",
+          "recovery": 49,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        }
+      ]
     },
     {
       "name": "G Spin Kick (Level 1)",
@@ -222,7 +514,36 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 1"
+      "notes": "Level 1",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": "20(25)",
+          "active": 7,
+          "recovery": "4+16",
+          "onBlock": -5,
+          "onHit": 3,
+          "damage": 70
+        },
+        {
+          "label": "MK",
+          "startup": "25(30)",
+          "active": 7,
+          "recovery": "4+18",
+          "onBlock": -5,
+          "onHit": 3,
+          "damage": 70
+        },
+        {
+          "label": "HK",
+          "startup": "28(33)",
+          "active": 7,
+          "recovery": "3+19",
+          "onBlock": -5,
+          "onHit": 3,
+          "damage": 70
+        }
+      ]
     },
     {
       "name": "G Spin Kick (Level 2)",
@@ -234,7 +555,36 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 2"
+      "notes": "Level 2",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": "17(25)",
+          "active": "2(1)7",
+          "recovery": "3+16",
+          "onBlock": -5,
+          "onHit": 5,
+          "damage": "50*50"
+        },
+        {
+          "label": "MK",
+          "startup": "22(30)",
+          "active": "2(1)7",
+          "recovery": "3+19",
+          "onBlock": -5,
+          "onHit": 5,
+          "damage": "50*51"
+        },
+        {
+          "label": "HK",
+          "startup": "25(33)",
+          "active": "2(1)7",
+          "recovery": "3+19",
+          "onBlock": -5,
+          "onHit": 5,
+          "damage": "50*52"
+        }
+      ]
     },
     {
       "name": "G Spin Kick (Level 3)",
@@ -246,7 +596,17 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 3"
+      "notes": "Level 3",
+      "frames": [
+        {
+          "startup": "20(25)",
+          "active": 7,
+          "recovery": "4+18",
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "30x2*50 (110)"
+        }
+      ]
     },
     {
       "name": "G Spin Kick",
@@ -258,7 +618,25 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 236KK"
+      "notes": "EX: 236KK",
+      "frames": [
+        {
+          "startup": "20(25)",
+          "active": 7,
+          "recovery": "4+18",
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "30x2*50 (110)"
+        },
+        {
+          "startup": "20(25)",
+          "active": 7,
+          "recovery": "4+18",
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "30x2*50 (110)"
+        }
+      ]
     },
     {
       "name": "G Impact (Level 1)",
@@ -272,7 +650,16 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 1"
+      "notes": "Level 1",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 60
+        }
+      ]
     },
     {
       "name": "G Impact (Level 2)",
@@ -286,7 +673,16 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 2"
+      "notes": "Level 2",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "30*40"
+        }
+      ]
     },
     {
       "name": "G Impact (Level 3)",
@@ -300,7 +696,16 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Level 3"
+      "notes": "Level 3",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "20*30x2 (80)"
+        }
+      ]
     },
     {
       "name": "G Impact",
@@ -314,7 +719,23 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 63214KK"
+      "notes": "EX: 63214KK",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "30*40x2 (110)"
+        },
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": "30*40x2 (110)"
+        }
+      ]
     },
     {
       "name": "Pangaea Burst",
@@ -329,7 +750,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": "13*13*13",
+          "recovery": 113,
+          "onBlock": "-24(-52)",
+          "onHit": "KD",
+          "damage": "50x5*80 (330)"
+        }
+      ]
     },
     {
       "name": "Wild President",
@@ -339,7 +770,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -4,
+          "onHit": 2,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Strong President",
@@ -349,7 +790,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "1*4",
+          "recovery": 23,
+          "onBlock": "-5(-6)",
+          "onHit": "KD",
+          "damage": "40*40 (80)"
+        }
+      ]
     },
     {
       "name": "Crash President",
@@ -359,7 +810,17 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 25,
+          "active": 2,
+          "recovery": 22,
+          "onBlock": -7,
+          "onHit": 1,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Flying President",
@@ -371,7 +832,345 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 7,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 3,
+          "onHit": 7,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 4,
+          "recovery": 21,
+          "onBlock": -3,
+          "onHit": 3,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": -2,
+          "onHit": 2,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "3(3)2",
+          "recovery": "23(25)",
+          "onBlock": -5,
+          "onHit": 2,
+          "damage": "50*40 (80)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 21,
+          "onBlock": -3,
+          "onHit": 1,
+          "damage": "90(80)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 14,
+          "onBlock": -2,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 2,
+          "recovery": 28,
+          "onBlock": -14,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 6,
+          "onHit": "KD",
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 7,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 6,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 5,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Violence President",
@@ -381,7 +1180,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     },
     {
       "name": "Destroy President",
@@ -393,7 +1201,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     },
     {
       "name": "Shining President",
@@ -403,7 +1220,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "on crouching"
+      "notes": "on crouching",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     }
   ]
 }

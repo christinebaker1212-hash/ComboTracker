@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Ingrid",
-  "slot_count": 33,
+  "slot_count": 56,
   "slots": [
     {
       "name": "Sun Shot",
@@ -14,7 +14,47 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP"
+      "notes": "OD: 236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 17,
+          "recovery": 32,
+          "onBlock": -6,
+          "onHit": -2,
+          "onPC": 2,
+          "damage": 700
+        },
+        {
+          "label": "MP",
+          "startup": 17,
+          "recovery": 32,
+          "onBlock": -6,
+          "onHit": -2,
+          "onPC": 2,
+          "damage": 700
+        },
+        {
+          "label": "HP",
+          "startup": 15,
+          "active": 59,
+          "recovery": "31(33)",
+          "onBlock": -5,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 700
+        },
+        {
+          "label": "OD",
+          "startup": "17(15)",
+          "active": "~(59)",
+          "recovery": "28(27~29)",
+          "onBlock": "1(2)",
+          "onHit": "KD +52(+53)",
+          "onPC": "KD +52(+53)",
+          "damage": "1000 (400*600)"
+        }
+      ]
     },
     {
       "name": "Sun Flare",
@@ -26,7 +66,33 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP"
+      "notes": "OD: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "recovery": "48~186 total"
+        },
+        {
+          "label": "MP",
+          "startup": 21,
+          "active": 6,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": 900
+        },
+        {
+          "label": "OD",
+          "startup": 18,
+          "active": 15,
+          "recovery": 14,
+          "onBlock": 4,
+          "onHit": "KD +68",
+          "onPC": "KD +68",
+          "damage": "1100 (800*300)"
+        }
+      ]
     },
     {
       "name": "Sun Flare (1 stock)",
@@ -38,7 +104,29 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "1 stock; OD: 214PP"
+      "notes": "1 stock; OD: 214PP",
+      "frames": [
+        {
+          "label": "HP",
+          "startup": 18,
+          "active": 15,
+          "recovery": 14,
+          "onBlock": 4,
+          "onHit": "KD +68",
+          "onPC": "KD +68",
+          "damage": "1100 (800*300)"
+        },
+        {
+          "label": "OD",
+          "startup": 18,
+          "active": 15,
+          "recovery": 14,
+          "onBlock": 5,
+          "onHit": "KD +76",
+          "onPC": "KD +76",
+          "damage": "1350 (450x3)"
+        }
+      ]
     },
     {
       "name": "Sun Flare (2 stock)",
@@ -50,7 +138,29 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "2 stock; OD: 214PP"
+      "notes": "2 stock; OD: 214PP",
+      "frames": [
+        {
+          "label": "HP",
+          "startup": 18,
+          "active": 15,
+          "recovery": 14,
+          "onBlock": 5,
+          "onHit": "KD +76",
+          "onPC": "KD +76",
+          "damage": "1350 (450x3)"
+        },
+        {
+          "label": "OD",
+          "startup": 18,
+          "active": 18,
+          "recovery": 11,
+          "onBlock": 9,
+          "onHit": "KD +87",
+          "onPC": "KD +87",
+          "damage": "1800 (450x4)"
+        }
+      ]
     },
     {
       "name": "Solar Burst",
@@ -62,7 +172,33 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "air; OD: 214PP"
+      "notes": "air; OD: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "recovery": "48 total"
+        },
+        {
+          "label": "MP",
+          "startup": 22,
+          "active": 8,
+          "recovery": "10 land",
+          "onBlock": "-5(3)",
+          "onHit": "KD +43(+51)",
+          "onPC": "KD +43(+51)",
+          "damage": 900
+        },
+        {
+          "label": "OD",
+          "startup": 22,
+          "active": 8,
+          "recovery": "10 land",
+          "onBlock": "-4(7)",
+          "onHit": "KD +44(+55)",
+          "onPC": "KD +44(+55)",
+          "damage": "1100 (800*300)"
+        }
+      ]
     },
     {
       "name": "Solar Burst (1 stock)",
@@ -74,7 +210,29 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "air 1 stock; OD: 214PP"
+      "notes": "air 1 stock; OD: 214PP",
+      "frames": [
+        {
+          "label": "HP",
+          "startup": 22,
+          "active": 8,
+          "recovery": "10 land",
+          "onBlock": "-4(7)",
+          "onHit": "KD +44(+55)",
+          "onPC": "KD +44(+55)",
+          "damage": "1100 (800*300)"
+        },
+        {
+          "label": "OD",
+          "startup": 22,
+          "active": 8,
+          "recovery": "8 land",
+          "onBlock": "-4(8)",
+          "onHit": "KD +59(+71)",
+          "onPC": "KD +59(+71)",
+          "damage": "1350 (450x3)"
+        }
+      ]
     },
     {
       "name": "Solar Burst (2 stock)",
@@ -86,7 +244,29 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "air 2 stock; OD: 214PP"
+      "notes": "air 2 stock; OD: 214PP",
+      "frames": [
+        {
+          "label": "HP",
+          "startup": 22,
+          "active": 8,
+          "recovery": "8 land",
+          "onBlock": "-3(8)",
+          "onHit": "KD +60(+71)",
+          "onPC": "KD +60(+71)",
+          "damage": "1350 (450x3)"
+        },
+        {
+          "label": "OD",
+          "startup": 22,
+          "active": 8,
+          "recovery": "5 land",
+          "onBlock": "4(15)",
+          "onHit": "KD +73(+84)",
+          "onPC": "KD +73(+84)",
+          "damage": "1800 (450x4)"
+        }
+      ]
     },
     {
       "name": "Sun Rise",
@@ -98,7 +278,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK"
+      "notes": "OD: 236KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 8,
+          "active": 10,
+          "recovery": "21+13",
+          "onBlock": -24,
+          "onHit": "KD +36",
+          "onPC": "KD +36",
+          "damage": "1000(800)"
+        },
+        {
+          "label": "MK",
+          "startup": 13,
+          "active": "5(17)10",
+          "recovery": "20+13",
+          "onBlock": -23,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": "1200 (500*700)"
+        },
+        {
+          "label": "HK",
+          "startup": 27,
+          "active": "3(4)2(14)4",
+          "recovery": "25+16",
+          "onBlock": -25,
+          "onHit": "KD +28",
+          "onPC": "KD +28",
+          "damage": "1300 (200x2*500*400)"
+        },
+        {
+          "label": "OD",
+          "startup": 14,
+          "active": "5(4)4(7)2",
+          "recovery": 21,
+          "onBlock": -3,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "1600 (200x2*500*700)"
+        }
+      ]
     },
     {
       "name": "Sun Veil",
@@ -109,7 +331,28 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 22KK"
+      "notes": "OD: 22KK",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 15,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": 1,
+          "active": 20,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD +52",
+          "onPC": "KD +52",
+          "damage": 1200
+        }
+      ]
     },
     {
       "name": "Vanishing Sun (forward)",
@@ -119,7 +362,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 36,
+          "active": 4,
+          "recovery": "7+11",
+          "onBlock": -3,
+          "onHit": "KD +44",
+          "onPC": "KD +44",
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Vanishing Sun (air)",
@@ -129,7 +383,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 43,
+          "active": 4,
+          "recovery": "2+11",
+          "onBlock": 2,
+          "onHit": "KD +48",
+          "onPC": "KD +48",
+          "damage": 1100
+        }
+      ]
     },
     {
       "name": "Vanishing Sun (backward)",
@@ -139,7 +404,13 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "recovery": 22
+        }
+      ]
     },
     {
       "name": "Sunburst Beam",
@@ -150,7 +421,18 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 61,
+          "active": 50,
+          "recovery": 25,
+          "onBlock": -14,
+          "onHit": "KD +48",
+          "onPC": "KD +48",
+          "damage": "5000 (300x15*500)"
+        }
+      ]
     },
     {
       "name": "Sunburst Blow",
@@ -165,7 +447,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 27,
+          "active": 7,
+          "recovery": 25,
+          "onBlock": -15,
+          "onHit": "KD +27",
+          "onPC": "KD +27",
+          "damage": "1800 (900*900)"
+        }
+      ]
     },
     {
       "name": "Shining Sun",
@@ -180,7 +473,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": "5(14)7(11)3",
+          "recovery": "45+34",
+          "onBlock": -99,
+          "onHit": "HKD +12/17/20",
+          "onPC": "HKD +12/17/20",
+          "damage": "1900~2700"
+        }
+      ]
     },
     {
       "name": "Order of the Sun",
@@ -195,7 +499,14 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "recovery": 12,
+          "damage": "1600~3400"
+        }
+      ]
     },
     {
       "name": "Cosmic Ray",
@@ -210,7 +521,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 3,
+          "recovery": 68,
+          "onBlock": -45,
+          "onHit": "HKD +30",
+          "onPC": "HKD +30",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Sun Octopus",
@@ -220,7 +542,17 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "6+0",
+          "active": 2,
+          "recovery": 101,
+          "onHit": "HKD +36",
+          "onPC": "HKD +36",
+          "damage": 3500
+        }
+      ]
     },
     {
       "name": "Monoid Super",
@@ -235,7 +567,18 @@
         "hp"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 46,
+          "active": 12,
+          "recovery": 32,
+          "onBlock": "-24(-13)",
+          "onHit": "KD -124(-652)",
+          "onPC": "KD -124(-652)",
+          "damage": 3000
+        }
+      ]
     },
     {
       "name": "Sun Bright",
@@ -245,7 +588,18 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 21,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Halo Flight",
@@ -255,7 +609,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 17,
+          "active": 3,
+          "recovery": "21(24)",
+          "onBlock": -4,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Glowing Touch 1",
@@ -265,7 +630,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -4,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Luminous Uppercut 1",
@@ -275,7 +651,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 5,
+          "recovery": 20,
+          "onBlock": -8,
+          "onHit": "KD +45",
+          "onPC": "KD +45",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Pretty Heel Kick",
@@ -285,7 +672,18 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -11,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Glowing Touch 2",
@@ -297,7 +695,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 6,
+          "recovery": 21,
+          "onBlock": -11,
+          "onHit": "KD +44",
+          "onPC": "KD +44",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Luminous Uppercut 2",
@@ -309,7 +718,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 23,
+          "active": 8,
+          "recovery": 16,
+          "onBlock": -10,
+          "onHit": "KD +43(+37)",
+          "onPC": "KD +43(+37)",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Satellite Leap",
@@ -323,7 +743,467 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": "3(2)4",
+          "onHit": "KD",
+          "onPC": "KD",
+          "damage": "1400 (800*300x2) {300x2}"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 5,
+          "recovery": 13,
+          "onBlock": 0,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 4,
+          "recovery": "19(20)",
+          "onBlock": -5,
+          "onHit": 3,
+          "onPC": 23,
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 11,
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "5(1)3",
+          "recovery": 19,
+          "onBlock": -2,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": "800 (400x2)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "recovery": "12(15)",
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -1,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 10,
+          "onBlock": -2,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -6,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 25,
+          "onBlock": -12,
+          "onHit": "KD +30",
+          "onPC": "HKD +45",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 10,
+          "onBlock": "2~5",
+          "onHit": "6~9",
+          "onPC": "10~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "onBlock": "6~7",
+          "onHit": "10~11 (KD)",
+          "onPC": "14~15 (KD)",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "onBlock": "4~11",
+          "onHit": "8~15",
+          "onPC": "12~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 10,
+          "onBlock": "1~6",
+          "onHit": "5~10",
+          "onPC": "9~14",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 6,
+          "onBlock": "5~9",
+          "onHit": "9~13",
+          "onPC": "13~17",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 7,
+          "onBlock": "6~11",
+          "onHit": "10~15 (KD)",
+          "onPC": "14~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Monoid Low Dive",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "Monoid",
+      "frames": [
+        {
+          "startup": 38,
+          "active": "3*3*3",
+          "recovery": 53,
+          "onBlock": -40,
+          "onHit": "KD +8",
+          "onPC": "KD +8",
+          "damage": "900 (300x3)"
+        }
+      ]
+    },
+    {
+      "name": "Monoid Overhead Hammer",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "Monoid",
+      "frames": [
+        {
+          "startup": 37,
+          "active": 2,
+          "recovery": 41,
+          "onBlock": -27,
+          "onHit": "KD +5",
+          "onPC": "KD +5",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Monoid Star Thrust",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "Monoid",
+      "frames": [
+        {
+          "startup": 30,
+          "active": 2,
+          "recovery": 28,
+          "onBlock": -14,
+          "onHit": "KD +31",
+          "onPC": "KD +31",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Monoid Beam",
+      "tokens": [],
+      "section": "Normal moves",
+      "notes": "Input: 5HP+5HK (Monoid)",
+      "frames": [
+        {
+          "startup": 32,
+          "active": 6,
+          "recovery": 31,
+          "onBlock": -13,
+          "onHit": "KD +37",
+          "onPC": "KD +37",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Monoid Aerial Strike",
+      "tokens": [],
+      "section": "Normal moves",
+      "notes": "Input: j.A (Monoid)",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 6,
+          "recovery": "8+26",
+          "onBlock": "-25~-20",
+          "onHit": "KD +19~23",
+          "onPC": "KD +19~23",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Strange Knuckle",
@@ -333,7 +1213,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +21",
+          "onPC": "HKD +21",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Gravity Drop",
@@ -345,7 +1235,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +20",
+          "onPC": "HKD +20",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Twinkle Kick",
@@ -355,7 +1255,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Odd Flight",
@@ -367,7 +1278,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -377,7 +1299,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -387,7 +1316,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

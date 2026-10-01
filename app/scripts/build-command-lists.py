@@ -1,6 +1,7 @@
 """Builds command lists (Presets/Command Lists/<Game>/<Character>.json) from
-FAT's frame data (https://github.com/D4RKONION/FAT, GPL-3.0). Only move names
-and inputs are used.
+FAT's frame data (https://github.com/D4RKONION/FAT, GPL-3.0): move names,
+inputs, and each move's frame data (startup, active, recovery, on block, on
+hit, and punish counter in SF6).
 
     git clone --depth 1 https://github.com/D4RKONION/FAT.git /tmp/FAT
     python scripts/build-command-lists.py /tmp/FAT
@@ -34,7 +35,9 @@ BUTTON = re.compile(r"(LP|MP|HP|LK|MK|HK|PPP|KKK|PP|KK|P|K)")
 BTN_TOKEN = {"LP": "lp", "MP": "mp", "HP": "hp", "LK": "lk", "MK": "mk", "HK": "hk",
              "P": "any_p", "K": "any_k", "PP": "any_p", "KK": "any_k", "PPP": "any_p", "KKK": "any_k"}
 STRENGTH = re.compile(r"^(LP|MP|HP|LK|MK|HK|EX|OD|L|M|H|Light|Medium|Heavy)\s+")
-SECTIONS = ["Special moves", "Super Arts", "Unique attacks", "Target combos", "Throws", "System"]
+SECTIONS = ["Special moves", "Super Arts", "Unique attacks", "Target combos", "Normal moves", "Throws", "System"]
+FRAME_FIELDS = [("startup", "startup"), ("active", "active"), ("recovery", "recovery"),
+                ("onBlock", "onBlock"), ("onHit", "onHit"), ("onPC", "onPC"), ("dmg", "damage")]
 
 
 def parse_step(step):
@@ -126,7 +129,30 @@ def section_for(move):
             return "Target combos"
         if re.match(r"^[1346]", cmd):
             return "Unique attacks"
-    return None  # plain normals, taunts
+        return "Normal moves"
+    return None  # taunts and the like
+
+
+def frames_of(move, label=None):
+    """A move's frame data, as numbers where FAT has numbers and text otherwise ("KD +30")."""
+    row = {"label": label} if label else {}
+    for src, dst in FRAME_FIELDS:
+        v = move.get(src)
+        if v in (None, "", "-", "~"):
+            continue
+        if isinstance(v, float) and v.is_integer():
+            v = int(v)
+        row[dst] = v
+    return row if len(row) > (1 if label else 0) else None
+
+
+def strength_label(move, base):
+    """'LP Shoryuken' / 'Light Shoryuken' / 'OD Shoryuken' → 'LP' / 'Light' / 'OD'."""
+    m = STRENGTH.match(move["moveName"])
+    if m:
+        return m.group(1)
+    m = re.search(r"([LMH][PK]|PP|KK|PPP|KKK)\b", move.get("numCmd") or "")
+    return m.group(1) if m else None
 
 
 def generalise(cmd, variants):
@@ -212,7 +238,12 @@ def build(fat_dir):
                         notes.append(("OD" if code == "SF6" else "EX") + ": " + boosted[0]["numCmd"].split("(")[0].strip())
                     if base.lower() in keep:
                         notes.append(keep[base.lower()])
-                    slots.append({"name": base, "tokens": tokens, "section": sec, "notes": "; ".join(dict.fromkeys(notes))})
+                    labelled = len(moves) > 1
+                    frames = [f for f in (frames_of(m, strength_label(m, base) if labelled else None) for m in normal + boosted) if f]
+                    slot = {"name": base, "tokens": tokens, "section": sec, "notes": "; ".join(dict.fromkeys(notes))}
+                    if frames:
+                        slot["frames"] = frames
+                    slots.append(slot)
             slots = fold_variants(slots)
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps({"glyph": glyph, "game": game, "character": name, "slot_count": len(slots), "slots": slots}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")

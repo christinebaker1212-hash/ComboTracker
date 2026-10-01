@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Ed",
-  "slot_count": 25,
+  "slot_count": 45,
   "slots": [
     {
       "name": "Psycho Spark",
@@ -14,7 +14,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP"
+      "notes": "OD: 236PP",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 12,
+          "recovery": 8,
+          "onBlock": "-5(6)",
+          "onHit": "3(14)",
+          "onPC": "7(18)",
+          "damage": 400
+        },
+        {
+          "label": "OD",
+          "startup": 14,
+          "active": 12,
+          "recovery": 7,
+          "onBlock": "-2(10)",
+          "onHit": "KD +43",
+          "onPC": "KD +43",
+          "damage": "200x2"
+        }
+      ]
     },
     {
       "name": "Psycho Shoot",
@@ -30,7 +51,26 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > 6P; During Psycho Spark"
+      "notes": "OD: 236PP > 6P; During Psycho Spark",
+      "frames": [
+        {
+          "startup": 12,
+          "recovery": 30,
+          "onBlock": -8,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": "600 (1000)"
+        },
+        {
+          "label": "OD",
+          "startup": 12,
+          "recovery": 28,
+          "onBlock": -2,
+          "onHit": "KD +46(50)",
+          "onPC": "KD +46(50)",
+          "damage": "400x2 (1200)"
+        }
+      ]
     },
     {
       "name": "Psycho Uppercut",
@@ -42,7 +82,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 623PP"
+      "notes": "OD: 623PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 10,
+          "active": 8,
+          "recovery": "28(23)",
+          "onBlock": -13,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": 900
+        },
+        {
+          "label": "MP",
+          "startup": 14,
+          "active": 6,
+          "recovery": 32,
+          "onBlock": -20,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": 1000
+        },
+        {
+          "label": "HP",
+          "startup": 16,
+          "active": 6,
+          "recovery": 33,
+          "onBlock": -21,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": 1200
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": 6,
+          "recovery": "36(41)",
+          "onBlock": -28,
+          "onHit": "KD +19",
+          "onPC": "KD +19",
+          "damage": "800*800"
+        }
+      ]
     },
     {
       "name": "Psycho Blitz",
@@ -54,7 +136,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP"
+      "notes": "OD: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 11,
+          "active": "3(3)3(6)4",
+          "recovery": 14,
+          "onBlock": -5,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": "800 (200x2*400)"
+        },
+        {
+          "label": "MP",
+          "startup": 13,
+          "active": "2(7)3(9)3",
+          "recovery": "16(24)",
+          "onBlock": -12,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": "900 (250x2*400)"
+        },
+        {
+          "label": "HP",
+          "startup": 15,
+          "active": "2(11)2(6)2",
+          "recovery": "23(26)",
+          "onBlock": -12,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "1100 (250x2*600)"
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": "1(4)1(3)1(3)1(3)1(3)1(8)2",
+          "recovery": 20,
+          "onBlock": -4,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": "1400 (150x8*200)"
+        }
+      ]
     },
     {
       "name": "Psycho Flicker",
@@ -66,7 +190,48 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK; Hold the button to change effect; Also: hold"
+      "notes": "OD: 236KK; Hold the button to change effect; Also: hold",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": "11+5",
+          "active": 4,
+          "recovery": "26(24)",
+          "onBlock": -6,
+          "onHit": 1,
+          "onPC": "Crumple +61",
+          "damage": 800
+        },
+        {
+          "label": "MK",
+          "startup": "15+5",
+          "active": 4,
+          "recovery": "26(25)",
+          "onBlock": -6,
+          "onHit": 3,
+          "onPC": "Crumple +62",
+          "damage": 900
+        },
+        {
+          "label": "HK",
+          "startup": "12+5",
+          "active": 8,
+          "recovery": 18,
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": 25,
+          "active": 4,
+          "recovery": 32,
+          "onBlock": 4,
+          "onHit": "KD +61",
+          "onPC": "KD +61",
+          "damage": "800 (1200)"
+        }
+      ]
     },
     {
       "name": "Kill Rush (Forward)",
@@ -74,7 +239,13 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "cancel; Press while charging an attack to activate"
+      "notes": "cancel; Press while charging an attack to activate",
+      "frames": [
+        {
+          "startup": "11(13)",
+          "recovery": 31
+        }
+      ]
     },
     {
       "name": "Kill Rush > Kill Switch Break",
@@ -82,7 +253,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "cancel, early"
+      "notes": "cancel, early",
+      "frames": [
+        {
+          "startup": "11+11",
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -4,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Kill Rush > Kill Switch Chaser",
@@ -90,7 +272,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "cancel, late"
+      "notes": "cancel, late",
+      "frames": [
+        {
+          "startup": "13+11",
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -6,
+          "onHit": "KD +50",
+          "onPC": "KD +50",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Kill Rush (Backward)",
@@ -100,7 +293,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "cancel; Press while charging an attack to activate"
+      "notes": "cancel; Press while charging an attack to activate",
+      "frames": [
+        {
+          "recovery": 31
+        }
+      ]
     },
     {
       "name": "Psycho Storm",
@@ -115,7 +313,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": "2(7)2(16)2(3)2(16)1(1)1(1)1",
+          "recovery": 56,
+          "onBlock": -32,
+          "onHit": "KD +33",
+          "onPC": "KD +33",
+          "damage": 2000
+        }
+      ]
     },
     {
       "name": "Psycho Cannon",
@@ -130,7 +339,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "recovery": 27,
+          "onBlock": "65~",
+          "onHit": "KD +115~",
+          "onPC": "KD +115~",
+          "damage": "1100 (150x6*200)"
+        }
+      ]
     },
     {
       "name": "Psycho Chamber",
@@ -145,7 +364,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 10,
+          "recovery": 64,
+          "onBlock": -49,
+          "onHit": "HKD +24",
+          "onPC": "HKD +24",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Cobra Punch",
@@ -155,7 +385,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 17,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Flicker Combination 1",
@@ -165,7 +406,18 @@
         "lk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 400
+        }
+      ]
     },
     {
       "name": "Flicker Combination 2",
@@ -177,7 +429,18 @@
         "lk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -8,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Body Blow Combination",
@@ -187,7 +450,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 2,
+          "recovery": 23,
+          "onBlock": "-8(-23)",
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": "1000 (600*400)"
+        }
+      ]
     },
     {
       "name": "Hitman Combination 1",
@@ -197,7 +471,18 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 2,
+          "recovery": 20,
+          "onBlock": "-6(-20)",
+          "onHit": "0(-15)",
+          "onPC": "4(-11)",
+          "damage": "900 (600*300)"
+        }
+      ]
     },
     {
       "name": "Hitman Combination 2",
@@ -209,7 +494,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 5,
+          "recovery": 23,
+          "onBlock": -11,
+          "onHit": "KD +35",
+          "onPC": "KD +35",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Low Smash Combination",
@@ -221,7 +517,416 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "recovery": 19,
+          "onBlock": -8,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": "1500 (800*700)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": "10(4~8)",
+          "active": 4,
+          "recovery": 18,
+          "onBlock": -2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 13,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 2,
+          "recovery": "16(20)",
+          "onBlock": -5,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 4,
+          "onHit": 8,
+          "onPC": 12,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -6,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 4,
+          "recovery": 24,
+          "onBlock": -12,
+          "onHit": "KD +30",
+          "onPC": "HKD +47",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": -4,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 2,
+          "recovery": "16(19)",
+          "onBlock": -1,
+          "onHit": 8,
+          "onPC": 12,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": "19(21)",
+          "onBlock": -6,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 5,
+          "onBlock": "1~5",
+          "onHit": "5~9",
+          "onPC": "9~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 6,
+          "onBlock": "2~9",
+          "onHit": "6~13",
+          "onPC": "10~17",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "onBlock": "4~11",
+          "onHit": "8~15",
+          "onPC": "12~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "onBlock": "-3~5",
+          "onHit": "1~9",
+          "onPC": "5~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 2,
+          "onBlock": "5~7",
+          "onHit": "9~11",
+          "onPC": "13~15",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "onBlock": 11,
+          "onHit": "15 (KD)",
+          "onPC": "19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Psycho Knuckle (level 1)",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "hold level 1",
+      "frames": [
+        {
+          "startup": "30+9",
+          "active": "1~15",
+          "recovery": "25~35",
+          "onBlock": "-2(2)",
+          "onHit": "Crumple +76",
+          "onPC": "Crumple +80",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Psycho Knuckle (level 2)",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "hold level 2",
+      "frames": [
+        {
+          "startup": "60+9",
+          "active": "1~15",
+          "recovery": "29~35",
+          "onBlock": 4,
+          "onHit": "Crumple +76",
+          "onPC": "Crumple +80",
+          "damage": 1200
+        }
+      ]
     },
     {
       "name": "Face Buster",
@@ -231,7 +936,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +34",
+          "onPC": "HKD +34",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Rib Crusher",
@@ -243,7 +958,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +24",
+          "onPC": "HKD +24",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Turn Punch",
@@ -253,7 +978,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Hammer Blow",
@@ -265,7 +1001,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -275,7 +1022,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -285,7 +1039,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

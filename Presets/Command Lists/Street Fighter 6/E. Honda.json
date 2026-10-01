@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "E. Honda",
-  "slot_count": 24,
+  "slot_count": 43,
   "slots": [
     {
       "name": "Sumo Spirit",
@@ -13,7 +13,13 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 51,
+          "recovery": 1
+        }
+      ]
     },
     {
       "name": "Neko Damashi",
@@ -24,7 +30,18 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 5,
+          "recovery": 14,
+          "onBlock": "-3(1)",
+          "onHit": "3(7)",
+          "onPC": "7(11)",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Hundred Hand Slap",
@@ -36,7 +53,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP; Effect changes when in Sumo Spirit state"
+      "notes": "OD: 214PP; Effect changes when in Sumo Spirit state",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 12,
+          "active": "2(4)2(2)1(2)2(1)1(1)2",
+          "recovery": 14,
+          "onBlock": "-4(0)",
+          "onHit": "2(4)",
+          "onPC": "6(8)",
+          "damage": "800(850)"
+        },
+        {
+          "label": "MP",
+          "startup": 16,
+          "active": "2(4)2(1)1(3)1(2)1(3)1(3)1(2)1(2)2",
+          "recovery": "17(14)",
+          "onBlock": "-8(-4)",
+          "onHit": "2(4)",
+          "onPC": "6(8)",
+          "damage": "1000(1050)"
+        },
+        {
+          "label": "HP",
+          "startup": 19,
+          "active": "2(4)2(3)1(3)1(3)1(3)1(3)1(3)1(2)1(2)1(2)1(1)2",
+          "recovery": "17(14)",
+          "onBlock": "-8(-4)",
+          "onHit": "2(4)",
+          "onPC": "6(8)",
+          "damage": "1200(1250)"
+        },
+        {
+          "label": "OD",
+          "startup": 19,
+          "active": "4(6)2(3)2(3)2(4)2(2)2(2)2(2)2(1)2",
+          "recovery": 12,
+          "onBlock": "-3(1)",
+          "onHit": "4(6)",
+          "onPC": "8(10)",
+          "damage": "800(850)"
+        }
+      ]
     },
     {
       "name": "Sumo Headbutt",
@@ -47,7 +106,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 46PP"
+      "notes": "OD: 46PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 10,
+          "active": "1~22",
+          "recovery": "2+18(19)",
+          "onBlock": -3,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "1400(1000)"
+        },
+        {
+          "label": "MP",
+          "startup": 10,
+          "active": "1~24",
+          "recovery": "2+18(22)",
+          "onBlock": -3,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "1400(1100)"
+        },
+        {
+          "label": "HP",
+          "startup": 14,
+          "active": "1~32",
+          "recovery": "2+18(22)",
+          "onBlock": -3,
+          "onHit": "KD +40",
+          "onPC": "KD +40",
+          "damage": "1500(1300)"
+        },
+        {
+          "label": "OD",
+          "startup": 9,
+          "active": "5*1~30",
+          "recovery": "30(37)",
+          "onBlock": -20,
+          "onHit": "KD +36(37)",
+          "onPC": "HKD +36(37)",
+          "damage": "600*1000 (1600)"
+        }
+      ]
     },
     {
       "name": "Sumo Smash",
@@ -58,7 +159,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 28KK"
+      "notes": "OD: 28KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": "11*41",
+          "active": "4(26)8",
+          "recovery": 17,
+          "onBlock": 1,
+          "onHit": "HKD +23(27)",
+          "onPC": "HKD +23(55)",
+          "damage": "1400 (400*1000)"
+        },
+        {
+          "label": "MK",
+          "startup": "11*39",
+          "active": "4(24)7",
+          "recovery": 17,
+          "onBlock": 1,
+          "onHit": "HKD +23(27)",
+          "onPC": "HKD +23(55)",
+          "damage": "1400 (400*1000)"
+        },
+        {
+          "label": "HK",
+          "startup": "11*37",
+          "active": "4(22)6",
+          "recovery": 17,
+          "onBlock": 1,
+          "onHit": "HKD +23(27)",
+          "onPC": "HKD +23(55)",
+          "damage": "1400 (400*1000)"
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": "12(13~17)9",
+          "recovery": 17,
+          "onBlock": 2,
+          "onHit": "HKD +23(27)",
+          "onPC": "HKD +23(54)",
+          "damage": "1400 (400*1000)"
+        }
+      ]
     },
     {
       "name": "Oicho Throw",
@@ -72,7 +215,45 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 63214KK; When near opponent"
+      "notes": "OD: 63214KK; When near opponent",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 6,
+          "active": 4,
+          "recovery": 52,
+          "onHit": "HKD +7",
+          "onPC": "HKD +7",
+          "damage": "2000(2300)"
+        },
+        {
+          "label": "MK",
+          "startup": 6,
+          "active": 4,
+          "recovery": 52,
+          "onHit": "HKD +7",
+          "onPC": "HKD +7",
+          "damage": "2200(2645)"
+        },
+        {
+          "label": "HK",
+          "startup": 6,
+          "active": 4,
+          "recovery": 52,
+          "onHit": "HKD +7",
+          "onPC": "HKD +7",
+          "damage": "2400(2760)"
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": 4,
+          "recovery": 52,
+          "onHit": "HKD +7",
+          "onPC": "HKD +7",
+          "damage": "2800(3220)"
+        }
+      ]
     },
     {
       "name": "Sumo Dash",
@@ -84,7 +265,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK"
+      "notes": "OD: 236KK",
+      "frames": [
+        {
+          "startup": 14,
+          "recovery": "51 total"
+        },
+        {
+          "label": "OD",
+          "startup": "13(11)",
+          "recovery": "34 total"
+        }
+      ]
     },
     {
       "name": "Teppo Double Slap",
@@ -98,7 +290,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > P"
+      "notes": "OD: 236KK > P",
+      "frames": [
+        {
+          "startup": "14+9",
+          "active": "3(13)3",
+          "recovery": 22,
+          "onBlock": -3,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": "800 (400*400)"
+        },
+        {
+          "label": "OD",
+          "startup": "13+9",
+          "active": "3(13)3",
+          "recovery": 17,
+          "onBlock": 3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": "800 (400*400)"
+        }
+      ]
     },
     {
       "name": "Teppo Triple Slap",
@@ -114,7 +327,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > P > P; During Sumo Dash"
+      "notes": "OD: 236KK > P > P; During Sumo Dash",
+      "frames": [
+        {
+          "startup": "14+9+14",
+          "active": "3(13)3(20)3",
+          "recovery": 38,
+          "onBlock": -24,
+          "onHit": "KD +22",
+          "onPC": "KD +25",
+          "damage": "1400 (400*400*600)"
+        },
+        {
+          "label": "OD",
+          "startup": "13+9+14",
+          "active": "3(13)3(20)3",
+          "recovery": 38,
+          "onBlock": -24,
+          "onHit": "KD +54",
+          "onPC": "KD +54",
+          "damage": "1600 (400*400*800)"
+        }
+      ]
     },
     {
       "name": "Taiho Cannon Lift",
@@ -130,7 +364,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > 2P; During Sumo Dash"
+      "notes": "OD: 236KK > 2P; During Sumo Dash",
+      "frames": [
+        {
+          "startup": "14+12",
+          "active": "2(17)3",
+          "recovery": "32(15)",
+          "onBlock": -22,
+          "onHit": "KD +64",
+          "onPC": "KD +64",
+          "damage": "800 (400*400)"
+        },
+        {
+          "label": "OD",
+          "startup": "11+12",
+          "active": "2(17)3",
+          "recovery": "32(15)",
+          "onBlock": -22,
+          "onHit": "KD +64",
+          "onPC": "KD +64",
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Show of Force",
@@ -145,7 +400,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 5,
+          "recovery": 48,
+          "onBlock": -33,
+          "onHit": "KD +13(38)",
+          "onPC": "KD +13(38)",
+          "damage": 2000
+        }
+      ]
     },
     {
       "name": "Ultimate Killer Head Ram",
@@ -158,7 +424,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": "2(2)1~21",
+          "recovery": "2+43",
+          "onBlock": -27,
+          "onHit": "HKD +13",
+          "onPC": "HKD +13",
+          "damage": "2850(2800)"
+        }
+      ]
     },
     {
       "name": "The Final Bout",
@@ -173,7 +450,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "3(8)3",
+          "recovery": 51,
+          "onBlock": -34,
+          "onHit": "HKD +11(KD +19)",
+          "onPC": "HKD +11(KD +19)",
+          "damage": "4000(2500)"
+        }
+      ]
     },
     {
       "name": "Harai Kick",
@@ -183,7 +471,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -5,
+          "onHit": 1,
+          "onPC": "KD +45",
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Power Stomp",
@@ -193,7 +492,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 6,
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Flying Sumo Press",
@@ -205,7 +515,17 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": "During a forward jump"
+      "notes": "During a forward jump",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 9,
+          "onBlock": "6~9",
+          "onHit": "10~13",
+          "onPC": "14~17",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Double Slaps",
@@ -215,7 +535,18 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "recovery": 20,
+          "onBlock": -10,
+          "onHit": "KD +34",
+          "onPC": "KD +34",
+          "damage": 300
+        }
+      ]
     },
     {
       "name": "Tokoshizume",
@@ -227,7 +558,396 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 6,
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 4,
+          "recovery": "13(15)",
+          "onBlock": 1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": "8(9)",
+          "active": 7,
+          "recovery": 20,
+          "onBlock": "-6(-3)",
+          "onHit": "1(4)",
+          "onPC": "Crumple +77(82)",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": "2(1)4",
+          "recovery": 22,
+          "onBlock": "-5(-11)",
+          "onHit": -1,
+          "onPC": 3,
+          "damage": "800 (400*400)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 4,
+          "recovery": "17(19)",
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": -2,
+          "onHit": 6,
+          "onPC": 9,
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": "3(6)5",
+          "recovery": 14,
+          "onBlock": "-10(-1)",
+          "onHit": "KD +30(39)",
+          "onPC": "HKD +45(54)",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 6,
+          "onBlock": "7~13",
+          "onHit": "3~9",
+          "onPC": "-1~5",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 8,
+          "onBlock": "1~7",
+          "onHit": "5~11 (KD)",
+          "onPC": "9~15 (KD)",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "upleft"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "onBlock": "5~11",
+          "onHit": "9~15",
+          "onPC": "13~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Neutral Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 8,
+          "onBlock": "8~11",
+          "onHit": "12~15",
+          "onPC": "16~18",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 6,
+          "onBlock": "1~6",
+          "onHit": "5~10",
+          "onPC": "9~14",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "onBlock": "4~9",
+          "onHit": "8~13",
+          "onPC": "12~17",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 8,
+          "onBlock": "4~11",
+          "onHit": "8~15",
+          "onPC": "12~19",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Saba Ori",
@@ -237,7 +957,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +17",
+          "onPC": "HKD +17",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Tawara Throw",
@@ -249,7 +979,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +24",
+          "onPC": "HKD +24",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Sumo Crunch",
@@ -259,7 +999,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Raiden-ho",
@@ -271,7 +1022,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -281,7 +1043,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -291,7 +1060,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

@@ -1,7 +1,7 @@
-import { ArrowLeft, ChevronDown, ListPlus, Pin, Plus, Search, Target, X } from 'lucide-react'
+import { ArrowLeft, ChevronDown, Gauge, ListPlus, Pin, Plus, Search, Target, X } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { makeCombo } from '../core/combos'
-import { filterMoves, parseMoveList, type Move, type MoveList } from '../core/movelist'
+import { advantage, advantageSign, filterMoves, frameSummary, parseMoveList, type FrameRow, type Move, type MoveList } from '../core/movelist'
 import { openPractice } from '../platform'
 import { allGlyphs, allRefs, readPreset, useLibrary } from '../store/useLibrary'
 import { useStore } from '../store/useStore'
@@ -11,6 +11,38 @@ import { CharacterPicker } from './CharacterPicker'
 import { entries, initials, type Entry } from '../characters'
 
 const LAST_KEY = 'combotracker:movelist:last'
+const FRAMES_KEY = 'combotracker:movelist:frames'
+
+/** Startup / active / recovery / on block / on hit (/ punish counter) / damage, one row per version. */
+function FrameTable({ rows }: { rows: FrameRow[] }) {
+  const pc = rows.some((r) => r.onPC !== undefined)
+  const labelled = rows.some((r) => r.label)
+  const adv = (v: FrameRow['onBlock']) => <td className={`fd-${advantageSign(v) ?? 'none'}`}>{advantage(v)}</td>
+  return (
+    <table className="frame-table">
+      <thead>
+        <tr>
+          {labelled && <th />}
+          <th title="Frames until it can hit">Startup</th><th title="Frames it can hit for">Active</th><th title="Frames before you can act again">Recovery</th>
+          <th title="Frame advantage when blocked">Block</th><th title="Frame advantage on hit">Hit</th>
+          {pc && <th title="Frame advantage on Punish Counter">PC</th>}
+          <th>Damage</th>
+        </tr>
+      </thead>
+      <tbody>
+        {rows.map((r, i) => (
+          <tr key={i}>
+            {labelled && <th>{r.label}</th>}
+            <td>{r.startup ?? ''}</td><td>{r.active ?? ''}</td><td>{r.recovery ?? ''}</td>
+            {adv(r.onBlock)}{adv(r.onHit)}
+            {pc && adv(r.onPC)}
+            <td>{r.damage ?? ''}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  )
+}
 const lastRef = () => {
   try {
     return localStorage.getItem(LAST_KEY) ?? undefined
@@ -33,6 +65,23 @@ export function MoveListPanel({ initial }: { initial?: string }) {
   const [list, setList] = useState<MoveList | null>(null)
   const [picking, setPicking] = useState(!ref)
   const [q, setQ] = useState('')
+  const [showFrames, setShowFrames] = useState(() => {
+    try {
+      return localStorage.getItem(FRAMES_KEY) !== 'off'
+    } catch {
+      return true
+    }
+  })
+  const toggleFrames = () =>
+    setShowFrames((v) => {
+      try {
+        localStorage.setItem(FRAMES_KEY, v ? 'off' : 'on')
+      } catch {
+        // Harmless.
+      }
+      return !v
+    })
+  const hasFrames = !!list?.sections.some((s) => s.moves.some((m) => m.frames))
   const bodyRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => void allRefs('commandLists').then((r) => setRefs(entries(r))), [])
@@ -64,7 +113,7 @@ export function MoveListPanel({ initial }: { initial?: string }) {
 
   const addMove = (m: Move, opts: { pin?: boolean; practice?: boolean } = {}) => {
     const s = useStore.getState()
-    const combo = { ...makeCombo(m.name, m.tokens, m.notes || undefined), pinned: !!opts.pin }
+    const combo = { ...makeCombo(m.name, m.tokens, m.notes || undefined), pinned: !!opts.pin, frames: frameSummary(m.frames) }
     s.appendList([combo])
     if (opts.practice) void openPractice(s.player, combo.id)
     notify(opts.pin ? `Pinned “${m.name}” to the overlay.` : opts.practice ? `Practising “${m.name}”.` : `Added “${m.name}” to your combos.`)
@@ -73,7 +122,9 @@ export function MoveListPanel({ initial }: { initial?: string }) {
   const useWholeList = () => {
     if (!list) return
     const s = useStore.getState()
-    s.replaceList(list.sections.flatMap((sec) => sec.moves.map((m) => ({ ...makeCombo(m.name, m.tokens, m.notes || undefined), child: m.followUp }))))
+    s.replaceList(list.sections.flatMap((sec) => sec.moves.map((m) => ({
+      ...makeCombo(m.name, m.tokens, m.notes || undefined), child: m.followUp, frames: frameSummary(m.frames),
+    }))))
     useStore.getState().notifyUndo(`Loaded ${entry?.character ?? 'move list'} as your combo list`)
     close()
   }
@@ -110,6 +161,12 @@ export function MoveListPanel({ initial }: { initial?: string }) {
                 <Search size={15} />
                 <input placeholder={`Search ${list.count} moves`} value={q} onChange={(e) => setQ(e.target.value)} />
               </div>
+              {hasFrames && (
+                <button className={`chip-btn${showFrames ? ' is-on' : ''}`} onClick={toggleFrames} aria-pressed={showFrames}
+                  title="Startup, active, recovery and advantage on block / hit for each move">
+                  <Gauge size={14} /> Frame data
+                </button>
+              )}
               {list.sections.length > 1 && <nav className="ml-jump" aria-label="Sections">
                 {list.sections.map((s) => (
                   <button key={s.title} className="chip-btn" onClick={() => bodyRef.current?.querySelector(`[data-sec="${CSS.escape(s.title)}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' })}>
@@ -132,6 +189,7 @@ export function MoveListPanel({ initial }: { initial?: string }) {
                         <div className="ml-move-input">
                           {m.tokens.map((t, j) => (t === 'newline' ? null : <TokenView key={j} token={t} glyph={listGlyph} size={26} />))}
                         </div>
+                        {showFrames && m.frames && <div className="ml-move-frames"><FrameTable rows={m.frames} /></div>}
                         {m.tokens.length > 0 && (
                           <div className="ml-move-actions">
                             <button className="icon-btn" title="Add to my combos" onClick={() => addMove(m)}><Plus size={15} /></button>

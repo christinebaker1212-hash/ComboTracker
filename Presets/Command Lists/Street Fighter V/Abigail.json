@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Abigail",
-  "slot_count": 23,
+  "slot_count": 41,
   "slots": [
     {
       "name": "Abigail Punch",
@@ -14,7 +14,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 236PP"
+      "notes": "EX: 236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 14,
+          "active": 2,
+          "recovery": 31,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": "100 (120)"
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 2,
+          "recovery": 31,
+          "onBlock": -19,
+          "onHit": "KD",
+          "damage": "110 (130)"
+        },
+        {
+          "label": "HP",
+          "startup": 16,
+          "active": 2,
+          "recovery": 31,
+          "onBlock": -16,
+          "onHit": "KD",
+          "damage": "120 (140)"
+        },
+        {
+          "label": "EX",
+          "startup": 14,
+          "active": 2,
+          "recovery": 38,
+          "onBlock": -23,
+          "onHit": "KD",
+          "damage": "140 (160)"
+        }
+      ]
     },
     {
       "name": "Giant Flip",
@@ -28,7 +66,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 63214PP"
+      "notes": "EX: 63214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 23,
+          "active": "3*4",
+          "recovery": 22,
+          "onBlock": 0,
+          "onHit": "KD",
+          "damage": "50*20 (70)"
+        },
+        {
+          "label": "MP",
+          "startup": 33,
+          "active": "2*4",
+          "recovery": 22,
+          "onBlock": 1,
+          "onHit": "KD",
+          "damage": "50*30 (80)"
+        },
+        {
+          "label": "HP",
+          "startup": 36,
+          "active": "2*4",
+          "recovery": 23,
+          "onBlock": 2,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        },
+        {
+          "label": "EX",
+          "startup": 9,
+          "active": "3(22)2*3",
+          "recovery": 24,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "20*20*40 (80)"
+        }
+      ]
     },
     {
       "name": "Giant Flip Mash",
@@ -42,7 +118,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "mash; EX: 63214PP"
+      "notes": "mash; EX: 63214PP",
+      "frames": [
+        {
+          "startup": 30,
+          "active": "4*2",
+          "recovery": 26,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "50*40 (90)"
+        },
+        {
+          "startup": 30,
+          "active": "4*2",
+          "recovery": 26,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "50*40 (90)"
+        }
+      ]
     },
     {
       "name": "Abigail Smash",
@@ -56,7 +150,41 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 63214KK"
+      "notes": "EX: 63214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 180
+        },
+        {
+          "label": "MK",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 200
+        },
+        {
+          "label": "HK",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 220
+        },
+        {
+          "label": "EX",
+          "startup": 6,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Nitro Blitz",
@@ -64,7 +192,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12
+        }
+      ]
     },
     {
       "name": "Nitro Charge",
@@ -72,7 +205,23 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "hold; EX: KKK"
+      "notes": "hold; EX: KKK",
+      "frames": [
+        {
+          "label": "KK",
+          "startup": 1,
+          "recovery": 124
+        },
+        {
+          "label": "EX",
+          "startup": "3*39",
+          "active": "2(23)2(23)2(19)2(14)3",
+          "recovery": 30,
+          "onBlock": -9,
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     },
     {
       "name": "Nitro Blitz  > Drop Back",
@@ -82,7 +231,12 @@
         "left"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "recovery": 37
+        }
+      ]
     },
     {
       "name": "Nitro Blitz  > Dynamite Punch",
@@ -92,7 +246,17 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "Run+15",
+          "active": 3,
+          "recovery": 29,
+          "onBlock": -9,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Nitro Blitz  > Avalanche Press",
@@ -102,7 +266,17 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "Run+23",
+          "active": "5(1)2",
+          "recovery": 35,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": "80*70 (150)"
+        }
+      ]
     },
     {
       "name": "Nitro Blitz  > Bay Area Sunrise",
@@ -114,7 +288,16 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "Run+8",
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 200
+        }
+      ]
     },
     {
       "name": "Nitro Charge > EX Dynamite Punch",
@@ -124,7 +307,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: KKK > P"
+      "notes": "EX: KKK > P",
+      "frames": [
+        {
+          "startup": "EX Run+15",
+          "active": 3,
+          "recovery": "29(49)",
+          "onBlock": -29,
+          "onHit": "KD (10)",
+          "damage": 100
+        },
+        {
+          "startup": "EX Run+15",
+          "active": 3,
+          "recovery": "29(49)",
+          "onBlock": -29,
+          "onHit": "KD (10)",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Nitro Charge > EX Avalanche Press",
@@ -134,7 +335,25 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: KKK > K"
+      "notes": "EX: KKK > K",
+      "frames": [
+        {
+          "startup": "EX Run+21",
+          "active": "5(1)2",
+          "recovery": 35,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": "90*80 (170)"
+        },
+        {
+          "startup": "EX Run+21",
+          "active": "5(1)2",
+          "recovery": 35,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": "90*80 (170)"
+        }
+      ]
     },
     {
       "name": "Nitro Charge > EX Bay Area Sunrise",
@@ -146,7 +365,23 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": "EX: KKK > LPLK"
+      "notes": "EX: KKK > LPLK",
+      "frames": [
+        {
+          "startup": "EX Run+8",
+          "active": 2,
+          "recovery": 52,
+          "onHit": "KD",
+          "damage": 240
+        },
+        {
+          "startup": "EX Run+8",
+          "active": 2,
+          "recovery": 52,
+          "onHit": "KD",
+          "damage": 240
+        }
+      ]
     },
     {
       "name": "Abigail Special",
@@ -161,7 +396,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "recovery": 118,
+          "onBlock": -95,
+          "onHit": "KD",
+          "damage": "20*30x7*70*50 (350)"
+        }
+      ]
     },
     {
       "name": "Abi Hammer",
@@ -171,7 +416,17 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 21,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -8,
+          "onHit": 3,
+          "damage": 70
+        }
+      ]
     },
     {
       "name": "Abi Lift",
@@ -181,7 +436,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "recovery": 18,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Abi Blaster",
@@ -191,7 +456,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 2,
+          "recovery": "30(35)",
+          "onBlock": -6,
+          "onHit": -3,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Abi Scissor",
@@ -201,7 +476,17 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 2,
+          "recovery": 30,
+          "onBlock": -14,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Abi Twist",
@@ -213,7 +498,17 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "7+17",
+          "active": "2(16)2",
+          "recovery": 29,
+          "onBlock": -9,
+          "onHit": "KD",
+          "damage": "90*81 (171)"
+        }
+      ]
     },
     {
       "name": "Vroom Vroom",
@@ -223,7 +518,17 @@
         "lp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "5+3",
+          "active": "3(4)2",
+          "recovery": 11,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": "40*27 (67)"
+        }
+      ]
     },
     {
       "name": "Bang Bang",
@@ -237,7 +542,347 @@
         "lp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "6+4",
+          "active": "2(6)2",
+          "recovery": 10,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": "40*27 (67)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": 5,
+          "onHit": 8,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 4,
+          "recovery": 25,
+          "onBlock": -3,
+          "onHit": 0,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": 0,
+          "onHit": 5,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 18,
+          "active": 4,
+          "recovery": 29,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 4,
+          "recovery": 18,
+          "onBlock": -2,
+          "onHit": 3,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 5,
+          "recovery": 35,
+          "onBlock": -18,
+          "onHit": -13,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": 21,
+          "onBlock": -3,
+          "onHit": 0,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": "2(2)4",
+          "recovery": 32,
+          "onBlock": -14,
+          "onHit": "KD",
+          "damage": "50*70 (120)"
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 5,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 6,
+          "damage": 110
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 5,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Red Leaf",
@@ -247,7 +892,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     },
     {
       "name": "Hit & Run",
@@ -259,7 +913,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     }
   ]
 }

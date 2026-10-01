@@ -247,6 +247,12 @@ export function SettingsPanel() {
             : 'Pinning a combo opens its own window; unpinning closes it. Arrange them anywhere on screen.'}
           {' '}Size, backdrop and opacity are set on the overlay itself (hover over it).
         </p>
+        <Toggle
+          label="Show frame data on pinned combos"
+          hint="Combos added from a move list remember the move's frame data (startup, on block, on hit)."
+          checked={settings.overlayFrames}
+          onChange={(v) => setSettings({ overlayFrames: v })}
+        />
       </section>
 
       <section className="form-section">

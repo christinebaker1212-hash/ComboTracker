@@ -778,3 +778,15 @@ html.is-obs .overlay-tools { display: none; }
 .drill-item { display: flex; align-items: center; gap: 8px; font-size: 13.5px; }
 .drill-item small { color: var(--muted); }
 .muted { color: var(--muted); }
+/* Frame data in the move list */
+.frame-table { margin-top: 6px; border-collapse: collapse; font-size: 12px; font-variant-numeric: tabular-nums; }
+.frame-table th, .frame-table td { padding: 1px 8px 1px 0; text-align: left; white-space: nowrap; }
+.frame-table thead th { color: var(--muted); font-weight: 600; font-size: 11px; }
+.frame-table tbody th { color: var(--muted); font-weight: 700; }
+.frame-table .fd-plus { color: #4ade80; }
+.frame-table .fd-minus { color: #f87171; }
+.row-frames, .overlay-frames { font-variant-numeric: tabular-nums; opacity: 0.85; }
+.ml-move-frames { grid-column: 1 / -1; overflow-x: auto; }
+.ml-tools > .chip-btn { align-self: flex-start; width: max-content; }
+/* Keep the top bar on one row on 1280-wide screens: these become icon-only (tooltips still explain them). */
+@media (max-width: 1360px) { .hide-narrow { display: none; } }

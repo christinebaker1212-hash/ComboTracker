@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Poison",
-  "slot_count": 16,
+  "slot_count": 34,
   "slots": [
     {
       "name": "Avant Line",
@@ -14,7 +14,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 236PP"
+      "notes": "EX: 236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 15,
+          "active": 2,
+          "recovery": 27,
+          "onBlock": -7,
+          "onHit": 1,
+          "damage": 60
+        },
+        {
+          "label": "MP",
+          "startup": 15,
+          "active": "2(13)2",
+          "recovery": 27,
+          "onBlock": "-8(-21)",
+          "onHit": 2,
+          "damage": "40*40 (80)"
+        },
+        {
+          "label": "HP",
+          "startup": 15,
+          "active": "2(13)2(18)2",
+          "recovery": 27,
+          "onBlock": "-17(-23)",
+          "onHit": "KD",
+          "damage": "30*40*40 (110)"
+        },
+        {
+          "label": "EX",
+          "startup": 12,
+          "active": "2(8)3(24)2",
+          "recovery": 35,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "15x6*30 (120)"
+        }
+      ]
     },
     {
       "name": "Heart Raid",
@@ -26,13 +64,66 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": "13+9",
+          "active": 2,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": 2
+        },
+        {
+          "label": "MP",
+          "startup": "13+9",
+          "active": 2,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": 2
+        },
+        {
+          "label": "HP",
+          "startup": "13+10",
+          "active": 2,
+          "recovery": 17,
+          "onHit": "KD"
+        }
+      ]
     },
     {
       "name": "Heart Raid Release",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: 214P > Release"
+      "notes": "Input: 214P > Release",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 9,
+          "active": 2,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": 2,
+          "damage": 80
+        },
+        {
+          "label": "MP",
+          "startup": 9,
+          "active": 2,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": -2,
+          "damage": 90
+        },
+        {
+          "label": "HP",
+          "startup": 10,
+          "active": 2,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 110
+        }
+      ]
     },
     {
       "name": "Heart Raid Cancel",
@@ -46,7 +137,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 12
+        }
+      ]
     },
     {
       "name": "Heart Raid Step",
@@ -60,7 +156,12 @@
         "left"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 32
+        }
+      ]
     },
     {
       "name": "LPMP EX Heart Raid",
@@ -74,7 +175,17 @@
         "mp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 18,
+          "active": "2(14)2",
+          "recovery": 24,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        }
+      ]
     },
     {
       "name": "LPHP EX Heart Raid",
@@ -88,7 +199,17 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 19,
+          "active": "3(13)2",
+          "recovery": 24,
+          "onBlock": 1,
+          "onHit": 2,
+          "damage": "70*60 (130)"
+        }
+      ]
     },
     {
       "name": "MPHP EX Heart Raid",
@@ -102,7 +223,16 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "2(14)2",
+          "recovery": 29,
+          "onHit": "KD",
+          "damage": "70*70 (140)"
+        }
+      ]
     },
     {
       "name": "Shocking Heel",
@@ -114,7 +244,45 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 236KK"
+      "notes": "EX: 236KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 8,
+          "active": 6,
+          "recovery": 27,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": 80
+        },
+        {
+          "label": "MK",
+          "startup": 16,
+          "active": 6,
+          "recovery": 27,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": 90
+        },
+        {
+          "label": "HK",
+          "startup": 25,
+          "active": 6,
+          "recovery": 27,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": 110
+        },
+        {
+          "label": "EX",
+          "startup": 18,
+          "active": 7,
+          "recovery": 32,
+          "onBlock": -17,
+          "onHit": "KD",
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Love Me Tender",
@@ -126,7 +294,45 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 214KK"
+      "notes": "EX: 214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 21,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -4,
+          "onHit": 2,
+          "damage": 70
+        },
+        {
+          "label": "MK",
+          "startup": 28,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -4,
+          "onHit": 3,
+          "damage": 80
+        },
+        {
+          "label": "HK",
+          "startup": 30,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "EX",
+          "startup": 24,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "Love Hurricane",
@@ -141,7 +347,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 2,
+          "recovery": 57,
+          "onBlock": -37,
+          "onHit": "KD",
+          "damage": "80*20x10*60 (340)"
+        }
+      ]
     },
     {
       "name": "Whiplash",
@@ -153,7 +369,14 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 4,
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Slap & Smash",
@@ -167,7 +390,15 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "6+9",
+          "active": 3,
+          "onHit": "KD",
+          "damage": 70
+        }
+      ]
     },
     {
       "name": "Slap & Slash",
@@ -181,7 +412,345 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": "6+7",
+          "active": 7,
+          "onHit": "KD",
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 16,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": "22(24)",
+          "onBlock": -6,
+          "onHit": 5,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 11,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -4,
+          "onHit": 0,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": 4,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 9,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 5,
+          "recovery": 13,
+          "onBlock": 4,
+          "onHit": 6,
+          "damage": "60(70)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -11,
+          "onHit": -1,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": -2,
+          "onHit": 1,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -2,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -14,
+          "onHit": "KD",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 5,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Slap Shot",
@@ -191,7 +760,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": "KD",
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     },
     {
       "name": "Frankensteiner",
@@ -203,7 +782,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": "KD",
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     }
   ]
 }

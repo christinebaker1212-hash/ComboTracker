@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter III - Third Strike",
   "character": "Dudley",
-  "slot_count": 18,
+  "slot_count": 36,
   "slots": [
     {
       "name": "Jet Uppercut",
@@ -14,7 +14,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 623PP"
+      "notes": "EX: 623PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 5,
+          "active": 8,
+          "recovery": 29,
+          "onBlock": -23,
+          "damage": 24
+        },
+        {
+          "label": "MP",
+          "startup": 5,
+          "active": 16,
+          "recovery": 28,
+          "onBlock": -30,
+          "damage": 28
+        },
+        {
+          "label": "HP",
+          "startup": 4,
+          "active": 21,
+          "recovery": 32,
+          "onBlock": -38,
+          "damage": 31
+        },
+        {
+          "label": "EX",
+          "startup": 4,
+          "active": 21,
+          "recovery": 34,
+          "onBlock": -37,
+          "damage": 37
+        }
+      ]
     },
     {
       "name": "Machine Gun Blow",
@@ -28,7 +62,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 41236PP"
+      "notes": "EX: 41236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 9,
+          "active": 8,
+          "recovery": 18,
+          "onBlock": -3,
+          "damage": 19
+        },
+        {
+          "label": "MP",
+          "startup": 16,
+          "active": 10,
+          "recovery": 24,
+          "onBlock": -9,
+          "damage": 22
+        },
+        {
+          "label": "HP",
+          "startup": 18,
+          "active": 13,
+          "recovery": 30,
+          "onBlock": -15,
+          "damage": 27
+        },
+        {
+          "label": "EX",
+          "startup": 17,
+          "active": 17,
+          "recovery": 28,
+          "onBlock": -15,
+          "damage": 32
+        }
+      ]
     },
     {
       "name": "Ducking Rush",
@@ -58,7 +126,15 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "active": 4,
+          "recovery": 19,
+          "onBlock": -7,
+          "damage": 28
+        }
+      ]
     },
     {
       "name": "Ducking Upper",
@@ -74,7 +150,15 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "active": 4,
+          "recovery": 25,
+          "onBlock": -12,
+          "damage": 30
+        }
+      ]
     },
     {
       "name": "Cross Counter",
@@ -88,7 +172,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 63214PP"
+      "notes": "EX: 63214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 3
+        },
+        {
+          "label": "MP",
+          "startup": 3
+        },
+        {
+          "label": "HP",
+          "startup": 3
+        },
+        {
+          "label": "EX",
+          "startup": 5
+        }
+      ]
     },
     {
       "name": "Short Swing Blow",
@@ -102,7 +204,39 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 63214KK"
+      "notes": "EX: 63214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 18,
+          "active": 3,
+          "recovery": 13,
+          "onBlock": 0,
+          "damage": 33
+        },
+        {
+          "label": "MK",
+          "startup": 21,
+          "active": 3,
+          "recovery": 13,
+          "onBlock": 0,
+          "damage": 33
+        },
+        {
+          "label": "HK",
+          "startup": 24,
+          "active": 3,
+          "recovery": 13,
+          "onBlock": 0,
+          "damage": 33
+        },
+        {
+          "label": "EX",
+          "startup": 18,
+          "active": 10,
+          "damage": 33
+        }
+      ]
     },
     {
       "name": "Rocket Uppercut",
@@ -117,7 +251,15 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "SA1"
+      "notes": "SA1",
+      "frames": [
+        {
+          "startup": 1,
+          "active": 40,
+          "recovery": 31,
+          "damage": 63
+        }
+      ]
     },
     {
       "name": "Rolling Thunder",
@@ -132,7 +274,15 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "mash P, SA2; Also: Hold"
+      "notes": "mash P, SA2; Also: Hold",
+      "frames": [
+        {
+          "startup": 2,
+          "active": 17,
+          "recovery": 20,
+          "damage": 60
+        }
+      ]
     },
     {
       "name": "Corkscrew Blow",
@@ -147,7 +297,15 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "SA3"
+      "notes": "SA3",
+      "frames": [
+        {
+          "startup": 1,
+          "active": 10,
+          "recovery": 24,
+          "damage": 46
+        }
+      ]
     },
     {
       "name": "Slipping Jab",
@@ -157,7 +315,17 @@
         "lp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 1,
+          "onHit": 1,
+          "damage": 4
+        }
+      ]
     },
     {
       "name": "Stomach Blow",
@@ -167,7 +335,17 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 10,
+          "onBlock": -1,
+          "onHit": 0,
+          "damage": 14
+        }
+      ]
     },
     {
       "name": "Step Straight",
@@ -177,7 +355,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 5,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": -1,
+          "damage": 24
+        }
+      ]
     },
     {
       "name": "Liver Blow",
@@ -187,7 +375,17 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 17
+        }
+      ]
     },
     {
       "name": "Dart Shot",
@@ -197,7 +395,347 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -2,
+          "onHit": 0,
+          "damage": 19
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 6,
+          "onBlock": 3,
+          "onHit": 3,
+          "damage": 3
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 10,
+          "onBlock": 1,
+          "onHit": 2,
+          "damage": 10
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": -1,
+          "onHit": 1,
+          "damage": 24
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 2,
+          "damage": 5
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 13,
+          "onBlock": 0,
+          "onHit": 2,
+          "damage": 14
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 4,
+          "onHit": 6,
+          "damage": 21
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 1,
+          "recovery": 9,
+          "onBlock": 1,
+          "onHit": 1,
+          "damage": 3
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 12
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 13,
+          "onBlock": 0,
+          "onHit": 2,
+          "damage": 23
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 1,
+          "recovery": 10,
+          "onBlock": 0,
+          "onHit": 0,
+          "damage": 5
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -12,
+          "onHit": "D",
+          "damage": 10
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": 1,
+          "onHit": "D",
+          "damage": 17
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "damage": 12
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "damage": 21
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 17,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 13,
+          "damage": 10
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 4,
+          "damage": 16
+        }
+      ]
     },
     {
       "name": "Liver Crusher",
@@ -207,7 +745,15 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "mash"
+      "notes": "mash",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 1,
+          "recovery": 21,
+          "damage": 19
+        }
+      ]
     },
     {
       "name": "Dynamite Throw",
@@ -219,7 +765,15 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 1,
+          "recovery": 21,
+          "damage": 21
+        }
+      ]
     },
     {
       "name": "Jumping Elbow",
@@ -229,7 +783,17 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 10,
+          "recovery": 5,
+          "onBlock": "-5 ~ +7",
+          "onHit": "0 ~ +8",
+          "damage": 7
+        }
+      ]
     }
   ]
 }

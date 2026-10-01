@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Ed",
-  "slot_count": 10,
+  "slot_count": 28,
   "slots": [
     {
       "name": "Psycho Knuckle",
@@ -10,7 +10,27 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "hold; EX: Flicker > PP"
+      "notes": "hold; EX: Flicker > PP",
+      "frames": [
+        {
+          "label": "HP",
+          "startup": 30,
+          "active": 12,
+          "recovery": 27,
+          "onBlock": -2,
+          "onHit": "KD (7)",
+          "damage": 100
+        },
+        {
+          "label": "EX",
+          "startup": 20,
+          "active": 12,
+          "recovery": 29,
+          "onBlock": -9,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Psycho Spark",
@@ -20,7 +40,17 @@
         "mp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 8,
+          "recovery": 16,
+          "onBlock": -2,
+          "onHit": 1,
+          "damage": 50
+        }
+      ]
     },
     {
       "name": "Psycho Shot",
@@ -28,7 +58,25 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "after 6MP; EX: PP"
+      "notes": "after 6MP; EX: PP",
+      "frames": [
+        {
+          "label": "MP",
+          "startup": "13+13",
+          "recovery": 26,
+          "onBlock": -4,
+          "onHit": 4,
+          "damage": 50
+        },
+        {
+          "label": "EX",
+          "startup": "13+13",
+          "recovery": 23,
+          "onBlock": 8,
+          "onHit": "KD",
+          "damage": "40*60 (100)"
+        }
+      ]
     },
     {
       "name": "Psycho Upper",
@@ -36,7 +84,27 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: PPP"
+      "notes": "EX: PPP",
+      "frames": [
+        {
+          "label": "PP",
+          "startup": 16,
+          "active": 5,
+          "recovery": 33,
+          "onBlock": -16,
+          "onHit": "KD",
+          "damage": 120
+        },
+        {
+          "label": "EX",
+          "startup": 16,
+          "active": 11,
+          "recovery": 32,
+          "onBlock": -20,
+          "onHit": "KD",
+          "damage": "80*60 (140)"
+        }
+      ]
     },
     {
       "name": "Psycho Flicker",
@@ -44,7 +112,17 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "mash"
+      "notes": "mash",
+      "frames": [
+        {
+          "startup": 6,
+          "active": "2(7)2(9)2",
+          "recovery": 22,
+          "onBlock": -2,
+          "onHit": 3,
+          "damage": "20*20*40 (80)"
+        }
+      ]
     },
     {
       "name": "Psycho Rising",
@@ -52,7 +130,17 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 18,
+          "recovery": "22+26",
+          "onBlock": -38,
+          "onHit": "KD",
+          "damage": "30*20 (50)"
+        }
+      ]
     },
     {
       "name": "Psycho Splash",
@@ -60,7 +148,23 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "after 5KK; EX: PP"
+      "notes": "after 5KK; EX: PP",
+      "frames": [
+        {
+          "label": "KK",
+          "startup": "23+14",
+          "recovery": 26,
+          "onHit": "KD",
+          "damage": "30*20*63 (113)"
+        },
+        {
+          "label": "EX",
+          "startup": "23+14",
+          "recovery": 13,
+          "onHit": "KD",
+          "damage": "30*20*72 (122)"
+        }
+      ]
     },
     {
       "name": "Psycho Barrage",
@@ -75,7 +179,347 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": "2(6)2(15)2(9)2(24)2(20)2(19)2",
+          "recovery": 49,
+          "onBlock": -21,
+          "onHit": "KD",
+          "damage": "10*20*10*20*10*20*30*20x7*80 (340)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": 3,
+          "onHit": 10,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "Also: release",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -2,
+          "onHit": 2,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": 1,
+          "onHit": 2,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 4,
+          "recovery": "5+17",
+          "onBlock": -4,
+          "onHit": 2,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 6,
+          "recovery": 21,
+          "onBlock": -5,
+          "onHit": 1,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 0,
+          "onHit": 2,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 2,
+          "recovery": 17,
+          "onBlock": -3,
+          "onHit": 1,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "recovery": "24(22)",
+          "onBlock": -10,
+          "onHit": "KD",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 5,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Psycho Blow",
@@ -85,7 +529,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     },
     {
       "name": "Cheat & Smash",
@@ -97,7 +550,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     }
   ]
 }

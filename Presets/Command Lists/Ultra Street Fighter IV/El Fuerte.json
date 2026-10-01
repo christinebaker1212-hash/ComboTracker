@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Ultra Street Fighter IV",
   "character": "El Fuerte",
-  "slot_count": 24,
+  "slot_count": 48,
   "slots": [
     {
       "name": "Wall Jump",
@@ -24,7 +24,16 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 236PP"
+      "notes": "EX: 236PP",
+      "frames": [
+        {
+          "recovery": 71
+        },
+        {
+          "label": "EX",
+          "recovery": 49
+        }
+      ]
     },
     {
       "name": "Habenero Dash Back",
@@ -64,7 +73,12 @@
         "lp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 3
+        }
+      ]
     },
     {
       "name": "Tostada Press (Forward)",
@@ -78,7 +92,16 @@
         "mp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "6+19",
+          "active": 8,
+          "recovery": "34 land",
+          "onBlock": -16,
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Tostada Press (Back)",
@@ -92,7 +115,16 @@
         "mp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "6+19",
+          "active": 8,
+          "recovery": "30 land",
+          "onBlock": -12,
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Fajita Buster",
@@ -106,7 +138,14 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 23,
+          "active": 6,
+          "damage": 180
+        }
+      ]
     },
     {
       "name": "Propeller Tortilla",
@@ -120,7 +159,14 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": 4,
+          "damage": 132
+        }
+      ]
     },
     {
       "name": "Back Step",
@@ -134,7 +180,12 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 17
+        }
+      ]
     },
     {
       "name": "Gordita Sobat",
@@ -148,7 +199,17 @@
         "mk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 2,
+          "recovery": 17,
+          "onBlock": 1,
+          "onHit": 5,
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Calamari Slide",
@@ -162,7 +223,16 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 6,
+          "recovery": 24,
+          "onBlock": -9,
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Picadillo Jump",
@@ -176,31 +246,81 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 40
+        }
+      ]
     },
     {
       "name": "Quesadilla Bomb Lvl1",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: Hold & Release K Lv1"
+      "notes": "Input: Hold & Release K Lv1",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 11,
+          "recovery": 14,
+          "onBlock": -17,
+          "onHit": -13,
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Quesadilla Bomb Lvl2",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: Hold & Release K Lv2"
+      "notes": "Input: Hold & Release K Lv2",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 11,
+          "recovery": 14,
+          "onBlock": -17,
+          "onHit": -13,
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "Quesadilla Bomb Lvl3",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: Hold & Release K Lv3"
+      "notes": "Input: Hold & Release K Lv3",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 11,
+          "recovery": 14,
+          "onBlock": -17,
+          "damage": 150
+        }
+      ]
     },
     {
       "name": "Quesadilla Bomb",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: Hold & Release KK; EX: Hold & Release KK"
+      "notes": "Input: Hold & Release KK; EX: Hold & Release KK",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 11,
+          "recovery": 14,
+          "onBlock": -17,
+          "damage": 200
+        },
+        {
+          "startup": 14,
+          "active": 11,
+          "recovery": 14,
+          "onBlock": -17,
+          "damage": 200
+        }
+      ]
     },
     {
       "name": "Guacamole Leg Throw",
@@ -212,7 +332,37 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 623KK"
+      "notes": "EX: 623KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 7,
+          "active": 6,
+          "recovery": "11 land",
+          "damage": "0*120"
+        },
+        {
+          "label": "MK",
+          "startup": 9,
+          "active": 6,
+          "recovery": "11 land",
+          "damage": "0*130"
+        },
+        {
+          "label": "HK",
+          "startup": 11,
+          "active": 9,
+          "recovery": "11 land",
+          "damage": "0*140"
+        },
+        {
+          "label": "EX",
+          "startup": 11,
+          "active": 9,
+          "recovery": "6 land",
+          "damage": "0*180"
+        }
+      ]
     },
     {
       "name": "El Fuerte Dynamite",
@@ -227,7 +377,33 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 4,
+          "active": "18 Total",
+          "recovery": 32,
+          "onBlock": -15,
+          "damage": "35x4*190"
+        },
+        {
+          "label": "MK",
+          "startup": 5,
+          "active": "19 Total",
+          "recovery": 32,
+          "onBlock": -15,
+          "damage": "35x4*190"
+        },
+        {
+          "label": "HK",
+          "startup": 6,
+          "active": "20 Total",
+          "recovery": 32,
+          "onBlock": -15,
+          "damage": "35x4*190"
+        }
+      ]
     },
     {
       "name": "Shower Kick",
@@ -237,7 +413,17 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": 1,
+          "onHit": 5,
+          "damage": 50
+        }
+      ]
     },
     {
       "name": "Target Combo",
@@ -247,7 +433,453 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 2,
+          "recovery": "5+10 land",
+          "onBlock": -3,
+          "onHit": 0,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Close LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 7,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Close MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Close HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 17,
+          "onBlock": -1,
+          "onHit": 3,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Close LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 7,
+          "onBlock": 3,
+          "onHit": 6,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Close MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 2,
+          "recovery": 13,
+          "onBlock": -1,
+          "onHit": 2,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Close HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 2,
+          "recovery": 16,
+          "onBlock": 0,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Far LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 6,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Far MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Far HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 17,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": 5,
+          "onHit": 9,
+          "damage": 120
+        }
+      ]
+    },
+    {
+      "name": "Far LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 6,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Far MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": 14,
+          "onBlock": -4,
+          "onHit": -1,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Far HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 19,
+          "active": "2(6)3",
+          "recovery": "12 land",
+          "onBlock": -5,
+          "onHit": -1,
+          "damage": "110*100"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": 1,
+          "onHit": 4,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": 0,
+          "onHit": 3,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "recovery": 15,
+          "onBlock": -1,
+          "onHit": 4,
+          "damage": 100
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 6,
+          "onBlock": 3,
+          "onHit": 6,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 13,
+          "onBlock": -1,
+          "onHit": 2,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 17,
+          "active": 10,
+          "recovery": 9,
+          "onBlock": -1,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 8,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "damage": 100
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 9,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 9,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 10,
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Tepache Bomb",
@@ -257,7 +889,15 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 20,
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "Chili Mexicano",
@@ -269,7 +909,15 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 20,
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "Sky Sopressa Drop",
@@ -279,7 +927,14 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "damage": 140
+        }
+      ]
     }
   ]
 }

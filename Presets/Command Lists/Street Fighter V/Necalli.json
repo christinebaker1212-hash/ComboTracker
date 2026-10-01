@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Necalli",
-  "slot_count": 10,
+  "slot_count": 28,
   "slots": [
     {
       "name": "The Disc's Guidance",
@@ -13,7 +13,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 46PP"
+      "notes": "EX: 46PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": "11(18)",
+          "active": 3,
+          "recovery": "11+14",
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 80
+        },
+        {
+          "label": "MP",
+          "startup": "17(21)",
+          "active": 3,
+          "recovery": "13+13",
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "HP",
+          "startup": "21(24)",
+          "active": 3,
+          "recovery": "12+14",
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 120
+        },
+        {
+          "label": "EX",
+          "startup": 17,
+          "active": "2(12)2(12)3",
+          "recovery": "11+20",
+          "onBlock": -13,
+          "onHit": "KD",
+          "damage": "40*40*70 (150)"
+        }
+      ]
     },
     {
       "name": "Raging Light",
@@ -25,7 +63,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 623PP"
+      "notes": "EX: 623PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 3,
+          "active": "2(3)2",
+          "recovery": "19+16",
+          "onBlock": -24,
+          "onHit": "KD",
+          "damage": 100
+        },
+        {
+          "label": "MP",
+          "startup": 5,
+          "active": "3(3)3",
+          "recovery": "21+16",
+          "onBlock": -28,
+          "onHit": "KD",
+          "damage": "80*30 (110)"
+        },
+        {
+          "label": "HP",
+          "startup": 7,
+          "active": "2*2(2)3",
+          "recovery": "26+19",
+          "onBlock": -33,
+          "onHit": "KD",
+          "damage": "60*30x2 (120)"
+        },
+        {
+          "label": "EX",
+          "startup": 3,
+          "active": "2*3*3*2(1)3",
+          "recovery": "23+19",
+          "onBlock": -38,
+          "onHit": "KD",
+          "damage": "20x4*70 (150)"
+        }
+      ]
     },
     {
       "name": "Mask of Tlalli",
@@ -39,7 +115,41 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 63214KK"
+      "notes": "EX: 63214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 8,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 140
+        },
+        {
+          "label": "MK",
+          "startup": 8,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 150
+        },
+        {
+          "label": "HK",
+          "startup": 8,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 160
+        },
+        {
+          "label": "EX",
+          "startup": 8,
+          "active": 2,
+          "recovery": 60,
+          "onHit": "KD",
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Valiant Rebellion",
@@ -51,7 +161,45 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 236KK"
+      "notes": "EX: 236KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 14,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -4,
+          "onHit": 2,
+          "damage": 50
+        },
+        {
+          "label": "MK",
+          "startup": 19,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -2,
+          "onHit": 5,
+          "damage": 60
+        },
+        {
+          "label": "HK",
+          "startup": 23,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": 0,
+          "onHit": "KD",
+          "damage": 80
+        },
+        {
+          "label": "EX",
+          "startup": 10,
+          "active": "2(24)2",
+          "recovery": 21,
+          "onBlock": 2,
+          "onHit": 2,
+          "damage": "50*70"
+        }
+      ]
     },
     {
       "name": "Ceremony of Honor",
@@ -66,7 +214,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 2,
+          "recovery": 45,
+          "onBlock": -25,
+          "onHit": "KD",
+          "damage": "50x2*6x23*92 (330)"
+        }
+      ]
     },
     {
       "name": "Opening Dagger",
@@ -76,7 +234,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 23,
+          "active": 3,
+          "recovery": 24,
+          "onBlock": -7,
+          "onHit": 1,
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Road of the Sun (air)",
@@ -88,7 +256,17 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 12,
+          "recovery": 11,
+          "onBlock": "-2(4)",
+          "onHit": "3(9)",
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Sacrificial Altar",
@@ -98,7 +276,347 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "5+11",
+          "active": 4,
+          "recovery": 21,
+          "onBlock": -8,
+          "onHit": "KD",
+          "damage": "60*54 (114)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 14,
+          "onBlock": 0,
+          "onHit": 6,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "recovery": 19,
+          "onBlock": -2,
+          "onHit": 1,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 13,
+          "onBlock": 2,
+          "onHit": 6,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 4,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": 3,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 13,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -4,
+          "onHit": 1,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -4,
+          "onHit": 1,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "recovery": 21,
+          "onBlock": -10,
+          "onHit": "KD",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 6,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Soul Sealer",
@@ -108,7 +626,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": "KD",
+          "onHit": "KD",
+          "damage": 120
+        }
+      ]
     },
     {
       "name": "Soul Discriminator",
@@ -120,7 +648,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": "KD",
+          "onHit": "KD",
+          "damage": 110
+        }
+      ]
     }
   ]
 }

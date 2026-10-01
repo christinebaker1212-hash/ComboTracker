@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter III - Third Strike",
   "character": "Remy",
-  "slot_count": 11,
+  "slot_count": 35,
   "slots": [
     {
       "name": "Light of Virtue - Haute",
@@ -13,7 +13,37 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 46PP"
+      "notes": "EX: 46PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 10,
+          "recovery": 22,
+          "onBlock": 5,
+          "damage": 10
+        },
+        {
+          "label": "MP",
+          "startup": 11,
+          "recovery": 22,
+          "onBlock": 5,
+          "damage": 10
+        },
+        {
+          "label": "HP",
+          "startup": 12,
+          "recovery": 22,
+          "onBlock": 5,
+          "damage": 10
+        },
+        {
+          "label": "EX",
+          "startup": 9,
+          "recovery": 24,
+          "onBlock": 4,
+          "damage": 20
+        }
+      ]
     },
     {
       "name": "Light of Virtue - Basse",
@@ -24,7 +54,37 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 46KK"
+      "notes": "EX: 46KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 12,
+          "recovery": 26,
+          "onBlock": 1,
+          "damage": 10
+        },
+        {
+          "label": "MK",
+          "startup": 13,
+          "recovery": 26,
+          "onBlock": 1,
+          "damage": 10
+        },
+        {
+          "label": "HK",
+          "startup": 14,
+          "recovery": 26,
+          "onBlock": 1,
+          "damage": 10
+        },
+        {
+          "label": "EX",
+          "startup": 9,
+          "recovery": 28,
+          "onBlock": 0,
+          "damage": 20
+        }
+      ]
     },
     {
       "name": "Rising Rage Flash",
@@ -35,7 +95,41 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 28KK"
+      "notes": "EX: 28KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 4,
+          "active": 3,
+          "recovery": 32,
+          "onBlock": -17,
+          "damage": 21
+        },
+        {
+          "label": "MK",
+          "startup": 4,
+          "active": 4,
+          "recovery": 39,
+          "onBlock": -23,
+          "damage": 23
+        },
+        {
+          "label": "HK",
+          "startup": 3,
+          "active": 7,
+          "recovery": 44,
+          "onBlock": -26,
+          "damage": 24
+        },
+        {
+          "label": "EX",
+          "startup": 7,
+          "active": 5,
+          "recovery": 41,
+          "onBlock": -21,
+          "damage": 32
+        }
+      ]
     },
     {
       "name": "Cold Blue Kick",
@@ -47,7 +141,41 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "air; EX: 214KK"
+      "notes": "air; EX: 214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 18,
+          "active": 10,
+          "recovery": 10,
+          "onBlock": -4,
+          "damage": 21
+        },
+        {
+          "label": "MK",
+          "startup": 19,
+          "active": 10,
+          "recovery": 10,
+          "onBlock": -4,
+          "damage": 21
+        },
+        {
+          "label": "HK",
+          "startup": 20,
+          "active": 12,
+          "recovery": 10,
+          "onBlock": -6,
+          "damage": 21
+        },
+        {
+          "label": "EX",
+          "startup": 19,
+          "active": 9,
+          "recovery": 10,
+          "onBlock": -1,
+          "damage": 27
+        }
+      ]
     },
     {
       "name": "of Justice",
@@ -62,7 +190,15 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "SA1"
+      "notes": "SA1",
+      "frames": [
+        {
+          "startup": 2,
+          "recovery": "N/A",
+          "onBlock": 3,
+          "damage": 52
+        }
+      ]
     },
     {
       "name": "Supreme Rising Rage Flash",
@@ -77,7 +213,16 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "SA2"
+      "notes": "SA2",
+      "frames": [
+        {
+          "startup": 1,
+          "active": 16,
+          "recovery": 53,
+          "onBlock": -29,
+          "damage": 61
+        }
+      ]
     },
     {
       "name": "Blue Nocturne",
@@ -92,7 +237,15 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "SA3"
+      "notes": "SA3",
+      "frames": [
+        {
+          "startup": 1,
+          "active": 21,
+          "recovery": 27,
+          "damage": 75
+        }
+      ]
     },
     {
       "name": "Aiguille",
@@ -102,7 +255,455 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 19,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -7,
+          "onHit": -6,
+          "damage": 14
+        }
+      ]
+    },
+    {
+      "name": "Close LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "recovery": 4,
+          "onBlock": 3,
+          "onHit": 3,
+          "damage": 5
+        }
+      ]
+    },
+    {
+      "name": "Far LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "recovery": 3,
+          "onBlock": 4,
+          "onHit": 4,
+          "damage": 3
+        }
+      ]
+    },
+    {
+      "name": "Close MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 5,
+          "recovery": 8,
+          "onBlock": 5,
+          "onHit": 6,
+          "damage": 12
+        }
+      ]
+    },
+    {
+      "name": "Far MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 12,
+          "onBlock": 1,
+          "onHit": 2,
+          "damage": 10
+        }
+      ]
+    },
+    {
+      "name": "Close HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 7,
+          "recovery": 8,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 21
+        }
+      ]
+    },
+    {
+      "name": "Far HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 5,
+          "recovery": 18,
+          "onBlock": -2,
+          "onHit": 0,
+          "damage": 19
+        }
+      ]
+    },
+    {
+      "name": "Close LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 5,
+          "recovery": 7,
+          "onBlock": 0,
+          "onHit": 0,
+          "damage": 6
+        }
+      ]
+    },
+    {
+      "name": "Far LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 5,
+          "recovery": 4,
+          "onBlock": 2,
+          "onHit": 2,
+          "damage": 5
+        }
+      ]
+    },
+    {
+      "name": "Close MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 6,
+          "recovery": 11,
+          "onBlock": 1,
+          "onHit": 3,
+          "damage": 16
+        }
+      ]
+    },
+    {
+      "name": "Far MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 14,
+          "onBlock": -3,
+          "onHit": -2,
+          "damage": 14
+        }
+      ]
+    },
+    {
+      "name": "Close HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 7,
+          "recovery": 13,
+          "onBlock": 3,
+          "onHit": 5,
+          "damage": 23
+        }
+      ]
+    },
+    {
+      "name": "Far HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -9,
+          "onHit": -7,
+          "damage": 23
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 2,
+          "recovery": 7,
+          "onBlock": 2,
+          "onHit": 2,
+          "damage": 3
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 5,
+          "recovery": 11,
+          "onBlock": -2,
+          "onHit": -1,
+          "damage": 9
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "recovery": 18,
+          "onBlock": -5,
+          "onHit": "D",
+          "damage": 17
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "recovery": 7,
+          "onBlock": 0,
+          "onHit": 0,
+          "damage": 5
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 18,
+          "onBlock": -9,
+          "onHit": -8,
+          "damage": 10
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 7,
+          "recovery": 21,
+          "onBlock": -11,
+          "onHit": "D",
+          "damage": 17
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 20,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 14,
+          "damage": 12
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "damage": 22
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 14,
+          "damage": 8
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "damage": 16
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 4,
+          "damage": 21
+        }
+      ]
     },
     {
       "name": "Crazed Waltz",
@@ -112,7 +713,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 1,
+          "recovery": 21,
+          "onBlock": 0,
+          "onHit": "D",
+          "damage": 17
+        }
+      ]
     },
     {
       "name": "Contour of Disturbed Sleep",
@@ -124,7 +735,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 1,
+          "recovery": 21,
+          "onBlock": 0,
+          "onHit": "D",
+          "damage": 23
+        }
+      ]
     },
     {
       "name": "Vague Temptation",
@@ -134,7 +755,15 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 10,
+          "recovery": 5,
+          "damage": 7
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Lily",
-  "slot_count": 20,
+  "slot_count": 42,
   "slots": [
     {
       "name": "Condor Wind",
@@ -14,7 +14,34 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Hold the button to charge the attack; Also: attack, hold"
+      "notes": "Hold the button to charge the attack; Also: attack, hold",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 46,
+          "recovery": 1
+        },
+        {
+          "label": "MP",
+          "startup": "23(4)",
+          "active": 4,
+          "recovery": 25,
+          "onBlock": -8,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 900
+        },
+        {
+          "label": "HP",
+          "startup": "25(4)",
+          "active": 4,
+          "recovery": 25,
+          "onBlock": -8,
+          "onHit": "KD +30",
+          "onPC": "KD +30",
+          "damage": 1100
+        }
+      ]
     },
     {
       "name": "Condor Wind (2 stocks)",
@@ -26,7 +53,13 @@
         "lp"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": 71,
+          "recovery": 19
+        }
+      ]
     },
     {
       "name": "Condor Wind (3 stocks)",
@@ -38,7 +71,13 @@
         "lp"
       ],
       "section": "Special moves",
-      "notes": "hold level 2"
+      "notes": "hold level 2",
+      "frames": [
+        {
+          "startup": 90,
+          "recovery": 19
+        }
+      ]
     },
     {
       "name": "Condor Spire",
@@ -50,7 +89,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK; Effect changes when Windclad; Also: enhanced"
+      "notes": "OD: 236KK; Effect changes when Windclad; Also: enhanced",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 17,
+          "active": 13,
+          "recovery": "2+14",
+          "onBlock": "-8(4)",
+          "onHit": "KD +33(45)",
+          "onPC": "KD +33(45)",
+          "damage": 800
+        },
+        {
+          "label": "MK",
+          "startup": 21,
+          "active": 13,
+          "recovery": "2+14",
+          "onBlock": "-8(4)",
+          "onHit": "KD +37(49)",
+          "onPC": "KD +37(49)",
+          "damage": 900
+        },
+        {
+          "label": "HK",
+          "startup": 25,
+          "active": 13,
+          "recovery": "2+14",
+          "onBlock": "-8(4)",
+          "onHit": "KD +37(49)",
+          "onPC": "KD +37(49)",
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": 15,
+          "active": 13,
+          "recovery": "2+11",
+          "onBlock": "-8(4)",
+          "onHit": "KD +43(55)",
+          "onPC": "KD +43(55)",
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Tomahawk Buster",
@@ -62,7 +143,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 623PP; Effect changes when Windclad; Also: enhanced"
+      "notes": "OD: 623PP; Effect changes when Windclad; Also: enhanced",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 6,
+          "active": 11,
+          "recovery": "21+12",
+          "onBlock": -27,
+          "onHit": "KD +36(41)",
+          "onPC": "KD +36(41)",
+          "damage": 900
+        },
+        {
+          "label": "MP",
+          "startup": 8,
+          "active": 12,
+          "recovery": "25+12",
+          "onBlock": -32,
+          "onHit": "KD +36(42)",
+          "onPC": "KD +36(42)",
+          "damage": 1000
+        },
+        {
+          "label": "HP",
+          "startup": 10,
+          "active": 14,
+          "recovery": "26+12",
+          "onBlock": -35,
+          "onHit": "KD +36(41)",
+          "onPC": "KD +36(41)",
+          "damage": 1200
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": "3*9",
+          "recovery": "28+15",
+          "onBlock": -35,
+          "onHit": "KD +32(37)",
+          "onPC": "KD +32(37)",
+          "damage": "1400 (800*600)"
+        }
+      ]
     },
     {
       "name": "Condor Dive",
@@ -70,7 +193,29 @@
         "up"
       ],
       "section": "Special moves",
-      "notes": "OD: 8 or 9PPP; During a neutral or forward jump Effect changes when Windclad; Also: enhanced, follow-up"
+      "notes": "OD: 8 or 9PPP; During a neutral or forward jump Effect changes when Windclad; Also: enhanced, follow-up",
+      "frames": [
+        {
+          "label": "PP",
+          "startup": 12,
+          "active": "11(17)",
+          "recovery": "5+19",
+          "onBlock": "-24(-19)",
+          "onHit": "KD +32(37)",
+          "onPC": "KD +32(37)",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": 12,
+          "active": "10(14)",
+          "recovery": "5+19",
+          "onBlock": "-24(-19)",
+          "onHit": "KD +40(46)",
+          "onPC": "KD +40(46)",
+          "damage": 1400
+        }
+      ]
     },
     {
       "name": "Mexican Typhoon",
@@ -80,7 +225,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 4268PP; When near opponent"
+      "notes": "OD: 4268PP; When near opponent",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 5,
+          "active": 3,
+          "recovery": 53,
+          "onHit": "HKD +28",
+          "onPC": "HKD +28",
+          "damage": 2000
+        },
+        {
+          "label": "MP",
+          "startup": 5,
+          "active": 3,
+          "recovery": 53,
+          "onHit": "HKD +28",
+          "onPC": "HKD +28",
+          "damage": 2400
+        },
+        {
+          "label": "HP",
+          "startup": 5,
+          "active": 3,
+          "recovery": 53,
+          "onHit": "HKD +28",
+          "onPC": "HKD +28",
+          "damage": 2800
+        },
+        {
+          "label": "OD",
+          "startup": 5,
+          "active": 3,
+          "recovery": 53,
+          "onHit": "HKD +28",
+          "onPC": "HKD +28",
+          "damage": 2900
+        }
+      ]
     },
     {
       "name": "Breezing Hawk",
@@ -95,7 +278,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": "2(5)2(7)2(8)2(8)2",
+          "recovery": 54,
+          "onBlock": -36,
+          "onHit": "KD +27(19)",
+          "onPC": "KD +27(19)",
+          "damage": "2200(1840)"
+        }
+      ]
     },
     {
       "name": "Thunderbird",
@@ -110,7 +304,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "Also: enhanced"
+      "notes": "Also: enhanced",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "4*3*3*3*3*3*3(9)2",
+          "recovery": "39+24",
+          "onBlock": "-60(-66)",
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": 2600
+        }
+      ]
     },
     {
       "name": "Soaring Thunderbird",
@@ -125,7 +330,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "air; Also: enhanced"
+      "notes": "air; Also: enhanced",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "4*3*3*3*3*3*3(9)2",
+          "recovery": 25,
+          "onBlock": "-54(-66)",
+          "onHit": "KD +36(42)",
+          "onPC": "KD +36(42)",
+          "damage": 2600
+        }
+      ]
     },
     {
       "name": "Raging Typhoon",
@@ -140,7 +356,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": "5+2",
+          "active": 2,
+          "recovery": 106,
+          "onHit": "HKD +4",
+          "onPC": "HKD +4",
+          "damage": 4500
+        }
+      ]
     },
     {
       "name": "Ridge Thrust",
@@ -150,7 +376,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 25,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Horn Breaker",
@@ -160,7 +397,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 4,
+          "recovery": 18,
+          "onBlock": -2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Desert Storm 1",
@@ -170,7 +418,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -4,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Cross Hammer",
@@ -182,7 +441,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Double Arrow",
@@ -196,7 +466,16 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": "During a jump"
+      "notes": "During a jump",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "onHit": "~ (KD)",
+          "onPC": "~ (KD)",
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Desert Storm 2",
@@ -208,7 +487,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 2,
+          "recovery": 27,
+          "onBlock": -9,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Desert Storm Final",
@@ -222,7 +512,453 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 5,
+          "recovery": 39,
+          "onBlock": -23,
+          "onHit": "KD +26",
+          "onPC": "KD +26",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 350
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "recovery": 17,
+          "onBlock": -4,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -5,
+          "onHit": 0,
+          "onPC": "Crumple +84",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": -1,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 4,
+          "recovery": 21,
+          "onBlock": -5,
+          "onHit": 1,
+          "onPC": "KD +47",
+          "damage": 1000
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": "2*4",
+          "recovery": 22,
+          "onBlock": -2,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": "1000 (500*500)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 12,
+          "onBlock": -2,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -5,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": "2(6)2",
+          "recovery": 24,
+          "onBlock": -12,
+          "onHit": "KD +32",
+          "onPC": "HKD +47",
+          "damage": "900 (450*450)"
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 9,
+          "onBlock": "2~5",
+          "onHit": "6~9",
+          "onPC": "10~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "onBlock": "1~7",
+          "onHit": "5~11 (KD)",
+          "onPC": "9~15 (KD)",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 6,
+          "onBlock": "2~11",
+          "onHit": "6~15 (KD)",
+          "onPC": "10~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 6,
+          "onBlock": "0~6",
+          "onHit": "4~10",
+          "onPC": "8~14",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 5,
+          "onBlock": "3~9",
+          "onHit": "7~13",
+          "onPC": "11~17",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 6,
+          "onBlock": "5~11",
+          "onHit": "9~15",
+          "onPC": "13~19",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Great Spin",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "air; During a jump",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 11,
+          "onBlock": "7~11",
+          "onHit": "11~15",
+          "onPC": "15~19",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Drive Impact: Earth's Rage",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     },
     {
       "name": "Canyon Throw",
@@ -232,7 +968,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +20",
+          "onPC": "HKD +20",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Falling Cliff",
@@ -244,7 +990,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +32",
+          "onPC": "HKD +32",
+          "damage": "1200(2040)"
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Zeku (Young)",
-  "slot_count": 31,
+  "slot_count": 50,
   "slots": [
     {
       "name": "Sankagu Tobi",
@@ -29,7 +29,12 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 25
+        }
+      ]
     },
     {
       "name": "Bushin Sho",
@@ -41,7 +46,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 236PP"
+      "notes": "EX: 236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 12,
+          "active": 6,
+          "recovery": 20,
+          "onBlock": -4,
+          "onHit": "KD",
+          "damage": 60
+        },
+        {
+          "label": "MP",
+          "startup": 18,
+          "active": 6,
+          "recovery": 16,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "50*40"
+        },
+        {
+          "label": "HP",
+          "startup": 24,
+          "active": 6,
+          "recovery": 15,
+          "onBlock": 2,
+          "onHit": "KD",
+          "damage": "30*30*60"
+        },
+        {
+          "label": "EX",
+          "startup": 23,
+          "active": 6,
+          "recovery": 21,
+          "onBlock": 2,
+          "onHit": "KD",
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Hozanto",
@@ -53,7 +96,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 214PP"
+      "notes": "EX: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 12,
+          "active": 6,
+          "recovery": "12(22)",
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 60
+        },
+        {
+          "label": "MP",
+          "startup": 22,
+          "active": 6,
+          "recovery": 13,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 70
+        },
+        {
+          "label": "HP",
+          "startup": 26,
+          "active": 5,
+          "recovery": 15,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 90
+        },
+        {
+          "label": "EX",
+          "startup": 16,
+          "active": 4,
+          "recovery": 14,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": "50*50 (100)"
+        }
+      ]
     },
     {
       "name": "Bushin Sangoku Otoshi",
@@ -65,7 +146,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "air; EX: 236PP"
+      "notes": "air; EX: 236PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 4,
+          "active": 2,
+          "recovery": 6,
+          "onHit": "KD",
+          "damage": 120
+        },
+        {
+          "label": "MP",
+          "startup": 5,
+          "active": 2,
+          "recovery": 6,
+          "onHit": "KD",
+          "damage": 130
+        },
+        {
+          "label": "HP",
+          "startup": 6,
+          "active": 2,
+          "recovery": 6,
+          "onHit": "KD",
+          "damage": 140
+        },
+        {
+          "label": "EX",
+          "startup": 4,
+          "active": 2,
+          "recovery": 6,
+          "onHit": "KD",
+          "damage": "60*100 (160)"
+        }
+      ]
     },
     {
       "name": "Hayagake",
@@ -77,7 +192,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8
+        }
+      ]
     },
     {
       "name": "Hayagake EX",
@@ -89,7 +209,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7
+        }
+      ]
     },
     {
       "name": "Tozetsu",
@@ -103,7 +228,13 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "recovery": 15
+        }
+      ]
     },
     {
       "name": "Ashikari",
@@ -117,7 +248,17 @@
         "mk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "8+9",
+          "active": 9,
+          "recovery": 27,
+          "onBlock": -21,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Gekkou",
@@ -131,7 +272,17 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "8+22",
+          "active": "2*2",
+          "recovery": 24,
+          "onBlock": -5,
+          "onHit": "KD",
+          "damage": "70*50 (120)"
+        }
+      ]
     },
     {
       "name": "Tozetsu EX",
@@ -145,7 +296,13 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "recovery": 12
+        }
+      ]
     },
     {
       "name": "Ashikari EX",
@@ -159,7 +316,17 @@
         "mk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "7+9",
+          "active": 9,
+          "recovery": 27,
+          "onBlock": -21,
+          "onHit": "KD",
+          "damage": 130
+        }
+      ]
     },
     {
       "name": "Gekkou EX",
@@ -173,7 +340,17 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "7+22",
+          "active": "2*2",
+          "recovery": 24,
+          "onBlock": -2,
+          "onHit": "KD",
+          "damage": "100*50 (150)"
+        }
+      ]
     },
     {
       "name": "Batsuzan Gaisei",
@@ -188,7 +365,17 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 8,
+          "recovery": 47,
+          "onBlock": -33,
+          "onHit": "KD",
+          "damage": "50*20x5*30x3*100 (340)"
+        }
+      ]
     },
     {
       "name": "Kubi Kudaki",
@@ -198,7 +385,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 22,
+          "active": "1*1",
+          "recovery": 22,
+          "onBlock": -7,
+          "onHit": 1,
+          "damage": "40*40 (80)"
+        }
+      ]
     },
     {
       "name": "Bushin Shidenkyaku",
@@ -208,7 +405,14 @@
         "any_k"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 27,
+          "recovery": 4,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Kaeshi Hayabusa",
@@ -222,7 +426,15 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "8+8",
+          "active": 4,
+          "onHit": "KD",
+          "damage": "60*54 (114)"
+        }
+      ]
     },
     {
       "name": "Kaeshi Saiha",
@@ -232,7 +444,17 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "12+10",
+          "active": 2,
+          "recovery": 25,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": "80*54 (134)"
+        }
+      ]
     },
     {
       "name": "Kaeshi Urasaiha",
@@ -246,7 +468,17 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "10+9",
+          "active": 1,
+          "recovery": 28,
+          "onBlock": -10,
+          "onHit": "KD",
+          "damage": "80*54 (134)"
+        }
+      ]
     },
     {
       "name": "Kagerou",
@@ -260,7 +492,16 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": "VS1"
+      "notes": "VS1",
+      "frames": [
+        {
+          "startup": "12+10+14",
+          "active": 2,
+          "recovery": 31,
+          "onHit": "KD",
+          "damage": "80*54*40*32 (206)"
+        }
+      ]
     },
     {
       "name": "Urakagerou",
@@ -278,7 +519,16 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": "VS1"
+      "notes": "VS1",
+      "frames": [
+        {
+          "startup": "10+9+14",
+          "active": 2,
+          "recovery": 31,
+          "onHit": "KD",
+          "damage": "80*54*40*32 (206)"
+        }
+      ]
     },
     {
       "name": "Sekibu No Jin",
@@ -292,7 +542,15 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": "VS2"
+      "notes": "VS2",
+      "frames": [
+        {
+          "startup": "12+10+30",
+          "recovery": 35,
+          "onHit": "KD",
+          "damage": "80*54 (134)"
+        }
+      ]
     },
     {
       "name": "Hakuso No Jin",
@@ -310,7 +568,15 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": "VS2"
+      "notes": "VS2",
+      "frames": [
+        {
+          "startup": "10+9+30",
+          "recovery": 35,
+          "onHit": "KD",
+          "damage": "80*54 (134)"
+        }
+      ]
     },
     {
       "name": "Bushin Soukosou",
@@ -320,7 +586,17 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "5+13",
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -6,
+          "onHit": -2,
+          "damage": "60*45 (105)"
+        }
+      ]
     },
     {
       "name": "Bushin Gokusanken - Ni",
@@ -330,7 +606,17 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "4+5",
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -7,
+          "onHit": -3,
+          "damage": "30*45 (75)"
+        }
+      ]
     },
     {
       "name": "Bushin Gokusanken - San",
@@ -342,7 +628,17 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "4+5+11",
+          "active": 4,
+          "recovery": 30,
+          "onBlock": -11,
+          "onHit": "KD",
+          "damage": "30*45*24*32 (131)"
+        }
+      ]
     },
     {
       "name": "Bushin Gokusanken - Shu",
@@ -356,7 +652,367 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "4+5+11+16",
+          "active": 7,
+          "recovery": 27,
+          "onBlock": -16,
+          "onHit": "KD",
+          "damage": "30*45*24*32*56 (187)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 16,
+          "onBlock": 2,
+          "onHit": 8,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 2,
+          "recovery": "20(25)",
+          "onBlock": -3,
+          "onHit": 2,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -2,
+          "onHit": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 17,
+          "onBlock": -3,
+          "onHit": 2,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 4,
+          "recovery": "19(24)",
+          "onBlock": "-2 (0)",
+          "onHit": "3 (5)",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 4,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 14,
+          "onBlock": 1,
+          "onHit": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": "20(25)",
+          "onBlock": -5,
+          "onHit": 1,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 2,
+          "damage": 50
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 7,
+          "recovery": 20,
+          "onBlock": "-13(-7)",
+          "onHit": "KD",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK late hit",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 17,
+          "active": 4,
+          "recovery": 20,
+          "onBlock": "-10(-7)",
+          "onHit": "3(6)",
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Bushin Gokusanage",
@@ -372,7 +1028,16 @@
         "hk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "4+5+11+7",
+          "active": 2,
+          "recovery": 29,
+          "onHit": "KD",
+          "damage": "30*45*24*77 (176)"
+        }
+      ]
     },
     {
       "name": "Tesso",
@@ -382,7 +1047,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     },
     {
       "name": "Raiju",
@@ -394,7 +1068,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 160
+        }
+      ]
     }
   ]
 }

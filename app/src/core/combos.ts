@@ -16,13 +16,15 @@ export interface Combo {
    * next, recorded from the controller or taken from a clean run.
    */
   timing?: number[]
+  /** Frame data summary, for combos added from a move list: "5f startup · -1 on block". */
+  frames?: string
 }
 
 export interface ComboListFile {
   glyph?: string
   theme?: string
   slot_count?: number
-  slots: { name: string; tokens: Token[]; notes?: string; timing?: number[] }[]
+  slots: { name: string; tokens: Token[]; notes?: string; timing?: number[]; frames?: string }[]
 }
 
 export const MAX_SLOTS = 250
@@ -48,8 +50,9 @@ export function emptyList(count = 8): Combo[] {
 }
 
 /** Keeps a saved practice rhythm if it's a list of frame counts. */
-function withTiming(timing: unknown, c: Combo): Combo {
-  return Array.isArray(timing) && timing.every((n) => typeof n === 'number' && n >= 0) ? { ...c, timing } : c
+function withTiming(timing: unknown, frames: string | undefined, c: Combo): Combo {
+  const out = frames ? { ...c, frames } : c
+  return Array.isArray(timing) && timing.every((n) => typeof n === 'number' && n >= 0) ? { ...out, timing } : out
 }
 
 function isStringArray(v: unknown): v is string[] {
@@ -68,9 +71,9 @@ export function parseComboFile(json: unknown): ParsedFile {
   const data = json as Record<string, unknown>
   if (Array.isArray(data.slots)) {
     const slots = data.slots.filter(
-      (s): s is { name?: unknown; tokens?: unknown; notes?: unknown; timing?: unknown } => !!s && typeof s === 'object',
+      (s): s is { name?: unknown; tokens?: unknown; notes?: unknown; timing?: unknown; frames?: unknown } => !!s && typeof s === 'object',
     )
-    const combos = slots.map((s, i) => withTiming(s.timing,
+    const combos = slots.map((s, i) => withTiming(s.timing, typeof s.frames === 'string' ? s.frames : undefined,
       makeCombo(
         typeof s.name === 'string' ? s.name.split('\n')[0] : `Combo ${i + 1}`,
         isStringArray(s.tokens) ? s.tokens : [],
@@ -104,6 +107,7 @@ export function toComboFile(combos: Combo[], glyph: string): ComboListFile {
       tokens: c.tokens,
       ...(c.notes ? { notes: c.notes } : {}),
       ...(c.timing?.length ? { timing: c.timing } : {}),
+      ...(c.frames ? { frames: c.frames } : {}),
     })),
   }
 }

@@ -4,12 +4,27 @@
 // follow-ups, no sections).
 import type { Token } from './tokens'
 
+/** One row of frame data. Values are numbers, or text like "KD +38" or "21+12". */
+export interface FrameRow {
+  /** Which version: "LP", "OD", ... (missing when the move has only one). */
+  label?: string
+  startup?: number | string
+  active?: number | string
+  recovery?: number | string
+  onBlock?: number | string
+  onHit?: number | string
+  /** Punish counter (SF6). */
+  onPC?: number | string
+  damage?: number | string
+}
+
 export interface Move {
   name: string
   tokens: Token[]
   notes: string
   /** A follow-up to the move above it. */
   followUp: boolean
+  frames?: FrameRow[]
 }
 
 export interface MoveSection {
@@ -24,7 +39,7 @@ export interface MoveList {
 }
 
 export function parseMoveList(json: unknown): MoveList {
-  const d = (json ?? {}) as { glyph?: string; slots?: { name?: string; tokens?: Token[]; section?: string; notes?: string }[] }
+  const d = (json ?? {}) as { glyph?: string; slots?: { name?: string; tokens?: Token[]; section?: string; notes?: string; frames?: FrameRow[] }[] }
   const sections: MoveSection[] = []
   for (const slot of d.slots ?? []) {
     const lines = (slot.name ?? '').split('\n').map((l) => l.trim()).filter(Boolean)
@@ -37,6 +52,7 @@ export function parseMoveList(json: unknown): MoveList {
       tokens: Array.isArray(slot.tokens) ? slot.tokens : [],
       notes: slot.notes || legacyNotes,
       followUp,
+      ...(Array.isArray(slot.frames) && slot.frames.length ? { frames: slot.frames } : {}),
     }
     if (!move.name && !move.tokens.length) continue
     const title = slot.section || 'Moves'
@@ -54,4 +70,32 @@ export function filterMoves(list: MoveList, query: string): MoveSection[] {
   return list.sections
     .map((s) => ({ ...s, moves: s.moves.filter((m) => m.name.toLowerCase().includes(q) || m.notes.toLowerCase().includes(q)) }))
     .filter((s) => s.moves.length)
+}
+
+/** "+4", "-1", "0", or the text as written ("KD +38"). */
+export function advantage(v: number | string | undefined): string {
+  if (v === undefined) return ''
+  if (typeof v === 'number') return v > 0 ? `+${v}` : `${v}`
+  return v
+}
+
+/** Whether a frame advantage favours you (+), the opponent (−) or neither, for colouring. */
+export function advantageSign(v: number | string | undefined): 'plus' | 'minus' | 'even' | null {
+  if (typeof v === 'number') return v > 0 ? 'plus' : v < 0 ? 'minus' : 'even'
+  if (typeof v !== 'string') return null
+  const m = v.match(/^([+-]?\d+)/)
+  if (m) return Number(m[1]) > 0 ? 'plus' : Number(m[1]) < 0 ? 'minus' : 'even'
+  return /KD|crumple|launch/i.test(v) ? 'plus' : null
+}
+
+/** One line for a combo built from a move: "5f startup · -1 on block · +4 on hit". */
+export function frameSummary(rows: FrameRow[] | undefined): string | undefined {
+  const r = rows?.[0]
+  if (!r) return undefined
+  const parts = [
+    r.startup !== undefined && `${r.startup}f startup`,
+    r.onBlock !== undefined && `${advantage(r.onBlock)} on block`,
+    r.onHit !== undefined && `${advantage(r.onHit)} on hit`,
+  ].filter(Boolean)
+  return parts.length ? `${r.label ? `${r.label}: ` : ''}${parts.join(' · ')}` : undefined
 }

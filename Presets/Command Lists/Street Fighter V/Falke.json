@@ -2,25 +2,77 @@
   "glyph": "Default",
   "game": "Street Fighter V",
   "character": "Falke",
-  "slot_count": 12,
+  "slot_count": 31,
   "slots": [
     {
       "name": "Psycho Kugel",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: hold punch button + release (standing); EX: hold punch button + release"
+      "notes": "Input: hold punch button + release (standing); EX: hold punch button + release",
+      "frames": [
+        {
+          "startup": 16,
+          "active": "2(2)2(1)2",
+          "recovery": 26,
+          "onBlock": 2,
+          "onHit": 7,
+          "damage": "20*20*20 (60)"
+        },
+        {
+          "label": "EX",
+          "startup": 12,
+          "active": 9,
+          "recovery": 15,
+          "onBlock": 1,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Psycho Kanonen",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: hold punch button + release (crouch); EX: hold punch button + release"
+      "notes": "Input: hold punch button + release (crouch); EX: hold punch button + release",
+      "frames": [
+        {
+          "startup": 24,
+          "active": 20,
+          "recovery": 30,
+          "onBlock": -3,
+          "onHit": 4,
+          "damage": 60
+        },
+        {
+          "label": "EX",
+          "startup": 11,
+          "active": 9,
+          "recovery": 42,
+          "onBlock": -6,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Psycho Feder",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: hold punch button + release (air); EX: hold punch button + release"
+      "notes": "Input: hold punch button + release (air); EX: hold punch button + release",
+      "frames": [
+        {
+          "startup": 16,
+          "recovery": 9,
+          "damage": 80
+        },
+        {
+          "label": "EX",
+          "startup": 16,
+          "recovery": 9,
+          "onHit": "KD",
+          "damage": 100
+        }
+      ]
     },
     {
       "name": "Psycho Schneide",
@@ -28,7 +80,27 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: PPP"
+      "notes": "EX: PPP",
+      "frames": [
+        {
+          "label": "PP",
+          "startup": 8,
+          "active": 6,
+          "recovery": "33(38)",
+          "onBlock": -17,
+          "onHit": "KD",
+          "damage": "50*70 (120)"
+        },
+        {
+          "label": "EX",
+          "startup": 12,
+          "active": "4(1)3",
+          "recovery": 44,
+          "onBlock": -25,
+          "onHit": "KD",
+          "damage": "40*40*60 (140)"
+        }
+      ]
     },
     {
       "name": "Katapult",
@@ -36,7 +108,27 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: KKK"
+      "notes": "EX: KKK",
+      "frames": [
+        {
+          "label": "KK",
+          "startup": 16,
+          "active": 4,
+          "recovery": "26(31)",
+          "onBlock": -10,
+          "onHit": "KD",
+          "damage": 90
+        },
+        {
+          "label": "EX",
+          "startup": 20,
+          "active": 4,
+          "recovery": 22,
+          "onBlock": -10,
+          "onHit": "KD",
+          "damage": "40x2 (80)"
+        }
+      ]
     },
     {
       "name": "Psycho Fluegel",
@@ -51,7 +143,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "recovery": 58,
+          "onBlock": -35,
+          "onHit": "KD",
+          "damage": "80*100*160 (340)"
+        }
+      ]
     },
     {
       "name": "Blaukraehe",
@@ -61,7 +163,17 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 6,
+          "recovery": 14,
+          "onBlock": 3,
+          "onHit": 6,
+          "damage": "70(40)"
+        }
+      ]
     },
     {
       "name": "Psycho Spitze",
@@ -71,7 +183,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 2,
+          "recovery": 25,
+          "onBlock": -10,
+          "onHit": 0,
+          "damage": 90
+        }
+      ]
     },
     {
       "name": "Zweitrit",
@@ -81,7 +203,366 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "8+12",
+          "active": 5,
+          "recovery": 36,
+          "onBlock": -14,
+          "onHit": "KD",
+          "damage": "60*63 (123)"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 9,
+          "onBlock": 2,
+          "onHit": 5,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": 15,
+          "onBlock": 3,
+          "onHit": 8,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -3,
+          "onHit": 4,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 11,
+          "onBlock": 3,
+          "onHit": 4,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -2,
+          "onHit": 4,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -4,
+          "onHit": 3,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 30
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 16,
+          "onBlock": -2,
+          "onHit": 4,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 27,
+          "onBlock": -8,
+          "onHit": -2,
+          "damage": 80
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": 2,
+          "onHit": 3,
+          "damage": 20
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 2,
+          "recovery": 17,
+          "onBlock": -2,
+          "onHit": 2,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 2,
+          "recovery": 24,
+          "onBlock": -12,
+          "onHit": "KD",
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 6,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "damage": 70
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 5,
+          "damage": 40
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 5,
+          "damage": 60
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 5,
+          "damage": 90
+        }
+      ]
+    },
+    {
+      "name": "Luftjagd",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 16,
+          "recovery": 15,
+          "onBlock": "~(1)",
+          "onHit": "~(7)",
+          "damage": 60
+        }
+      ]
     },
     {
       "name": "Wirbel Wind",
@@ -91,7 +572,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     },
     {
       "name": "Luftstrom",
@@ -103,7 +593,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 17,
+          "onHit": "KD",
+          "damage": 150
+        }
+      ]
     },
     {
       "name": "Windstoss",
@@ -113,7 +612,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 6,
+          "onHit": "KD",
+          "damage": 140
+        }
+      ]
     }
   ]
 }

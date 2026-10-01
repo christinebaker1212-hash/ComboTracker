@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Cammy",
-  "slot_count": 34,
+  "slot_count": 52,
   "slots": [
     {
       "name": "Spiral Arrow",
@@ -14,7 +14,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK"
+      "notes": "OD: 236KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 9,
+          "active": 13,
+          "recovery": 21,
+          "onBlock": "-12(0)",
+          "onHit": "KD +26(48)",
+          "onPC": "KD +26(48)",
+          "damage": 800
+        },
+        {
+          "label": "MK",
+          "startup": 9,
+          "active": 15,
+          "recovery": 21,
+          "onBlock": "-14(0)",
+          "onHit": "KD +26(48)",
+          "onPC": "KD +26(48)",
+          "damage": 900
+        },
+        {
+          "label": "HK",
+          "startup": 15,
+          "active": "3(1)12",
+          "recovery": 21,
+          "onBlock": "-12(-1)",
+          "onHit": "KD +29(48)",
+          "onPC": "KD +29(48)",
+          "damage": "1000 (300*700)"
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": "3(1)12",
+          "recovery": 20,
+          "onBlock": -14,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": "800 (150x4*200)"
+        }
+      ]
     },
     {
       "name": "Spiral Arrow (hold)",
@@ -26,7 +68,18 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "27(25)",
+          "active": "3(1)12",
+          "recovery": 20,
+          "onBlock": -14,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": "800 (150x4*200)"
+        }
+      ]
     },
     {
       "name": "Cannon Spike",
@@ -38,7 +91,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 623KK"
+      "notes": "OD: 623KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 5,
+          "active": 12,
+          "recovery": "24+16",
+          "onBlock": -36,
+          "onHit": "KD +20",
+          "onPC": "KD +20",
+          "damage": 900
+        },
+        {
+          "label": "MK",
+          "startup": 6,
+          "active": 12,
+          "recovery": "25+16",
+          "onBlock": -36,
+          "onHit": "KD +21",
+          "onPC": "KD +21",
+          "damage": 1000
+        },
+        {
+          "label": "HK",
+          "startup": 7,
+          "active": 12,
+          "recovery": "28+16",
+          "onBlock": -36,
+          "onHit": "KD +22",
+          "onPC": "KD +22",
+          "damage": 1200
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": 12,
+          "recovery": "30+16",
+          "onBlock": -40,
+          "onHit": "KD +19",
+          "onPC": "KD +19",
+          "damage": "1500 (600*100x3*600)"
+        }
+      ]
     },
     {
       "name": "Cannon Spike (hold)",
@@ -50,7 +145,18 @@
         "hk"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "24(22)",
+          "active": 12,
+          "recovery": "29+16",
+          "onBlock": -40,
+          "onHit": "KD +16",
+          "onPC": "KD +16",
+          "damage": "1500 (1100*100x4)"
+        }
+      ]
     },
     {
       "name": "Quick Spin Knuckle",
@@ -62,7 +168,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP; Hold the button to charge the attack"
+      "notes": "OD: 214PP; Hold the button to charge the attack",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 21,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 800
+        },
+        {
+          "label": "MP",
+          "startup": 24,
+          "active": 4,
+          "recovery": 16,
+          "onBlock": -2,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        },
+        {
+          "label": "HP",
+          "startup": 28,
+          "active": 4,
+          "recovery": 17,
+          "onBlock": 3,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": "25(28)",
+          "active": 4,
+          "recovery": 17,
+          "onBlock": -2,
+          "onHit": 7,
+          "onPC": 11,
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Cannon Strike",
@@ -74,7 +222,28 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "air; OD: 214KK; During a forward jump"
+      "notes": "air; OD: 214KK; During a forward jump",
+      "frames": [
+        {
+          "startup": 13,
+          "active": "until land",
+          "recovery": 12,
+          "onBlock": "-8(5)",
+          "onHit": "-2(11)",
+          "onPC": "2(15)",
+          "damage": 600
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": "until land",
+          "recovery": 12,
+          "onBlock": "-4(7)",
+          "onHit": "0(11)",
+          "onPC": "4(15)",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Hooligan Combination",
@@ -86,7 +255,16 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP"
+      "notes": "OD: 236PP",
+      "frames": [
+        {
+          "startup": "20~40"
+        },
+        {
+          "label": "OD",
+          "startup": "20~40"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination (hold)",
@@ -98,7 +276,12 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "38(40~60)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination > Razor Edge Slicer",
@@ -110,7 +293,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "then return the stick to neutral; OD: 236PP > 5"
+      "notes": "then return the stick to neutral; OD: 236PP > 5",
+      "frames": [
+        {
+          "startup": 50,
+          "active": 9,
+          "recovery": 13,
+          "onBlock": 2,
+          "onHit": "KD +48",
+          "onPC": "KD +48",
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": 50,
+          "active": "9(10)5",
+          "recovery": 17,
+          "onBlock": 2,
+          "onHit": "KD +48",
+          "onPC": "KD +48",
+          "damage": "1200 (800*400)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination (hold) > Razor Edge Slicer",
@@ -122,7 +326,18 @@
         "hp"
       ],
       "section": "Special moves",
-      "notes": "hold, then return the stick to neutral"
+      "notes": "hold, then return the stick to neutral",
+      "frames": [
+        {
+          "startup": "70(68)",
+          "active": "9(10)5",
+          "recovery": 17,
+          "onBlock": 2,
+          "onHit": "KD +48",
+          "onPC": "KD +48",
+          "damage": "1200 (800*400)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination > Cannon Strike",
@@ -136,7 +351,28 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > K"
+      "notes": "OD: 236PP > K",
+      "frames": [
+        {
+          "startup": "20+13",
+          "active": "until land",
+          "recovery": 12,
+          "onBlock": "-7(3)",
+          "onHit": "-1(9)",
+          "onPC": "3(13)",
+          "damage": 600
+        },
+        {
+          "label": "OD",
+          "startup": "20+13",
+          "active": "until land",
+          "recovery": 12,
+          "onBlock": "0(5)",
+          "onHit": "-1(9)",
+          "onPC": "3(13)",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Hooligan Combination (hold) > Cannon Strike",
@@ -150,7 +386,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "38(40)+13",
+          "active": "until land",
+          "recovery": 12,
+          "onBlock": "0(5)",
+          "onHit": "-1(9)",
+          "onPC": "3(13)",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Hooligan Combination > Reverse Edge",
@@ -166,7 +413,28 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > 2K"
+      "notes": "OD: 236PP > 2K",
+      "frames": [
+        {
+          "startup": "20+18",
+          "active": 4,
+          "recovery": 13,
+          "onBlock": "-5(1)",
+          "onHit": "5(11)",
+          "onPC": "9(15)",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": "20+18",
+          "active": "4(14)4",
+          "recovery": 13,
+          "onBlock": -2,
+          "onHit": 8,
+          "onPC": 12,
+          "damage": "1200 (600*600)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination (hold) > Reverse Edge",
@@ -182,7 +450,18 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "38(40)+18",
+          "active": "4(14)4",
+          "recovery": 13,
+          "onBlock": -2,
+          "onHit": 8,
+          "onPC": 12,
+          "damage": "1200 (600*600)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination > Fatal Leg Twister",
@@ -198,7 +477,27 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > LPLK"
+      "notes": "OD: 236PP > LPLK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": "20+10",
+          "active": 3,
+          "recovery": "30(38)",
+          "onHit": "HKD +18",
+          "onPC": "HKD +18",
+          "damage": "1800(2070)"
+        },
+        {
+          "label": "OD",
+          "startup": "20+10",
+          "active": 3,
+          "recovery": "30(38)",
+          "onHit": "HKD +60",
+          "onPC": "HKD +60",
+          "damage": "1000(1150)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination (hold) > Fatal Leg Twister",
@@ -214,7 +513,17 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "38(40)+10",
+          "active": 3,
+          "recovery": "30(32)",
+          "onHit": "HKD +60",
+          "onPC": "HKD +60",
+          "damage": "1000(1150)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination > Silent Step",
@@ -228,7 +537,18 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP > P"
+      "notes": "OD: 236PP > P",
+      "frames": [
+        {
+          "startup": 20,
+          "recovery": "14(22)"
+        },
+        {
+          "label": "OD",
+          "startup": 20,
+          "recovery": "14(19)"
+        }
+      ]
     },
     {
       "name": "Hooligan Combination (hold) > Silent Step",
@@ -242,7 +562,13 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "hold"
+      "notes": "hold",
+      "frames": [
+        {
+          "startup": "38(40)",
+          "recovery": "14(17)"
+        }
+      ]
     },
     {
       "name": "Spin Drive Smasher",
@@ -257,7 +583,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": "4*3*3*3*3",
+          "recovery": 38,
+          "onBlock": "-24(-22)",
+          "onHit": "KD +10",
+          "onPC": "KD +10",
+          "damage": 2000
+        }
+      ]
     },
     {
       "name": "Killer Bee Spin",
@@ -272,7 +609,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 9,
+          "recovery": 37,
+          "onBlock": "-24(-18)",
+          "onHit": "HKD +12",
+          "onPC": "HKD +12",
+          "damage": 3000
+        }
+      ]
     },
     {
       "name": "Aerial Killer Bee Spin",
@@ -287,7 +635,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 13,
+          "active": "until land",
+          "recovery": 37,
+          "onBlock": "-23(-18)",
+          "onHit": "HKD +12",
+          "onPC": "HKD +12",
+          "damage": 3000
+        }
+      ]
     },
     {
       "name": "Delta Red Assault",
@@ -302,7 +661,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 15,
+          "recovery": 38,
+          "onBlock": "-33(-23)",
+          "onHit": "HKD +17",
+          "onPC": "HKD +17",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Lift Uppercut",
@@ -312,7 +682,18 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 5,
+          "recovery": 12,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Assault Blade",
@@ -322,7 +703,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -7,
+          "onHit": "KD +54",
+          "onPC": "KD +54",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Delayed Ripper",
@@ -332,7 +724,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 18,
+          "active": 3,
+          "recovery": "20(25)",
+          "onBlock": -12,
+          "onHit": "KD +31",
+          "onPC": "KD +52",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Lift Combination",
@@ -344,7 +747,18 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": "-12(-19)",
+          "onHit": "KD +49",
+          "onPC": "KD +49",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Swing Combination",
@@ -354,7 +768,378 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": "4(12)3",
+          "recovery": 29,
+          "onBlock": -12,
+          "onHit": "KD +26",
+          "onPC": "KD +26",
+          "damage": "1600 (800*400*400) {400*400}"
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": -2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "recovery": 13,
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -4,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 3,
+          "recovery": "19(21)",
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": "KD +44",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 8,
+          "onBlock": -2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": "14(17)",
+          "onBlock": -2,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 4,
+          "recovery": 15,
+          "onBlock": 1,
+          "onHit": 7,
+          "onPC": 11,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": -2,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -5,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 24,
+          "onBlock": -10,
+          "onHit": "KD +38",
+          "onPC": "HKD +43",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 10,
+          "onBlock": "2~5",
+          "onHit": "6~9",
+          "onPC": "10~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 8,
+          "onBlock": "6~9",
+          "onHit": "10~13 (KD)",
+          "onPC": "14~17 (KD)",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 5,
+          "onBlock": "4~11",
+          "onHit": "8~15 (KD)",
+          "onPC": "12~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 10,
+          "onBlock": "2~6",
+          "onHit": "6~10",
+          "onPC": "10~14",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 6,
+          "onBlock": "8~9",
+          "onHit": "12~13",
+          "onPC": "16~17",
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 6,
+          "onBlock": "7~11",
+          "onHit": "11~15",
+          "onPC": "15~19",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Rough Landing",
@@ -364,7 +1149,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +17",
+          "onPC": "HKD +17",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Delta Throw",
@@ -376,7 +1171,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +14",
+          "onPC": "HKD +14",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Leg Scissors Choke",
@@ -386,7 +1191,16 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "onHit": "KD +22",
+          "onPC": "HKD +22",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Spin Raider",
@@ -396,7 +1210,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Countersnipe",
@@ -408,7 +1233,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -418,7 +1254,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -428,7 +1271,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

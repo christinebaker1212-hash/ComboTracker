@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Akuma",
-  "slot_count": 40,
+  "slot_count": 58,
   "slots": [
     {
       "name": "Gou Hadoken",
@@ -14,7 +14,45 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP; Hold the button to change effect; Also: lvl 2, lvl 3, hold"
+      "notes": "OD: 236PP; Hold the button to change effect; Also: lvl 2, lvl 3, hold",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 16,
+          "recovery": 30,
+          "onBlock": -4,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 700
+        },
+        {
+          "label": "MP",
+          "startup": 14,
+          "recovery": 32,
+          "onBlock": -6,
+          "onHit": -2,
+          "onPC": 2,
+          "damage": 700
+        },
+        {
+          "label": "HP",
+          "startup": 12,
+          "recovery": 34,
+          "onBlock": -8,
+          "onHit": -4,
+          "onPC": 0,
+          "damage": 700
+        },
+        {
+          "label": "OD",
+          "startup": "12~27",
+          "recovery": 29,
+          "onBlock": 2,
+          "onHit": "KD +55",
+          "onPC": "KD +55",
+          "damage": "1000 (400*600)"
+        }
+      ]
     },
     {
       "name": "Zanku Hadoken",
@@ -26,7 +64,22 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "air; OD: 236PP; During a forward jump"
+      "notes": "air; OD: 236PP; During a forward jump",
+      "frames": [
+        {
+          "startup": 13,
+          "recovery": "9(2) land",
+          "damage": 600
+        },
+        {
+          "label": "OD",
+          "startup": "6 (21)",
+          "recovery": "9(2) land",
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": "900 (300x3)"
+        }
+      ]
     },
     {
       "name": "Gou Shoryuken",
@@ -38,7 +91,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 623PP"
+      "notes": "OD: 623PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 5,
+          "active": 10,
+          "recovery": "21+12",
+          "onBlock": -23,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": 1100
+        },
+        {
+          "label": "MP",
+          "startup": 6,
+          "active": "2*8",
+          "recovery": "30+12",
+          "onBlock": -30,
+          "onHit": "KD +32",
+          "onPC": "KD +32",
+          "damage": "1300 (700*600)"
+        },
+        {
+          "label": "HP",
+          "startup": 7,
+          "active": "2*3*6",
+          "recovery": "35+15",
+          "onBlock": "-36(-39)",
+          "onHit": "KD +30",
+          "onPC": "KD +30",
+          "damage": "1500 (600*500*400)"
+        },
+        {
+          "label": "OD",
+          "startup": 6,
+          "active": "2*2*7",
+          "recovery": "37+15",
+          "onBlock": -41,
+          "onHit": "KD +14",
+          "onPC": "KD +14",
+          "damage": "1700 (300x3*100*700)"
+        }
+      ]
     },
     {
       "name": "Adamant Flame",
@@ -50,7 +145,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP"
+      "notes": "OD: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 15,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -8,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 700
+        },
+        {
+          "label": "MP",
+          "startup": 19,
+          "active": 3,
+          "recovery": "20(23)",
+          "onBlock": -4,
+          "onHit": 2,
+          "onPC": 10,
+          "damage": 800
+        },
+        {
+          "label": "HP",
+          "startup": 23,
+          "active": 3,
+          "recovery": "19(21)",
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 12,
+          "damage": 900
+        },
+        {
+          "label": "OD",
+          "startup": "18(20)",
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": "Crumple +78",
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Adamant Flame follow-up",
@@ -66,7 +203,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 214PP > 6P"
+      "notes": "OD: 214PP > 6P",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 7,
+          "active": 4,
+          "recovery": "18(22)",
+          "onBlock": -10,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 500
+        },
+        {
+          "label": "MP",
+          "startup": 7,
+          "active": 4,
+          "recovery": 32,
+          "onBlock": -18,
+          "onHit": "KD +32",
+          "onPC": "KD +32",
+          "damage": 600
+        },
+        {
+          "label": "HP",
+          "startup": 11,
+          "active": 4,
+          "recovery": 28,
+          "onBlock": -14,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": 600
+        },
+        {
+          "label": "OD",
+          "startup": 7,
+          "active": "4(4)3",
+          "recovery": "25(31)",
+          "onBlock": -18,
+          "onHit": "Wall Splat HKD +45~63",
+          "onPC": "Wall Splat HKD +45~63",
+          "damage": "1260 (700*240*320) {300, 400}"
+        }
+      ]
     },
     {
       "name": "Tatsumaki Zanku-kyaku",
@@ -78,7 +257,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 214KK"
+      "notes": "OD: 214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 12,
+          "active": 2,
+          "recovery": "14+13(14+7)",
+          "onBlock": -13,
+          "onHit": "KD +50",
+          "onPC": "KD +50",
+          "damage": 600
+        },
+        {
+          "label": "MK",
+          "startup": 11,
+          "active": "2(13)3",
+          "recovery": "10+20",
+          "onBlock": -13,
+          "onHit": "KD +41*38",
+          "onPC": "KD +41*38",
+          "damage": "1000 (500*500)"
+        },
+        {
+          "label": "HK",
+          "startup": 7,
+          "active": "3(6)3(9)3(18)3",
+          "recovery": "21+20(21+14)",
+          "onBlock": -59,
+          "onHit": "KD +34",
+          "onPC": "KD +34",
+          "damage": "1600 (400*300x2*600)"
+        },
+        {
+          "label": "OD",
+          "startup": 13,
+          "active": "2(4)2(4)2(3)2(4)2",
+          "recovery": "7+19",
+          "onBlock": -17,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": "1000 (200x3*100*300)"
+        }
+      ]
     },
     {
       "name": "Aerial Tatsumaki Zanku-kyaku",
@@ -90,7 +311,27 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "air; OD: 214KK; During a jump"
+      "notes": "air; OD: 214KK; During a jump",
+      "frames": [
+        {
+          "startup": 11,
+          "active": "2(5)2(5)2",
+          "recovery": "16 land",
+          "onBlock": "-6(3)",
+          "onHit": "KD +46(52)",
+          "onPC": "KD +46(52)",
+          "damage": 900
+        },
+        {
+          "label": "OD",
+          "startup": 11,
+          "active": "2(1)3(1)3(1)3(2)2",
+          "recovery": "16 land",
+          "onHit": "KD +39(46)",
+          "onPC": "KD +39(46)",
+          "damage": "1300 (200x4*500)"
+        }
+      ]
     },
     {
       "name": "Demon Raid",
@@ -102,7 +343,16 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK"
+      "notes": "OD: 236KK",
+      "frames": [
+        {
+          "startup": "18~40"
+        },
+        {
+          "label": "OD",
+          "startup": "16~40"
+        }
+      ]
     },
     {
       "name": "Demon Raid > Demon Low Slash",
@@ -114,7 +364,28 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "then return the stick to neutral; OD: 236KK > 5"
+      "notes": "then return the stick to neutral; OD: 236KK > 5",
+      "frames": [
+        {
+          "startup": 53,
+          "active": 4,
+          "recovery": "15(19)",
+          "onBlock": 2,
+          "onHit": "HKD +39",
+          "onPC": "HKD +54",
+          "damage": 1000
+        },
+        {
+          "label": "OD",
+          "startup": 53,
+          "active": 4,
+          "recovery": "15(19)",
+          "onBlock": 2,
+          "onHit": "HKD +39",
+          "onPC": "HKD +54",
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Demon Raid > Demon Guillotine",
@@ -128,7 +399,28 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > P"
+      "notes": "OD: 236KK > P",
+      "frames": [
+        {
+          "startup": "18+16",
+          "active": "until land",
+          "recovery": 9,
+          "onBlock": "4(10)",
+          "onHit": "KD +38(44)",
+          "onPC": "KD +38(44)",
+          "damage": 1300
+        },
+        {
+          "label": "OD",
+          "startup": "16+16",
+          "active": "until land",
+          "recovery": 9,
+          "onBlock": "4(10)",
+          "onHit": "KD +38(44)",
+          "onPC": "KD +38(44)",
+          "damage": 1300
+        }
+      ]
     },
     {
       "name": "Demon Raid > Demon Blade Kick",
@@ -142,13 +434,43 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > K"
+      "notes": "OD: 236KK > K",
+      "frames": [
+        {
+          "startup": "18+13",
+          "active": "until land",
+          "recovery": "9(14)",
+          "onBlock": "-5(5)",
+          "onHit": "0(10)",
+          "onPC": "4(14)",
+          "damage": 700
+        },
+        {
+          "label": "OD",
+          "startup": "16+13",
+          "active": "until land",
+          "recovery": "9(14)",
+          "onBlock": "-5(5)",
+          "onHit": "0(10)",
+          "onPC": "4(14)",
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Demon Raid > Demon Swoop",
       "tokens": [],
       "section": "Special moves",
-      "notes": "Input: 236K > 1/2/3 (hold); OD: 236KK > 1/2/3"
+      "notes": "Input: 236K > 1/2/3 (hold); OD: 236KK > 1/2/3",
+      "frames": [
+        {
+          "recovery": "3~8 land (45~50 total)"
+        },
+        {
+          "label": "OD",
+          "recovery": "3~8 land (45~50 total)"
+        }
+      ]
     },
     {
       "name": "Demon Raid > OD Demon Gou Zanku",
@@ -166,7 +488,23 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > 236P"
+      "notes": "OD: 236KK > 236P",
+      "frames": [
+        {
+          "startup": "16+6 (21)",
+          "recovery": "9(2) land",
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": "900 (300x3)"
+        },
+        {
+          "startup": "16+6 (21)",
+          "recovery": "9(2) land",
+          "onHit": "KD ~",
+          "onPC": "KD ~",
+          "damage": "900 (300x3)"
+        }
+      ]
     },
     {
       "name": "Demon Raid > OD Demon Gou Rasen",
@@ -184,7 +522,25 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 236KK > 214K"
+      "notes": "OD: 236KK > 214K",
+      "frames": [
+        {
+          "startup": "16+5",
+          "active": "2(2)3(2)3(1)3(1)2",
+          "recovery": "10 land",
+          "onHit": "KD +39(46)",
+          "onPC": "KD +39(46)",
+          "damage": "1300 (200x4*500)"
+        },
+        {
+          "startup": "16+5",
+          "active": "2(2)3(2)3(1)3(1)2",
+          "recovery": "10 land",
+          "onHit": "KD +39(46)",
+          "onPC": "KD +39(46)",
+          "damage": "1300 (200x4*500)"
+        }
+      ]
     },
     {
       "name": "Ashura Senku (backward)",
@@ -194,7 +550,12 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "recovery": 49
+        }
+      ]
     },
     {
       "name": "Ashura Senku (forward)",
@@ -204,7 +565,13 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "23 (~)",
+          "recovery": 51
+        }
+      ]
     },
     {
       "name": "Ashura Senku (forward) > Oboro Throw",
@@ -218,7 +585,17 @@
         "lk"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "23+8",
+          "active": 3,
+          "recovery": 50,
+          "onHit": "HKD +20",
+          "onPC": "HKD +20",
+          "damage": "2200(2900)"
+        }
+      ]
     },
     {
       "name": "Double Zanku Hadoken",
@@ -230,7 +607,14 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": "8(21)",
+          "recovery": "9(2)",
+          "damage": "1200 (600*600)"
+        }
+      ]
     },
     {
       "name": "Messatsu Gohado",
@@ -245,7 +629,17 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "recovery": 96,
+          "onBlock": -41,
+          "onHit": "KD +9",
+          "onPC": "KD +9",
+          "damage": "2200 (400x4*600)"
+        }
+      ]
     },
     {
       "name": "Tenma Gozanku",
@@ -260,7 +654,16 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 14,
+          "recovery": "23(33) landing",
+          "onHit": "KD +49~",
+          "onPC": "KD +49~",
+          "damage": "2000 (400x5)"
+        }
+      ]
     },
     {
       "name": "Empyrean's End",
@@ -275,7 +678,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "9(2)",
+          "active": 3,
+          "recovery": 52,
+          "onBlock": -35,
+          "onHit": "KD +29 Tumble (HKD +97 Wall Splat)",
+          "onPC": "KD +29 Tumble (HKD +97 Wall Splat)",
+          "damage": "2800 (250*1500*1050)"
+        }
+      ]
     },
     {
       "name": "Sip of Calamity",
@@ -290,7 +704,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": "8(2)",
+          "active": 4,
+          "recovery": 58,
+          "onBlock": -41,
+          "onHit": "HKD +18",
+          "onPC": "HKD +18",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Shun Goku Satsu",
@@ -306,7 +731,17 @@
         "hp"
       ],
       "section": "Super Arts",
-      "notes": "Only when vitality is at 25% or below"
+      "notes": "Only when vitality is at 25% or below",
+      "frames": [
+        {
+          "startup": "6+0",
+          "active": 21,
+          "recovery": 57,
+          "onHit": "HKD +18",
+          "onPC": "HKD +18",
+          "damage": 4700
+        }
+      ]
     },
     {
       "name": "Kongou Kokuretsuzan (KKZ)",
@@ -317,7 +752,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 30,
+          "recovery": 41,
+          "onBlock": -39,
+          "onHit": "KD +38",
+          "onPC": "KD +38",
+          "damage": 3000
+        }
+      ]
     },
     {
       "name": "Misogi",
@@ -332,7 +778,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "5(9~10)",
+          "active": 7,
+          "recovery": 88,
+          "onBlock": "-58(-57)",
+          "onHit": "KD +25(26)",
+          "onPC": "KD +29(30)",
+          "damage": 2900
+        }
+      ]
     },
     {
       "name": "Skull Splitter",
@@ -342,7 +799,18 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": "1(1)3",
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": "600 (200*400)"
+        }
+      ]
     },
     {
       "name": "Resso Snap Kick",
@@ -352,7 +820,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": "15(19)",
+          "onBlock": -4,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Kikoku",
@@ -362,7 +841,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 4,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Rago High Kick",
@@ -372,7 +862,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 5,
+          "recovery": 27,
+          "onBlock": -15,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Tenmaku Blade Kick",
@@ -384,7 +885,18 @@
         "mk"
       ],
       "section": "Target combos",
-      "notes": "During a forward jump"
+      "notes": "During a forward jump",
+      "frames": [
+        {
+          "startup": 16,
+          "active": "until land",
+          "recovery": "7(13)",
+          "onBlock": "-4(6)",
+          "onHit": "1(11)",
+          "onPC": "5(15)",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Viscera Piercer",
@@ -394,7 +906,18 @@
         "mp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 21,
+          "onBlock": -6,
+          "onHit": -1,
+          "onPC": 3,
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Bone Crusher Axe Kick",
@@ -404,7 +927,18 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 20,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Kikoku Combination 1",
@@ -418,7 +952,18 @@
         "hp"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 3,
+          "recovery": "21(24)",
+          "onBlock": -10,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Kikoku Combination 2",
@@ -434,7 +979,378 @@
         "hk"
       ],
       "section": "Target combos",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 24,
+          "onBlock": -13,
+          "onHit": "KD +35",
+          "onPC": "KD +35",
+          "damage": 875
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 7,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "recovery": "11(13)",
+          "onBlock": 1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 18,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 11,
+          "onBlock": -4,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 5,
+          "recovery": 15,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": "3(8)4",
+          "recovery": "15(16)",
+          "onBlock": "3(-13)",
+          "onHit": 7,
+          "onPC": 11,
+          "damage": "800 (400*400)"
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 2,
+          "recovery": 9,
+          "onBlock": -1,
+          "onHit": 5,
+          "onPC": 9,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 3,
+          "recovery": "14(16)",
+          "onBlock": -1,
+          "onHit": 6,
+          "onPC": 10,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 8,
+          "recovery": 19,
+          "onBlock": -8,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 2,
+          "recovery": 10,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -6,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": "23(29)",
+          "onBlock": -12,
+          "onHit": "KD +40",
+          "onPC": "HKD +47",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 10,
+          "onBlock": "0~5",
+          "onHit": "4~9",
+          "onPC": "8~13",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 4,
+          "onBlock": "5~7",
+          "onHit": "9~11 (KD)",
+          "onPC": "13~15 (KD)",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "onBlock": "4~11",
+          "onHit": "8~15 (KD)",
+          "onPC": "12~19 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 10,
+          "onBlock": "1~6",
+          "onHit": "5~10",
+          "onPC": "9~14",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 6,
+          "onBlock": "4~9",
+          "onHit": "8~13",
+          "onPC": "12~17",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 6,
+          "onBlock": "5~11",
+          "onHit": "9~15",
+          "onPC": "13~19",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Goshoha",
@@ -444,7 +1360,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +28",
+          "onPC": "HKD +28",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Shuretto",
@@ -456,7 +1382,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +14",
+          "onPC": "HKD +14",
+          "damage": "1200(2040)"
+        }
+      ]
     },
     {
       "name": "Drive Impact: Oni Goroshi",
@@ -466,7 +1402,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Souha Double Palm",
@@ -478,7 +1425,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +23",
+          "onPC": "KD +23",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -488,7 +1446,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -498,7 +1463,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter III - Third Strike",
   "character": "Q",
-  "slot_count": 15,
+  "slot_count": 36,
   "slots": [
     {
       "name": "Dashing Head Attack",
@@ -13,7 +13,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "hold; EX: 46PP"
+      "notes": "hold; EX: 46PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 25,
+          "active": 3,
+          "recovery": 23,
+          "onBlock": -10,
+          "damage": 17
+        },
+        {
+          "label": "MP",
+          "startup": 29,
+          "active": 3,
+          "recovery": 24,
+          "onBlock": -11,
+          "damage": 20
+        },
+        {
+          "label": "HP",
+          "startup": 33,
+          "active": 3,
+          "recovery": 25,
+          "onBlock": -12,
+          "damage": 23
+        },
+        {
+          "label": "EX",
+          "startup": 15,
+          "active": 3,
+          "recovery": 36,
+          "onBlock": -21,
+          "damage": 28
+        }
+      ]
     },
     {
       "name": "Dashing Leg Attack",
@@ -24,7 +58,41 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "EX: 46KK"
+      "notes": "EX: 46KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 26,
+          "active": 2,
+          "recovery": 29,
+          "onBlock": -13,
+          "damage": 19
+        },
+        {
+          "label": "MK",
+          "startup": 29,
+          "active": 2,
+          "recovery": 30,
+          "onBlock": -14,
+          "damage": 22
+        },
+        {
+          "label": "HK",
+          "startup": 32,
+          "active": 2,
+          "recovery": 31,
+          "onBlock": -15,
+          "damage": 24
+        },
+        {
+          "label": "EX",
+          "startup": 27,
+          "active": 4,
+          "recovery": 34,
+          "onBlock": -18,
+          "damage": 29
+        }
+      ]
     },
     {
       "name": "High Speed Barrage",
@@ -36,7 +104,41 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "EX: 214PP"
+      "notes": "EX: 214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 10,
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "damage": 24
+        },
+        {
+          "label": "MP",
+          "startup": 9,
+          "active": 4,
+          "recovery": 28,
+          "onBlock": -9,
+          "damage": 24
+        },
+        {
+          "label": "HP",
+          "startup": 10,
+          "active": 3,
+          "recovery": 28,
+          "onBlock": -8,
+          "damage": 24
+        },
+        {
+          "label": "EX",
+          "startup": 7,
+          "active": 11,
+          "recovery": 36,
+          "onBlock": -23,
+          "damage": 40
+        }
+      ]
     },
     {
       "name": "Capture and Deadly Blow",
@@ -50,7 +152,30 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 13,
+          "active": 2,
+          "recovery": 42,
+          "damage": 19
+        },
+        {
+          "label": "MK",
+          "startup": 14,
+          "active": 2,
+          "recovery": 44,
+          "damage": 21
+        },
+        {
+          "label": "HK",
+          "startup": 15,
+          "active": 2,
+          "recovery": 46,
+          "damage": 23
+        }
+      ]
     },
     {
       "name": "Critical Combo Attack",
@@ -65,7 +190,16 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "SA1"
+      "notes": "SA1",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 16,
+          "recovery": 31,
+          "onBlock": -19,
+          "damage": 62
+        }
+      ]
     },
     {
       "name": "Deadly Double Combination",
@@ -80,7 +214,16 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "SA2"
+      "notes": "SA2",
+      "frames": [
+        {
+          "startup": 2,
+          "active": 1,
+          "recovery": 65,
+          "onBlock": -25,
+          "damage": 80
+        }
+      ]
     },
     {
       "name": "Total Destruction",
@@ -95,7 +238,12 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "SA3"
+      "notes": "SA3",
+      "frames": [
+        {
+          "startup": 19
+        }
+      ]
     },
     {
       "name": "Total Destruction: Blow",
@@ -107,7 +255,16 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": "during SA3"
+      "notes": "during SA3",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 1,
+          "recovery": 39,
+          "onBlock": -17,
+          "damage": 62
+        }
+      ]
     },
     {
       "name": "Total Destruction: Capture",
@@ -119,7 +276,15 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "during SA3"
+      "notes": "during SA3",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 3,
+          "recovery": 59,
+          "damage": 83
+        }
+      ]
     },
     {
       "name": "Upwards Head Strike",
@@ -129,7 +294,17 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "recovery": 18,
+          "onBlock": -2,
+          "onHit": 0,
+          "damage": 17
+        }
+      ]
     },
     {
       "name": "Double-Armed Advance",
@@ -139,7 +314,17 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 11,
+          "recovery": 15,
+          "onBlock": -1,
+          "onHit": 1,
+          "damage": 21
+        }
+      ]
     },
     {
       "name": "Inversion Head Kick",
@@ -149,7 +334,397 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 7,
+          "recovery": 35,
+          "onBlock": -26,
+          "onHit": "D",
+          "damage": 24
+        }
+      ]
+    },
+    {
+      "name": "Close LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "recovery": 6,
+          "onBlock": 2,
+          "onHit": 2,
+          "damage": 6
+        }
+      ]
+    },
+    {
+      "name": "Far LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "recovery": 4,
+          "onBlock": 4,
+          "onHit": 4,
+          "damage": 5
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 5,
+          "recovery": 19,
+          "onBlock": -2,
+          "onHit": 0,
+          "damage": 16
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 19,
+          "active": 16,
+          "recovery": 23,
+          "onBlock": -23,
+          "onHit": "D",
+          "damage": 23
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 4,
+          "recovery": 8,
+          "onBlock": 2,
+          "onHit": 2,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Close MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 2,
+          "recovery": 18,
+          "onBlock": -2,
+          "onHit": 0,
+          "damage": 17
+        }
+      ]
+    },
+    {
+      "name": "Far MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 14,
+          "onBlock": -1,
+          "onHit": 1,
+          "damage": 19
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 21,
+          "active": 5,
+          "recovery": 28,
+          "onBlock": -12,
+          "onHit": -10,
+          "damage": 26
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "recovery": 4,
+          "onBlock": 4,
+          "onHit": 4,
+          "damage": 3
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 5,
+          "recovery": 13,
+          "onBlock": -2,
+          "onHit": -1,
+          "damage": 16
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 1,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": -1,
+          "damage": 21
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 5,
+          "recovery": 8,
+          "onBlock": -2,
+          "onHit": -2,
+          "damage": 3
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 14,
+          "onBlock": -3,
+          "onHit": -2,
+          "damage": 14
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 8,
+          "recovery": 33,
+          "onBlock": -25,
+          "onHit": "D",
+          "damage": 23
+        }
+      ]
+    },
+    {
+      "name": "Jump LP (Neutral)",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 6,
+          "damage": 17
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 8,
+          "damage": 23
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "damage": 7
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 8,
+          "damage": 16
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 18,
+          "active": 3,
+          "damage": 25
+        }
+      ]
     },
     {
       "name": "Grab and Knee Smash",
@@ -159,7 +734,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 1,
+          "recovery": 21,
+          "onBlock": 0,
+          "onHit": "D",
+          "damage": 19
+        }
+      ]
     },
     {
       "name": "Depraved Impact",
@@ -171,7 +756,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 3,
+          "active": 1,
+          "recovery": 21,
+          "onBlock": 0,
+          "onHit": "D",
+          "damage": 24
+        }
+      ]
     },
     {
       "name": "Leap Attack",
@@ -181,7 +776,15 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 10,
+          "recovery": 5,
+          "damage": 7
+        }
+      ]
     }
   ]
 }

@@ -2,7 +2,7 @@
   "glyph": "Default",
   "game": "Street Fighter 6",
   "character": "Dhalsim",
-  "slot_count": 28,
+  "slot_count": 47,
   "slots": [
     {
       "name": "Yoga Float",
@@ -10,7 +10,14 @@
         "down"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 30,
+          "active": 91,
+          "recovery": "20+3"
+        }
+      ]
     },
     {
       "name": "Aerial Yoga Float (air)",
@@ -20,7 +27,14 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 15,
+          "active": 81,
+          "recovery": "18+3"
+        }
+      ]
     },
     {
       "name": "Yoga Teleport",
@@ -28,7 +42,13 @@
         "left"
       ],
       "section": "Special moves",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "recovery": "24(31)"
+        }
+      ]
     },
     {
       "name": "Aerial Yoga Teleport (air)",
@@ -36,7 +56,12 @@
         "left"
       ],
       "section": "Special moves",
-      "notes": "air"
+      "notes": "air",
+      "frames": [
+        {
+          "startup": 10
+        }
+      ]
     },
     {
       "name": "Yoga Fire",
@@ -48,7 +73,26 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 236PP; Also: hold"
+      "notes": "OD: 236PP; Also: hold",
+      "frames": [
+        {
+          "startup": "15(9)",
+          "recovery": 33,
+          "onBlock": -6,
+          "onHit": -2,
+          "onPC": 2,
+          "damage": 600
+        },
+        {
+          "label": "OD",
+          "startup": 12,
+          "recovery": 33,
+          "onBlock": -3,
+          "onHit": "KD +49",
+          "onPC": "KD +49",
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Yoga Arch",
@@ -60,7 +104,28 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "Arch; OD: 236KK"
+      "notes": "Arch; OD: 236KK",
+      "frames": [
+        {
+          "startup": 18,
+          "active": "~(81)+10",
+          "recovery": 27,
+          "onBlock": -1,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 600
+        },
+        {
+          "label": "OD",
+          "startup": 18,
+          "active": "~(190)+10",
+          "recovery": 27,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Yoga Flame",
@@ -74,7 +139,49 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "OD: 63214PP"
+      "notes": "OD: 63214PP",
+      "frames": [
+        {
+          "label": "LP",
+          "startup": 16,
+          "active": 15,
+          "recovery": 15,
+          "onBlock": -4,
+          "onHit": "KD +33",
+          "onPC": "KD +33",
+          "damage": 800
+        },
+        {
+          "label": "MP",
+          "startup": 20,
+          "active": 15,
+          "recovery": 17,
+          "onBlock": -4,
+          "onHit": "KD +33",
+          "onPC": "KD +33",
+          "damage": "900 (450*450)"
+        },
+        {
+          "label": "HP",
+          "startup": 26,
+          "active": 17,
+          "recovery": 16,
+          "onBlock": "-4(-2)",
+          "onHit": "KD +45(47)",
+          "onPC": "KD +45(47)",
+          "damage": "1200 (400x3)"
+        },
+        {
+          "label": "OD",
+          "startup": 18,
+          "active": "5*5*5*5*5",
+          "recovery": "19(24)",
+          "onBlock": -11,
+          "onHit": "KD +51",
+          "onPC": "KD +51",
+          "damage": "800 (100x2*200x3)"
+        }
+      ]
     },
     {
       "name": "Yoga Blast",
@@ -88,7 +195,49 @@
         "any_k"
       ],
       "section": "Special moves",
-      "notes": "OD: 63214KK"
+      "notes": "OD: 63214KK",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 12,
+          "active": 10,
+          "recovery": 23,
+          "onBlock": -6,
+          "onHit": "KD +39",
+          "onPC": "KD +39",
+          "damage": 1000
+        },
+        {
+          "label": "MK",
+          "startup": 15,
+          "active": 10,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": 1200
+        },
+        {
+          "label": "HK",
+          "startup": 17,
+          "active": 10,
+          "recovery": 18,
+          "onBlock": -1,
+          "onHit": "KD +47",
+          "onPC": "KD +47",
+          "damage": 1200
+        },
+        {
+          "label": "OD",
+          "startup": 12,
+          "active": 10,
+          "recovery": 20,
+          "onBlock": 0,
+          "onHit": "KD +42",
+          "onPC": "KD +42",
+          "damage": "1000 (500*500)"
+        }
+      ]
     },
     {
       "name": "Yoga Comet (air)",
@@ -102,7 +251,27 @@
         "any_p"
       ],
       "section": "Special moves",
-      "notes": "Air; OD: 63214PP"
+      "notes": "Air; OD: 63214PP",
+      "frames": [
+        {
+          "startup": 30,
+          "active": "~(55)",
+          "recovery": "8 land",
+          "onBlock": "-2~",
+          "onHit": "-4~",
+          "onPC": "0~",
+          "damage": 800
+        },
+        {
+          "label": "OD",
+          "startup": 30,
+          "recovery": "3 land",
+          "onBlock": "9~",
+          "onHit": "5~",
+          "onPC": "6~",
+          "damage": "1200 (600*600)"
+        }
+      ]
     },
     {
       "name": "Yoga Inferno",
@@ -117,7 +286,18 @@
         "any_p"
       ],
       "section": "Super Arts",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": "104(84)",
+          "recovery": "15(40)",
+          "onBlock": "-10(-22)",
+          "onHit": "KD +24(27)",
+          "onPC": "KD +24(27)",
+          "damage": "1920~2100 (2040)"
+        }
+      ]
     },
     {
       "name": "Yoga Sunburst",
@@ -132,7 +312,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "Also: hold"
+      "notes": "Also: hold",
+      "frames": [
+        {
+          "startup": 7,
+          "active": "~(142)+20",
+          "recovery": 60,
+          "onBlock": -4,
+          "onHit": "KD +50",
+          "onPC": "KD +50",
+          "damage": "2800 (450x4*1000)"
+        }
+      ]
     },
     {
       "name": "Merciless Yoga",
@@ -147,7 +338,18 @@
         "any_k"
       ],
       "section": "Super Arts",
-      "notes": "Also: Critical Art (low health)"
+      "notes": "Also: Critical Art (low health)",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 5,
+          "recovery": 75,
+          "onBlock": -62,
+          "onHit": "HKD +19",
+          "onPC": "HKD +19",
+          "damage": 4000
+        }
+      ]
     },
     {
       "name": "Drill Kick",
@@ -155,7 +357,39 @@
         "downleft"
       ],
       "section": "Unique attacks",
-      "notes": "air; During a jump"
+      "notes": "air; During a jump",
+      "frames": [
+        {
+          "label": "LK",
+          "startup": 9,
+          "active": "until land",
+          "recovery": "6(11)",
+          "onBlock": "-30(5)",
+          "onHit": "-23(12)",
+          "onPC": "-19(16)",
+          "damage": 500
+        },
+        {
+          "label": "MK",
+          "startup": 9,
+          "active": "until land",
+          "recovery": "6(11)",
+          "onBlock": "-20(5)",
+          "onHit": "-15(10)",
+          "onPC": "-11(14)",
+          "damage": 500
+        },
+        {
+          "label": "HK",
+          "startup": 9,
+          "active": "until land",
+          "recovery": "6(11)",
+          "onBlock": "-22(5)",
+          "onHit": "-17(10)",
+          "onPC": "-13(14)",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Yoga Uppercut",
@@ -165,7 +399,18 @@
         "mp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 6,
+          "recovery": 16,
+          "onBlock": -3,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 700
+        }
+      ]
     },
     {
       "name": "Yoga Lance",
@@ -175,7 +420,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 7,
+          "recovery": 29,
+          "onBlock": -16,
+          "onHit": -9,
+          "onPC": "-5 (KD)",
+          "damage": 900
+        }
+      ]
     },
     {
       "name": "Nirvana Punch",
@@ -185,7 +441,18 @@
         "hp"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 4,
+          "recovery": 20,
+          "onBlock": -3,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Agile Kick",
@@ -195,7 +462,18 @@
         "lk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 10,
+          "onBlock": -3,
+          "onHit": 1,
+          "onPC": 5,
+          "damage": 200
+        }
+      ]
     },
     {
       "name": "Divine Kick",
@@ -205,7 +483,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 7,
+          "active": 4,
+          "recovery": 17,
+          "onBlock": 0,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 600
+        }
+      ]
     },
     {
       "name": "Thrust Kick",
@@ -215,7 +504,18 @@
         "mk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 8,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -7,
+          "onHit": -3,
+          "onPC": 1,
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Yoga Mountain",
@@ -225,7 +525,18 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 6,
+          "recovery": 20,
+          "onBlock": -9,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 1000
+        }
+      ]
     },
     {
       "name": "Karma Kick",
@@ -235,7 +546,399 @@
         "hk"
       ],
       "section": "Unique attacks",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 3,
+          "recovery": 22,
+          "onBlock": -7,
+          "onHit": "KD +33",
+          "onPC": "HKD +48",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Stand LP",
+      "tokens": [
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 3,
+          "recovery": 8,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MP",
+      "tokens": [
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 14,
+          "active": 3,
+          "recovery": 19,
+          "onBlock": -5,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Stand HP",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 16,
+          "active": 4,
+          "recovery": 27,
+          "onBlock": -11,
+          "onHit": -6,
+          "onPC": "KD +32",
+          "damage": 1000
+        }
+      ]
+    },
+    {
+      "name": "Stand LK",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 4,
+          "recovery": 11,
+          "onBlock": -6,
+          "onHit": 2,
+          "onPC": 6,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Stand MK",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 18,
+          "onBlock": -6,
+          "onHit": -2,
+          "onPC": 2,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Stand HK",
+      "tokens": [
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 17,
+          "active": 3,
+          "recovery": 20,
+          "onBlock": -6,
+          "onHit": 3,
+          "onPC": 24,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LP",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 9,
+          "onBlock": -1,
+          "onHit": 4,
+          "onPC": 8,
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Crouch MP",
+      "tokens": [
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 3,
+          "recovery": 16,
+          "onBlock": -4,
+          "onHit": 0,
+          "onPC": 4,
+          "damage": 600
+        }
+      ]
+    },
+    {
+      "name": "Crouch HP",
+      "tokens": [
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 19,
+          "active": 4,
+          "recovery": "20(24)",
+          "onBlock": -8,
+          "onHit": 3,
+          "onPC": 7,
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Crouch LK",
+      "tokens": [
+        "down",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 7,
+          "recovery": 16,
+          "onBlock": "-10(-4)",
+          "onHit": "-5(1)",
+          "onPC": "-1(5)",
+          "damage": 200
+        }
+      ]
+    },
+    {
+      "name": "Crouch MK",
+      "tokens": [
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 13,
+          "recovery": 14,
+          "onBlock": "-10(2)",
+          "onHit": "-3(9)",
+          "onPC": "1(13)",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Crouch HK",
+      "tokens": [
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 12,
+          "active": 16,
+          "recovery": 20,
+          "onBlock": "-16(-1)",
+          "onHit": "HKD +22(37)",
+          "onPC": "HKD +37(52)",
+          "damage": 900
+        }
+      ]
+    },
+    {
+      "name": "Jump LP",
+      "tokens": [
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 4,
+          "active": 4,
+          "onBlock": "0~5",
+          "onHit": "8~13",
+          "onPC": "12~17",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MP",
+      "tokens": [
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 9,
+          "active": 6,
+          "onBlock": "3~7",
+          "onHit": "9~13",
+          "onPC": "13~17",
+          "damage": 700
+        }
+      ]
+    },
+    {
+      "name": "Jump HP",
+      "tokens": [
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 13,
+          "active": 4,
+          "onBlock": "up to 15",
+          "onHit": "up to 19 (KD)",
+          "onPC": "up to 23 (KD)",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Jump LK",
+      "tokens": [
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 6,
+          "active": 4,
+          "onBlock": "-9~5",
+          "onHit": "-6~8",
+          "onPC": "-2~12",
+          "damage": 300
+        }
+      ]
+    },
+    {
+      "name": "Jump MK",
+      "tokens": [
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 11,
+          "active": 6,
+          "onBlock": "-11~9",
+          "onHit": "-7~13",
+          "onPC": "-3~17",
+          "damage": 500
+        }
+      ]
+    },
+    {
+      "name": "Jump HK",
+      "tokens": [
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Normal moves",
+      "notes": "",
+      "frames": [
+        {
+          "startup": 10,
+          "active": 10,
+          "onBlock": "5~11",
+          "onHit": "9~15",
+          "onPC": "13~19",
+          "damage": 800
+        }
+      ]
+    },
+    {
+      "name": "Yoga Mummy",
+      "tokens": [
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Normal moves",
+      "notes": "air; During a jump",
+      "frames": [
+        {
+          "startup": 10,
+          "active": "until land",
+          "recovery": 9,
+          "onBlock": "-22(4)",
+          "onHit": "-18(8)",
+          "onPC": "-14(12)",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Yoga Smash",
@@ -245,7 +948,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +31",
+          "onPC": "HKD +31",
+          "damage": 1200
+        }
+      ]
     },
     {
       "name": "Yoga Throw",
@@ -257,7 +970,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +19",
+          "onPC": "HKD +19",
+          "damage": 1200
+        }
+      ]
     },
     {
       "name": "Yoga Splash",
@@ -269,7 +992,17 @@
         "lk"
       ],
       "section": "Throws",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 5,
+          "active": 3,
+          "recovery": 23,
+          "onHit": "KD +35",
+          "onPC": "HKD +35",
+          "damage": 1200
+        }
+      ]
     },
     {
       "name": "Drive Impact: Yoga Rise",
@@ -279,7 +1012,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 26,
+          "active": 2,
+          "recovery": 35,
+          "onBlock": -3,
+          "onHit": "KD (notes)",
+          "onPC": "Crumple +104",
+          "damage": 800
+        }
+      ]
     },
     {
       "name": "Drive Reversal: Yoga Illusion",
@@ -291,7 +1035,18 @@
         "hk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": "20(18)",
+          "active": 3,
+          "recovery": 26,
+          "onBlock": -6,
+          "onHit": "KD +24",
+          "onPC": "KD +24",
+          "damage": 500
+        }
+      ]
     },
     {
       "name": "Drive Parry",
@@ -301,7 +1056,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": ""
+      "notes": "",
+      "frames": [
+        {
+          "startup": 1,
+          "active": "12(2)",
+          "recovery": "33(1)notes"
+        }
+      ]
     },
     {
       "name": "Drive Rush",
@@ -311,7 +1073,14 @@
         "mk"
       ],
       "section": "System",
-      "notes": "cancel"
+      "notes": "cancel",
+      "frames": [
+        {
+          "startup": "9(11)",
+          "active": "45(46)",
+          "recovery": "24(23)"
+        }
+      ]
     }
   ]
 }

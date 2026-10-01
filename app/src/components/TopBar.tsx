@@ -132,13 +132,13 @@ export function TopBar({ pad }: { pad: string | null }) {
           title={pad ? `${pad}\nClick for controller settings` : 'No controller found. Plug one in and press any button.'}
           onClick={() => open({ kind: 'settings' })}
         >
-          <Gamepad2 size={16} /> {pad ? 'Controller' : 'No controller'}
+          <Gamepad2 size={16} /> <span className="hide-narrow">{pad ? 'Controller' : 'No controller'}</span>
         </button>
         <button className="icon-btn" onClick={undo} disabled={!canUndo} title="Undo (Ctrl+Z)"><Undo2 size={17} /></button>
         <button className="icon-btn" onClick={redo} disabled={!canRedo} title="Redo (Ctrl+Shift+Z)"><Redo2 size={17} /></button>
         <span className="split-btn">
           <button className="btn" onClick={() => void openViewer()} title="Show your controller on screen, lighting up as you press buttons">
-            <Gamepad2 size={15} /> Input viewer
+            <Gamepad2 size={15} /> <span className="hide-narrow">Input viewer</span>
           </button>
           <Menu title="Input viewer and input history" align="right" triggerClassName="btn split-btn-more" trigger={<ChevronDown size={15} />} items={viewerItems} />
         </span>
