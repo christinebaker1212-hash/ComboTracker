@@ -2,7 +2,11 @@
   "$schema": "../gen/schemas/desktop-schema.json",
   "identifier": "default",
   "description": "Main editor and overlay windows",
-  "windows": ["main", "overlay-*"],
+  "windows": [
+    "main",
+    "overlay-*",
+    "viewer-*"
+  ],
   "permissions": [
     "core:default",
     "core:window:allow-create",
@@ -18,7 +22,86 @@
     "core:window:allow-scale-factor",
     "core:event:default",
     "dialog:allow-save",
-    "fs:allow-write-text-file",
-    "window-state:default"
+    "window-state:default",
+    {
+      "identifier": "fs:allow-read-dir",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-read-text-file",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-write-text-file",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-mkdir",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-remove",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    },
+    {
+      "identifier": "fs:allow-exists",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    },
+    "core:window:allow-destroy",
+    "core:window:allow-hide",
+    "core:path:default",
+    {
+      "identifier": "opener:allow-open-path",
+      "allow": [
+        {
+          "path": "$DOCUMENT/ComboTracker"
+        },
+        {
+          "path": "$DOCUMENT/ComboTracker/**"
+        }
+      ]
+    }
   ]
 }

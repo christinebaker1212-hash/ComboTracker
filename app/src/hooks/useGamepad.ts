@@ -1,51 +1,61 @@
 import { useEffect, useRef, useState } from 'react'
 import { insertTokens, mutateLast } from '../core/editor'
-import { frameFromGamepad, InputInterpreter, profileFor } from '../core/input'
+import { frameFromGamepad, InputInterpreter, pickPad, profileFor, profileFromMappings } from '../core/input'
+import { inputBus } from '../inputBus'
 import { useStore } from '../store/useStore'
 
+/** Poll interval. Independent of screen redraws, so a slow frame never swallows a quick input. */
+const POLL_MS = 4
+
 /**
- * Reads the first connected controller through the browser Gamepad API and
- * feeds it to the input interpreter. Polls once per animation frame and only
- * while a controller is connected, so an idle app uses no CPU.
+ * Reads the chosen controller through the browser Gamepad API and turns it
+ * into combo input. Polls only while a controller is connected, so an idle
+ * app uses no CPU.
  */
 export function useGamepad(): string | null {
   const [padName, setPadName] = useState<string | null>(null)
   const interp = useRef(new InputInterpreter())
-  const glyphName = useStore((s) => s.glyph.name)
+  const glyph = useStore((s) => s.glyph)
+  const padIndex = useStore((s) => s.settings.padIndex)
 
   useEffect(() => {
-    interp.current.profile = profileFor(glyphName)
+    const hasMap = glyph.source === 'user' && glyph.mappings && Object.keys(glyph.mappings).length
+    interp.current.profile = hasMap ? profileFromMappings(glyph.mappings!) : profileFor(glyph.name)
     interp.current.reset()
-  }, [glyphName])
+  }, [glyph])
 
   useEffect(() => {
-    let raf = 0
+    let timer: ReturnType<typeof setInterval> | undefined
     let active = false
 
-    const firstPad = () => navigator.getGamepads?.().find((p): p is Gamepad => !!p && p.connected) ?? null
-
     const loop = () => {
-      const pad = firstPad()
+      const pad = pickPad(useStore.getState().settings.padIndex)
       if (!pad) {
         active = false
+        clearInterval(timer)
         setPadName(null)
         return
       }
-      const { edit } = useStore.getState()
-      for (const ev of interp.current.update(frameFromGamepad(pad, performance.now()))) {
+      const now = performance.now()
+      const frame = frameFromGamepad(pad, now)
+      inputBus.emitRaw(frame.buttons)
+      const events = interp.current.update(frame)
+      const { edit, settings } = useStore.getState()
+      for (const ev of events) {
+        inputBus.emit(ev, now)
+        if (inputBus.captured || !settings.padInput) continue
         if (ev.type === 'insert') edit((s, g) => insertTokens(s, ev.tokens, g))
         else edit((s) => mutateLast(s, ev.from, ev.to))
       }
-      raf = requestAnimationFrame(loop)
     }
 
     const start = () => {
-      const pad = firstPad()
+      const pad = pickPad(useStore.getState().settings.padIndex)
       setPadName(pad?.id ?? null)
       if (pad && !active) {
         active = true
         interp.current.reset()
-        raf = requestAnimationFrame(loop)
+        timer = setInterval(loop, POLL_MS)
       }
     }
 
@@ -53,11 +63,12 @@ export function useGamepad(): string | null {
     window.addEventListener('gamepaddisconnected', start)
     start()
     return () => {
-      cancelAnimationFrame(raf)
+      clearInterval(timer)
+      active = false
       window.removeEventListener('gamepadconnected', start)
       window.removeEventListener('gamepaddisconnected', start)
     }
-  }, [])
+  }, [padIndex])
 
   return padName
 }

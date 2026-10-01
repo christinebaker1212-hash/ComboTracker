@@ -3,6 +3,7 @@ pub fn run() {
   tauri::Builder::default()
     .plugin(tauri_plugin_dialog::init())
     .plugin(tauri_plugin_fs::init())
+    .plugin(tauri_plugin_opener::init())
     // Remembers every window's position and size, including overlays.
     .plugin(tauri_plugin_window_state::Builder::default().build())
     .setup(|app| {

@@ -1,6 +1,7 @@
 import { useEffect, type RefObject } from 'react'
 import { backspace, deleteForward, moveCursor } from '../core/editor'
 import { useStore } from '../store/useStore'
+import { useUI } from '../store/useUI'
 
 const isTyping = (t: EventTarget | null) =>
   t instanceof HTMLElement && (t.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(t.tagName))
@@ -9,17 +10,31 @@ const isTyping = (t: EventTarget | null) =>
  * Global shortcuts. Editing keys only apply when you're not typing in a field.
  *   Ctrl+Z / Ctrl+Shift+Z / Ctrl+Y  undo / redo
  *   Ctrl+S                          save the current list
+ *   Ctrl+F                          search combos
  *   Backspace / Delete              delete before / after the caret
  *   ← → Home End                    move the caret
  *   ↑ ↓                             select the previous / next combo
  *   / or Enter                      jump to the notation box
  *   Esc                             hide the caret (input appends to the end)
  */
-export function useKeyboard(notationRef: RefObject<HTMLInputElement | null>, onSave: () => void) {
+export function useKeyboard(
+  notationRef: RefObject<HTMLInputElement | null>,
+  searchRef: RefObject<HTMLInputElement | null>,
+  onSave: () => void,
+) {
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const s = useStore.getState()
       const mod = e.ctrlKey || e.metaKey
+      // Dialogs handle their own keys; nothing should edit combos behind them.
+      if (useUI.getState().dialog) return
+
+      if (mod && e.key.toLowerCase() === 'f') {
+        e.preventDefault()
+        searchRef.current?.focus()
+        searchRef.current?.select()
+        return
+      }
 
       if (mod && e.key.toLowerCase() === 'z') {
         if (isTyping(e.target)) return
@@ -86,5 +101,5 @@ export function useKeyboard(notationRef: RefObject<HTMLInputElement | null>, onS
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [notationRef, onSave])
+  }, [notationRef, searchRef, onSave])
 }

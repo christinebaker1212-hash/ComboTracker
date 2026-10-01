@@ -1,8 +1,8 @@
 # ComboTracker (new app)
 
 The modern rewrite of ComboTracker: React + TypeScript, running in the browser
-or as a Windows desktop app built with Tauri. The
-Python app in the repo root keeps working until this one does everything it does.
+or as a Windows desktop app built with Tauri. It covers everything the Python
+app in the repo root did, plus practice mode, share codes and search.
 
 It reads the same `icons/` and `Presets/` folders and the same combo, command
 list and theme JSON files, so nothing you've made needs converting.
@@ -33,9 +33,9 @@ Other commands:
 The desktop build adds a real game overlay: pinned combos float see-through
 and always on top, and can be locked so clicks pass through to the game.
 
-**Get a build without installing anything:** on GitHub, open Actions →
-"Windows build" → Run workflow (or push a tag like `v0.2.1`). When it
-finishes, download the `ComboTracker-windows` artifact. It contains:
+**Get a build without installing anything:** every push that changes the app,
+icons or presets builds it on GitHub and updates the
+[`latest` release](https://github.com/christinebaker1212-hash/ComboTracker/releases/tag/latest), which has:
 
 - `ComboTracker-windows-portable.zip`: one `.exe`, no install. Upload this to itch.io.
 - `ComboTracker_x.y.z_x64-setup.exe`: a regular installer.
@@ -48,27 +48,8 @@ exclusive fullscreen.
 
 ## Using it
 
-- **Click** palette buttons, or **hold** one for the held/charge version.
-- **Type** notation in the "Type it" box: `2MK > 236HP`, `[4]6HP`, `j.HK`,
-  `623P`, `qcf+lp`, or a shortcut name like `DRC`.
-- **Controller**: plug one in and press a button; input goes into the selected combo.
-- **Click inside a combo** to place the caret and insert in the middle.
-- **Pin** combos and press **Overlay**. On desktop it floats see-through over
-  your game: drag to move, scroll to resize, hover for options, and use the
-  lock button in the main window to make it click-through. It can also use a
-  green-screen backdrop for OBS.
-- Everything autosaves in the browser. **Save/Open** read and write the same
-  JSON files as the desktop app.
-
-| Shortcut | Action |
-|---|---|
-| Ctrl+Z / Ctrl+Shift+Z | Undo / redo |
-| Ctrl+S | Save the current list |
-| Backspace / Delete | Delete before / after the caret |
-| ← → Home End | Move the caret |
-| ↑ ↓ | Previous / next combo |
-| / or Enter | Jump to the notation box |
-| Esc | Hide the caret |
+See the main [README](../README.md) for features and shortcuts; the app's **?**
+button has a quick guide too.
 
 ## Layout
 
@@ -78,13 +59,18 @@ src/
     tokens.ts     Token names and labels (the JSON vocabulary)
     editor.ts     Combo editing rules (ported from the Python app)
     notation.ts   Typed notation → tokens
-    glyphs.ts     Icon packs and icon fallback rules
-    input.ts      Controller timing and per-game button chords
+    glyphs.ts     Icon styles (built-in and user) and icon fallback rules
+    input.ts      Controller timing, per-game chords, SC/SNK specials, custom mappings
+    layouts.ts    Input viewer layouts
+    practice.ts   Practice mode input checking
+    share.ts      Share codes
     theme.ts      Theme JSON → colours
     combos.ts     File format read/write
-  store/        App state, undo/redo, autosave
-  components/   UI
-  hooks/        Gamepad and keyboard
+  store/        App state (undo/redo, autosave), user library, open dialogs
+  components/   UI: editor, dialogs, overlay and input viewer windows
+  hooks/        Controller, keyboard, shared state for floating windows
+  userdata.ts   The user's saved files (Documents\ComboTracker on desktop)
+  platform.ts   Browser vs desktop differences (windows, files)
 ```
 
 Per-game controller chords (Tekken 1+2 and so on) are data in `core/input.ts`

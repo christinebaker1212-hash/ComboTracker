@@ -3,7 +3,8 @@ import { forwardRef, useRef, useState, type PointerEvent, type ReactNode } from 
 import {
   addAttack, addDirection, applyCommand, applyMotion, insertRaw, insertTokens, togglePlus,
 } from '../core/editor'
-import { macrosFor } from '../core/glyphs'
+import { iconUrl, useAssets } from '../assets'
+import { iconSource, macroCode, macrosFor } from '../core/glyphs'
 import { TIMING } from '../core/input'
 import { applyNotation } from '../core/notation'
 import { MACRO_TOOLTIPS, type Token } from '../core/tokens'
@@ -60,6 +61,18 @@ function PadKey({ token, onTap, onHold, title, children, wide }: {
   )
 }
 
+/** Shows what typed notation will add, so mistakes are visible before pressing Enter. */
+function NotationPreview({ text }: { text: string }) {
+  const glyph = useStore((s) => s.glyph)
+  const { state, unknown } = applyNotation({ tokens: [], cursor: null }, text, glyph, macrosFor(glyph))
+  return (
+    <div className="notation-preview" aria-live="polite">
+      {state.tokens.map((t, i) => (t === 'newline' ? null : <TokenView key={i} token={t} glyph={glyph} size={22} />))}
+      {unknown.length > 0 && <span className="notation-unknown">Not understood: {unknown.join(', ')}</span>}
+    </div>
+  )
+}
+
 const ATTACK_ROWS: Token[][] = [
   ['lp', 'mp', 'hp', 'any_p'],
   ['lk', 'mk', 'hk', 'any_k'],
@@ -82,6 +95,7 @@ export const Palette = forwardRef<HTMLInputElement>(function Palette(_, notation
   const [confirmClear, setConfirmClear] = useState(false)
 
   const macros = macrosFor(glyph)
+  const { icons } = useAssets()
 
   const submitNotation = () => {
     if (!text.trim()) return
@@ -119,6 +133,7 @@ export const Palette = forwardRef<HTMLInputElement>(function Palette(_, notation
           />
           <button className="btn btn-accent" type="submit" disabled={!text.trim()}>Add</button>
         </form>
+        {text.trim() && <NotationPreview text={text} />}
       </section>
 
       <section className="panel">
@@ -191,6 +206,9 @@ export const Palette = forwardRef<HTMLInputElement>(function Palette(_, notation
               title={`${MACRO_TOOLTIPS[m.name.toUpperCase()] ?? m.name}: ${m.command}`}
               onClick={() => edit((s, g) => applyCommand(s, m.command, g))}
             >
+              {iconSource(macroCode(m.name), glyph, icons, iconUrl) && (
+                <TokenView token={macroCode(m.name)} glyph={glyph} size={18} />
+              )}
               {m.name}
             </button>
           ))}

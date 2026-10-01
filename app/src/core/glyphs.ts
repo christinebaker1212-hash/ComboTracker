@@ -6,6 +6,9 @@ export interface Macro {
   command: string
 }
 
+/** Where a user pack gets one icon: borrowed from another pack, or an uploaded image. */
+export type GlyphSource = { pack: string } | { image: string }
+
 export interface GlyphPack {
   name: string
   /** Icon filename suffix, e.g. "_ps" loads "lp_ps.png". Empty for the default set. */
@@ -18,7 +21,48 @@ export interface GlyphPack {
   motionsAreButtons?: boolean
   /** Built-in pack or one the user created. */
   source: 'builtin' | 'user'
+  /** User packs: per-token icon sources. Tokens not listed use the Default pack. */
+  tokens?: Record<string, GlyphSource>
+  /** User packs: controller mapping, token → buttons like "X" or "LB+RB". */
+  mappings?: Record<string, string>
 }
+
+/** The file format for user packs (one shareable JSON with images embedded). */
+export interface GlyphPackFile {
+  name: string
+  suffix?: string
+  macros?: Macro[] | string[]
+  tokens?: Record<string, GlyphSource>
+  mappings?: Record<string, string>
+}
+
+export function packFromFile(f: GlyphPackFile): GlyphPack {
+  const macros = (f.macros ?? []).map((m) => {
+    if (typeof m !== 'string') return m
+    // The desktop app stored macros as "Name, command".
+    const [name, ...rest] = m.split(',')
+    return { name: name.trim(), command: rest.join(',').trim() }
+  })
+  return {
+    name: f.name,
+    suffix: f.suffix ?? '',
+    macros: macros.filter((m) => m.name),
+    tokens: f.tokens ?? {},
+    mappings: f.mappings ?? {},
+    source: 'user',
+  }
+}
+
+export const packToFile = (g: GlyphPack): GlyphPackFile => ({
+  name: g.name,
+  suffix: g.suffix,
+  macros: g.macros,
+  tokens: g.tokens,
+  mappings: g.mappings,
+})
+
+/** A macro's key for icons, e.g. "Drive Rush" → "drive_rush". */
+export const macroCode = (name: string) => name.toLowerCase().trim().replace(/\s+/g, '_')
 
 const SF6_MACROS: Macro[] = [
   { name: 'PDR', command: 'mp+mk+right right' },
@@ -93,11 +137,13 @@ export function resolveIcon(
   token: Token,
   g: GlyphPack,
   available: ReadonlySet<string>,
-  opts: { macroArt?: boolean } = {},
+  opts: { macroArt?: boolean; gamepad?: boolean } = {},
 ): string | null {
   const t = token.toLowerCase()
-  const s = g.suffix.toLowerCase()
+  const s = g.source === 'user' ? '' : g.suffix.toLowerCase()
   const candidates: string[] = []
+  // Input viewer: controller-shaped art ("lp_tk_gamepad", then "lp_gamepad") where it exists.
+  if (opts.gamepad) candidates.push(`${t}${s}_gamepad`, `${t}_gamepad`)
   if (opts.macroArt && (s === '_tk' || s === '_t3')) candidates.push(`${t}${s}_2`)
   candidates.push(`${t}${s}`)
   if (s === '_ps') candidates.push(`${t}_xb`)
@@ -106,4 +152,30 @@ export function resolveIcon(
   for (const c of candidates) if (available.has(c)) return c
   if (t.startsWith('c_') || t.startsWith('h_')) return resolveIcon(t.slice(2), g, available, opts)
   return null
+}
+
+/**
+ * Resolves a token to an image URL for any pack. User packs can use uploaded
+ * images or borrow icons from built-in packs; anything unset falls back to Default.
+ */
+export function iconSource(
+  token: Token,
+  g: GlyphPack,
+  available: ReadonlySet<string>,
+  iconUrl: (name: string) => string,
+  opts: { macroArt?: boolean; gamepad?: boolean } = {},
+): string | null {
+  if (g.source === 'user') {
+    const t = token.toLowerCase()
+    const entry = g.tokens?.[t] ?? (/^[ch]_/.test(t) ? g.tokens?.[t.slice(2)] : undefined)
+    if (entry && 'image' in entry) return entry.image
+    const borrowed = BUILTIN_GLYPHS.find((b) => b.name === (entry && 'pack' in entry ? entry.pack : 'Default'))
+    if (borrowed) {
+      const name = resolveIcon(token, borrowed, available, opts)
+      return name ? iconUrl(name) : null
+    }
+    return null
+  }
+  const name = resolveIcon(token, g, available, opts)
+  return name ? iconUrl(name) : null
 }

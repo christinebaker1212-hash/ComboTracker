@@ -6,22 +6,23 @@ import type { Player } from './store/useStore'
 
 export const isDesktop = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window
 
-const overlayLabel = (p: Player) => `overlay-${p}`
+const overlayLabel = (p: Player, comboId?: string) => (comboId ? `overlay-${p}-${comboId}` : `overlay-${p}`)
 
-/** Opens (or focuses) the pinned-combo overlay for a player. */
-export async function openOverlay(p: Player): Promise<boolean> {
-  const url = `index.html?view=overlay&p=${p}`
-  if (!isDesktop) return !!window.open(`${location.pathname}?view=overlay&p=${p}`, overlayLabel(p), 'width=720,height=420')
-  const existing = await WebviewWindow.getByLabel(overlayLabel(p))
+/** Opens (or focuses) a see-through, always-on-top window for a page of this app. */
+async function openFloating(label: string, query: string, title: string, size: { width: number; height: number }): Promise<boolean> {
+  if (!isDesktop) {
+    const w = window.open(`${location.pathname}?${query}`, label, `width=${size.width},height=${size.height}`)
+    return !!w
+  }
+  const existing = await WebviewWindow.getByLabel(label)
   if (existing) {
     await existing.setFocus()
     return true
   }
-  new WebviewWindow(overlayLabel(p), {
-    url,
-    title: `ComboTracker overlay · Player ${p[1]}`,
-    width: 560,
-    height: 240,
+  new WebviewWindow(label, {
+    url: `index.html?${query}`,
+    title,
+    ...size,
     transparent: true,
     decorations: false,
     shadow: false,
@@ -30,6 +31,25 @@ export async function openOverlay(p: Player): Promise<boolean> {
   })
   return true
 }
+
+async function closeFloating(label: string) {
+  if (!isDesktop) {
+    window.open('', label)?.close()
+    return
+  }
+  await (await WebviewWindow.getByLabel(label))?.close()
+}
+
+/** Opens (or focuses) the pinned-combo overlay: all pinned combos, or a single one. */
+export function openOverlay(p: Player, comboId?: string): Promise<boolean> {
+  const q = `view=overlay&p=${p}${comboId ? `&combo=${comboId}` : ''}`
+  return openFloating(overlayLabel(p, comboId), q, `ComboTracker overlay · Player ${p[1]}`, { width: 560, height: 240 })
+}
+
+export const closeOverlay = (p: Player, comboId?: string) => closeFloating(overlayLabel(p, comboId))
+
+/** Opens the live input viewer. */
+export const openViewer = () => openFloating('viewer-main', 'view=viewer', 'ComboTracker input viewer', { width: 420, height: 280 })
 
 /** Tells overlays that the saved state changed (browser windows get a storage event instead). */
 export function broadcastState() {
@@ -42,16 +62,29 @@ export function onStateChanged(fn: () => void): () => void {
   return () => void un.then((f) => f())
 }
 
-/** Click-through: while locked, mouse clicks pass through the overlay to the game. */
-export function setOverlayLocked(p: Player, locked: boolean) {
-  if (isDesktop) void emit('overlay-lock', { player: p, locked })
+const LOCK_KEY = 'combotracker:overlays-locked'
+
+/** Click-through for every floating window: while locked, clicks pass through to the game. */
+export function setOverlaysLocked(locked: boolean) {
+  try {
+    localStorage.setItem(LOCK_KEY, locked ? '1' : '')
+  } catch {
+    // Lock still applies to open windows via the event below.
+  }
+  if (isDesktop) void emit('overlay-lock', { locked })
 }
 
-export function onOverlayLock(p: Player, fn: (locked: boolean) => void): () => void {
+export function overlaysLocked(): boolean {
+  try {
+    return !!localStorage.getItem(LOCK_KEY)
+  } catch {
+    return false
+  }
+}
+
+export function onOverlayLock(fn: (locked: boolean) => void): () => void {
   if (!isDesktop) return () => {}
-  const un = listen<{ player: Player; locked: boolean }>('overlay-lock', (e) => {
-    if (e.payload.player === p) fn(e.payload.locked)
-  })
+  const un = listen<{ locked: boolean }>('overlay-lock', (e) => fn(e.payload.locked))
   return () => void un.then((f) => f())
 }
 

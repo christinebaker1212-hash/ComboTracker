@@ -35,6 +35,37 @@ export interface InputProfile {
   /** Buttons that don't exist in this game and are ignored. */
   ignore: Token[]
   chords: Chord[]
+  /** Sequence-based extras that need input history. */
+  special?: 'soulcalibur' | 'snk'
+  /**
+   * Custom glyph packs: token → controller buttons pressed together. When set,
+   * this replaces the default button map entirely.
+   */
+  padMap?: { buttons: PadButton[]; emit: Token }[]
+}
+
+/** Accepts the desktop app's XInput names too ("RIGHT_SHOULDER" → "RB"). */
+const PAD_ALIASES: Record<string, PadButton> = {
+  RIGHT_SHOULDER: 'RB', LEFT_SHOULDER: 'LB', LEFT_THUMB: 'L3', RIGHT_THUMB: 'R3', SELECT: 'BACK',
+}
+export const PAD_BUTTONS: PadButton[] = ['A', 'B', 'X', 'Y', 'LB', 'RB', 'LT', 'RT', 'BACK', 'START', 'L3', 'R3']
+
+export function parsePadCombo(text: string): PadButton[] {
+  return text
+    .toUpperCase()
+    .split('+')
+    .map((b) => b.trim())
+    .map((b) => PAD_ALIASES[b] ?? b)
+    .filter((b): b is PadButton => (PAD_BUTTONS as string[]).includes(b))
+}
+
+/** Builds the input profile for a user glyph pack's controller mapping. */
+export function profileFromMappings(mappings: Record<string, string>): InputProfile {
+  const padMap = Object.entries(mappings)
+    .map(([emit, combo]) => ({ emit, buttons: parsePadCombo(combo) }))
+    .filter((m) => m.buttons.length)
+    .sort((a, b) => b.buttons.length - a.buttons.length)
+  return { ignore: [], chords: [], padMap }
 }
 
 const PLAIN: InputProfile = { ignore: [], chords: [] }
@@ -79,16 +110,37 @@ export const INPUT_PROFILES: Record<string, InputProfile> = {
       { buttons: ['lk', 'mk'], emit: 'any_p', group: 'a' },
     ],
   },
-  // Four-button games. Their sequence-based specials (Soul Calibur slides, SNK
-  // desperation moves) are not ported yet.
-  'Soul Calibur': { ignore: ['hp', 'hk', 'any_p', 'any_k'], chords: [] },
-  SNK: { ignore: ['hp', 'hk', 'any_p', 'any_k'], chords: [] },
+  // Four-button games with sequence-based extras (see InputInterpreter.resolve).
+  'Soul Calibur': { ignore: ['hp', 'hk', 'any_p', 'any_k'], chords: [], special: 'soulcalibur' },
+  SNK: { ignore: ['hp', 'hk', 'any_p', 'any_k'], chords: [], special: 'snk' },
 }
 
 export const profileFor = (glyph: string) => INPUT_PROFILES[glyph] ?? PLAIN
 
 const OUTPUT_ORDER: Token[] = [
   'lp', 'mp', 'hp', 'lk', 'mk', 'hk', 'any_p', 'any_k', 'start', 'select', 'l3', 'r3',
+]
+
+const joinWithPlus = (firstTier: Token[], attacks: Token[]): Token[] => {
+  const out: Token[] = [...firstTier]
+  attacks.forEach((a, i) => {
+    if (i > 0 || firstTier.length) out.push('plus')
+    out.push(a)
+  })
+  return out
+}
+
+/** True if `sub` appears in order (not necessarily adjacent) within `seq`. */
+export function hasSubsequence<T>(seq: T[], sub: T[]): boolean {
+  let i = 0
+  for (const x of seq) if (x === sub[i]) i++
+  return i === sub.length
+}
+
+const SNK_MOVES: { dirs: Direction[]; emit: Token }[] = [
+  { dirs: ['downleft', 'right', 'downright', 'down', 'downleft', 'left', 'downright'], emit: 'any_k' },
+  { dirs: ['right', 'left', 'downleft', 'down', 'downright', 'right'], emit: 'any_p' },
+  { dirs: ['right', 'downright', 'down', 'downleft', 'left', 'downleft', 'down', 'downright', 'right'], emit: 'hk' },
 ]
 
 /** Resolves one batch of simultaneous presses into tokens, e.g. {lp, mp} in Tekken → [hp]. */
@@ -105,13 +157,7 @@ export function resolveChord(pressed: Set<Token>, profile: InputProfile): Token[
     ;(chord.group === 'motion' ? firstTier : attacks).push(chord.emit)
   }
   for (const t of OUTPUT_ORDER) if (active.has(t)) attacks.push(t)
-
-  const out: Token[] = [...firstTier]
-  attacks.forEach((a, i) => {
-    if (i > 0 || firstTier.length) out.push('plus')
-    out.push(a)
-  })
-  return out
+  return joinWithPlus(firstTier, attacks)
 }
 
 export const TIMING = {
@@ -135,6 +181,9 @@ export class InputInterpreter {
   private chordStart: number | null = null
   private holdSince = new Map<PadButton, number>()
   private holdFired = new Set<PadButton>()
+  /** Recent committed directions and button batches, for sequence-based specials. */
+  private dirHistory: { dir: Direction; time: number }[] = []
+  private btnHistory: { count: number; time: number }[] = []
 
   buttonMap: Record<PadButton, Token>
   profile: InputProfile
@@ -155,6 +204,63 @@ export class InputInterpreter {
     this.chordStart = null
     this.holdSince.clear()
     this.holdFired.clear()
+    this.dirHistory = []
+    this.btnHistory = []
+  }
+
+  /** Token a single pad button stands for, used for hold detection. */
+  private tokenFor(b: PadButton): Token | undefined {
+    if (this.profile.padMap) return this.profile.padMap.find((m) => m.buttons.length === 1 && m.buttons[0] === b)?.emit
+    return this.buttonMap[b]
+  }
+
+  private resolve(buffer: Set<PadButton>, now: number): Token[] {
+    this.btnHistory = [...this.btnHistory.filter((h) => now - h.time < 2000), { count: buffer.size, time: now }]
+    const p = this.profile
+
+    // Custom mapping: biggest button combinations first, e.g. LB+RB before LB.
+    if (p.padMap) {
+      const left = new Set(buffer)
+      const attacks: Token[] = []
+      for (const m of p.padMap) {
+        if (m.buttons.every((b) => left.has(b))) {
+          attacks.push(m.emit)
+          m.buttons.forEach((b) => left.delete(b))
+        }
+      }
+      return joinWithPlus([], attacks)
+    }
+
+    const pressed = new Set([...buffer].map((b) => this.buttonMap[b]).filter(Boolean))
+
+    if (p.special === 'soulcalibur') {
+      // A press within 200 ms of the previous one is a "slide": LP→HP, MP→HK, MK→Any P.
+      const prev = this.btnHistory.at(-2)
+      if (prev && now - prev.time < 200) {
+        const slides: [Token, Token][] = [['lp', 'hp'], ['mp', 'hk'], ['mk', 'any_p']]
+        const hit = slides.find(([from]) => pressed.has(from))
+        if (hit) {
+          pressed.delete(hit[0])
+          const rest = resolveChord(pressed, p).filter((t) => t !== 'plus')
+          return joinWithPlus([], [hit[1], ...rest])
+        }
+      }
+    }
+
+    if (p.special === 'snk') {
+      const recent = this.dirHistory.filter((d) => now - d.time < 1500).map((d) => d.dir)
+      const move = SNK_MOVES.find((m) => hasSubsequence(recent, m.dirs))
+      if (move) {
+        this.dirHistory = []
+        return [move.emit]
+      }
+      if (this.btnHistory.filter((b) => now - b.time < 1500).length >= 5) {
+        this.btnHistory = []
+        return ['hp']
+      }
+    }
+
+    return resolveChord(pressed, p)
   }
 
   update(f: Frame): InputEvent[] {
@@ -172,6 +278,7 @@ export class InputInterpreter {
         f.time - this.dirStableSince >= TIMING.dirSettleMs) {
       events.push({ type: 'insert', tokens: [f.dir] })
       this.committedDir = f.dir
+      this.dirHistory = [...this.dirHistory, { dir: f.dir, time: f.time }].slice(-30)
     }
     if (f.dir && this.dirHeldSince !== null && !this.dirCharged &&
         f.time - this.dirHeldSince >= TIMING.holdMs) {
@@ -188,7 +295,7 @@ export class InputInterpreter {
         this.holdFired.delete(b)
       } else if (!this.holdFired.has(b) && f.time - (this.holdSince.get(b) ?? f.time) >= TIMING.holdMs) {
         this.holdFired.add(b)
-        const tok = this.buttonMap[b]
+        const tok = this.tokenFor(b)
         if (tok) events.push({ type: 'mutate', from: tok, to: `h_${tok}` })
       }
     }
@@ -196,8 +303,7 @@ export class InputInterpreter {
     this.lastButtons = new Set(f.buttons)
 
     if (this.chordStart !== null && f.time - this.chordStart >= TIMING.chordWindowMs) {
-      const pressed = new Set([...this.chordBuffer].map((b) => this.buttonMap[b]).filter(Boolean))
-      const tokens = resolveChord(pressed, this.profile)
+      const tokens = this.resolve(this.chordBuffer, f.time)
       if (tokens.length) events.push({ type: 'insert', tokens })
       this.chordBuffer.clear()
       this.chordStart = null
@@ -237,4 +343,52 @@ export function frameFromGamepad(pad: Gamepad, time: number): Frame {
   const buttons = new Set<PadButton>()
   for (const [i, name] of Object.entries(STANDARD_GAMEPAD)) if (name && pressed(Number(i))) buttons.add(name)
   return { time, dir, buttons }
+}
+
+/** Every input the viewer can light up, keyed by the layout element IDs. */
+export interface PadState {
+  pressed: Set<string>
+  left: [number, number]
+  right: [number, number]
+  dir: Direction | null
+}
+
+const VIEWER_BUTTONS: Record<number, string> = {
+  0: 'A', 1: 'B', 2: 'X', 3: 'Y', 4: 'LEFT_SHOULDER', 5: 'RIGHT_SHOULDER', 6: 'LT', 7: 'RT',
+  8: 'BACK', 9: 'START', 10: 'LEFT_THUMB', 11: 'RIGHT_THUMB',
+  12: 'DPAD_UP', 13: 'DPAD_DOWN', 14: 'DPAD_LEFT', 15: 'DPAD_RIGHT', 17: 'TOUCHPAD',
+}
+
+export function padStateFromGamepad(pad: Gamepad): PadState {
+  const pressed = new Set<string>()
+  pad.buttons.forEach((b, i) => {
+    if ((b.pressed || b.value > 0.5) && VIEWER_BUTTONS[i]) pressed.add(VIEWER_BUTTONS[i])
+  })
+  const [lx = 0, ly = 0, rx = 0, ry = 0] = pad.axes
+  const stick = (x: number, y: number, prefix: string) => {
+    if (y < -0.5) pressed.add(`${prefix}_UP`)
+    if (y > 0.5) pressed.add(`${prefix}_DOWN`)
+    if (x < -0.5) pressed.add(`${prefix}_LEFT`)
+    if (x > 0.5) pressed.add(`${prefix}_RIGHT`)
+  }
+  stick(lx, ly, 'L_STICK')
+  stick(rx, ry, 'R_STICK')
+  const dir = dirFrom(
+    pressed.has('DPAD_UP') || ly < -0.5,
+    pressed.has('DPAD_DOWN') || ly > 0.5,
+    pressed.has('DPAD_LEFT') || lx < -0.5,
+    pressed.has('DPAD_RIGHT') || lx > 0.5,
+  )
+  return { pressed, left: [lx, ly], right: [rx, ry], dir }
+}
+
+/** Pads the Gamepad API currently reports, for the controller picker. */
+export function connectedPads(): Gamepad[] {
+  return [...(navigator.getGamepads?.() ?? [])].filter((p): p is Gamepad => !!p && p.connected)
+}
+
+/** Picks the chosen pad, or the first connected one when set to automatic. */
+export function pickPad(index: number | null): Gamepad | null {
+  const pads = connectedPads()
+  return (index === null ? pads[0] : pads.find((p) => p.index === index)) ?? null
 }

@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { emptyList, makeCombo, MAX_SLOTS, type Combo } from '../core/combos'
 import type { EditState } from '../core/editor'
 import { BUILTIN_GLYPHS, type GlyphPack } from '../core/glyphs'
-import { DEFAULT_THEME, type Theme } from '../core/theme'
+import { upgradeTheme, type Theme } from '../core/theme'
 import { broadcastState } from '../platform'
 
 export type Player = 'P1' | 'P2'
@@ -34,6 +34,7 @@ export interface State {
   past: Snapshot[]
   future: Snapshot[]
   toast: { text: string; tone: 'info' | 'error' } | null
+  settings: Settings
 
   setPlayer(p: Player): void
   select(id: string): void
@@ -53,9 +54,28 @@ export interface State {
   setGlyph(g: GlyphPack): void
   setTheme(t: Theme, path: string): void
   setPinScale(n: number): void
+  setSettings(patch: Partial<Settings>): void
   undo(): void
   redo(): void
   notify(text: string, tone?: 'info' | 'error'): void
+}
+
+export interface Settings {
+  /** One overlay window with every pinned combo, or one window per combo. */
+  overlayMode: 'combined' | 'separate'
+  /** Which controller drives input; null picks the first one connected. */
+  padIndex: number | null
+  /** Controller input on/off, e.g. to stop a pad left on the desk typing into combos. */
+  padInput: boolean
+  /** Layout shown by the input viewer (a preset ref). */
+  viewerLayout: string | null
+}
+
+export const DEFAULT_SETTINGS: Settings = {
+  overlayMode: 'combined',
+  padIndex: null,
+  padInput: true,
+  viewerLayout: 'builtin:Gamepad/Xbox One.json',
 }
 
 const STORAGE_KEY = 'combotracker:v1'
@@ -67,6 +87,7 @@ interface Saved {
   themePath: string
   theme: Theme
   pinScale: number
+  settings: Settings
 }
 
 function loadSaved(): Partial<Saved> {
@@ -83,6 +104,8 @@ export function readSavedLists(): Lists | null {
 }
 
 export const STORAGE_EVENT_KEY = STORAGE_KEY
+/** Glyph pack name from the last session (may be a user pack that loads later). */
+export const savedGlyphName = () => loadSaved().glyph ?? 'Default'
 
 const saved = loadSaved()
 const initialLists: Lists = {
@@ -110,12 +133,13 @@ export const useStore = create<State>()((set, get) => {
     selected: { P1: initialLists.P1[0].id, P2: initialLists.P2[0].id },
     caret: null,
     glyph: BUILTIN_GLYPHS.find((g) => g.name === saved.glyph) ?? BUILTIN_GLYPHS[0],
-    theme: saved.theme ?? DEFAULT_THEME,
+    theme: upgradeTheme(saved.theme),
     themePath: saved.themePath ?? '',
     pinScale: saved.pinScale ?? 1,
     past: [],
     future: [],
     toast: null,
+    settings: { ...DEFAULT_SETTINGS, ...saved.settings },
 
     setPlayer: (player) => set({ player, caret: null }),
 
@@ -232,6 +256,7 @@ export const useStore = create<State>()((set, get) => {
     setGlyph: (glyph) => set({ glyph }),
     setTheme: (theme, themePath) => set({ theme, themePath }),
     setPinScale: (pinScale) => set({ pinScale }),
+    setSettings: (patch) => set((s) => ({ settings: { ...s.settings, ...patch } })),
 
     undo: () =>
       set((s) => {
@@ -272,11 +297,12 @@ export const useStore = create<State>()((set, get) => {
 // Autosave: debounced so rapid gamepad input doesn't hammer storage.
 let saveTimer: ReturnType<typeof setTimeout> | undefined
 useStore.subscribe((s, prev) => {
-  if (s.lists === prev.lists && s.glyph === prev.glyph && s.theme === prev.theme && s.pinScale === prev.pinScale) return
+  if (s.lists === prev.lists && s.glyph === prev.glyph && s.theme === prev.theme && s.pinScale === prev.pinScale && s.settings === prev.settings) return
   clearTimeout(saveTimer)
   saveTimer = setTimeout(() => {
     const data: Saved = {
       lists: s.lists, glyph: s.glyph.name, themePath: s.themePath, theme: s.theme, pinScale: s.pinScale,
+      settings: s.settings,
     }
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data))

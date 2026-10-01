@@ -27,9 +27,16 @@ export interface Theme {
   btnBg: string
   gradient: [string, string, string, string] | null
   gradMain: boolean
+  /** Gradient on palette keys and highlights. */
   gradButtons: boolean
+  /** Gradient on ordinary buttons (toolbar, dialogs). */
+  gradStandard: boolean
   gradCombos: boolean
   gradPinned: boolean
+  /** "Classic" gives palette keys a raised, bevelled look; "Modern" is flat. */
+  paletteStyle: 'Classic' | 'Modern'
+  /** The file this theme came from, so the theme editor can reopen it. */
+  source: ThemeFile
 }
 
 const hexToRgb = (h: string): [number, number, number] => {
@@ -42,6 +49,19 @@ const rgbToHex = (rgb: number[]) =>
 export const luminance = (hex: string) => {
   const [r, g, b] = hexToRgb(hex)
   return (0.299 * r + 0.587 * g + 0.114 * b) / 255
+}
+
+/** WCAG contrast ratio (1–21). 4.5+ is comfortable for normal text. */
+export function contrastRatio(a: string, b: string): number {
+  const rel = (hex: string) => {
+    const [r, g, bl] = hexToRgb(hex).map((c) => {
+      const v = c / 255
+      return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4
+    })
+    return 0.2126 * r + 0.7152 * g + 0.0722 * bl
+  }
+  const [hi, lo] = [rel(a), rel(b)].sort((x, y) => y - x)
+  return (hi + 0.05) / (lo + 0.05)
 }
 
 /** Shifts a colour away from its own brightness: darker for light colours, lighter for dark ones. */
@@ -97,15 +117,25 @@ export function compileTheme(name: string, data: ThemeFile): Theme {
     btnBg,
     gradient,
     gradMain: !!(gradient && data.grad_main_bg),
-    gradButtons: !!(gradient && (data.grad_btns_and_highlights || data.grad_standard_btns)),
+    gradButtons: !!(gradient && data.grad_btns_and_highlights),
+    gradStandard: !!(gradient && data.grad_standard_btns),
     gradCombos: !!(gradient && data.grad_combos),
     gradPinned: !!(gradient && data.grad_pinned),
+    paletteStyle: data.palette_style === 'Modern' ? 'Modern' : 'Classic',
+    source: data,
   }
 }
 
 export const DEFAULT_THEME = compileTheme('Dark', {
-  bg: '#0F0F0F', font: '#FFFFFF', highlight: '#505050', entry_bg: '#1E1F20',
+  bg: '#0F0F0F', font: '#FFFFFF', highlight: '#505050', entry_bg: '#1E1F20', palette_style: 'Modern',
 })
+
+/** Themes saved by older versions of this app lack newer fields; fill them in. */
+export function upgradeTheme(t: Partial<Theme> | undefined): Theme {
+  if (!t || !t.bg) return DEFAULT_THEME
+  if (t.source && t.paletteStyle) return t as Theme
+  return compileTheme(t.name ?? 'Theme', t.source ?? { bg: t.bg, font: t.font, highlight: t.highlight, entry_bg: t.entryBg, btn_bg: t.btnBg, bg_grad: t.gradient ?? undefined })
+}
 
 /** CSS custom properties for a theme. The stylesheet builds every surface from these. */
 export function themeToCss(t: Theme): Record<string, string> {

@@ -23,8 +23,18 @@ on stream.
 - **Controller support:** Xbox, PlayStation, Switch and most others. Hold a
   direction for a charge input, or a button for a held press.
 - **Two players:** separate combo lists for P1 and P2.
-- **Comfortable editing:** undo/redo, drag to reorder, group combos under a
-  parent, and autosave.
+- **Practice mode:** checks your controller inputs against a combo step by step,
+  tells you exactly where you dropped it, and shows your timing in frames.
+- **Input viewer:** shows your controller on screen and lights up buttons as you
+  press them. Comes with 20+ layouts (pads, arcade sticks, leverless), or design
+  your own by dragging buttons around.
+- **Make it yours:** build your own icon styles (mix icons from any style or
+  upload pictures, and map controller buttons by pressing them), themes with a
+  live preview, and controller layouts.
+- **Share codes:** turn a combo or a whole list into a short code you can paste
+  in Discord.
+- **Comfortable editing:** undo/redo, search, drag to reorder, group combos
+  under a parent, and autosave.
 
 ## Download
 
@@ -41,8 +51,8 @@ there's nothing to install. This download updates automatically with every chang
    and a theme.
 2. **Enter a combo:** click a combo row, then use the palette, your controller,
    or the **Type it** box.
-3. **Load presets:** use **Combos** or **Command lists** in the top bar to load
-   a whole character.
+3. **Load presets:** **Presets → Combos** or **Command lists** loads a whole
+   character.
 4. **Pin it:** click the 📌 on the combos you want, then press **Overlay**.
 5. **Play:** drag the overlay where you want it, scroll over it to resize,
    then click 🔒 in the main window so clicks go through to the game.
@@ -70,6 +80,7 @@ Buttons: `LP MP HP LK MK HK`, `P`/`K` for any punch/kick, and `[HP]` for a held 
 |---|---|
 | Ctrl+Z / Ctrl+Shift+Z | Undo / redo |
 | Ctrl+S | Save combos to a file |
+| Ctrl+F | Search combos |
 | Backspace / Delete | Delete before / after the caret |
 | ← → Home End | Move the caret |
 | ↑ ↓ | Previous / next combo |
@@ -78,15 +89,21 @@ Buttons: `LP MP HP LK MK HK`, `P`/`K` for any punch/kick, and `[HP]` for a held 
 
 ## Making your own content
 
-Everything is plain JSON in the `Presets/` folder, so you can add your own and
-share them:
+Use the editors in the app: **Save → Save as my preset**, **Theme → Customize
+this theme**, **Icon style → New icon style**, and **Settings → Edit layouts**.
+On the desktop app everything you save goes in `Documents\ComboTracker`, as
+plain JSON files you can back up or share. To use someone else's file, press
+**Presets → Open a file**: it works out whether it's a combo list, theme, icon
+style or layout.
+
+The built-in presets live in this repo's `Presets/` folder:
 
 - `Presets/Combos/<Game>/<Character>.json`: combo lists
 - `Presets/Command Lists/<Game>/<Character>.json`: move lists
 - `Presets/Themes/<Folder>/<Name>.json`: colour themes
+- `Presets/Layouts/<Folder>/<Name>.json`: input viewer layouts
 
-The easiest way to make a combo list is to build it in the app and press
-**Save**. A theme needs just a few colours:
+A theme needs just a few colours:
 
 ```json
 { "bg": "#2A065E", "highlight": "#C429C7", "font": "#FFFFFF", "entry_bg": "#3B0984" }
@@ -108,7 +125,7 @@ The repository contains two versions:
 | Folder | What it is |
 |---|---|
 | `app/` | **The current app.** React + TypeScript, packaged for desktop with Tauri. |
-| `ComboTracker.py` | The original Tkinter version, kept until the new app covers everything. |
+| `ComboTracker.py` | The original Tkinter version (everything it did is now in the new app). |
 
 Build and run the new app:
 
@@ -129,8 +146,6 @@ See [`app/README.md`](app/README.md) for the code layout.
 
 ## Roadmap
 
-- Custom icon-set builder and theme editor
-- Live input viewer with controller layouts
-- Soul Calibur and SNK special-input detection for controllers
-- Practice mode that checks your inputs against a combo
-- Shareable combo codes
+- Keyboard and hitbox input without a controller driver
+- Frame data overlays
+- Auto-update inside the app

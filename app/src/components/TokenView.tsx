@@ -1,5 +1,5 @@
 import { iconUrl, useAssets } from '../assets'
-import { isAtk, resolveIcon, type GlyphPack } from '../core/glyphs'
+import { iconSource, isAtk, type GlyphPack } from '../core/glyphs'
 import { tokenLabel, type Token } from '../core/tokens'
 
 interface Props {
@@ -7,17 +7,18 @@ interface Props {
   glyph: GlyphPack
   size?: number
   macroArt?: boolean
+  gamepad?: boolean
 }
 
 /** One combo token: the glyph pack's icon if it has one, otherwise a text chip. */
-export function TokenView({ token, glyph, size = 28, macroArt }: Props) {
+export function TokenView({ token, glyph, size = 28, macroArt, gamepad }: Props) {
   const { icons } = useAssets()
-  const icon = resolveIcon(token, glyph, icons, { macroArt })
+  const src = iconSource(token, glyph, icons, iconUrl, { macroArt, gamepad })
   const hold = token.startsWith('h_') || token.startsWith('c_')
-  if (icon) {
+  if (src) {
     return (
       <span className={`tok tok-icon${hold ? ' tok-hold' : ''}`} style={{ height: size }} title={tokenLabel(token)}>
-        <img src={iconUrl(icon)} alt={tokenLabel(token)} height={size} draggable={false} />
+        <img src={src} alt={tokenLabel(token)} height={size} draggable={false} />
       </span>
     )
   }

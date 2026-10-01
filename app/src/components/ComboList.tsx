@@ -1,9 +1,16 @@
 import {
-  Copy, GripVertical, IndentDecrease, IndentIncrease, Pin, Plus, Trash2,
+  Copy, Download, Eraser, GripVertical, IndentDecrease, IndentIncrease, MoreHorizontal, Pin, Plus, SearchX, Share2,
+  Target, Trash2, Upload,
 } from 'lucide-react'
 import { memo, useEffect, useRef, useState, type DragEvent, type MouseEvent } from 'react'
 import type { Combo } from '../core/combos'
+import { exportCombo, importIntoCombo } from '../actions'
+import { tokenLabel } from '../core/tokens'
+import { closeOverlay, openOverlay } from '../platform'
 import { PLAYERS, useStore } from '../store/useStore'
+import { useUI } from '../store/useUI'
+import { Menu } from './Menu'
+import { SEPARATOR } from './menuTree'
 import { TokenView } from './TokenView'
 
 function TokenStrip({ combo, active }: { combo: Combo; active: boolean }) {
@@ -64,6 +71,18 @@ function TokenStrip({ combo, active }: { combo: Combo; active: boolean }) {
   )
 }
 
+/** Pins a combo; in one-window-per-combo mode this also opens or closes its window. */
+function togglePin(combo: Combo) {
+  const s = useStore.getState()
+  s.updateCombo(combo.id, { pinned: !combo.pinned })
+  if (s.settings.overlayMode !== 'separate') return
+  if (combo.pinned) void closeOverlay(s.player, combo.id)
+  else void openOverlay(s.player, combo.id)
+}
+
+const matches = (c: Combo, q: string) =>
+  c.name.toLowerCase().includes(q) || c.tokens.some((t) => tokenLabel(t).toLowerCase() === q)
+
 const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDragStart, onDropAt }: {
   combo: Combo
   index: number
@@ -77,6 +96,8 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
   const duplicate = useStore((s) => s.duplicateCombo)
   const remove = useStore((s) => s.removeCombo)
   const addCombo = useStore((s) => s.addCombo)
+  const clearCombo = useStore((s) => s.clearCombo)
+  const openDialog = useUI((s) => s.open)
   const renaming = useRef(false)
   const [dropHint, setDropHint] = useState<'above' | 'below' | null>(null)
 
@@ -125,27 +146,43 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
           <div className="row-actions">
             <button
               className={`icon-btn${combo.pinned ? ' is-on' : ''}`}
-              title={combo.pinned ? 'Unpin from overlay' : 'Pin to overlay'}
-              onClick={() => update(combo.id, { pinned: !combo.pinned })}
+              title={combo.pinned ? 'Unpin (remove from the overlay)' : 'Pin to the overlay'}
+              onClick={() => togglePin(combo)}
             >
               <Pin size={15} fill={combo.pinned ? 'currentColor' : 'none'} />
             </button>
             <button
               className="icon-btn"
-              title={combo.child ? 'Outdent' : 'Indent under the combo above'}
+              title="Practice this combo with your controller"
+              disabled={!combo.tokens.length}
+              onClick={() => openDialog({ kind: 'practice', comboId: combo.id })}
+            >
+              <Target size={15} />
+            </button>
+            <button
+              className={`icon-btn${combo.child ? ' is-on' : ''}`}
+              title={combo.child ? 'Move back out (stop grouping under the combo above)' : 'Group under the combo above (e.g. an ender for a starter)'}
               onClick={() => update(combo.id, { child: !combo.child })}
             >
               {combo.child ? <IndentDecrease size={15} /> : <IndentIncrease size={15} />}
             </button>
-            <button className="icon-btn" title="Insert combo below" onClick={() => addCombo(combo.id)}>
-              <Plus size={15} />
-            </button>
-            <button className="icon-btn" title="Duplicate" onClick={() => duplicate(combo.id)}>
-              <Copy size={15} />
-            </button>
-            <button className="icon-btn icon-danger" title="Delete combo" onClick={() => remove(combo.id)}>
-              <Trash2 size={15} />
-            </button>
+            <Menu
+              title="More actions"
+              align="right"
+              triggerClassName="icon-btn"
+              trigger={<MoreHorizontal size={16} />}
+              items={[
+                { label: 'Insert a combo below', icon: <Plus size={14} />, onSelect: () => addCombo(combo.id) },
+                { label: 'Duplicate', icon: <Copy size={14} />, onSelect: () => duplicate(combo.id) },
+                { label: 'Share code…', icon: <Share2 size={14} />, onSelect: () => (select(combo.id), openDialog({ kind: 'share' })) },
+                SEPARATOR,
+                { label: 'Save this combo to a file…', icon: <Download size={14} />, onSelect: () => void exportCombo(combo.id) },
+                { label: 'Load a combo file into this row…', icon: <Upload size={14} />, onSelect: () => void importIntoCombo(combo.id) },
+                SEPARATOR,
+                { label: 'Clear inputs', icon: <Eraser size={14} />, onSelect: () => clearCombo(combo.id) },
+                { label: 'Delete combo', icon: <Trash2 size={14} />, onSelect: () => remove(combo.id) },
+              ]}
+            />
           </div>
         </div>
         <TokenStrip combo={combo} active={active} />
@@ -162,6 +199,8 @@ export function ComboList() {
   const addCombo = useStore((s) => s.addCombo)
   const moveCombo = useStore((s) => s.moveCombo)
   const [dragId, setDragId] = useState<string | null>(null)
+  const query = useUI((s) => s.search.trim().toLowerCase())
+  const visible = query ? list.filter((c) => matches(c, query)) : list
 
   const dropAt = (index: number) => {
     if (!dragId) return
@@ -186,14 +225,14 @@ export function ComboList() {
             </button>
           ))}
         </div>
-        <span className="count">{list.length} combos</span>
+        <span className="count">{query ? `${visible.length} of ${list.length} combos` : `${list.length} combos`}</span>
       </div>
       <ol className="rows" onDragEnd={() => setDragId(null)}>
-        {list.map((c, i) => (
+        {visible.map((c) => (
           <ComboRow
             key={c.id}
             combo={c}
-            index={i}
+            index={list.indexOf(c)}
             active={c.id === selected}
             dragging={c.id === dragId}
             onDragStart={setDragId}
@@ -201,6 +240,9 @@ export function ComboList() {
           />
         ))}
       </ol>
+      {query && !visible.length && (
+        <p className="empty"><SearchX size={18} /> No combos match “{query}”.</p>
+      )}
       <button className="add-row" onClick={() => addCombo()}>
         <Plus size={16} /> New combo
       </button>

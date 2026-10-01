@@ -1,10 +1,18 @@
+import type { ReactNode } from 'react'
+
 export interface MenuItem {
   label: string
   onSelect?: () => void
   children?: MenuItem[]
+  /** undefined: plain command; true/false: a radio-style choice. */
   checked?: boolean
   hint?: string
+  icon?: ReactNode
+  separator?: boolean
+  keepOpen?: boolean
 }
+
+export const SEPARATOR: MenuItem = { label: '', separator: true }
 
 /** Builds a nested menu from "Folder/Sub/File.json" paths. */
 export function treeFromPaths(paths: string[], onSelect: (path: string) => void, isChecked?: (p: string) => boolean): MenuItem[] {
@@ -23,7 +31,7 @@ export function treeFromPaths(paths: string[], onSelect: (path: string) => void,
     level.push({
       label: parts.at(-1)!.replace(/\.json$/i, ''),
       onSelect: () => onSelect(path),
-      checked: isChecked?.(path),
+      checked: isChecked ? isChecked(path) : undefined,
     })
   }
   // Folders first, then files, alphabetically.
