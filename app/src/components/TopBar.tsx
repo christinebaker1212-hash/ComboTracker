@@ -1,11 +1,11 @@
 import {
   BookOpen, ChevronDown, Download, FolderOpen, Gamepad2, HelpCircle, Layers, Lock, LockOpen, MonitorUp, Palette as PaletteIcon,
-  Pencil, Plus, Redo2, Save, Settings, Share2, Swords, Undo2,
+  ListOrdered, Pencil, Plus, Redo2, Save, Settings, Share2, Swords, Undo2,
 } from 'lucide-react'
 import { presetName, useAssets } from '../assets'
 import { exportCurrentList, loadPreset, loadThemeRef, openAnyFile } from '../actions'
 import { BUILTIN_GLYPHS } from '../core/glyphs'
-import { isDesktop, openViewer } from '../platform'
+import { isDesktop, openHistory, openViewer } from '../platform'
 import { showOverlay, useLock, useScenes } from '../overlays'
 import { presetRef, useLibrary } from '../store/useLibrary'
 import { useStore } from '../store/useStore'
@@ -57,6 +57,16 @@ export function TopBar({ pad }: { pad: string | null }) {
     })),
     ...(scenes.length ? [SEPARATOR] : []),
     { label: 'Save open windows as a scene…', icon: <Save size={14} />, onSelect: () => open({ kind: 'scenes' }) },
+  ]
+
+  const viewerItems: MenuItem[] = [
+    { label: 'Input viewer', icon: <Gamepad2 size={14} />, hint: hotkeys ? 'Ctrl+Alt+V' : undefined, onSelect: () => void openViewer() },
+    {
+      label: 'Input history',
+      icon: <ListOrdered size={14} />,
+      hint: hotkeys ? 'Ctrl+Alt+H' : 'inputs with frame counts',
+      onSelect: () => void openHistory(),
+    },
   ]
 
   const glyphItems: MenuItem[] = [
@@ -126,9 +136,12 @@ export function TopBar({ pad }: { pad: string | null }) {
         </button>
         <button className="icon-btn" onClick={undo} disabled={!canUndo} title="Undo (Ctrl+Z)"><Undo2 size={17} /></button>
         <button className="icon-btn" onClick={redo} disabled={!canRedo} title="Redo (Ctrl+Shift+Z)"><Redo2 size={17} /></button>
-        <button className="btn" onClick={() => void openViewer()} title="Show your controller on screen, lighting up as you press buttons">
-          <Gamepad2 size={15} /> Input viewer
-        </button>
+        <span className="split-btn">
+          <button className="btn" onClick={() => void openViewer()} title="Show your controller on screen, lighting up as you press buttons">
+            <Gamepad2 size={15} /> Input viewer
+          </button>
+          <Menu title="Input viewer and input history" align="right" triggerClassName="btn split-btn-more" trigger={<ChevronDown size={15} />} items={viewerItems} />
+        </span>
         <Tip id="overlay" align="end"><span className="split-btn">
           <button className="btn btn-accent" onClick={() => void showOverlay()} title={`Show pinned combos on top of your game${hotkeys ? ' (Ctrl+Alt+O)' : ''}`}>
             <MonitorUp size={15} /> Overlay

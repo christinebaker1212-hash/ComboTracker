@@ -4,6 +4,7 @@ import { AssetsContext, useManifest } from './assets'
 import { ComboList } from './components/ComboList'
 import { GlyphEditor } from './components/GlyphEditor'
 import { HelpDialog } from './components/HelpDialog'
+import { InputHistoryWindow } from './components/InputHistory'
 import { InputViewer } from './components/InputViewer'
 import { LayoutEditor } from './components/LayoutEditor'
 import { MoveListPanel } from './components/MoveListPanel'
@@ -167,6 +168,8 @@ export default function App() {
         <PracticeOverlay player={player} comboId={params.get('combo') ?? ''} />
       ) : view === 'viewer' ? (
         <InputViewer />
+      ) : view === 'history' ? (
+        <InputHistoryWindow />
       ) : (
         <Editor />
       )}

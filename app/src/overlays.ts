@@ -3,7 +3,7 @@
 import { create } from 'zustand'
 import {
   closeFloating, isFloatingOpen, openFloating, openFloatingWindows, openOverlay, openViewer,
-  overlaysLocked, setOverlaysLocked, VIEWER_LABEL, type FloatingInfo,
+  overlaysLocked, setOverlaysLocked, VIEWER_LABEL, HISTORY_LABEL, openHistory, type FloatingInfo,
 } from './platform'
 import { useStore } from './store/useStore'
 
@@ -51,6 +51,11 @@ export async function toggleViewer() {
   else await openViewer()
 }
 
+export async function toggleHistory() {
+  if (await isFloatingOpen(HISTORY_LABEL)) await closeFloating(HISTORY_LABEL)
+  else await openHistory()
+}
+
 // --- Scenes ---
 export interface Scene {
   name: string
@@ -76,6 +81,7 @@ function prefKeyFor(w: FloatingInfo): string | null {
   const view = q.get('view')
   const p = q.get('p') ?? 'P1'
   if (view === 'viewer') return 'combotracker:viewer'
+  if (view === 'history') return 'combotracker:history'
   if (view === 'practice') return `combotracker:practice:${p}`
   if (view === 'overlay') return `combotracker:overlay:${p}${q.get('combo') ? `:${q.get('combo')}` : ''}`
   return null

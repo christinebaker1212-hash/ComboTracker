@@ -132,6 +132,11 @@ export function onPracticeRestart(fn: () => void): () => void {
 
 export const VIEWER_LABEL = 'viewer-main'
 
+export const HISTORY_LABEL = 'viewer-history'
+
+/** Opens the training-mode style input history. */
+export const openHistory = () => openFloating(HISTORY_LABEL, 'view=history', 'ComboTracker input history', { width: 240, height: 520 })
+
 /** Opens the live input viewer. */
 export const openViewer = () => openFloating(VIEWER_LABEL, 'view=viewer', 'ComboTracker input viewer', { width: 420, height: 280 })
 
