@@ -2,6 +2,7 @@ import { Command, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp,
 import { useEffect, useState } from 'react'
 import { presetName } from '../assets'
 import type { PadButton } from '../core/input'
+import { DEFAULT_KEYBOARD, DEFAULT_KEYMAP, KEY_ROLES, keyLabel, type KeyboardSettings } from '../core/keyboard'
 import { connectedPads, NATIVE_INDEX_BASE } from '../nativePads'
 import { inputBus } from '../inputBus'
 import { isDesktop, openViewer } from '../platform'
@@ -37,6 +38,88 @@ function PadTester() {
     <div className="pad-test" aria-live="polite">
       {pressed.length ? pressed.map((b) => <span key={b} className="key-chip">{b}</span>) : <span className="field-hint">Press buttons to test…</span>}
     </div>
+  )
+}
+
+/** Keyboard / hitbox play: turn it on, pick SOCD cleaning, and remap keys by pressing them. */
+function KeyboardSection() {
+  const kb = useStore((s) => s.settings.keyboard ?? DEFAULT_KEYBOARD)
+  const setSettings = useStore((s) => s.setSettings)
+  const [waiting, setWaiting] = useState<number | null>(null)
+  const save = (patch: Partial<KeyboardSettings>) => setSettings({ keyboard: { ...kb, ...patch } })
+
+  useEffect(() => {
+    if (waiting === null) return
+    const onKey = (e: KeyboardEvent) => {
+      e.preventDefault()
+      e.stopPropagation()
+      if (e.code !== 'Escape') {
+        const map = { ...kb.map }
+        map[e.code] = waiting
+        setSettings({ keyboard: { ...kb, map } })
+      }
+      setWaiting(null)
+    }
+    // Capture phase, so the key doesn't also close the dialog or edit a combo.
+    window.addEventListener('keydown', onKey, true)
+    return () => window.removeEventListener('keydown', onKey, true)
+  }, [waiting, kb, setSettings])
+
+  const remove = (code: string) => {
+    const map = { ...kb.map }
+    delete map[code]
+    save({ map })
+  }
+
+  return (
+    <section className="form-section">
+      <h3><Keyboard size={16} /> Keyboard &amp; hitbox</h3>
+      <Toggle
+        label="Play with the keyboard"
+        hint={isDesktop
+          ? 'Keys act as controller buttons in the editor, input viewer and practice, even while your game has focus. Only the keys below are read. Also for leverless controllers set to keyboard mode.'
+          : 'Keys act as controller buttons while this window has focus. Also for leverless controllers set to keyboard mode.'}
+        checked={kb.enabled}
+        onChange={(v) => save({ enabled: v })}
+      />
+      {kb.enabled && (
+        <>
+          <Segmented
+            label="Left + right together (SOCD)"
+            value={kb.socd}
+            onChange={(v) => save({ socd: v })}
+            options={[
+              { value: 'neutral', label: 'Neutral', hint: 'Left+right = neutral, up+down = up. The tournament standard for hitboxes.' },
+              { value: 'last', label: 'Last input wins', hint: 'The direction pressed most recently wins.' },
+            ]}
+          />
+          <div className="keymap">
+            {KEY_ROLES.map((role) => {
+              const keys = Object.entries(kb.map).filter(([, b]) => b === role.index).map(([code]) => code)
+              return (
+                <div key={role.index} className="keymap-row">
+                  <span className="keymap-role">{role.label}</span>
+                  <span className="keymap-keys">
+                    {keys.map((code) => (
+                      <button key={code} className="key-chip key-chip-btn" onClick={() => remove(code)} title="Click to remove this key">
+                        {keyLabel(code)} ×
+                      </button>
+                    ))}
+                    <button
+                      className={`btn btn-small${waiting === role.index ? ' is-on' : ''}`}
+                      onClick={() => setWaiting(waiting === role.index ? null : role.index)}
+                    >
+                      {waiting === role.index ? 'Press a key… (Esc cancels)' : '+ Key'}
+                    </button>
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+          <button className="btn" onClick={() => save({ map: DEFAULT_KEYMAP })}>Reset keys (WASD + U I O / J K L)</button>
+        </>
+      )}
+    </section>
   )
 }
 
@@ -89,6 +172,8 @@ export function SettingsPanel() {
         />
         <PadTester />
       </section>
+
+      <KeyboardSection />
 
       <section className="form-section">
         <h3><MonitorUp size={16} /> Overlay</h3>

@@ -22,7 +22,7 @@ export function applyPadFamily(family: keyof typeof FAMILIES) {
   const info = FAMILIES[family]
   const glyph = BUILTIN_GLYPHS.find((g) => g.name === info.glyph)
   if (glyph && PAD_GLYPHS.has(s.glyph.name)) s.setGlyph(glyph)
-  s.setSettings({ viewerLayout: info.layout })
+  s.setSettings({ viewerLayout: info.layout, ...(family === 'keyboard' ? { keyboard: { ...s.settings.keyboard, enabled: true } } : {}) })
 }
 
 /**

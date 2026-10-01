@@ -6,6 +6,7 @@
 import { invoke } from '@tauri-apps/api/core'
 import { listen } from '@tauri-apps/api/event'
 import type { PadLike } from './core/input'
+import { buttonsFromKeys, codeToVk, DEFAULT_KEYBOARD, SocdCleaner, type KeyboardSettings } from './core/keyboard'
 import { isDesktop } from './platform'
 
 export interface NativeSnapshot {
@@ -26,6 +27,8 @@ export interface NativeSnapshot {
 
 /** Native pads use indices from here up, so they never clash with browser pad indices. */
 export const NATIVE_INDEX_BASE = 100
+/** The keyboard's index (see KEYBOARD_INDEX in pads.rs). */
+export const KEYBOARD_INDEX = 120
 
 const axis = (v: number) => Math.max(-1, Math.min(1, v / 32767))
 
@@ -41,13 +44,17 @@ export function padFromSnapshot(s: NativeSnapshot): PadLike {
 
 let pads: PadLike[] = []
 let snapshots: NativeSnapshot[] = []
+/** Keyboard buttons from the desktop app (read even while the game has focus). */
+let nativeKeys = 0
 const listeners = new Set<() => void>()
 
 if (isDesktop) {
   const set = (list: NativeSnapshot[]) => {
     const connectedBefore = pads.map((p) => p.index).join()
-    snapshots = list
-    pads = list.map(padFromSnapshot)
+    const kb = list.find((p) => p.index === KEYBOARD_INDEX)
+    nativeKeys = kb?.buttons ?? 0
+    snapshots = list.filter((p) => p !== kb)
+    pads = snapshots.map(padFromSnapshot)
     const connectedNow = pads.map((p) => p.index).join()
     listeners.forEach((l) => l())
     // Lets pages that wait for "a controller was plugged in" start polling.
@@ -55,6 +62,78 @@ if (isDesktop) {
   }
   void invoke<NativeSnapshot[]>('native_pads').then(set).catch(() => {})
   void listen<NativeSnapshot[]>('native-pads', (e) => set(e.payload))
+}
+
+// --- Keyboard ---
+let keyboard: KeyboardSettings = DEFAULT_KEYBOARD
+let sentKeys = ''
+const heldCodes = new Set<string>()
+const socd = new SocdCleaner()
+
+/** Applies the keyboard settings; on the desktop, tells the background reader which keys to watch. */
+export function setKeyboardConfig(cfg: KeyboardSettings) {
+  const wasEnabled = keyboard.enabled
+  keyboard = cfg
+  if (isDesktop) {
+    const keys = cfg.enabled
+      ? Object.entries(cfg.map).flatMap(([code, b]) => {
+        const vk = codeToVk(code)
+        return vk ? [[vk, b] as [number, number]] : []
+      })
+      : []
+    const key = JSON.stringify(keys)
+    if (key !== sentKeys) {
+      sentKeys = key
+      void invoke('set_keyboard', { keys }).catch(() => {})
+    }
+  }
+  if (wasEnabled !== cfg.enabled) window.dispatchEvent(new Event('nativepadschanged'))
+}
+
+// In the browser (or while our own window has focus) keys arrive as events.
+if (typeof window !== 'undefined' && !isDesktop) {
+  const changed = () => listeners.forEach((l) => l())
+  window.addEventListener('keydown', (e) => {
+    if (!keyboard.enabled || e.repeat || keyboard.map[e.code] === undefined || typingHere()) return
+    heldCodes.add(e.code)
+    changed()
+  })
+  window.addEventListener('keyup', (e) => {
+    if (heldCodes.delete(e.code)) changed()
+  })
+  window.addEventListener('blur', () => {
+    heldCodes.clear()
+    changed()
+  })
+}
+
+/** Typing into a text box in this window shouldn't press buttons. */
+function typingHere(): boolean {
+  const el = typeof document !== 'undefined' ? document.activeElement : null
+  return el instanceof HTMLElement && (el.isContentEditable || ['INPUT', 'TEXTAREA', 'SELECT'].includes(el.tagName))
+}
+
+/** Buttons the keyboard is pressing right now, after SOCD cleaning. */
+function keyboardButtons(): Set<number> {
+  if (!keyboard.enabled || typingHere()) return new Set()
+  const raw = isDesktop
+    ? new Set(Array.from({ length: 32 }, (_, i) => i).filter((i) => nativeKeys & (1 << i)))
+    : buttonsFromKeys(heldCodes, keyboard.map)
+  return socd.clean(raw, keyboard.socd)
+}
+
+/** Adds the keyboard's presses to a pad, or makes a keyboard-only pad. */
+function withKeyboard(pad: PadLike | null): PadLike | null {
+  if (!keyboard.enabled) return pad
+  const keys = keyboardButtons()
+  const base = pad ?? {
+    id: 'Keyboard (ComboTracker)', index: KEYBOARD_INDEX, connected: true, axes: [0, 0, 0, 0],
+    buttons: Array.from({ length: 18 }, () => ({ pressed: false, value: 0 })),
+  }
+  if (!keys.size) return base
+  const buttons = Array.from({ length: Math.max(18, base.buttons.length) }, (_, i) =>
+    keys.has(i) ? { pressed: true, value: 1 } : base.buttons[i] ?? { pressed: false, value: 0 })
+  return { ...base, buttons }
 }
 
 /** Natively read controllers, newest state. Empty in the browser. */
@@ -90,8 +169,10 @@ export function connectedPads(): PadLike[] {
 /**
  * The chosen pad, or the first connected one when set to automatic. If the
  * chosen pad has gone (unplugged, or now read natively), the first one is used.
+ * Keyboard presses are merged in when keyboard play is on.
  */
 export function pickPad(index: number | null): PadLike | null {
   const list = connectedPads()
-  return (index === null ? undefined : list.find((p) => p.index === index)) ?? list[0] ?? null
+  // The keyboard (when turned on) adds to whichever pad is in use, so both work.
+  return withKeyboard((index === null ? undefined : list.find((p) => p.index === index)) ?? list[0] ?? null)
 }

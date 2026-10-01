@@ -8,6 +8,8 @@
 //   - HID: PlayStation controllers (DualShock 4, DualSense, DualSense Edge)
 //     and PS4-mode sticks that speak the DualShock 4 protocol, read straight
 //     from their USB or Bluetooth reports.
+//   - Keyboard: the keys mapped in Settings, for keyboard players and
+//     leverless controllers in keyboard mode. Only those keys are read.
 use serde::Serialize;
 use std::sync::Mutex;
 use tauri::{AppHandle, Emitter, Manager};
@@ -32,13 +34,25 @@ pub struct PadSnapshot {
   pub ry: i16,
 }
 
-/// Latest state of every connected controller, for windows that open later.
+/// Latest state of every connected controller, for windows that open later,
+/// and the keyboard keys to read (virtual-key code, standard button index).
 #[derive(Default)]
-pub struct Pads(pub Mutex<Vec<PadSnapshot>>);
+pub struct Pads(pub Mutex<Vec<PadSnapshot>>, pub Mutex<Vec<(u16, u8)>>);
+
+/// The keyboard pad's index; the page merges it into whichever pad is in use.
+pub const KEYBOARD_INDEX: u32 = 120;
 
 #[tauri::command]
 pub fn native_pads(state: tauri::State<'_, Pads>) -> Vec<PadSnapshot> {
   state.0.lock().map(|p| p.clone()).unwrap_or_default()
+}
+
+/// Sets which keys stand in for controller buttons. An empty list turns the keyboard off.
+#[tauri::command]
+pub fn set_keyboard(state: tauri::State<'_, Pads>, keys: Vec<(u16, u8)>) {
+  if let Ok(mut k) = state.1.lock() {
+    *k = keys.into_iter().filter(|&(vk, b)| vk > 0 && vk < 256 && b < 32).collect();
+  }
 }
 
 /// Sticks and triggers jitter constantly; only changes bigger than this are sent.
@@ -213,6 +227,33 @@ mod xinput {
 }
 
 #[cfg(windows)]
+mod keyboard {
+  #[link(name = "user32")]
+  unsafe extern "system" {
+    fn GetAsyncKeyState(vk: i32) -> i16;
+  }
+
+  pub fn read(keys: &[(u16, u8)]) -> Option<super::PadSnapshot> {
+    if keys.is_empty() {
+      return None;
+    }
+    let mut buttons = 0u32;
+    for &(vk, button) in keys {
+      // SAFETY: plain query of one key's state. The high bit means "down right now".
+      if unsafe { GetAsyncKeyState(vk as i32) } as u16 & 0x8000 != 0 {
+        buttons |= 1 << button;
+      }
+    }
+    Some(super::PadSnapshot {
+      index: super::KEYBOARD_INDEX,
+      name: "Keyboard (ComboTracker)".into(),
+      buttons,
+      ..Default::default()
+    })
+  }
+}
+
+#[cfg(windows)]
 mod hid {
   use super::{parse_ps_report, ps_kind, PadSnapshot, PsKind};
   use hidapi::{BusType, HidApi, HidDevice};
@@ -341,6 +382,8 @@ fn poll_loop(app: AppHandle) {
       ps.refresh();
     }
     now.extend(ps.poll());
+    let keys = app.try_state::<Pads>().and_then(|s| s.1.lock().ok().map(|k| k.clone())).unwrap_or_default();
+    now.extend(keyboard::read(&keys));
 
     let changed = now.len() != sent.len() || now.iter().zip(&sent).any(|(a, b)| quantize(a) != quantize(b));
     if changed {

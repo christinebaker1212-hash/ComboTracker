@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { emptyList, makeCombo, MAX_SLOTS, type Combo } from '../core/combos'
 import type { EditState } from '../core/editor'
 import { BUILTIN_GLYPHS, type GlyphPack } from '../core/glyphs'
+import { DEFAULT_KEYBOARD, type KeyboardSettings } from '../core/keyboard'
 import { upgradeTheme, type Theme } from '../core/theme'
 import { broadcastState } from '../platform'
 
@@ -81,6 +82,8 @@ export interface Settings {
   uiSize: 'compact' | 'standard' | 'large'
   /** Show one-time tips next to features the first time they appear. */
   tips: boolean
+  /** Keys that stand in for controller buttons (keyboard players, leverless in keyboard mode). */
+  keyboard: KeyboardSettings
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -91,6 +94,7 @@ export const DEFAULT_SETTINGS: Settings = {
   hotkeys: true,
   uiSize: 'standard',
   tips: true,
+  keyboard: DEFAULT_KEYBOARD,
 }
 
 const STORAGE_KEY = 'combotracker:v1'

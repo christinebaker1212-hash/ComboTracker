@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import type { Combo } from '../core/combos'
 import { upgradeTheme, type Theme } from '../core/theme'
+import { DEFAULT_KEYBOARD } from '../core/keyboard'
+import { setKeyboardConfig } from '../nativePads'
 import { onStateChanged } from '../platform'
 import { allGlyphs, useLibrary } from '../store/useLibrary'
 import { DEFAULT_SETTINGS, STORAGE_EVENT_KEY, type Player, type Settings } from '../store/useStore'
@@ -49,6 +51,8 @@ export function useShared() {
       un()
     }
   }, [refreshLib])
+  const keyboard = shared.settings.keyboard ?? DEFAULT_KEYBOARD
+  useEffect(() => setKeyboardConfig(keyboard), [keyboard])
   const glyphs = allGlyphs(userGlyphs)
   return { ...shared, glyph: glyphs.find((g) => g.name === shared.glyphName) ?? glyphs[0] }
 }

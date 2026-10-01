@@ -22,6 +22,8 @@ import { useGamepad } from './hooks/useGamepad'
 import { useKeyboard } from './hooks/useKeyboard'
 import { useGlobalHotkeys } from './hooks/useGlobalHotkeys'
 import { usePadSuggest } from './hooks/usePadSuggest'
+import { DEFAULT_KEYBOARD } from './core/keyboard'
+import { setKeyboardConfig } from './nativePads'
 import { needsSetup } from './setup'
 import { useLibrary } from './store/useLibrary'
 import { savedGlyphName, useStore, type Player } from './store/useStore'
@@ -102,6 +104,7 @@ function Editor() {
   useEffect(() => {
     if (needsSetup()) open({ kind: 'setup' })
   }, [open])
+  useEffect(() => setKeyboardConfig(settings.keyboard ?? DEFAULT_KEYBOARD), [settings.keyboard])
   const notationRef = useRef<HTMLInputElement>(null)
   const searchRef = useRef<HTMLInputElement>(null)
   const pad = useGamepad()

@@ -10,7 +10,7 @@ pub fn run() {
     .plugin(tauri_plugin_window_state::Builder::default().build())
     // Hotkeys that work while a game has focus (toggle overlay, lock, restart practice).
     .plugin(tauri_plugin_global_shortcut::Builder::new().build())
-    .invoke_handler(tauri::generate_handler![pads::native_pads])
+    .invoke_handler(tauri::generate_handler![pads::native_pads, pads::set_keyboard])
     .setup(|app| {
       // Controller input that keeps working while the game has focus.
       pads::start(app.handle());
