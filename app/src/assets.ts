@@ -3,10 +3,12 @@ import { createContext, useContext, useEffect, useState } from 'react'
 
 export interface Manifest {
   icons: string[]
+  /** Controller line-art tracings: key → [width, height] in layout pixels. */
+  controllers: Record<string, [number, number]>
   presets: { combos: string[]; commandLists: string[]; themes: string[]; layouts: string[] }
 }
 
-const EMPTY: Manifest = { icons: [], presets: { combos: [], commandLists: [], themes: [], layouts: [] } }
+const EMPTY: Manifest = { icons: [], controllers: {}, presets: { combos: [], commandLists: [], themes: [], layouts: [] } }
 
 const base = import.meta.env.BASE_URL
 
@@ -27,6 +29,7 @@ export function useManifest() {
 }
 
 export const iconUrl = (name: string) => `${base}icons/${name}.png`
+export const controllerUrl = (key: string) => `${base}controllers/${key}.png`
 
 export const PRESET_FOLDERS = {
   combos: 'Combos',
@@ -44,7 +47,7 @@ export async function fetchPreset(folder: keyof typeof PRESET_FOLDERS, path: str
 export const presetName = (path: string) => path.split('/').pop()!.replace(/\.json$/i, '')
 
 export const AssetsContext = createContext<{ manifest: Manifest; icons: Set<string> }>({
-  manifest: { icons: [], presets: { combos: [], commandLists: [], themes: [], layouts: [] } },
+  manifest: { icons: [], controllers: {}, presets: { combos: [], commandLists: [], themes: [], layouts: [] } },
   icons: new Set(),
 })
 

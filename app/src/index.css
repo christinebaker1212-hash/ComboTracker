@@ -558,3 +558,8 @@ button.pad-status { background: transparent; }
 
 /* Dark and green-screen backdrops always get light text, whatever the theme. */
 .overlay-body.is-dark, .overlay-body.is-chroma, .overlay-body.is-clear { color: #fff; }
+
+/* Controller tracing thumbnails are white line art: show them on a dark tile. */
+.pic-cell:has(img) { background: #15161a; }
+/* See-through overlay: a soft shadow keeps traced lines visible over any game. */
+.overlay-body.is-clear .lv-trace { filter: drop-shadow(0 0 1px rgb(0 0 0 / 0.9)); }

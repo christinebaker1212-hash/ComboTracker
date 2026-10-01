@@ -1,9 +1,9 @@
 import { Copy, Gamepad2, Trash2, Upload } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
-import { presetName } from '../assets'
+import { controllerUrl, presetName, useAssets } from '../assets'
 import type { PadButton } from '../core/input'
 import {
-  defaultElement, INPUT_IDS, inputLabel, layoutBody, layoutPicture, type BodyShape, type ElementType, type Layout, type LayoutElement,
+  defaultElement, INPUT_IDS, inputLabel, layoutBody, layoutPicture, layoutTrace, type ElementType, type Layout, type LayoutElement,
 } from '../core/layouts'
 import { tokenLabel } from '../core/tokens'
 import { inputBus } from '../inputBus'
@@ -34,6 +34,7 @@ export function LayoutEditor({ initialRef }: { initialRef?: string }) {
   const notify = useStore((s) => s.notify)
   const refresh = useLibrary((s) => s.refresh)
   const pad = usePadState(settings.padIndex)
+  const { manifest } = useAssets()
 
   const [refs, setRefs] = useState<string[]>([])
   const [ref, setRef] = useState<string | undefined>(initialRef)
@@ -52,6 +53,8 @@ export function LayoutEditor({ initialRef }: { initialRef?: string }) {
     }).catch((e: Error) => notify(e.message, 'error'))
   }, [ref, notify])
 
+  const traces = new Set(Object.keys(manifest.controllers))
+  const shape = layoutBody(layout, traces)
   const isUser = ref ? splitRef(ref).origin === 'user' : false
   const el = selected !== null ? layout.elements[selected] : null
 
@@ -163,17 +166,26 @@ export function LayoutEditor({ initialRef }: { initialRef?: string }) {
             <input type="range" min={1} max={4} step={0.25} value={zoom} onChange={(e) => setZoom(Number(e.target.value))} />
           </Field>
 
-          <Field label="Controller body" hint="Drawn in your theme's colours.">
-            <Segmented<BodyShape>
-              value={layoutBody(layout)}
-              onChange={(body) => setLayout((l) => ({ ...l, body }))}
-              options={[
-                { value: 'gamepad', label: 'Gamepad' },
-                { value: 'arcade', label: 'Arcade panel' },
-                { value: 'none', label: 'None' },
-              ]}
-            />
-          </Field>
+          <div className="field">
+            <span className="field-label">Controller drawing</span>
+            <div className="pic-grid">
+              {[...Object.keys(manifest.controllers).sort(), 'arcade', 'none'].map((key) => {
+                const on = key === 'arcade' || key === 'none' ? shape === key : shape === 'trace' && layoutTrace(layout, traces) === key
+                return (
+                  <button
+                    key={key}
+                    className={`pic-cell${on ? ' is-on' : ''}`}
+                    title={key === 'arcade' ? 'Arcade panel outline' : key === 'none' ? 'Nothing behind the buttons' : key}
+                    onClick={() => setLayout((l) => key === 'arcade' || key === 'none'
+                      ? { ...l, body: key, bg_image: '' }
+                      : { ...l, body: 'trace', bg_image: `${key}.png` })}
+                  >
+                    {key === 'arcade' ? 'Panel' : key === 'none' ? 'None' : <img src={controllerUrl(key)} alt={key} />}
+                  </button>
+                )
+              })}
+            </div>
+          </div>
           <div className="row-gap">
             <button className="btn btn-small" onClick={async () => {
               const f = await pickFile('image/*')
@@ -186,7 +198,7 @@ export function LayoutEditor({ initialRef }: { initialRef?: string }) {
               }
             }}><Upload size={14} /> Use my own picture</button>
             {layoutPicture(layout) && (
-              <button className="btn btn-small" onClick={() => setLayout((l) => ({ ...l, bg_image: '', body: undefined }))}>Remove picture</button>
+              <button className="btn btn-small" onClick={() => setLayout((l) => ({ ...l, bg_image: '', body: 'none' }))}>Remove picture</button>
             )}
           </div>
 

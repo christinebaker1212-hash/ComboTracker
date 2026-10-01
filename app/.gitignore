@@ -27,4 +27,5 @@ dist-ssr
 public/icons
 public/presets
 public/manifest.json
+public/controllers
 out

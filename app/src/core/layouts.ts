@@ -18,14 +18,20 @@ export interface LayoutElement {
   base_color?: string
 }
 
-/** The drawn controller shape behind the buttons. Original artwork, coloured by the theme. */
-export type BodyShape = 'gamepad' | 'arcade' | 'none'
+/**
+ * What's drawn behind the buttons, all as line art in the theme colour:
+ * a traced controller, a plain arcade-panel outline, or nothing.
+ */
+export type BodyShape = 'trace' | 'arcade' | 'none'
 
 export interface Layout {
   name: string
-  /** Optional picture the user uploaded (a data: URL). Old files hold a path here, which is ignored. */
+  /**
+   * Controller drawing: a tracing key like "xboxone.png", or a picture the user
+   * uploaded (data: URL). Old files hold a full path, which is mapped to its tracing.
+   */
   bg_image?: string
-  body?: BodyShape
+  body?: BodyShape | 'gamepad'
   elements: LayoutElement[]
 }
 
@@ -68,12 +74,23 @@ export function defaultElement(id: string, x = 100, y = 100): LayoutElement {
 export const layoutPicture = (layout: Layout): string | null =>
   layout.bg_image?.startsWith('data:') ? layout.bg_image : null
 
-/** Which drawn body to show: the layout's own choice, or a guess from its inputs and name. */
-export function layoutBody(layout: Layout): BodyShape {
-  if (layout.body) return layout.body
-  if (layoutPicture(layout)) return 'none'
-  const arcade = /arcade|leverless|vewlix|sega|noir|ist|sf2|mvs|mortal|hitbox|stick/i.test(layout.name)
-  return arcade || layout.elements.some((e) => e.id === 'joystick') ? 'arcade' : 'gamepad'
+/** The controller tracing this layout uses, if one exists (from its picture path or its name). */
+export function layoutTrace(layout: Layout, traces: ReadonlySet<string>): string | null {
+  if (layout.bg_image?.startsWith('data:')) return null
+  const base = layout.bg_image?.split(/[\\/]/).pop()?.replace(/\.[a-z]+$/i, '').toLowerCase()
+  if (base && traces.has(base)) return base
+  const guess = layout.name.toLowerCase().replace(/[^a-z0-9]/g, '')
+  return traces.has(guess) ? guess : null
+}
+
+const ARCADE_NAME = /arcade|leverless|vewlix|sega2p|noir|ist|sf2|mvs|mortal|hitbox|stick/i
+
+/** What to draw behind the buttons. */
+export function layoutBody(layout: Layout, traces: ReadonlySet<string>): BodyShape {
+  if (layout.body === 'none' || layoutPicture(layout)) return 'none'
+  if (layout.body === 'arcade') return 'arcade'
+  if (layoutTrace(layout, traces)) return 'trace'
+  return ARCADE_NAME.test(layout.name) || layout.elements.some((e) => e.id === 'joystick') ? 'arcade' : 'none'
 }
 
 /** Area covered by the elements, including how much they grow when pressed. */
@@ -115,24 +132,15 @@ export function parseLayout(json: unknown, fallbackName: string): Layout {
   return {
     name: typeof d.name === 'string' && d.name ? d.name : fallbackName,
     bg_image: typeof d.bg_image === 'string' ? d.bg_image : '',
-    body: d.body === 'gamepad' || d.body === 'arcade' || d.body === 'none' ? d.body : undefined,
+    body: d.body === 'trace' || d.body === 'arcade' || d.body === 'none' ? d.body : undefined,
     elements: d.elements.filter((e) => e && typeof e.id === 'string' && typeof e.x === 'number'),
   }
 }
 
-export interface BodyBox { x: number; y: number; w: number; h: number }
-
-/** Extra room the body leaves around the buttons. */
+/** Extra room the arcade panel leaves around the buttons. */
 const PAD = 18
 
-/** Where the drawn body goes for a given element area, and how far it extends. */
-export function bodyBox(shape: BodyShape, box: { x0: number; y0: number; x1: number; y1: number }): BodyBox | null {
-  if (shape === 'none') return null
-  const x = box.x0 - PAD
-  const y = box.y0 - PAD
-  const w = box.x1 - box.x0 + PAD * 2
-  const h = box.y1 - box.y0 + PAD * 2
-  // The gamepad's grips hang below the button area.
-  return { x, y, w, h: shape === 'gamepad' ? h * 1.45 : h }
+/** The arcade panel outline around a set of buttons. */
+export function panelBox(box: { x0: number; y0: number; x1: number; y1: number }) {
+  return { x: box.x0 - PAD, y: box.y0 - PAD, w: box.x1 - box.x0 + PAD * 2, h: box.y1 - box.y0 + PAD * 2 }
 }
-

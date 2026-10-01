@@ -1,7 +1,7 @@
 // Copies the repo's shared icons/ and Presets/ folders into public/ and writes a
 // manifest the app uses to discover them. Icons are lowercased so lookups are
 // case-insensitive on every platform, matching the original desktop app.
-import { cpSync, existsSync, mkdirSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs'
+import { cpSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, writeFileSync } from 'node:fs'
 import { dirname, join, relative, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -20,7 +20,8 @@ function walk(dir) {
 const toPosix = (p) => p.split(sep).join('/')
 
 // Not shipped in the app:
-// - photos of real controllers (the input viewer draws its own, in theme colours)
+// - photos of real controllers (the app ships line-art tracings of them instead,
+//   made by scripts/trace-controllers.py)
 // - personal presets kept in any folder named "User"
 const CONTROLLER_PHOTOS = new Set([
   'dreamcast', 'duke', 'gamecube', 'genesis3b', 'genesis6b', 'leverlessg13', 'n64', 'nes',
@@ -41,6 +42,23 @@ for (const file of walk(join(repoDir, 'icons'))) {
   icons.push(key)
 }
 
+// --- Controller tracings ---
+// Tracings are 1.5x the source picture; layouts are positioned in source pixels.
+const tracesSrc = join(appDir, 'assets', 'controllers')
+const tracesOut = join(publicDir, 'controllers')
+rmSync(tracesOut, { recursive: true, force: true })
+mkdirSync(tracesOut, { recursive: true })
+const controllers = {}
+for (const file of walk(tracesSrc)) {
+  if (!file.endsWith('.png')) continue
+  const key = file.split(sep).pop().slice(0, -4)
+  const png = readFileSync(file)
+  const w = png.readUInt32BE(16)
+  const h = png.readUInt32BE(20)
+  cpSync(file, join(tracesOut, `${key}.png`))
+  controllers[key] = [Math.round(w / 1.5), Math.round(h / 1.5)]
+}
+
 // --- Presets ---
 const presetsSrc = join(repoDir, 'Presets')
 const presetsOut = join(publicDir, 'presets')
@@ -55,6 +73,7 @@ const listPresets = (sub) =>
 
 const manifest = {
   icons: icons.sort(),
+  controllers,
   presets: {
     combos: listPresets('Combos'),
     commandLists: listPresets('Command Lists'),

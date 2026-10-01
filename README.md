@@ -28,7 +28,7 @@ on stream.
   and shows your timing in frames.
 - **Input viewer:** shows your controller on screen and lights up buttons as you
   press them. Comes with 20+ layouts (pads, arcade sticks, leverless), drawn in
-  your theme's colours, or design your own by dragging buttons around.
+  your theme's colours as clean line art, or design your own by dragging buttons around.
 - **Make it yours:** build your own icon styles (mix icons from any style or
   upload pictures, and map controller buttons by pressing them), themes with a
   live preview, and controller layouts.

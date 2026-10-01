@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { iconUrl, useAssets } from '../assets'
 import { iconSource, type GlyphPack } from '../core/glyphs'
 import type { PadState } from '../core/input'
-import { bodyBox, elementBox, layoutBody, layoutPicture, shortLabel, type Layout, type LayoutElement } from '../core/layouts'
-import { ControllerBody } from './ControllerBody'
+import { elementBox, layoutBody, layoutPicture, layoutTrace, panelBox, shortLabel, type Layout, type LayoutElement } from '../core/layouts'
+import { ArcadePanel, ControllerTrace } from './ControllerBody'
 import type { Theme } from '../core/theme'
 
 export interface LayoutLook {
@@ -58,14 +58,18 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
   const { icons } = useAssets()
   const picture = look.showImage ? layoutPicture(layout) : null
   const img = useImageSize(picture)
-  const shape = look.showImage ? layoutBody(layout) : 'none'
+  const { manifest } = useAssets()
+  const traces = new Set(Object.keys(manifest.controllers))
+  const shape = look.showImage ? layoutBody(layout, traces) : 'none'
+  const traceKey = shape === 'trace' ? layoutTrace(layout, traces) : null
+  const traceSize = traceKey ? manifest.controllers[traceKey] : null
   const ebox = elementBox(layout.elements)
-  const body = bodyBox(shape, ebox)
-  // Everything drawn: elements, body and any uploaded picture.
-  const minX = Math.min(0, ebox.x0, body?.x ?? 0) - 6
-  const minY = Math.min(0, ebox.y0, body?.y ?? 0) - 6
-  const maxX = Math.max(ebox.x1, body ? body.x + body.w : 0, img?.w ?? 0, editing ? 320 : 0) + 6
-  const maxY = Math.max(ebox.y1, body ? body.y + body.h : 0, img?.h ?? 0, editing ? 200 : 0) + 12
+  const panel = shape === 'arcade' ? panelBox(ebox) : null
+  // Everything drawn: elements, the drawing behind them, and any uploaded picture.
+  const minX = Math.min(0, ebox.x0, panel?.x ?? 0) - 6
+  const minY = Math.min(0, ebox.y0, panel?.y ?? 0) - 6
+  const maxX = Math.max(ebox.x1, panel ? panel.x + panel.w : 0, traceSize?.[0] ?? 0, img?.w ?? 0, editing ? 320 : 0) + 6
+  const maxY = Math.max(ebox.y1, panel ? panel.y + panel.h : 0, traceSize?.[1] ?? 0, img?.h ?? 0, editing ? 200 : 0) + 6
   const width = maxX - minX
   const height = maxY - minY
   const idle = theme.btnBg
@@ -85,7 +89,8 @@ export function LayoutView({ layout, state = IDLE, glyph, theme, look, scale = 1
       height={height * scale}
       onPointerDown={(e) => e.target === e.currentTarget && editing?.onBackground()}
     >
-      {body && <ControllerBody shape={shape} box={body} theme={theme} />}
+      {traceKey && traceSize && <ControllerTrace traceKey={traceKey} size={traceSize} theme={theme} />}
+      {panel && <ArcadePanel box={panel} theme={theme} />}
       {img && picture && <image href={picture} x={0} y={0} width={img.w} height={img.h} pointerEvents="none" />}
       {layout.elements.map((el, i) => {
         const on = state.pressed.has(el.id) || (el.type === 'stick' && state.pressed.has(el.id))

@@ -3,7 +3,7 @@ import { BUILTIN_GLYPHS, iconSource, packFromFile } from './glyphs'
 import {
   InputInterpreter, INPUT_PROFILES, parsePadCombo, profileFromMappings, type Frame, type PadButton,
 } from './input'
-import { defaultElement, layoutBody, layoutPicture, parseLayout } from './layouts'
+import { defaultElement, layoutBody, layoutPicture, layoutTrace, parseLayout } from './layouts'
 import { feedPractice, startPractice, stepsFor } from './practice'
 import { decodeShare, encodeShare } from './share'
 import { compileTheme, upgradeTheme } from './theme'
@@ -62,12 +62,15 @@ describe('user glyph packs', () => {
 })
 
 describe('layouts', () => {
-  it('draws its own controller body instead of old picture paths', () => {
+  it('maps pictures to line-art tracings, arcade layouts to a panel', () => {
+    const traces = new Set(['xboxone', 'snes'])
     const pad = parseLayout({ name: 'Xbox One', bg_image: 'D:/Tools/ComboTracker (Source)/icons/XboxOne.png', elements: [] }, 'x')
     expect(layoutPicture(pad)).toBeNull()
-    expect(layoutBody(pad)).toBe('gamepad')
-    expect(layoutBody(parseLayout({ name: 'Vewlix 8', elements: [defaultElement('joystick')] }, 'x'))).toBe('arcade')
-    expect(layoutBody(parseLayout({ name: 'Mine', bg_image: 'data:image/png;base64,AA', elements: [] }, 'x'))).toBe('none')
+    expect(layoutBody(pad, traces)).toBe('trace')
+    expect(layoutTrace(pad, traces)).toBe('xboxone')
+    expect(layoutTrace(parseLayout({ name: 'SNES', elements: [] }, 'x'), traces)).toBe('snes')
+    expect(layoutBody(parseLayout({ name: 'Vewlix 8', elements: [defaultElement('joystick')] }, 'x'), traces)).toBe('arcade')
+    expect(layoutBody(parseLayout({ name: 'Mine', bg_image: 'data:image/png;base64,AA', elements: [] }, 'x'), traces)).toBe('none')
   })
   it('creates sensible default elements', () => {
     expect(defaultElement('X')).toMatchObject({ type: 'glyph', token: 'lp' })
