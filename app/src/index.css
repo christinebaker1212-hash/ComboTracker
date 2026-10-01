@@ -758,3 +758,23 @@ html.is-obs .overlay-tools { display: none; }
 .stream-link-label small { color: var(--muted); font-size: 11px; }
 .stream-link code { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .field-error { color: #ff6b6b; }
+/* Practice timing marks: under each timed button, on time / early / late */
+.practice-tok { position: relative; }
+.timing-mark {
+  position: absolute; left: 50%; bottom: -1.1em; transform: translateX(-50%);
+  font-size: 0.7em; font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums;
+}
+.timing-mark.is-ok { color: #4ade80; }
+.timing-mark.is-early { color: #60a5fa; }
+.timing-mark.is-late { color: #f59e0b; }
+.practice-overlay .overlay-tokens { padding-bottom: 0.9em; }
+.practice-timing { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 0.8em; }
+.drill-summary { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; }
+.drill-summary th, .drill-summary td { padding: 3px 10px 3px 0; text-align: left; }
+.drill-summary th { color: var(--muted); font-weight: 600; }
+.btn.is-recording { color: #fff; background: #d73a49; border-color: #d73a49; animation: rec-pulse 1.2s ease-in-out infinite; }
+@keyframes rec-pulse { 50% { opacity: 0.7; } }
+.drill-pick { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 4px 12px; max-height: 300px; overflow: auto; margin-bottom: 12px; }
+.drill-item { display: flex; align-items: center; gap: 8px; font-size: 13.5px; }
+.drill-item small { color: var(--muted); }
+.muted { color: var(--muted); }

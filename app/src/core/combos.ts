@@ -11,13 +11,18 @@ export interface Combo {
   child: boolean
   /** Short extra info shown under the name, e.g. "OD: 236PP". */
   notes?: string
+  /**
+   * Reference rhythm for practice: frames between one button press and the
+   * next, recorded from the controller or taken from a clean run.
+   */
+  timing?: number[]
 }
 
 export interface ComboListFile {
   glyph?: string
   theme?: string
   slot_count?: number
-  slots: { name: string; tokens: Token[]; notes?: string }[]
+  slots: { name: string; tokens: Token[]; notes?: string; timing?: number[] }[]
 }
 
 export const MAX_SLOTS = 250
@@ -42,6 +47,11 @@ export function emptyList(count = 8): Combo[] {
   return Array.from({ length: count }, (_, i) => makeCombo(`Combo ${i + 1}`))
 }
 
+/** Keeps a saved practice rhythm if it's a list of frame counts. */
+function withTiming(timing: unknown, c: Combo): Combo {
+  return Array.isArray(timing) && timing.every((n) => typeof n === 'number' && n >= 0) ? { ...c, timing } : c
+}
+
 function isStringArray(v: unknown): v is string[] {
   return Array.isArray(v) && v.every((x) => typeof x === 'string')
 }
@@ -58,9 +68,9 @@ export function parseComboFile(json: unknown): ParsedFile {
   const data = json as Record<string, unknown>
   if (Array.isArray(data.slots)) {
     const slots = data.slots.filter(
-      (s): s is { name?: unknown; tokens?: unknown; notes?: unknown } => !!s && typeof s === 'object',
+      (s): s is { name?: unknown; tokens?: unknown; notes?: unknown; timing?: unknown } => !!s && typeof s === 'object',
     )
-    const combos = slots.map((s, i) =>
+    const combos = slots.map((s, i) => withTiming(s.timing,
       makeCombo(
         typeof s.name === 'string' ? s.name.split('\n')[0] : `Combo ${i + 1}`,
         isStringArray(s.tokens) ? s.tokens : [],
@@ -68,7 +78,7 @@ export function parseComboFile(json: unknown): ParsedFile {
           ? s.notes
           : typeof s.name === 'string' ? s.name.split('\n').slice(1).map((l) => l.trim().replace(/^\((.*)\)$/, '$1')).filter(Boolean).join(' · ') : undefined,
       ),
-    )
+    ))
     return {
       glyph: typeof data.glyph === 'string' ? data.glyph : undefined,
       combos: combos.slice(0, MAX_SLOTS),
@@ -89,6 +99,11 @@ export function toComboFile(combos: Combo[], glyph: string): ComboListFile {
   return {
     glyph,
     slot_count: combos.length,
-    slots: combos.map((c) => ({ name: c.child ? `[>] ${c.name}` : c.name, tokens: c.tokens, ...(c.notes ? { notes: c.notes } : {}) })),
+    slots: combos.map((c) => ({
+      name: c.child ? `[>] ${c.name}` : c.name,
+      tokens: c.tokens,
+      ...(c.notes ? { notes: c.notes } : {}),
+      ...(c.timing?.length ? { timing: c.timing } : {}),
+    })),
   }
 }

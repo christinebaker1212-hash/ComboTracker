@@ -13,6 +13,7 @@ import { Palette } from './components/Palette'
 import { PracticeOverlay } from './components/PracticeOverlay'
 import { ScenesDialog } from './components/ScenesDialog'
 import { FirstRun } from './components/FirstRun'
+import { DrillDialog } from './components/DrillDialog'
 import { SavePresetDialog } from './components/SavePresetDialog'
 import { SettingsPanel } from './components/SettingsPanel'
 import { ShareDialog } from './components/ShareDialog'
@@ -26,6 +27,7 @@ import { useObsHost } from './hooks/useObsHost'
 import { usePadSuggest } from './hooks/usePadSuggest'
 import { DEFAULT_KEYBOARD } from './core/keyboard'
 import { setKeyboardConfig } from './nativePads'
+import { onMainMessage } from './platform'
 import { needsSetup } from './setup'
 import { useLibrary } from './store/useLibrary'
 import { savedGlyphName, useStore, type Player } from './store/useStore'
@@ -65,6 +67,7 @@ function Dialogs() {
     case 'moves': return <MoveListPanel initial={d.ref} />
     case 'scenes': return <ScenesDialog />
     case 'setup': return <FirstRun />
+    case 'drill': return <DrillDialog />
   }
 }
 
@@ -108,6 +111,15 @@ function Editor() {
     if (needsSetup()) open({ kind: 'setup' })
   }, [open])
   useEffect(() => setKeyboardConfig(settings.keyboard ?? DEFAULT_KEYBOARD), [settings.keyboard])
+  // The practice window saves a combo's reference rhythm through here.
+  useEffect(
+    () => onMainMessage<{ player: Player; comboId: string; timing: number[] }>('set-timing', ({ player, comboId, timing }) => {
+      useStore.setState((s) => ({
+        lists: { ...s.lists, [player]: s.lists[player].map((c) => (c.id === comboId ? { ...c, timing } : c)) },
+      }))
+    }),
+    [],
+  )
   const notationRef = useRef<HTMLInputElement>(null)
   const searchRef = useRef<HTMLInputElement>(null)
   const pad = useGamepad()
@@ -167,7 +179,15 @@ export default function App() {
       {view === 'overlay' ? (
         <Overlay player={player} comboId={params.get('combo') ?? undefined} />
       ) : view === 'practice' ? (
-        <PracticeOverlay player={player} comboId={params.get('combo') ?? ''} />
+        <PracticeOverlay
+          player={player}
+          comboId={params.get('combo') ?? ''}
+          drill={params.get('drill') ? {
+            ids: params.get('drill')!.split(','),
+            reps: Math.max(1, Number(params.get('reps')) || 3),
+            shuffled: params.get('order') === 'random',
+          } : undefined}
+        />
       ) : view === 'viewer' ? (
         <InputViewer />
       ) : view === 'history' ? (

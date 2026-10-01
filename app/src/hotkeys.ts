@@ -1,6 +1,7 @@
 // Global hotkeys: work while the game has focus (desktop app only).
 import { toggleHistory, toggleOverlay, toggleViewer, useLock, useScenes } from './overlays'
 import { restartPractice } from './platform'
+import { useRecorder } from './recorder'
 
 export interface Hotkey { keys: string; label: string; run: () => void }
 
@@ -12,6 +13,7 @@ export const HOTKEYS: Hotkey[] = [
   { keys: `${MOD}R`, label: 'Restart practice', run: restartPractice },
   { keys: `${MOD}V`, label: 'Show / hide the input viewer', run: () => void toggleViewer() },
   { keys: `${MOD}H`, label: 'Show / hide the input history', run: () => void toggleHistory() },
+  { keys: `${MOD}C`, label: 'Start / stop recording a combo', run: () => useRecorder.getState().toggle() },
   ...Array.from({ length: 9 }, (_, i): Hotkey => ({
     keys: `${MOD}${i + 1}`,
     label: `Scene ${i + 1}`,

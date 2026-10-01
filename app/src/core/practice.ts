@@ -44,10 +44,15 @@ export interface PracticeState {
   completions: number
   /** Attempts that got at least one input in, then went wrong. */
   drops: number
+  /** Hit times of the last clean run, step by step, for timing feedback and as a reference. */
+  lastRun: number[]
 }
 
 export function startPractice(steps: Step[], prev?: PracticeState): PracticeState {
-  return { steps, index: 0, hitTimes: [], mistake: null, best: prev?.best ?? 0, completions: prev?.completions ?? 0, drops: prev?.drops ?? 0 }
+  return {
+    steps, index: 0, hitTimes: [], mistake: null, best: prev?.best ?? 0,
+    completions: prev?.completions ?? 0, drops: prev?.drops ?? 0, lastRun: prev?.lastRun ?? [],
+  }
 }
 
 const isDirection = (t: Token) => ['up', 'down', 'left', 'right', 'upleft', 'upright', 'downleft', 'downright'].includes(t)
@@ -68,6 +73,7 @@ export function feedPractice(s: PracticeState, input: Token, time: number): Prac
       ...s,
       index: done ? 0 : index,
       hitTimes: done ? [] : [...s.hitTimes, time],
+      lastRun: done ? [...s.hitTimes, time] : s.lastRun,
       mistake: null,
       best: Math.max(s.best, index),
       completions: s.completions + (done ? 1 : 0),
@@ -83,3 +89,26 @@ export function feedPractice(s: PracticeState, input: Token, time: number): Prac
 
 /** Milliseconds → frames at 60 fps, the unit fighting game players think in. */
 export const toFrames = (ms: number) => Math.round(ms / (1000 / 60))
+
+// --- Timing ---
+
+/** Indices of the steps that are button presses (links are timed between these). */
+export const buttonSteps = (steps: Step[]) => steps.flatMap((s, i) => (isDirection(s.token) ? [] : [i]))
+
+/** Frames from each button press to the next, given each step's hit time. */
+export function buttonGaps(steps: Step[], times: number[]): number[] {
+  const at = buttonSteps(steps).filter((i) => i < times.length).map((i) => times[i])
+  return at.slice(1).map((t, i) => toFrames(t - at[i]))
+}
+
+export type Judgement = 'early' | 'ok' | 'late'
+
+/** On time within ±`tolerance` frames of the reference. */
+export function judge(gap: number, ref: number, tolerance = 1): { verdict: Judgement; off: number } {
+  const off = gap - ref
+  return { verdict: Math.abs(off) <= tolerance ? 'ok' : off < 0 ? 'early' : 'late', off }
+}
+
+/** A reference only applies while the combo still has the same number of button presses. */
+export const referenceFits = (steps: Step[], timing?: number[]) =>
+  !!timing?.length && timing.length === Math.max(0, buttonSteps(steps).length - 1)

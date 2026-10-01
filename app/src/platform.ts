@@ -114,6 +114,15 @@ export function practiceActive(): boolean {
 export const openPractice = (p: Player, comboId: string) =>
   openFloating(`overlay-practice-${p}`, `view=practice&p=${p}&combo=${comboId}`, 'ComboTracker practice', { width: 520, height: 220 })
 
+/** Opens a drill: several combos in turn, each landed `reps` times clean, then a summary. */
+export async function openDrill(p: Player, ids: string[], reps: number, shuffled: boolean) {
+  const label = `overlay-practice-${p}`
+  // A practice window may already be open on one combo; reopen it as the drill.
+  await closeFloating(label)
+  return openFloating(label, `view=practice&p=${p}&drill=${ids.join(',')}&reps=${reps}&order=${shuffled ? 'random' : 'list'}`,
+    'ComboTracker drill', { width: 520, height: 240 })
+}
+
 /** Restarts any open practice window (used by the global hotkey). */
 export function restartPractice() {
   if (isDesktop) void emit('practice-restart')
@@ -127,6 +136,29 @@ export function onPracticeRestart(fn: () => void): () => void {
     return () => window.removeEventListener('storage', h)
   }
   const un = listen('practice-restart', fn)
+  return () => void un.then((f) => f())
+}
+
+/** Asks the main window to do something (e.g. save a combo's practice rhythm). */
+export function sendToMain(name: string, payload: unknown) {
+  if (isDesktop) void emit(`main:${name}`, payload)
+  else localStorage.setItem(`combotracker:msg:${name}`, JSON.stringify({ payload, t: Date.now() }))
+}
+
+export function onMainMessage<T>(name: string, fn: (payload: T) => void): () => void {
+  if (!isDesktop) {
+    const h = (e: StorageEvent) => {
+      if (e.key !== `combotracker:msg:${name}` || !e.newValue) return
+      try {
+        fn((JSON.parse(e.newValue) as { payload: T }).payload)
+      } catch {
+        // Ignore a damaged message.
+      }
+    }
+    window.addEventListener('storage', h)
+    return () => window.removeEventListener('storage', h)
+  }
+  const un = listen<T>(`main:${name}`, (e) => fn(e.payload))
   return () => void un.then((f) => f())
 }
 

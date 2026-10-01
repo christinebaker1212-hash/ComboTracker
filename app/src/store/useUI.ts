@@ -13,6 +13,7 @@ export type Dialog =
   | { kind: 'moves'; ref?: string }
   | { kind: 'scenes' }
   | { kind: 'setup' }
+  | { kind: 'drill' }
 
 interface UIState {
   dialog: Dialog | null

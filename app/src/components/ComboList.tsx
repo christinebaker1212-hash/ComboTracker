@@ -1,17 +1,18 @@
 import {
   Copy, Download, Eraser, GripVertical, IndentDecrease, IndentIncrease, MoreHorizontal, Pin, Plus, Search, SearchX, Share2,
-  Target, Trash2, Upload, X,
+  Circle, ListChecks, Target, Trash2, Upload, X,
 } from 'lucide-react'
 import { memo, useEffect, useRef, useState, type DragEvent, type MouseEvent } from 'react'
 import type { Combo } from '../core/combos'
 import { exportCombo, importIntoCombo } from '../actions'
 import { tokenLabel } from '../core/tokens'
-import { closeOverlay, openOverlay, openPractice } from '../platform'
+import { closeOverlay, isDesktop, openOverlay, openPractice } from '../platform'
 import { rate, recentDays, statsKey } from '../core/stats'
 import { useStats } from '../store/useStats'
 import { Tip } from './Tip'
 import { PLAYERS, useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
+import { useRecorder } from '../recorder'
 import { Menu } from './Menu'
 import { SEPARATOR } from './menuTree'
 import { TokenView } from './TokenView'
@@ -237,6 +238,10 @@ export function ComboList({ searchRef }: { searchRef: React.RefObject<HTMLInputE
   const moveCombo = useStore((s) => s.moveCombo)
   const [dragId, setDragId] = useState<string | null>(null)
   const query = useUI((s) => s.search.trim().toLowerCase())
+  const open = useUI((s) => s.open)
+  const recording = useRecorder((s) => !!s.comboId)
+  const toggleRecording = useRecorder((s) => s.toggle)
+  const hotkeys = useStore((s) => s.settings.hotkeys) && isDesktop
   const visible = query ? list.filter((c) => matches(c, query)) : list
 
   const dropAt = (index: number) => {
@@ -275,6 +280,16 @@ export function ComboList({ searchRef }: { searchRef: React.RefObject<HTMLInputE
           {search && <button className="icon-btn" onClick={() => setSearch('')} title="Clear search"><X size={14} /></button>}
         </div>
         <span className="count">{query ? `${visible.length} of ${list.length} combos` : `${list.length} combos`}</span>
+        <button
+          className={`btn btn-small${recording ? ' is-recording' : ''}`}
+          onClick={toggleRecording}
+          title={recording ? 'Stop recording (it also stops 3 s after your last input)' : `Record the selected combo from your controller, with your timing${hotkeys ? ' (Ctrl+Alt+C in-game)' : ''}`}
+        >
+          <Circle size={12} fill={recording ? 'currentColor' : 'none'} /> {recording ? 'Recording…' : 'Record'}
+        </button>
+        <button className="btn btn-small" onClick={() => open({ kind: 'drill' })} title="Practise several combos in a row, then see a summary">
+          <ListChecks size={14} /> Drill
+        </button>
       </div>
       <ol className="rows" onDragEnd={() => setDragId(null)}>
         {visible.map((c) => (
