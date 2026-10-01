@@ -16,16 +16,28 @@ on stream.
   BlazBlue, SNK, PlayStation, Xbox, Nintendo, keyboard, numpad notation and more.
 - **Game overlay:** pinned combos float see-through and always on top. Lock it
   and clicks pass straight through to your game.
+- **Scenes:** save where your overlay windows sit and how they look, and switch
+  between setups in one click (or Ctrl+Alt+1–9).
+- **Hotkeys that work in-game:** Ctrl+Alt+O shows or hides the overlay,
+  Ctrl+Alt+L locks it, Ctrl+Alt+R restarts practice, Ctrl+Alt+V toggles the
+  input viewer.
 - **Stream-ready:** switch the overlay to a green-screen backdrop and key it out in OBS.
-- **Ready-made presets:** command lists for SF6, SF III: 3rd Strike, SF EX Plus α,
-  Tekken 3, BlazBlue and Persona 4 Arena, plus starter combos.
+- **Move lists for 140+ characters:** every character in Street Fighter 6,
+  Street Fighter V, Ultra Street Fighter IV and SF III: 3rd Strike, plus
+  selections for SF EX Plus α, Tekken 3, BlazBlue and Persona 4 Arena. Read
+  them like the in-game command list, search them, and add, pin or practise
+  any move in one click.
+- **Set up in seconds:** on first launch, pick your game, your character and
+  your controller; ComboTracker picks matching button icons and opens their
+  moves. Plug in a different controller later and it offers to switch.
 - **Themes:** 38 colour themes, including gradients, or make your own.
 - **Controller support:** Xbox, PlayStation, Switch and most others. Hold a
   direction for a charge input, or a button for a held press.
 - **Two players:** separate combo lists for P1 and P2.
 - **Practice mode:** a window on top of your game that checks your controller
   inputs against a combo as you play, tells you exactly where you dropped it,
-  and shows your timing in frames.
+  and shows your timing in frames. Your success rate and best streak are kept
+  over time, and each practised combo shows its success rate in the list.
 - **Input viewer:** shows your controller on screen and lights up buttons as you
   press them. Comes with 20+ layouts (pads, arcade sticks, leverless), drawn in
   your theme's colours as clean line art, or design your own by dragging buttons around.
@@ -34,8 +46,11 @@ on stream.
   live preview, and controller layouts.
 - **Share codes:** turn a combo or a whole list into a short code you can paste
   in Discord.
-- **Comfortable editing:** undo/redo, search, drag to reorder, group combos
-  under a parent, and autosave.
+- **Comfortable editing:** undo/redo (every delete offers an Undo button),
+  search, drag to reorder, group combos under a parent, and autosave. Drop any
+  ComboTracker file onto the window to open it.
+- **Easy on the eyes:** Compact, Standard or Large interface sizes, and short
+  one-time tips instead of a tutorial.
 
 ## Download
 
@@ -48,12 +63,11 @@ there's nothing to install. This download updates automatically with every chang
 
 ## Quick start
 
-1. **Pick your style:** choose an icon style (top left, e.g. *PlayStation*)
-   and a theme.
+1. **Answer three questions:** the first time it opens, pick your game,
+   character and controller.
 2. **Enter a combo:** click a combo row, then use the palette, your controller,
-   or the **Type it** box.
-3. **Load presets:** **Presets → Combos** or **Command lists** loads a whole
-   character.
+   or the **Type it** box. Or press **Move list** and add moves from there.
+3. **Load presets:** **Presets → Combos** loads ready-made combo lists.
 4. **Pin it:** click the 📌 on the combos you want, then press **Overlay**.
 5. **Play:** drag the overlay where you want it, scroll over it to resize,
    then click 🔒 in the main window so clicks go through to the game.
@@ -146,6 +160,13 @@ with GitHub Actions and replaces the files on the
 It can also push to itch.io: see the setup notes at the bottom of
 `.github/workflows/windows-build.yml`.
 See [`app/README.md`](app/README.md) for the code layout.
+
+## Credits
+
+Move lists for Street Fighter 6, Street Fighter V, Ultra Street Fighter IV and
+Street Fighter III: 3rd Strike are built from move names and inputs in
+[FAT (Frame Assistant Tool)](https://github.com/D4RKONION/FAT) by D4RKONION
+(GPL-3.0), using `app/scripts/build-command-lists.py`.
 
 ## Roadmap
 

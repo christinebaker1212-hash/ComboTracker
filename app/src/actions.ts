@@ -20,7 +20,7 @@ export function loadCombos(json: unknown, label: string) {
     const glyph = allGlyphs(useLibrary.getState().userGlyphs).find((g) => g.name === parsed.glyph)
     if (glyph) s.setGlyph(glyph)
     s.replaceList(parsed.combos)
-    s.notify(`Loaded ${label} · ${parsed.combos.length} combos${parsed.truncated ? ' (trimmed to 250)' : ''} · Ctrl+Z to undo`)
+    s.notifyUndo(`Loaded ${label} · ${parsed.combos.length} combos${parsed.truncated ? ' (trimmed to 250)' : ''}`)
   } catch (e) {
     s.notify(errText(e), 'error')
   }
@@ -75,7 +75,7 @@ export async function importIntoCombo(id: string) {
     const parsed = parseComboFile(JSON.parse(await file.text()))
     const first = parsed.combos[0] ?? makeCombo()
     s.updateCombo(id, { name: first.name, tokens: first.tokens })
-    s.notify(`Loaded "${first.name}" into this row · Ctrl+Z to undo`)
+    s.notifyUndo(`Loaded "${first.name}" into this row`)
   } catch (e) {
     s.notify(`${file.name}: ${errText(e)}`, 'error')
   }
@@ -87,10 +87,18 @@ export async function importIntoCombo(id: string) {
  * also added to the user's library so they stay in the menus.
  */
 export async function openAnyFile() {
+  const file = await pickFile('.json,application/json')
+  if (file) await openFile(file)
+}
+
+/** Opens one file the user picked or dropped onto the window. */
+export async function openFile(file: File) {
   const s = useStore.getState()
   const lib = useLibrary.getState()
-  const file = await pickFile('.json,application/json')
-  if (!file) return
+  if (!/\.json$/i.test(file.name)) {
+    s.notify(`${file.name} isn't a ComboTracker file (they end in .json).`, 'error')
+    return
+  }
   const base = file.name.replace(/\.json$/i, '')
   let json: Record<string, unknown>
   try {

@@ -1,4 +1,4 @@
-import { FolderOpen, Gamepad2, Keyboard, MonitorUp, Pencil } from 'lucide-react'
+import { Command, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp, Pencil, Wand2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { presetName } from '../assets'
 import { connectedPads, type PadButton } from '../core/input'
@@ -9,6 +9,8 @@ import { useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
 import { openUserFolder, userFolderLabel } from '../userdata'
 import { SHORTCUTS } from '../shortcuts'
+import { HOTKEYS, hotkeyLabel } from '../hotkeys'
+import { useTips } from '../store/useTips'
 import { Field, Modal, Segmented, Toggle } from './ui'
 
 
@@ -44,6 +46,7 @@ export function SettingsPanel() {
   const setSettings = useStore((s) => s.setSettings)
   const [pads, setPads] = useState(() => connectedPads())
   const [layouts, setLayouts] = useState<string[]>([])
+  const resetTips = useTips((s) => s.reset)
 
   useEffect(() => {
     const update = () => setPads(connectedPads())
@@ -132,6 +135,50 @@ export function SettingsPanel() {
           <p className="field-hint">In the browser, things you save are kept in this browser only. Use Save / Export to keep copies as files.</p>
         )}
       </section>
+
+      <section className="form-section">
+        <h3><Monitor size={16} /> Interface</h3>
+        <Segmented
+          label="Size"
+          value={settings.uiSize}
+          onChange={(v) => setSettings({ uiSize: v })}
+          options={[
+            { value: 'compact', label: 'Compact', hint: 'Fit more combos on screen' },
+            { value: 'standard', label: 'Standard' },
+            { value: 'large', label: 'Large', hint: 'Bigger buttons and text: easier to hit and read' },
+          ]}
+        />
+        <Toggle
+          label="Show tips"
+          hint="A short tip next to each feature the first time you see it."
+          checked={settings.tips}
+          onChange={(v) => setSettings({ tips: v })}
+        />
+        <div className="row-gap">
+          <button className="btn" onClick={() => { resetTips(); setSettings({ tips: true }) }}><Lightbulb size={14} /> Show tips again</button>
+          <button className="btn" onClick={() => open({ kind: 'setup' })}><Wand2 size={14} /> Run setup again</button>
+        </div>
+      </section>
+
+      {isDesktop && (
+        <section className="form-section">
+          <h3><Command size={16} /> Hotkeys that work in-game</h3>
+          <Toggle
+            label="Use global hotkeys"
+            hint="These work even while your game is focused."
+            checked={settings.hotkeys}
+            onChange={(v) => setSettings({ hotkeys: v })}
+          />
+          {settings.hotkeys && (
+            <dl className="shortcuts">
+              {HOTKEYS.filter((h) => !h.label.startsWith('Scene ')).map((h) => (
+                <div key={h.keys}><dt><kbd>{hotkeyLabel(h.keys)}</kbd></dt><dd>{h.label}</dd></div>
+              ))}
+              <div><dt><kbd>Ctrl+Alt+1 … 9</kbd></dt><dd>Switch to a saved overlay scene</dd></div>
+            </dl>
+          )}
+        </section>
+      )}
 
       <section className="form-section">
         <h3><Keyboard size={16} /> Keyboard shortcuts</h3>

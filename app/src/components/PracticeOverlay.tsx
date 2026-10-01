@@ -1,13 +1,36 @@
 import { ArrowLeftRight, RotateCcw } from 'lucide-react'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { feedPractice, startPractice, stepsFor, toFrames } from '../core/practice'
 import { tokenLabel } from '../core/tokens'
 import { usePadEvents } from '../hooks/usePadEvents'
 import { useShared } from '../hooks/useShared'
-import { PRACTICE_HEARTBEAT_KEY } from '../platform'
+import { onPracticeRestart, PRACTICE_HEARTBEAT_KEY } from '../platform'
+import { rate, recentDays, statsKey, type ComboStats } from '../core/stats'
+import { useStats } from '../store/useStats'
 import type { Player } from '../store/useStore'
 import { FloatingShell } from './Floating'
 import { TokenView } from './TokenView'
+
+/** Today, all-time and best streak, with a 14-day bar chart. */
+function PracticeHistory({ stats }: { stats: ComboStats }) {
+  const days = recentDays(stats, 14)
+  const today = days[days.length - 1]
+  const peak = Math.max(1, ...days.map((d) => d.tries))
+  return (
+    <div className="practice-history">
+      <span>Today {today.clean}/{today.tries}</span>
+      <span>All time {rate(stats)}%</span>
+      <span>Best streak {stats.best}</span>
+      <span className="practice-spark" title="Last 14 days: bar height is attempts, filled part is clean">
+        {days.map((d) => (
+          <i key={d.day} style={{ height: `${(d.tries / peak) * 100}%` }} title={`${d.day}: ${d.clean}/${d.tries}`}>
+            <b style={{ height: d.tries ? `${(d.clean / d.tries) * 100}%` : 0 }} />
+          </i>
+        ))}
+      </span>
+    </div>
+  )
+}
 
 /**
  * Practice mode as a floating, always-on-top window: play the combo in your
@@ -30,6 +53,21 @@ export function PracticeOverlay({ player, comboId }: { player: Player; comboId: 
   usePadEvents(settings.padIndex, glyph, (ev, time) => {
     if (ev.type === 'insert') setState((s) => ev.tokens.reduce((acc, t) => feedPractice(acc, t, time), s))
   })
+
+  // Record each landed combo and each drop in the long-term practice history.
+  const record = useStats((s) => s.record)
+  const stats = useStats((s) => (combo ? s.book[statsKey(combo.tokens)] : undefined))
+  const counted = useRef({ completions: state.completions, drops: state.drops })
+  useEffect(() => {
+    const prev = counted.current
+    counted.current = { completions: state.completions, drops: state.drops }
+    if (!combo) return
+    for (let i = prev.completions; i < state.completions; i++) record(combo.tokens, true)
+    for (let i = prev.drops; i < state.drops; i++) record(combo.tokens, false)
+  }, [state.completions, state.drops, combo, record])
+
+  // Global hotkey from the main window: restart.
+  useEffect(() => onPracticeRestart(() => setState((s) => startPractice(s.steps, s))), [])
 
   // Tell the editor window not to type controller input into combos meanwhile.
   useEffect(() => {
@@ -91,6 +129,7 @@ export function PracticeOverlay({ player, comboId }: { player: Player; comboId: 
                 : state.index === 0 && state.completions ? 'Clean! Go again.' : `Next: ${current ? tokenLabel(current.token) : ''}`}
             </div>
             {gaps.length > 0 && <div className="practice-gaps">Frames between inputs: {gaps.join(' · ')}</div>}
+            {stats && <PracticeHistory stats={stats} />}
           </div>
         )
       }}

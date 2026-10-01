@@ -92,6 +92,13 @@
     "core:window:allow-destroy",
     "core:window:allow-hide",
     "core:path:default",
+    "core:window:allow-set-position",
+    "core:window:allow-outer-position",
+    "core:window:allow-outer-size",
+    "global-shortcut:allow-register",
+    "global-shortcut:allow-unregister",
+    "global-shortcut:allow-unregister-all",
+    "global-shortcut:allow-is-registered",
     {
       "identifier": "opener:allow-open-path",
       "allow": [

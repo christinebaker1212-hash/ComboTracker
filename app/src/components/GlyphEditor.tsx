@@ -151,10 +151,15 @@ export function GlyphEditor({ edit }: { edit?: string }) {
 
   const remove = async () => {
     if (!existing) return
-    await deleteUser('glyphs', `${safeName(existing.name)}.json`)
+    const file = `${safeName(existing.name)}.json`
+    const wasCurrent = current.name === existing.name
+    await deleteUser('glyphs', file)
     await refresh('glyphs')
-    if (current.name === existing.name) setGlyph(BUILTIN_GLYPHS[0])
-    notify(`Deleted "${existing.name}".`)
+    if (wasCurrent) setGlyph(BUILTIN_GLYPHS[0])
+    notify(`Deleted "${existing.name}".`, 'info', {
+      label: 'Undo',
+      run: () => void writeUser('glyphs', file, packToFile(existing)).then(() => refresh('glyphs')).then(() => wasCurrent && setGlyph(existing)),
+    })
     close()
   }
 

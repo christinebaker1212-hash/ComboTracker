@@ -5,10 +5,10 @@ import { Modal } from './ui'
 const STEPS: [string, string][] = [
   ['Pick a combo row', 'Click a row on the right. That’s where input goes. Click inside it to insert in the middle.'],
   ['Enter inputs', 'Click the buttons on the left, press buttons on your controller, or type notation like 2MK > 236HP. Hold a button or direction for a held or charge input.'],
-  ['Load ready-made lists', 'Presets → Combos or Command lists loads a whole character. Ctrl+Z undoes it.'],
-  ['Put it on screen', 'Pin rows with 📌, then press Overlay. Drag it into place, scroll over it to resize, and lock it so clicks reach your game.'],
-  ['Practise', 'The 🎯 button on a row opens a practice window on top of your game. Play the combo and each input lights up; drops are called out.'],
-  ['Make it yours', 'Change icon styles and themes from the top bar, or create your own from the bottom of those menus.'],
+  ['Use a character’s moves', 'Move list shows any character’s moves like the in-game list. Add, pin or practise a move in one click.'],
+  ['Put it on screen', 'Pin rows with 📌, then press Overlay. Drag it into place, scroll over it to resize, and lock it so clicks reach your game. Save the arrangement as a scene from the arrow next to Overlay.'],
+  ['Practise', 'The 🎯 button on a row opens a practice window on top of your game. Play the combo and each input lights up; drops are called out, and your success rate is kept over time.'],
+  ['Make it yours', 'Change icon styles and themes from the top bar, or create your own from the bottom of those menus. Drop any ComboTracker file onto the window to open it.'],
 ]
 
 export function HelpDialog() {

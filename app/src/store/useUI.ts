@@ -11,6 +11,8 @@ export type Dialog =
   | { kind: 'savePreset' }
   | { kind: 'help' }
   | { kind: 'moves'; ref?: string }
+  | { kind: 'scenes' }
+  | { kind: 'setup' }
 
 interface UIState {
   dialog: Dialog | null

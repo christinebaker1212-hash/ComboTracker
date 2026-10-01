@@ -1,12 +1,15 @@
 import {
-  Copy, Download, Eraser, GripVertical, IndentDecrease, IndentIncrease, MoreHorizontal, Pin, Plus, SearchX, Share2,
-  Target, Trash2, Upload,
+  Copy, Download, Eraser, GripVertical, IndentDecrease, IndentIncrease, MoreHorizontal, Pin, Plus, Search, SearchX, Share2,
+  Target, Trash2, Upload, X,
 } from 'lucide-react'
 import { memo, useEffect, useRef, useState, type DragEvent, type MouseEvent } from 'react'
 import type { Combo } from '../core/combos'
 import { exportCombo, importIntoCombo } from '../actions'
 import { tokenLabel } from '../core/tokens'
 import { closeOverlay, openOverlay, openPractice } from '../platform'
+import { rate, recentDays, statsKey } from '../core/stats'
+import { useStats } from '../store/useStats'
+import { Tip } from './Tip'
 import { PLAYERS, useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
 import { Menu } from './Menu'
@@ -143,7 +146,9 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
             }}
             aria-label="Combo name"
           />
+          <StatsBadge combo={combo} />
           <div className="row-actions">
+            <MaybeTip id="pin" on={index === 0}>
             <button
               className={`icon-btn${combo.pinned ? ' is-on' : ''}`}
               title={combo.pinned ? 'Unpin (remove from the overlay)' : 'Pin to the overlay'}
@@ -151,6 +156,8 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
             >
               <Pin size={15} fill={combo.pinned ? 'currentColor' : 'none'} />
             </button>
+            </MaybeTip>
+            <MaybeTip id="practice" on={index === 0 && combo.tokens.length > 0}>
             <button
               className="icon-btn"
               title="Practice this combo in-game: opens a window on top of your game that checks your inputs"
@@ -159,6 +166,7 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
             >
               <Target size={15} />
             </button>
+            </MaybeTip>
             <button
               className={`icon-btn${combo.child ? ' is-on' : ''}`}
               title={combo.child ? 'Move back out (stop grouping under the combo above)' : 'Group under the combo above (e.g. an ender for a starter)'}
@@ -192,7 +200,35 @@ const ComboRow = memo(function ComboRow({ combo, index, active, dragging, onDrag
   )
 })
 
-export function ComboList() {
+const MaybeTip = ({ id, on, children }: { id: 'pin' | 'practice'; on: boolean; children: React.ReactNode }) =>
+  on ? <Tip id={id} align="end">{children}</Tip> : <>{children}</>
+
+/** Practice success rate, once a combo has been practised a few times. */
+function StatsBadge({ combo }: { combo: Combo }) {
+  const stats = useStats((s) => s.book[statsKey(combo.tokens)])
+  if (!stats || stats.tries < 3) return null
+  const pct = rate(stats)
+  const week = recentDays(stats, 7).reduce((a, d) => ({ tries: a.tries + d.tries, clean: a.clean + d.clean }), { tries: 0, clean: 0 })
+  const tip = [
+    `Practised ${stats.tries} times · ${pct}% clean`,
+    `Best streak: ${stats.best} in a row`,
+    week.tries ? `Last 7 days: ${week.clean}/${week.tries} (${rate(week)}%)` : 'Not practised in the last 7 days',
+    'Click to practise again',
+  ].join('\n')
+  return (
+    <button
+      className={`stats-badge ${pct >= 80 ? 'is-good' : pct >= 50 ? 'is-ok' : 'is-low'}`}
+      title={tip}
+      onClick={() => void openPractice(useStore.getState().player, combo.id)}
+    >
+      <Target size={12} /> {pct}%
+    </button>
+  )
+}
+
+export function ComboList({ searchRef }: { searchRef: React.RefObject<HTMLInputElement | null> }) {
+  const search = useUI((s) => s.search)
+  const setSearch = useUI((s) => s.setSearch)
   const player = useStore((s) => s.player)
   const setPlayer = useStore((s) => s.setPlayer)
   const list = useStore((s) => s.lists[s.player])
@@ -225,6 +261,18 @@ export function ComboList() {
               Player {p[1]}
             </button>
           ))}
+        </div>
+        <div className="search">
+          <Search size={15} />
+          <input
+            ref={searchRef}
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search combos"
+            aria-label="Search combos (Ctrl+F)"
+            onKeyDown={(e) => e.key === 'Escape' && (setSearch(''), e.currentTarget.blur())}
+          />
+          {search && <button className="icon-btn" onClick={() => setSearch('')} title="Clear search"><X size={14} /></button>}
         </div>
         <span className="count">{query ? `${visible.length} of ${list.length} combos` : `${list.length} combos`}</span>
       </div>

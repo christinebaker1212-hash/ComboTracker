@@ -1,13 +1,14 @@
 import { ArrowLeft, ChevronDown, ListPlus, Pin, Plus, Search, Target, X } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { presetName } from '../assets'
 import { makeCombo } from '../core/combos'
 import { filterMoves, parseMoveList, type Move, type MoveList } from '../core/movelist'
 import { openPractice } from '../platform'
-import { allGlyphs, allRefs, readPreset, splitRef, useLibrary } from '../store/useLibrary'
+import { allGlyphs, allRefs, readPreset, useLibrary } from '../store/useLibrary'
 import { useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
 import { TokenView } from './TokenView'
+import { CharacterPicker } from './CharacterPicker'
+import { entries, initials, type Entry } from '../characters'
 
 const LAST_KEY = 'combotracker:movelist:last'
 const lastRef = () => {
@@ -16,53 +17,6 @@ const lastRef = () => {
   } catch {
     return undefined
   }
-}
-
-interface Entry { ref: string; game: string; character: string; mine: boolean }
-
-function entries(refs: string[]): Entry[] {
-  return refs.map((ref) => {
-    const { origin, path } = splitRef(ref)
-    const parts = path.split('/')
-    return { ref, game: parts.length > 1 ? parts[0] : 'Other', character: presetName(path), mine: origin === 'user' }
-  })
-}
-
-const initials = (name: string) => name.replace(/[^A-Za-z0-9 .]/g, '').split(/[\s.]+/).filter(Boolean).map((w) => w[0]).join('').slice(0, 2).toUpperCase()
-
-/** Searchable character picker, grouped by game. */
-function CharacterPicker({ list, current, onPick }: { list: Entry[]; current?: string; onPick: (ref: string) => void }) {
-  const [q, setQ] = useState('')
-  const games = [...new Set(list.map((e) => e.game))]
-  const currentGame = list.find((e) => e.ref === current)?.game
-  const [game, setGame] = useState<string>(currentGame ?? 'All')
-  const shown = list.filter(
-    (e) => (game === 'All' || e.game === game) && (!q || `${e.character} ${e.game}`.toLowerCase().includes(q.toLowerCase())),
-  )
-  return (
-    <div className="picker-panel">
-      <div className="ml-search">
-        <Search size={15} />
-        <input autoFocus placeholder="Search characters, e.g. Ryu" value={q} onChange={(e) => setQ(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && shown[0] && onPick(shown[0].ref)} />
-      </div>
-      <div className="game-chips" role="tablist">
-        {['All', ...games].map((g) => (
-          <button key={g} role="tab" aria-selected={game === g} className={`chip-btn${game === g ? ' is-on' : ''}`} onClick={() => setGame(g)}>{g}</button>
-        ))}
-      </div>
-      <div className="char-grid">
-        {shown.map((e) => (
-          <button key={e.ref} className={`char-card${e.ref === current ? ' is-on' : ''}`} onClick={() => onPick(e.ref)} title={`${e.character} · ${e.game}`}>
-            <span className="char-avatar">{initials(e.character)}</span>
-            <span className="char-name">{e.character}</span>
-            {game === 'All' && <span className="char-game">{e.game}{e.mine ? ' · yours' : ''}</span>}
-          </button>
-        ))}
-        {!shown.length && <p className="field-hint">No characters match “{q}”.</p>}
-      </div>
-    </div>
-  )
 }
 
 /**
@@ -120,7 +74,7 @@ export function MoveListPanel({ initial }: { initial?: string }) {
     if (!list) return
     const s = useStore.getState()
     s.replaceList(list.sections.flatMap((sec) => sec.moves.map((m) => ({ ...makeCombo(m.name, m.tokens, m.notes || undefined), child: m.followUp }))))
-    notify(`Loaded ${entry?.character ?? 'move list'} as your combo list · Ctrl+Z to undo`)
+    useStore.getState().notifyUndo(`Loaded ${entry?.character ?? 'move list'} as your combo list`)
     close()
   }
 

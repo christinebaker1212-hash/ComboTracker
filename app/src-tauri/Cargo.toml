@@ -33,3 +33,6 @@ lto = true
 opt-level = "s"
 codegen-units = 1
 strip = true
+
+[target.'cfg(not(any(target_os = "android", target_os = "ios")))'.dependencies]
+tauri-plugin-global-shortcut = "2"

@@ -135,3 +135,42 @@ describe('move lists', () => {
     expect(filterMoves(fresh, 'od')[0].moves[0].name).toBe('Hadoken')
   })
 })
+
+describe('practice stats', () => {
+  it('tracks rate, streaks and days', async () => {
+    const { recordAttempt, rate, recentDays, statsKey } = await import('./stats')
+    const day = new Date(2026, 0, 10, 12).getTime()
+    let s = recordAttempt(undefined, true, day)
+    s = recordAttempt(s, true, day)
+    s = recordAttempt(s, false, day)
+    s = recordAttempt(s, true, day + 86_400_000)
+    expect(s).toMatchObject({ tries: 4, clean: 3, streak: 1, best: 2 })
+    expect(rate(s)).toBe(75)
+    const recent = recentDays(s, 3, day + 86_400_000)
+    expect(recent.map((d) => [d.tries, d.clean])).toEqual([[0, 0], [3, 2], [1, 1]])
+    expect(statsKey(['2', 'mk', 'newline', '236', 'hp'])).toBe('2 mk 236 hp')
+  })
+
+  it('counts drops only after the combo started', async () => {
+    const { feedPractice, startPractice, stepsFor } = await import('./practice')
+    let s = startPractice(stepsFor(['lp', 'mp', 'hp']))
+    s = feedPractice(s, 'hk', 0)
+    expect(s.drops).toBe(0)
+    s = feedPractice(s, 'lp', 1)
+    s = feedPractice(s, 'hk', 2)
+    expect(s.drops).toBe(1)
+  })
+})
+
+describe('controller detection', () => {
+  it('recognises common pads from their gamepad id', async () => {
+    const { padFamily } = await import('./controllers')
+    expect(padFamily('Xbox 360 Controller (XInput STANDARD GAMEPAD)')).toBe('xbox')
+    expect(padFamily('DualSense Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 0ce6)')).toBe('playstation')
+    expect(padFamily('Wireless Controller (STANDARD GAMEPAD Vendor: 054c Product: 09cc)')).toBe('playstation')
+    expect(padFamily('Pro Controller (STANDARD GAMEPAD Vendor: 057e Product: 2009)')).toBe('nintendo')
+    expect(padFamily('Snack Box Micro (Vendor: 2e8a Product: 10c8)')).toBe('leverless')
+    expect(padFamily('Qanba Obsidian 2 Arcade Joystick (Vendor: 2c22 Product: 2503)')).toBe('stick')
+    expect(padFamily('USB Gamepad (Vendor: 0079 Product: 0006)')).toBe('generic')
+  })
+})

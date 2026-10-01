@@ -6,6 +6,8 @@ pub fn run() {
     .plugin(tauri_plugin_opener::init())
     // Remembers every window's position and size, including overlays.
     .plugin(tauri_plugin_window_state::Builder::default().build())
+    // Hotkeys that work while a game has focus (toggle overlay, lock, restart practice).
+    .plugin(tauri_plugin_global_shortcut::Builder::new().build())
     .setup(|app| {
       if cfg!(debug_assertions) {
         app.handle().plugin(

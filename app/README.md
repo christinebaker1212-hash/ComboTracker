@@ -66,12 +66,25 @@ src/
     share.ts      Share codes
     theme.ts      Theme JSON → colours
     combos.ts     File format read/write
+    movelist.ts   Command list → sections of moves for the move list
+    stats.ts      Practice history (success rate, streaks, per day)
+    controllers.ts  Recognise a controller from its id; matching icons/layout
   store/        App state (undo/redo, autosave), user library, open dialogs
   components/   UI: editor, dialogs, overlay and input viewer windows
   hooks/        Controller, keyboard, shared state for floating windows
   userdata.ts   The user's saved files (Documents\ComboTracker on desktop)
   platform.ts   Browser vs desktop differences (windows, files)
+  overlays.ts   Show/hide/lock overlays and saved scenes
+  hotkeys.ts    Global hotkeys (desktop)
+scripts/
+  sync-assets.mjs           Copies icons/ and Presets/ into public/ (skips User folders)
+  trace-controllers.py      Controller photos → line-art tracings
+  build-command-lists.py    FAT frame data → Command Lists presets
 ```
+
+To refresh the generated move lists, clone [FAT](https://github.com/D4RKONION/FAT)
+and run `python3 scripts/build-command-lists.py <path to FAT>`. Notes written by
+hand in those files are kept.
 
 Per-game controller chords (Tekken 1+2 and so on) are data in `core/input.ts`
 (`INPUT_PROFILES`), not code, so adding a game means adding an entry.

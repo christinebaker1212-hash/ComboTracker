@@ -33,7 +33,7 @@ export interface State {
   pinScale: number
   past: Snapshot[]
   future: Snapshot[]
-  toast: { text: string; tone: 'info' | 'error' } | null
+  toast: Toast | null
   settings: Settings
 
   setPlayer(p: Player): void
@@ -57,8 +57,14 @@ export interface State {
   setSettings(patch: Partial<Settings>): void
   undo(): void
   redo(): void
-  notify(text: string, tone?: 'info' | 'error'): void
+  notify(text: string, tone?: 'info' | 'error', action?: ToastAction): void
+  /** Toast with an Undo button for anything destructive. */
+  notifyUndo(text: string): void
 }
+
+export interface ToastAction { label: string; run: () => void }
+export interface Toast { text: string; tone: 'info' | 'error'; action?: ToastAction; id: number }
+let toastId = 0
 
 export interface Settings {
   /** One overlay window with every pinned combo, or one window per combo. */
@@ -69,6 +75,12 @@ export interface Settings {
   padInput: boolean
   /** Layout shown by the input viewer (a preset ref). */
   viewerLayout: string | null
+  /** Global hotkeys (desktop): overlay, lock, practice restart, scenes. */
+  hotkeys: boolean
+  /** Interface size: tighter rows, or bigger click targets. */
+  uiSize: 'compact' | 'standard' | 'large'
+  /** Show one-time tips next to features the first time they appear. */
+  tips: boolean
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -76,6 +88,9 @@ export const DEFAULT_SETTINGS: Settings = {
   padIndex: null,
   padInput: true,
   viewerLayout: 'builtin:Gamepad/Xbox One.json',
+  hotkeys: true,
+  uiSize: 'standard',
+  tips: true,
 }
 
 const STORAGE_KEY = 'combotracker:v1'
@@ -203,7 +218,8 @@ export const useStore = create<State>()((set, get) => {
         return { lists: withList(s, s.player, next), selected: { ...s.selected, [s.player]: copy.id } }
       }),
 
-    removeCombo: (id) =>
+    removeCombo: (id) => {
+      const name = get().lists[get().player].find((c) => c.id === id)?.name
       commit((s) => {
         let next = s.lists[s.player].filter((c) => c.id !== id)
         if (!next.length) next = emptyList(1)
@@ -212,7 +228,9 @@ export const useStore = create<State>()((set, get) => {
           selected: { ...s.selected, [s.player]: ensureSelection(next, s.selected[s.player]) },
           caret: s.caret?.id === id ? null : s.caret,
         }
-      }),
+      })
+      get().notifyUndo(`Deleted “${name || 'combo'}”`)
+    },
 
     moveCombo: (id, toIndex) =>
       commit((s) => {
@@ -224,17 +242,22 @@ export const useStore = create<State>()((set, get) => {
         return { lists: withList(s, s.player, list) }
       }),
 
-    clearCombo: (id) =>
+    clearCombo: (id) => {
+      if (!get().lists[get().player].find((c) => c.id === id)?.tokens.length) return
       commit((s) => ({
         lists: withList(s, s.player, s.lists[s.player].map((c) => (c.id === id ? { ...c, tokens: [] } : c))),
         caret: s.caret?.id === id ? null : s.caret,
-      })),
+      }))
+      get().notifyUndo('Cleared the combo')
+    },
 
-    clearAll: () =>
+    clearAll: () => {
       commit((s) => {
         const next = emptyList(s.lists[s.player].length)
         return { lists: withList(s, s.player, next), selected: { ...s.selected, [s.player]: next[0].id }, caret: null }
-      }),
+      })
+      get().notifyUndo('Cleared every combo')
+    },
 
     replaceList: (combos, player) =>
       commit((s) => {
@@ -290,7 +313,8 @@ export const useStore = create<State>()((set, get) => {
         }
       }),
 
-    notify: (text, tone = 'info') => set({ toast: { text, tone } }),
+    notify: (text, tone = 'info', action) => set({ toast: { text, tone, action, id: ++toastId } }),
+    notifyUndo: (text) => get().notify(text, 'info', { label: 'Undo', run: () => get().undo() }),
   }
 })
 

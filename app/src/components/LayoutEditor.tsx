@@ -115,10 +115,16 @@ export function LayoutEditor({ initialRef }: { initialRef?: string }) {
 
   const remove = async () => {
     if (!ref || !isUser) return
-    await deleteUser('layouts', splitRef(ref).path)
+    const path = splitRef(ref).path
+    const saved = await loadLayout(ref)
+    const wasViewer = settings.viewerLayout === ref
+    await deleteUser('layouts', path)
     await refresh('layouts')
-    if (settings.viewerLayout === ref) setSettings({ viewerLayout: 'builtin:Gamepad/Xbox One.json' })
-    notify(`Deleted "${layout.name}".`)
+    if (wasViewer) setSettings({ viewerLayout: 'builtin:Gamepad/Xbox One.json' })
+    notify(`Deleted "${layout.name}".`, 'info', {
+      label: 'Undo',
+      run: () => void writeUser('layouts', path, saved).then(() => refresh('layouts')).then(() => wasViewer && setSettings({ viewerLayout: ref })),
+    })
     close()
   }
 

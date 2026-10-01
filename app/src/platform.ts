@@ -1,25 +1,53 @@
 // Differences between running in a browser and in the Tauri desktop app.
 import { emit, listen } from '@tauri-apps/api/event'
-import { getCurrentWindow, LogicalSize } from '@tauri-apps/api/window'
-import { WebviewWindow } from '@tauri-apps/api/webviewWindow'
+import { getCurrentWindow, LogicalSize, PhysicalPosition } from '@tauri-apps/api/window'
+import { getAllWebviewWindows, WebviewWindow } from '@tauri-apps/api/webviewWindow'
 import type { Player } from './store/useStore'
 
 export const isDesktop = typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window
 
-const overlayLabel = (p: Player, comboId?: string) => (comboId ? `overlay-${p}-${comboId}` : `overlay-${p}`)
+export const overlayLabel = (p: Player, comboId?: string) => (comboId ? `overlay-${p}-${comboId}` : `overlay-${p}`)
+
+/** A floating window as a scene remembers it. */
+export interface FloatingInfo {
+  label: string
+  query: string
+  title: string
+  size: { width: number; height: number }
+  /** Physical screen position (desktop only). */
+  pos?: { x: number; y: number }
+}
+
+const FLOATING_KEY = 'combotracker:floating'
+const browserWindows = new Map<string, Window>()
+
+function registry(): Record<string, FloatingInfo> {
+  try {
+    return JSON.parse(localStorage.getItem(FLOATING_KEY) ?? '{}')
+  } catch {
+    return {}
+  }
+}
 
 /** Opens (or focuses) a see-through, always-on-top window for a page of this app. */
-async function openFloating(label: string, query: string, title: string, size: { width: number; height: number }): Promise<boolean> {
+export async function openFloating(label: string, query: string, title: string, size: { width: number; height: number }, pos?: { x: number; y: number }): Promise<boolean> {
+  try {
+    localStorage.setItem(FLOATING_KEY, JSON.stringify({ ...registry(), [label]: { label, query, title, size } }))
+  } catch {
+    // Only scenes need this.
+  }
   if (!isDesktop) {
-    const w = window.open(`${location.pathname}?${query}`, label, `width=${size.width},height=${size.height}`)
+    const w = window.open(`${location.pathname}?${query}`, label, `width=${size.width},height=${size.height}${pos ? `,left=${pos.x},top=${pos.y}` : ''}`)
+    if (w) browserWindows.set(label, w)
     return !!w
   }
   const existing = await WebviewWindow.getByLabel(label)
   if (existing) {
+    if (pos) await existing.setPosition(new PhysicalPosition(pos.x, pos.y))
     await existing.setFocus()
     return true
   }
-  new WebviewWindow(label, {
+  const win = new WebviewWindow(label, {
     url: `index.html?${query}`,
     title,
     ...size,
@@ -29,15 +57,38 @@ async function openFloating(label: string, query: string, title: string, size: {
     alwaysOnTop: true,
     resizable: true,
   })
+  // Placed after creation so it wins over the remembered position.
+  if (pos) void win.once('tauri://created', () => setTimeout(() => void win.setPosition(new PhysicalPosition(pos.x, pos.y)), 150))
   return true
 }
 
-async function closeFloating(label: string) {
+export async function closeFloating(label: string) {
   if (!isDesktop) {
-    window.open('', label)?.close()
+    const w = browserWindows.get(label)
+    if (w) w.close()
+    else window.open('', label)?.close()
+    browserWindows.delete(label)
     return
   }
   await (await WebviewWindow.getByLabel(label))?.close()
+}
+
+/** Every floating window that is open right now, with where it sits on screen. */
+export async function openFloatingWindows(): Promise<FloatingInfo[]> {
+  const reg = registry()
+  if (!isDesktop) {
+    return [...browserWindows].filter(([, w]) => !w.closed).flatMap(([label]) => (reg[label] ? [reg[label]] : []))
+  }
+  const wins = (await getAllWebviewWindows()).filter((w) => w.label !== 'main' && reg[w.label])
+  return Promise.all(wins.map(async (w) => {
+    const p = await w.outerPosition()
+    return { ...reg[w.label], pos: { x: p.x, y: p.y } }
+  }))
+}
+
+export async function isFloatingOpen(label: string): Promise<boolean> {
+  if (!isDesktop) return !!browserWindows.get(label) && !browserWindows.get(label)!.closed
+  return !!(await WebviewWindow.getByLabel(label))
 }
 
 /** Opens (or focuses) the pinned-combo overlay: all pinned combos, or a single one. */
@@ -63,8 +114,26 @@ export function practiceActive(): boolean {
 export const openPractice = (p: Player, comboId: string) =>
   openFloating(`overlay-practice-${p}`, `view=practice&p=${p}&combo=${comboId}`, 'ComboTracker practice', { width: 520, height: 220 })
 
+/** Restarts any open practice window (used by the global hotkey). */
+export function restartPractice() {
+  if (isDesktop) void emit('practice-restart')
+  else localStorage.setItem('combotracker:practice-restart', String(Date.now()))
+}
+
+export function onPracticeRestart(fn: () => void): () => void {
+  if (!isDesktop) {
+    const h = (e: StorageEvent) => e.key === 'combotracker:practice-restart' && fn()
+    window.addEventListener('storage', h)
+    return () => window.removeEventListener('storage', h)
+  }
+  const un = listen('practice-restart', fn)
+  return () => void un.then((f) => f())
+}
+
+export const VIEWER_LABEL = 'viewer-main'
+
 /** Opens the live input viewer. */
-export const openViewer = () => openFloating('viewer-main', 'view=viewer', 'ComboTracker input viewer', { width: 420, height: 280 })
+export const openViewer = () => openFloating(VIEWER_LABEL, 'view=viewer', 'ComboTracker input viewer', { width: 420, height: 280 })
 
 /** Tells overlays that the saved state changed (browser windows get a storage event instead). */
 export function broadcastState() {

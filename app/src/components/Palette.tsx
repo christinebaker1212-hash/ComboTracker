@@ -9,6 +9,7 @@ import { TIMING } from '../core/input'
 import { applyNotation } from '../core/notation'
 import { MACRO_TOOLTIPS, type Token } from '../core/tokens'
 import { useStore } from '../store/useStore'
+import { Tip } from './Tip'
 import { TokenView } from './TokenView'
 
 /** A palette key: tap to add, hold (like the old app) to add the hold/charge version. */
@@ -92,7 +93,6 @@ export const Palette = forwardRef<HTMLInputElement>(function Palette(_, notation
   const clearAll = useStore((s) => s.clearAll)
   const notify = useStore((s) => s.notify)
   const [text, setText] = useState('')
-  const [confirmClear, setConfirmClear] = useState(false)
 
   const macros = macrosFor(glyph)
   const { icons } = useAssets()
@@ -113,7 +113,7 @@ export const Palette = forwardRef<HTMLInputElement>(function Palette(_, notation
     <aside className="palette" aria-label="Input palette">
       <section className="panel">
         <header className="panel-head">
-          <h2>Type it</h2>
+          <Tip id="palette"><h2>Type it</h2></Tip>
           <span className="panel-hint"><Keyboard size={13} /> numpad or words</span>
         </header>
         <form
@@ -227,19 +227,12 @@ export const Palette = forwardRef<HTMLInputElement>(function Palette(_, notation
       </section>
 
       <section className="panel panel-row">
-        <button className="btn" onClick={() => clearCombo(selectedId)} title="Clear the selected combo (undo with Ctrl+Z)">
+        <button className="btn" onClick={() => clearCombo(selectedId)} title="Clear the selected combo (you can undo it)">
           <Eraser size={15} /> Clear combo
         </button>
-        {confirmClear ? (
-          <span className="confirm">
-            <button className="btn btn-danger" onClick={() => (clearAll(), setConfirmClear(false))}>Clear every combo</button>
-            <button className="btn" onClick={() => setConfirmClear(false)}>Cancel</button>
-          </span>
-        ) : (
-          <button className="btn" onClick={() => setConfirmClear(true)} title="Clear every combo for this player">
-            <Trash2 size={15} /> Clear all
-          </button>
-        )}
+        <button className="btn" onClick={clearAll} title="Clear every combo for this player (you can undo it)">
+          <Trash2 size={15} /> Clear all
+        </button>
       </section>
     </aside>
   )

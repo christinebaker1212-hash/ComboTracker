@@ -39,10 +39,12 @@ export interface PracticeState {
   mistake: { expected: Token; got: Token; at: number } | null
   best: number
   completions: number
+  /** Attempts that got at least one input in, then went wrong. */
+  drops: number
 }
 
 export function startPractice(steps: Step[], prev?: PracticeState): PracticeState {
-  return { steps, index: 0, hitTimes: [], mistake: null, best: prev?.best ?? 0, completions: prev?.completions ?? 0 }
+  return { steps, index: 0, hitTimes: [], mistake: null, best: prev?.best ?? 0, completions: prev?.completions ?? 0, drops: prev?.drops ?? 0 }
 }
 
 const isDirection = (t: Token) => ['up', 'down', 'left', 'right', 'upleft', 'upright', 'downleft', 'downright'].includes(t)
@@ -70,8 +72,10 @@ export function feedPractice(s: PracticeState, input: Token, time: number): Prac
   }
   if (isDirection(got)) return s
   // Pressing the first button of the combo again restarts cleanly instead of counting as a drop.
-  if (got === s.steps[0]?.token) return { ...s, index: 1, hitTimes: [time], mistake: null, best: Math.max(s.best, 1) }
-  return { ...s, index: 0, hitTimes: [], mistake: { expected, got, at: s.index } }
+  if (got === s.steps[0]?.token) {
+    return { ...s, index: 1, hitTimes: [time], mistake: null, best: Math.max(s.best, 1), drops: s.drops + (s.index > 1 ? 1 : 0) }
+  }
+  return { ...s, index: 0, hitTimes: [], mistake: { expected, got, at: s.index }, drops: s.drops + (s.index > 0 ? 1 : 0) }
 }
 
 /** Milliseconds → frames at 60 fps, the unit fighting game players think in. */

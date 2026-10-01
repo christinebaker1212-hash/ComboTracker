@@ -52,7 +52,7 @@ export function ShareDialog({ code: initial }: { code?: string }) {
     if (g && mode === 'replace') setGlyph(g)
     if (mode === 'add') appendList(combos)
     else replaceList(combos)
-    notify(`Imported ${combos.length} combo${combos.length === 1 ? '' : 's'} · Ctrl+Z to undo`)
+    useStore.getState().notifyUndo(`Imported ${combos.length} combo${combos.length === 1 ? '' : 's'}`)
     close()
   }
 
