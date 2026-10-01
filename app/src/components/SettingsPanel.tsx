@@ -1,4 +1,4 @@
-import { Command, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp, Pencil, Wand2 } from 'lucide-react'
+import { Command, Copy, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp, Pencil, Radio, Wand2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { presetName } from '../assets'
 import type { PadButton } from '../core/input'
@@ -13,6 +13,7 @@ import { openUserFolder, userFolderLabel } from '../userdata'
 import { SHORTCUTS } from '../shortcuts'
 import { HOTKEYS, hotkeyLabel } from '../hotkeys'
 import { useTips } from '../store/useTips'
+import { DEFAULT_OBS, useObsStatus } from '../hooks/useObsHost'
 import { Field, Modal, Segmented, Toggle } from './ui'
 
 
@@ -123,6 +124,59 @@ function KeyboardSection() {
   )
 }
 
+/** Stream links for OBS: pages served from this computer, added as Browser Sources. */
+function StreamSection() {
+  const obs = useStore((s) => s.settings.obs ?? DEFAULT_OBS)
+  const setSettings = useStore((s) => s.setSettings)
+  const notify = useStore((s) => s.notify)
+  const { port, error } = useObsStatus()
+  const base = port ? `http://127.0.0.1:${port}/` : ''
+  const links = [
+    { label: 'Input viewer', path: '?view=viewer&obs=1', size: '600 × 400' },
+    { label: 'Input history', path: '?view=history&obs=1', size: '260 × 600' },
+    { label: 'Pinned combos (Player 1)', path: '?view=overlay&p=P1&obs=1', size: '900 × 300' },
+    { label: 'Pinned combos (Player 2)', path: '?view=overlay&p=P2&obs=1', size: '900 × 300' },
+  ]
+  const copy = (url: string) =>
+    void navigator.clipboard.writeText(url).then(() => notify('Link copied. In OBS: Sources → + → Browser, then paste it as the URL.'))
+
+  return (
+    <section className="form-section">
+      <h3><Radio size={16} /> Stream links (OBS)</h3>
+      {!isDesktop ? (
+        <p className="field-hint">In the desktop app, you can add the overlay, input viewer and input history to OBS as Browser Sources.</p>
+      ) : (
+        <>
+          <Toggle
+            label="Turn on stream links"
+            hint="Serves the overlay, input viewer and input history as web pages on this computer only. Add them to OBS as Browser Sources: transparent, sharp at any size, no window capture needed."
+            checked={obs.enabled}
+            onChange={(v) => setSettings({ obs: { ...obs, enabled: v } })}
+          />
+          {error && <p className="field-hint field-error">{error}</p>}
+          {obs.enabled && port && (
+            <>
+              <div className="stream-links">
+                {links.map((l) => (
+                  <div key={l.path} className="stream-link">
+                    <span className="stream-link-label">{l.label}<small>{l.size}</small></span>
+                    <code>{base + l.path}</code>
+                    <button className="btn btn-small" onClick={() => copy(base + l.path)}><Copy size={13} /> Copy</button>
+                  </div>
+                ))}
+              </div>
+              <p className="field-hint">
+                Pages are see-through. Add <code>&amp;bg=dark</code> or <code>&amp;bg=chroma</code> to the link for a background,
+                and <code>&amp;scale=2</code> to draw at double size. They follow everything you change in the app, live.
+              </p>
+            </>
+          )}
+        </>
+      )}
+    </section>
+  )
+}
+
 export function SettingsPanel() {
   const close = useUI((s) => s.close)
   const open = useUI((s) => s.open)
@@ -174,6 +228,7 @@ export function SettingsPanel() {
       </section>
 
       <KeyboardSection />
+      <StreamSection />
 
       <section className="form-section">
         <h3><MonitorUp size={16} /> Overlay</h3>

@@ -4,6 +4,7 @@ import type { Combo } from '../core/combos'
 import { upgradeTheme, type Theme } from '../core/theme'
 import { DEFAULT_KEYBOARD } from '../core/keyboard'
 import { setKeyboardConfig } from '../nativePads'
+import { isObs, obsGlyph } from '../obs'
 import { onStateChanged } from '../platform'
 import { allGlyphs, useLibrary } from '../store/useLibrary'
 import { DEFAULT_SETTINGS, STORAGE_EVENT_KEY, type Player, type Settings } from '../store/useStore'
@@ -42,18 +43,23 @@ export function useShared() {
       if (e.key?.startsWith('combotracker:user:')) void refreshLib()
     }
     window.addEventListener('storage', onStorage)
+    // Stream pages (OBS) get the state over the server instead.
+    window.addEventListener('ct-state', refresh)
     const un = onStateChanged(() => {
       refresh()
       void refreshLib('glyphs')
     })
     return () => {
       window.removeEventListener('storage', onStorage)
+      window.removeEventListener('ct-state', refresh)
       un()
     }
   }, [refreshLib])
   const keyboard = shared.settings.keyboard ?? DEFAULT_KEYBOARD
   useEffect(() => setKeyboardConfig(keyboard), [keyboard])
   const glyphs = allGlyphs(userGlyphs)
-  return { ...shared, glyph: glyphs.find((g) => g.name === shared.glyphName) ?? glyphs[0] }
+  const sent = isObs ? obsGlyph() : null
+  const glyph = sent?.name === shared.glyphName ? sent : glyphs.find((g) => g.name === shared.glyphName) ?? glyphs[0]
+  return { ...shared, glyph }
 }
 

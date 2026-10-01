@@ -4,6 +4,7 @@
 import { Minus, Plus, X } from 'lucide-react'
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from 'react'
 import { themeToCss, type Theme } from '../core/theme'
+import { isObs, obsBackdrop, obsScale } from '../obs'
 import {
   applyClickThrough, closeWindow, fitWindow, isDesktop, onOverlayLock, overlaysLocked, startWindowDrag,
 } from '../platform'
@@ -37,11 +38,18 @@ export function FloatingShell({ prefKey, title, theme, extraTools, children, def
   defaults?: Partial<Prefs>
   children: (scale: number) => ReactNode
 }) {
-  const [prefs, setPrefs] = useState(() => loadPrefs(prefKey, defaults))
+  const [prefs, setPrefs] = useState(() => {
+    const p = loadPrefs(prefKey, defaults)
+    // Stream pages: transparent unless the link asks for a background, sized by the link.
+    if (!isObs) return p
+    const backdrop: Backdrop = (['theme', 'dark', 'chroma'] as const).find((b) => b === obsBackdrop) ?? 'clear'
+    return { ...p, backdrop, scale: obsScale ?? p.scale }
+  })
   const [locked, setLocked] = useState(overlaysLocked)
   const contentRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    if (isObs) return
     try {
       localStorage.setItem(prefKey, JSON.stringify(prefs))
     } catch {
@@ -52,6 +60,7 @@ export function FloatingShell({ prefKey, title, theme, extraTools, children, def
   useEffect(() => {
     document.title = title
     document.documentElement.classList.add('is-overlay')
+    if (isObs) document.documentElement.classList.add('is-obs')
     void applyClickThrough(overlaysLocked())
     return onOverlayLock((l) => {
       setLocked(l)

@@ -750,3 +750,11 @@ button.pad-status { background: transparent; }
 .viewer-row.is-idle { opacity: 0.15; transition-duration: 1.2s; }
 .viewer-fx { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
 .viewer-fx .chip-btn { height: 26px; font-size: 12px; }
+/* Stream pages (OBS): no toolbar, nothing to drag. */
+html.is-obs .overlay-tools { display: none; }
+.stream-links { display: grid; gap: 6px; margin: 6px 0; }
+.stream-link { display: grid; grid-template-columns: 170px 1fr auto; gap: 8px; align-items: center; }
+.stream-link-label { display: flex; flex-direction: column; font-size: 13px; }
+.stream-link-label small { color: var(--muted); font-size: 11px; }
+.stream-link code { font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.field-error { color: #ff6b6b; }

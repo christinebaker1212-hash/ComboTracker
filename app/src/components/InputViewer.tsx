@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { usePadState } from '../hooks/usePadState'
 import type { Layout } from '../core/layouts'
 import { loadLayout } from '../store/useLibrary'
+import { isObs, obsLayout } from '../obs'
 import { useShared } from '../hooks/useShared'
 import { DEFAULT_FX, useViewerFx, type ViewerFx } from '../hooks/useViewerFx'
 import { FloatingShell } from './Floating'
@@ -58,9 +59,10 @@ export function InputViewer() {
     }
   })
 
+  const shownLayout = (isObs ? obsLayout() : null) ?? layout
   const [fx, setFx] = useState(loadFx)
   const [fxOpen, setFxOpen] = useState(false)
-  const fxFrame = useViewerFx(layout, state, fx)
+  const fxFrame = useViewerFx(shownLayout, state, fx)
   const toggleFx = (key: keyof ViewerFx) =>
     setFx((f) => {
       const next = { ...f, [key]: !f[key] }
@@ -70,6 +72,8 @@ export function InputViewer() {
 
   useEffect(() => {
     if (!settings.viewerLayout) return
+    // Stream pages get the layout from the app instead, since it may be one of your own files.
+    if (isObs) return
     loadLayout(settings.viewerLayout)
       .then((l) => {
         setLayout(l)
@@ -124,9 +128,9 @@ export function InputViewer() {
           </div>
         )}
         <div className={`viewer-row${fxFrame.idle ? ' is-idle' : ''}`}>
-          {layout ? (
+          {shownLayout ? (
             <LayoutView
-              layout={layout} state={state} glyph={glyph} theme={theme} scale={scale}
+              layout={shownLayout} state={state} glyph={glyph} theme={theme} scale={scale}
               look={{ outline: 2, highlight: 3, showImage }} fx={{ frame: fxFrame, strength: fx.strength }}
             />
           ) : (

@@ -22,6 +22,7 @@ import { themeToCss } from './core/theme'
 import { useGamepad } from './hooks/useGamepad'
 import { useKeyboard } from './hooks/useKeyboard'
 import { useGlobalHotkeys } from './hooks/useGlobalHotkeys'
+import { useObsHost } from './hooks/useObsHost'
 import { usePadSuggest } from './hooks/usePadSuggest'
 import { DEFAULT_KEYBOARD } from './core/keyboard'
 import { setKeyboardConfig } from './nativePads'
@@ -102,6 +103,7 @@ function Editor() {
   const drop = useFileDrop()
   useGlobalHotkeys(settings.hotkeys)
   usePadSuggest()
+  useObsHost()
   useEffect(() => {
     if (needsSetup()) open({ kind: 'setup' })
   }, [open])

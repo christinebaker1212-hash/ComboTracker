@@ -1,3 +1,4 @@
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 // Reads controllers natively and sends their state to every window.
 //
 // The webview's own Gamepad API stops reporting controllers while another

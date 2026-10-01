@@ -7,6 +7,7 @@ import { invoke } from '@tauri-apps/api/core'
 import { listen } from '@tauri-apps/api/event'
 import type { PadLike } from './core/input'
 import { buttonsFromKeys, codeToVk, DEFAULT_KEYBOARD, SocdCleaner, type KeyboardSettings } from './core/keyboard'
+import { isObs, startObsBridge } from './obs'
 import { isDesktop } from './platform'
 
 export interface NativeSnapshot {
@@ -48,7 +49,10 @@ let snapshots: NativeSnapshot[] = []
 let nativeKeys = 0
 const listeners = new Set<() => void>()
 
-if (isDesktop) {
+/** Pads and keyboard come from the desktop app: directly, or over the stream server in OBS. */
+const usesNative = isDesktop || isObs
+
+if (usesNative) {
   const set = (list: NativeSnapshot[]) => {
     const connectedBefore = pads.map((p) => p.index).join()
     const kb = list.find((p) => p.index === KEYBOARD_INDEX)
@@ -60,8 +64,18 @@ if (isDesktop) {
     // Lets pages that wait for "a controller was plugged in" start polling.
     if (connectedBefore !== connectedNow) window.dispatchEvent(new Event('nativepadschanged'))
   }
-  void invoke<NativeSnapshot[]>('native_pads').then(set).catch(() => {})
-  void listen<NativeSnapshot[]>('native-pads', (e) => set(e.payload))
+  if (isObs) {
+    startObsBridge('combotracker:v1', (json) => {
+      try {
+        set(JSON.parse(json) as NativeSnapshot[])
+      } catch {
+        // A partial message; the next one will do.
+      }
+    })
+  } else {
+    void invoke<NativeSnapshot[]>('native_pads').then(set).catch(() => {})
+    void listen<NativeSnapshot[]>('native-pads', (e) => set(e.payload))
+  }
 }
 
 // --- Keyboard ---
@@ -91,7 +105,7 @@ export function setKeyboardConfig(cfg: KeyboardSettings) {
 }
 
 // In the browser (or while our own window has focus) keys arrive as events.
-if (typeof window !== 'undefined' && !isDesktop) {
+if (typeof window !== 'undefined' && !usesNative) {
   const changed = () => listeners.forEach((l) => l())
   window.addEventListener('keydown', (e) => {
     if (!keyboard.enabled || e.repeat || keyboard.map[e.code] === undefined || typingHere()) return
@@ -116,7 +130,7 @@ function typingHere(): boolean {
 /** Buttons the keyboard is pressing right now, after SOCD cleaning. */
 function keyboardButtons(): Set<number> {
   if (!keyboard.enabled || typingHere()) return new Set()
-  const raw = isDesktop
+  const raw = usesNative
     ? new Set(Array.from({ length: 32 }, (_, i) => i).filter((i) => nativeKeys & (1 << i)))
     : buttonsFromKeys(heldCodes, keyboard.map)
   return socd.clean(raw, keyboard.socd)
