@@ -1,0 +1,109 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "E. Honda",
+  "slot_count": 9,
+  "slots": [
+    {
+      "name": "Hundred Hand Slap",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "mash; EX: PP; Also: extended"
+    },
+    {
+      "name": "Sumo Headbutt",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Sumo Smash",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Oicho Throw",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Super Killer Head Ram",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Shikofumi",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Sabori",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Rice Bale Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

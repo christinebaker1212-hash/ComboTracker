@@ -1,0 +1,195 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Abel",
+  "slot_count": 14,
+  "slots": [
+    {
+      "name": "Change of Direction",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Second Mid",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Second Low",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Finish Mid",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Finish Low",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Wheel Kick",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Marseilles Roll",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Falling Sky",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Tornado Throw",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Heartless",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Step Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step Kick > Dash",
+      "tokens": [],
+      "section": "Unique attacks",
+      "notes": "Input: 6MK xx 66"
+    },
+    {
+      "name": "Drop Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Pincer Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

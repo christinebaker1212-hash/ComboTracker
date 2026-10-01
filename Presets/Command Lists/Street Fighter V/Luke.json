@@ -1,0 +1,231 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Luke",
+  "slot_count": 19,
+  "slots": [
+    {
+      "name": "Sand Blaster",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Rising Rocket",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Flash Knuckle",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP; Also: hold, V-Skill 1"
+    },
+    {
+      "name": "Flash Knuckle (hold) (V-Skill 1)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold, VS1"
+    },
+    {
+      "name": "Avenger",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Avenger > No Chaser",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > P"
+    },
+    {
+      "name": "Avenger > Impaler",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > K"
+    },
+    {
+      "name": "Annihilator",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Rawhide",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Brutal Spike",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "impact",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Outlaw Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Triple Impact",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Triple Impact 2nd",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Snapback Combo",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Snapback Combo 2nd",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Snapback Combo 3rd",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Punisher",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Scrapper",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

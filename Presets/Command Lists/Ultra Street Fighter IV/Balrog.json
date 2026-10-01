@@ -1,0 +1,182 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Balrog",
+  "slot_count": 20,
+  "slots": [
+    {
+      "name": "Dash Straight",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Dash Upper",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Dash Low Straight",
+      "tokens": [
+        "left",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 43PP"
+    },
+    {
+      "name": "Dash Swing Blow",
+      "tokens": [
+        "left",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold; EX: 43PP"
+    },
+    {
+      "name": "Dash Low Smash",
+      "tokens": [
+        "left",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 43KK"
+    },
+    {
+      "name": "Buffalo Head",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Turn Punch LVL1",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl1"
+    },
+    {
+      "name": "Turn Punch LVL2",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl2"
+    },
+    {
+      "name": "Turn Punch LVL3",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl3"
+    },
+    {
+      "name": "Turn Punch LVL4",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl4"
+    },
+    {
+      "name": "Turn Punch LVL5",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl5"
+    },
+    {
+      "name": "Turn Punch LVL6",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl6"
+    },
+    {
+      "name": "Turn Punch LVL7",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl7"
+    },
+    {
+      "name": "Turn Punch LVL8",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl8"
+    },
+    {
+      "name": "Turn Punch LVL9",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl9"
+    },
+    {
+      "name": "Turn Punch Final",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK Max"
+    },
+    {
+      "name": "P Crazy Buffalo",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "K Crazy Buffalo",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Head Bomber",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Lever Break",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

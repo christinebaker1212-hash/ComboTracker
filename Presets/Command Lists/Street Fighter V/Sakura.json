@@ -1,0 +1,183 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Sakura",
+  "slot_count": 15,
+  "slots": [
+    {
+      "name": "Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Hadoken lvl 2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold"
+    },
+    {
+      "name": "Tengyo Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Tengyo Hadoken lvl 2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "hold"
+    },
+    {
+      "name": "Shouoken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Shunpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Airborne Shunpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Sakura Rain",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Flower Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Furiko Upper",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Chin Buster Kick",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hanakaze",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Sakura Shoulder Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Sailor Hop",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Kashinfu",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "VS1"
+    }
+  ]
+}

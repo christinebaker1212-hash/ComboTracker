@@ -1,0 +1,381 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Akuma",
+  "slot_count": 28,
+  "slots": [
+    {
+      "name": "Neutral Stomp",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 5"
+    },
+    {
+      "name": "Gohadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Zanku Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 236PP"
+    },
+    {
+      "name": "Zanku Hadoken Initial Hit",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 236PP"
+    },
+    {
+      "name": "Sekia Goshoha",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Goshoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Tatsumaki Zankukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Air Tatsumaki Zankukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Hyakki Gozan",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "then return the stick to neutral; EX: 41236KK > 5"
+    },
+    {
+      "name": "Hyakkishu > Hyakki Gosho",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236KK > P"
+    },
+    {
+      "name": "Hyakkishu > Hyakki Gojin",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236KK > K"
+    },
+    {
+      "name": "Hyakkishu > Hyakki Gosai",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 412362KK> LPLK"
+    },
+    {
+      "name": "Hyakkishu > EX Hyakki Gozanku",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Hyakkishu > Hyakki Gozanku",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236KK > 236P"
+    },
+    {
+      "name": "Hyakkishu > EX Hyakki Gorasen",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "left",
+        "downleft",
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Hyakkishu > Hyakki Gorasen",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "left",
+        "downleft",
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236KK > 412K"
+    },
+    {
+      "name": "Ashura Senku (fwd)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ashura Senku (back)",
+      "tokens": [
+        "left",
+        "down",
+        "downleft",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Sekia Kuretsuha",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Zugaihasatsu",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Sekiseiken",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tenha",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tenmakujinkyaku",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kikokurenzan",
+      "tokens": [
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kongoken",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kongoken > Kiai",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Goshoha",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Shuretsuzan",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

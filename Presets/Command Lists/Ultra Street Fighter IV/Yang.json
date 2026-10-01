@@ -1,0 +1,197 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Yang",
+  "slot_count": 17,
+  "slots": [
+    {
+      "name": "Tourouzan",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP; Also: 2 hit, 3 hit, 4 hit, 5 hit"
+    },
+    {
+      "name": "Kaihou",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Byakko Soushouda",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "feint; EX: 214PP"
+    },
+    {
+      "name": "Senkyuutai",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Senkyuutai FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 623LK xx FADC"
+    },
+    {
+      "name": "Seiei Enbu",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Senpukyaku",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Raigekishu (LK)",
+      "tokens": [
+        "downright",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Raigekishu (MK)",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Raigekishu (HK)",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 1",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 2",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Target Combo 2 Full",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Target Combo 3",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Target Combo 3 Full",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Gut Kick",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Monkey Flip",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

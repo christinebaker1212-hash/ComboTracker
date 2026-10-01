@@ -1,0 +1,145 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Ken",
+  "slot_count": 12,
+  "slots": [
+    {
+      "name": "Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Air Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Guren Enjikyaku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Thunder Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": "hold; Also: Feint"
+    },
+    {
+      "name": "Inazuma Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Chin Buster",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Chin Buster 2nd",
+      "tokens": [
+        "left",
+        "plus",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Lion Breaker",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Knee Bash",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Hell Wheel",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

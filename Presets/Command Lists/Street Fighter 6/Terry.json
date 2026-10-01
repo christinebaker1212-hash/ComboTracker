@@ -1,195 +1,325 @@
 {
-    "glyph": "Default",
-    "slot_count": 20,
-    "slots": [
-        {
-            "name": "Power Wave\n(Light / Medium)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "lp"
-            ]
-        },
-        {
-            "name": "Round Wave\n(Heavy)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Quick Burn\n(Light)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "lp"
-            ]
-        },
-        {
-            "name": "Burning Knuckle\n(Medium / Heavy)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Power Charge",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Crack Shoot",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Rising Tackle",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1: Buster Wolf",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Power Geyser",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Twin Geyser\n(After Power Geyser connects)",
-            "tokens": [
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Triple Geyser\n(After Twin Geyser connects)",
-            "tokens": [
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3: Rising Fang\n(More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Hammer Punch",
-            "tokens": [
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Power Drive",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Power Shoot",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Power Dunk",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "hk",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Passing Sway",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mk"
-            ]
-        },
-        {
-            "name": "[>] Jumping Lariat\n(After Passing Sway connects)",
-            "tokens": [
-                "mp"
-            ]
-        },
-        {
-            "name": "[>] Jumping Knee\n(After Passing Sway connects)",
-            "tokens": [
-                "mk"
-            ]
-        },
-        {
-            "name": "Fire Kick",
-            "tokens": [
-                "down",
-                "plus",
-                "mk",
-                "goes_into",
-                "down",
-                "plus",
-                "hk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Terry",
+  "slot_count": 26,
+  "slots": [
+    {
+      "name": "Power Wave",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP; Light / Medium"
+    },
+    {
+      "name": "Round Wave",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "Heavy"
+    },
+    {
+      "name": "Quick Burn",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214LPMP or LPHP; Light"
+    },
+    {
+      "name": "Burning Knuckle",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214MPHP; Medium / Heavy"
+    },
+    {
+      "name": "Crack Shoot",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Rising Tackle",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP"
+    },
+    {
+      "name": "Power Charge",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Buster Wolf",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Power Geyser",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Twin Geyser",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "After Power Geyser connects"
+    },
+    {
+      "name": "Triple Geyser",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "After Twin Geyser connects"
+    },
+    {
+      "name": "Rising Fang",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Hammer Punch",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Power Drive",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Power Shoot",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Power Dunk",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Fire Kick",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Passing Sway",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Passing Sway > Jumping Lariat",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Passing Sway > Jumping Knee",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Grasping Upper",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Buster Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Back Spin Kick",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Back Knuckle",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

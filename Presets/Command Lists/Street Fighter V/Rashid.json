@@ -1,0 +1,174 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Rashid",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Wall Jump",
+      "tokens": [
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": "near wall"
+    },
+    {
+      "name": "Spinning Mixer",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP; Also: lvl 2, lvl 3"
+    },
+    {
+      "name": "Spinning Mixer (wind)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": "wind; EX: 236PP"
+    },
+    {
+      "name": "Eagle Spike",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK; Also: wind"
+    },
+    {
+      "name": "Airborne Eagle Spike",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK; Also: wind"
+    },
+    {
+      "name": "Whirlwind Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Forward Dash (run)",
+      "tokens": [
+        "right",
+        "right"
+      ],
+      "section": "Special moves",
+      "notes": "hold"
+    },
+    {
+      "name": "Altair",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Flap Spin",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Beak Assault",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Spinning Mixer (run)",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": "during Run; Also: wind"
+    },
+    {
+      "name": "Spinning Mixer (lvl 2) (run)",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": "lvl 2, during Run"
+    },
+    {
+      "name": "Spinning Mixer (lvl 3) (run)",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": "lvl 3, during Run"
+    },
+    {
+      "name": "Eagle Spike (run)",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Target combos",
+      "notes": "during Run; Also: wind"
+    },
+    {
+      "name": "Riding Glider",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Rising Sun",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

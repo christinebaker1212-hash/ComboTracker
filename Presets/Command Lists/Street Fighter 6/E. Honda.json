@@ -1,169 +1,297 @@
 {
-    "glyph": "Default",
-    "slot_count": 17,
-    "slots": [
-        {
-            "name": "Hundred Hand Slap\n(Effect changes when in Sumo Spirit state)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Sumo Headbutt",
-            "tokens": [
-                "c_left",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Sumo Smash",
-            "tokens": [
-                "c_down",
-                "up",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Oicho Throw\n(When near opponent)",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Sumo Dash",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Teppo Triple Slap\n(During Sumo Dash)",
-            "tokens": [
-                "any_p",
-                "goes_into",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Taiho Cannon Lift\n(During Sumo Dash)",
-            "tokens": [
-                "down",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Neko Damashi",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Sumo Spirit",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA1: Show of Force",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2: Ultimate Killer Head Ram",
-            "tokens": [
-                "c_left",
-                "right",
-                "left",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA3: The Final Bout\n(More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Harai Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Power Stomp",
-            "tokens": [
-                "downright",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Flying Sumo Press\n(During a forward jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Double Slaps",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "mp"
-            ]
-        },
-        {
-            "name": "Toko Shizume",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "downright",
-                "plus",
-                "hk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "E. Honda",
+  "slot_count": 24,
+  "slots": [
+    {
+      "name": "Sumo Spirit",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Neko Damashi",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Hundred Hand Slap",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP; Effect changes when in Sumo Spirit state"
+    },
+    {
+      "name": "Sumo Headbutt",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 46PP"
+    },
+    {
+      "name": "Sumo Smash",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 28KK"
+    },
+    {
+      "name": "Oicho Throw",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 63214KK; When near opponent"
+    },
+    {
+      "name": "Sumo Dash",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Teppo Double Slap",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > P"
+    },
+    {
+      "name": "Teppo Triple Slap",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > P > P; During Sumo Dash"
+    },
+    {
+      "name": "Taiho Cannon Lift",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 2P; During Sumo Dash"
+    },
+    {
+      "name": "Show of Force",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Ultimate Killer Head Ram",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "The Final Bout",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Harai Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Power Stomp",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Flying Sumo Press",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "During a forward jump"
+    },
+    {
+      "name": "Double Slaps",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tokoshizume",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Saba Ori",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tawara Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Sumo Crunch",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Raiden-ho",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

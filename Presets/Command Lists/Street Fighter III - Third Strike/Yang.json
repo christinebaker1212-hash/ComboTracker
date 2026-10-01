@@ -1,0 +1,179 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Yang",
+  "slot_count": 14,
+  "slots": [
+    {
+      "name": "Tourou Zan",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Senkyuutai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Byakko Soushouda",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Kaihou",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Zenpou Tenshin",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Raishin Mahhaken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Tenshin Senkyuutai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2"
+    },
+    {
+      "name": "Sei-ei Enbu",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Senpuukyaku",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Raigeki Shuu",
+      "tokens": [
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hizageri",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Monkey Flip",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Youhon Shiun",
+      "tokens": [
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Toukuu Koushu",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
+}

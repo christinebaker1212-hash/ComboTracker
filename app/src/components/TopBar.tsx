@@ -94,7 +94,7 @@ export function TopBar({ pad, searchRef }: { pad: string | null; searchRef: Reac
 
   const presetItems: MenuItem[] = [
     { label: 'Combos', children: presetTree(manifest.presets.combos, user.combos, (r) => void loadPreset('combos', r)) },
-    { label: 'Command lists', children: presetTree(manifest.presets.commandLists, user.commandLists, (r) => void loadPreset('commandLists', r)) },
+    { label: 'Command lists', children: presetTree(manifest.presets.commandLists, user.commandLists, (r) => open({ kind: 'moves', ref: r })) },
     SEPARATOR,
     { label: 'Open a file…', icon: <FolderOpen size={14} />, onSelect: () => void openAnyFile() },
     { label: 'Use a share code…', icon: <Share2 size={14} />, onSelect: () => open({ kind: 'share', code: ' ' }) },
@@ -114,7 +114,10 @@ export function TopBar({ pad, searchRef }: { pad: string | null; searchRef: Reac
       </div>
 
       <div className="topbar-group">
-        <Menu title="Load combos or a character's moves" trigger={<><BookOpen size={15} /> Presets</>} items={presetItems} />
+        <button className="btn btn-accent" onClick={() => open({ kind: 'moves' })} title="A character's moves, like the in-game command list">
+          <BookOpen size={15} /> Move list
+        </button>
+        <Menu title="Load combos or a character's moves" trigger={<><FolderOpen size={15} /> Presets</>} items={presetItems} />
         <Menu title="Save or share this list" trigger={<><Save size={15} /> Save</>} items={saveItems} />
       </div>
 

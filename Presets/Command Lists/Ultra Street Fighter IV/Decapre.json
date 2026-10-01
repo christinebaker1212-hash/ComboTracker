@@ -1,0 +1,156 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Decapre",
+  "slot_count": 15,
+  "slots": [
+    {
+      "name": "Psycho Sting",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28PP"
+    },
+    {
+      "name": "Rapid Dagger",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "mash; EX: PP"
+    },
+    {
+      "name": "Spiral Arrow",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 46KK"
+    },
+    {
+      "name": "Scramble",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Break",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "during Scramble"
+    },
+    {
+      "name": "Razor Edge Slicer",
+      "tokens": [
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "during Scramble; EX: 2K"
+    },
+    {
+      "name": "Break (Air)",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "during Air Scramble; EX: 2P"
+    },
+    {
+      "name": "Cannon Strike",
+      "tokens": [
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "during Air Scramble; EX: 2K"
+    },
+    {
+      "name": "Strafe Dagger",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Fox Tail",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 1",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 2",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Shadow Suplex",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Frakensteiner",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Flying Neck Hunt",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Ryu",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Air Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Jodan Sokutou Geri",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236KK"
+    },
+    {
+      "name": "Shinkuu Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Collarbone Breaker",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Solar Plexus Strike",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Axe Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Jodan Sanrengeki 1st",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Jodan Sanrengeki 2nd",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Jodan Sanrengeki 3rd",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Jodan Nirengeki",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Jodan Nirengeki 2nd",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Shoulder Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Somersault Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

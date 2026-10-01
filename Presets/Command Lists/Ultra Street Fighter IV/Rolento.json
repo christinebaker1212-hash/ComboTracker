@@ -1,0 +1,191 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Rolento",
+  "slot_count": 17,
+  "slots": [
+    {
+      "name": "Trick Landing (Forward Jump)",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "landing"
+    },
+    {
+      "name": "Trick Landing (Neutral Jump)",
+      "tokens": [
+        "up",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "landing"
+    },
+    {
+      "name": "Trick Landing (Backward Jump)",
+      "tokens": [
+        "upleft",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "landing"
+    },
+    {
+      "name": "Stinger Jump",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Stinger Attack",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK > P or K"
+    },
+    {
+      "name": "Patriot Circle",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Patriot Circle 2nd",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 236P x2"
+    },
+    {
+      "name": "Patriot Circle 3rd",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 236P x3"
+    },
+    {
+      "name": "Mekong Delta Attack (Hop)",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Mekong Delta Attack (Follow-up)",
+      "tokens": [
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: PPP > PP"
+    },
+    {
+      "name": "Mekong Delta Air Raid (Roll)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Mekong Delta Air Raid (Overhead)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP > P"
+    },
+    {
+      "name": "Mekong Delta Escape",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Mine Sweeper",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Trick Rod",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Colonel Carrier",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Deadly Package",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

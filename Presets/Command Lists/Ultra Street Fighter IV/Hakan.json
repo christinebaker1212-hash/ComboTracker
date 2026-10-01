@@ -1,0 +1,197 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Hakan",
+  "slot_count": 17,
+  "slots": [
+    {
+      "name": "Guard Position",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oil Shower",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Oil Slide",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Oil Slide > Oil Shower",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oil Slide > Body Press",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP > P"
+    },
+    {
+      "name": "Oil Rocket",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268PP"
+    },
+    {
+      "name": "Oil Dive",
+      "tokens": [
+        "360",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268KK; Also: charge"
+    },
+    {
+      "name": "Flying Oil Spin",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Hakan Smash",
+      "tokens": [
+        "right",
+        "plus",
+        "lp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hakan Tackle",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hakan Spear",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step Low",
+      "tokens": [
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Front Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step Knee",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hakan Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Hakan Reverse",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Hakan Stomp",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

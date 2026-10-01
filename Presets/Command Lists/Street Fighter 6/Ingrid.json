@@ -1,0 +1,393 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Ingrid",
+  "slot_count": 33,
+  "slots": [
+    {
+      "name": "Sun Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Sun Flare",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Sun Flare (1 stock)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "1 stock; OD: 214PP"
+    },
+    {
+      "name": "Sun Flare (2 stock)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "2 stock; OD: 214PP"
+    },
+    {
+      "name": "Solar Burst",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 214PP"
+    },
+    {
+      "name": "Solar Burst (1 stock)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "air 1 stock; OD: 214PP"
+    },
+    {
+      "name": "Solar Burst (2 stock)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "air 2 stock; OD: 214PP"
+    },
+    {
+      "name": "Sun Rise",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Sun Veil",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 22KK"
+    },
+    {
+      "name": "Vanishing Sun (forward)",
+      "tokens": [
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Vanishing Sun (air)",
+      "tokens": [
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Vanishing Sun (backward)",
+      "tokens": [
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Sunburst Beam",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Sunburst Blow",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Shining Sun",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Order of the Sun",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Cosmic Ray",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Sun Octopus",
+      "tokens": [
+        "360",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Monoid Super",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Sun Bright",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Halo Flight",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Glowing Touch 1",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Luminous Uppercut 1",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Pretty Heel Kick",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Glowing Touch 2",
+      "tokens": [
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Luminous Uppercut 2",
+      "tokens": [
+        "left",
+        "plus",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Satellite Leap",
+      "tokens": [
+        "up",
+        "plus",
+        "hk",
+        "goes_into",
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Strange Knuckle",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Gravity Drop",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Twinkle Kick",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Odd Flight",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
+}

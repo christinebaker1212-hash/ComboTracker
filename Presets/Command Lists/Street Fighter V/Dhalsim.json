@@ -1,0 +1,230 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Dhalsim",
+  "slot_count": 18,
+  "slots": [
+    {
+      "name": "Yoga Fire",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP; Also: V-Skill 2"
+    },
+    {
+      "name": "Yoga Flame",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Yoga Gale",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 63214PP"
+    },
+    {
+      "name": "Yoga Teleport",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Teleport (Air)",
+      "tokens": [
+        "right",
+        "down",
+        "downright"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Yoga Sunburst lvl 1",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "can hold"
+    },
+    {
+      "name": "Yoga Sunburst lvl 2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "can hold"
+    },
+    {
+      "name": "Yoga Sunburst lvl 3",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "can hold"
+    },
+    {
+      "name": "Air Yoga Sunburst lvl 1",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "can hold, air"
+    },
+    {
+      "name": "Air Yoga Sunburst lvl 2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "can hold, air"
+    },
+    {
+      "name": "Air Yoga Sunburst lvl 3",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "can hold, air"
+    },
+    {
+      "name": "Drill Kick",
+      "tokens": [
+        "downleft"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Yoga Anvil",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Upper",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Divine Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Thrust Kick",
+      "tokens": [
+        "downleft",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Rocket",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Hoop",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

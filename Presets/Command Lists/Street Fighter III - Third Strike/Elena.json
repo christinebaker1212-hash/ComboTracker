@@ -1,0 +1,194 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Elena",
+  "slot_count": 15,
+  "slots": [
+    {
+      "name": "Scratch Wheel",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Rhino Horn",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236KK"
+    },
+    {
+      "name": "Mallet Smash",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Spinning Scythe",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Lynx Tail",
+      "tokens": [
+        "left",
+        "down",
+        "downleft",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 421KK"
+    },
+    {
+      "name": "Spinning Beat",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Brave Dance",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2"
+    },
+    {
+      "name": "Healing",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Healing (Cancel)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Handstand Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Handstand Whip",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Round Arch",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Slide",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Leg Lift Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Knee Attack",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
+}

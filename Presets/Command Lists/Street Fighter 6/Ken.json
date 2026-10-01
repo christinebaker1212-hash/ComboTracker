@@ -1,180 +1,409 @@
 {
-    "glyph": "Default",
-    "slot_count": 19,
-    "slots": [
-        {
-            "name": "Hadoken",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Shoryuken",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Tatsumaki Senpu-kyaku",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Aerial Tatsumaki Senpu-kyaku\n(During a forward jump)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Dragonlash Kick",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Jinrai Kick",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Kazekama Shin Kick\n(During Jinrai Kick)",
-            "tokens": [
-                "right",
-                "plus",
-                "lk"
-            ]
-        },
-        {
-            "name": "[>] Gorai Axe Kick\n(During Jinrai Kick)",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "[>] Senka Snap Kick\n(During Jinrai Kick)",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "[>] Kasai Thrust Kick\n(During OD Kazekama Shin Kick, OD Gorai Axe Kick, or OD Senka Snap Kick)",
-            "tokens": [
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA1: Dragonlash Flame",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Shippu Jinrai-kyaku",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA3: Shinryu Reppa",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Quick Dash",
-            "tokens": [
-                "any_k",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Emergency Stop\n(During Quick Dash)",
-            "tokens": [
-                "lk"
-            ]
-        },
-        {
-            "name": "[>] Thunder Kick\n(During Quick Dash)",
-            "tokens": [
-                "mk"
-            ]
-        },
-        {
-            "name": "[>] Forward Step Kick\n(During Quick Dash)",
-            "tokens": [
-                "hk"
-            ]
-        },
-        {
-            "name": "Chin Buster",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Triple Flash Kicks",
-            "tokens": [
-                "mk",
-                "goes_into",
-                "mk",
-                "goes_into",
-                "hk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Ken",
+  "slot_count": 31,
+  "slots": [
+    {
+      "name": "Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP"
+    },
+    {
+      "name": "Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Air Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 214KK"
+    },
+    {
+      "name": "Dragonlash Kick",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623KK"
+    },
+    {
+      "name": "Jinrai Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Kazekama Shin Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 6LK; During Jinrai Kick"
+    },
+    {
+      "name": "Gorai Axe Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 6MK; During Jinrai Kick"
+    },
+    {
+      "name": "Senka Snap Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 6HK; During Jinrai Kick"
+    },
+    {
+      "name": "Kasai Thrust Kick (LK)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "lk",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 6LK > 6K"
+    },
+    {
+      "name": "Kasai Thrust Kick (MK)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "mk",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 6MK > 6K"
+    },
+    {
+      "name": "Kasai Thrust Kick (HK)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "hk",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 6HK > 6K"
+    },
+    {
+      "name": "Quick Dash",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Emergency Stop",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "During Quick Dash"
+    },
+    {
+      "name": "Run > Shoryuken",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Run > Tatsumaki Senpukyaku",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Run > Dragonlash",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Dragonlash Flame",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Shippu Jinrai-kyaku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Shinryu Reppa",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Chin Buster 2nd",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Triple Flash Kicks 1",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Triple Flash Kicks 2",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Thunder Kick",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "During Quick Dash"
+    },
+    {
+      "name": "Forward Step Kick",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": "During Quick Dash"
+    },
+    {
+      "name": "Knee Strikes",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Hell Wheel",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Flame Strike",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Lightning Crack",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

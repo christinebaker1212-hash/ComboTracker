@@ -1,0 +1,234 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Alex",
+  "slot_count": 19,
+  "slots": [
+    {
+      "name": "Flash Chop",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Power Bomb",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Back Drop",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "opp turn"
+    },
+    {
+      "name": "Air Knee Smash",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Air Stampede",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Slash Elbow",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Spiral D.D.T.",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Hyper Bomb",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Reverse Hyper Bomb",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1 opp turn"
+    },
+    {
+      "name": "Boomerang Raid",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2"
+    },
+    {
+      "name": "Stun Gun Headbutt",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "High Chop",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Lariat",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Headbutt",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Sleeper Hold",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "opp turn, mash"
+    },
+    {
+      "name": "Crouch LK -> Crouch MK (TC)",
+      "tokens": [
+        "down",
+        "plus",
+        "lk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Crouch LK -> Crouch HK (TC)",
+      "tokens": [
+        "down",
+        "plus",
+        "lk",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Body Slam",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Flying Knee",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
+}

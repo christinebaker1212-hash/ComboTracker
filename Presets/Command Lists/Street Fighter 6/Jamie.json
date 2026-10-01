@@ -1,250 +1,292 @@
 {
-    "theme": "Dark",
-    "glyph": "Default",
-    "slot_count": 21,
-    "slots": [
-        {
-            "name": "The Devil Inside\n(Hold to extend)",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Freeflow Strikes\n(Effect changes at drink level 4)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p",
-                "goes_into",
-                "right",
-                "plus",
-                "any_p",
-                "goes_into",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Freeflow Kicks",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k",
-                "goes_into",
-                "right",
-                "plus",
-                "any_k",
-                "goes_into",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Swagger Step",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Arrow Kick",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Luminous Dive Kick\n(Drink level 1)\n(Forward jump)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Bakkai\n(Drink level 2)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Tenshin\n(Drink level 3)",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Swagger Hermit Punch\n(Drink level 4)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p",
-                "goes_into",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1 - Breakin'\n(Hold down to drink)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2 - The Devil's Song",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3 - Getsuga Saiho",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Tensei Kick",
-            "tokens": [
-                "down",
-                "plus",
-                "any_k",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Phantom Sway",
-            "tokens": [
-                "down",
-                "plus",
-                "hk",
-                "goes_into",
-                "hk",
-                "goes_into",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Falling Star Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Hermit's Elbow",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Senei Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Bitter Strikes\n(Drink level 1)",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "lk",
-                "goes_into",
-                "mp"
-            ]
-        },
-        {
-            "name": "Full Moon Kick\n(Drink level 2)",
-            "tokens": [
-                "right",
-                "plus",
-                "mk",
-                "goes_into",
-                "mk",
-                "goes_into",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Intoxicated Assault\n(Drink level 3)",
-            "tokens": [
-                "left",
-                "plus",
-                "hp",
-                "goes_into",
-                "hp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Ransui Haze\n(Drink level 4)",
-            "tokens": [
-                "right",
-                "plus",
-                "hk",
-                "goes_into",
-                "left",
-                "plus",
-                "hp",
-                "goes_into",
-                "any_p"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Jamie",
+  "slot_count": 22,
+  "slots": [
+    {
+      "name": "The Devil Inside",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Hold to extend; Also: 2 drinks, 3 drinks, 4 drinks, DR4 activation"
+    },
+    {
+      "name": "Freeflow Strikes",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP; Effect changes at drink level 4"
+    },
+    {
+      "name": "Freeflow Strikes 2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP > 6P"
+    },
+    {
+      "name": "Freeflow Strikes 3",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP > 6P > 6P"
+    },
+    {
+      "name": "Freeflow Kicks 2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP > 6K"
+    },
+    {
+      "name": "Freeflow Kicks 3",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP > 6K > 6K"
+    },
+    {
+      "name": "Swagger Step",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Arrow Kick",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623KK"
+    },
+    {
+      "name": "Breakin'",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "The Devil's Song",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Getsuga Saiho",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Falling Star Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hermit's Elbow",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Senei Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Phantom Sway",
+      "tokens": [
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Phantom Sway + Drink",
+      "tokens": [
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Back Shaver",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Wheel Punch",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Vainglory Strike",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Leg Sweep",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

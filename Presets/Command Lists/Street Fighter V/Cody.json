@@ -1,0 +1,191 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Cody",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Bad Spray",
+      "tokens": [
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "wake-up"
+    },
+    {
+      "name": "Tornado Sweep",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Ruffian Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Zonk Knuckle",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: hold any punch button, release; EX: hold any 2 punch buttons, release"
+    },
+    {
+      "name": "Zonk Knuckle Level 2",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: hold any punch button, release; EX: hold any 2 punch buttons, release"
+    },
+    {
+      "name": "Criminal Punisher",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Axel Knuckle",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hammer Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Air Raid Punch",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Air Raid Kick",
+      "tokens": [
+        "up",
+        "plus",
+        "mk",
+        "goes_into",
+        "up",
+        "plus",
+        "lk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Slip Jab",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Crime Blow",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "lp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Final Combination",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "lp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Final Combo Throw",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Trash Out",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Crime Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

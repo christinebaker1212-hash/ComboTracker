@@ -1,273 +1,522 @@
 {
-    "glyph": "Default",
-    "slot_count": 31,
-    "slots": [
-        {
-            "name": "Bunshin Senpukyaku\n(Air OK)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Sprint",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>]Emergency Stop",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Torso Cleaver",
-            "tokens": [
-                "lk"
-            ]
-        },
-        {
-            "name": "[>]Shadow Slide",
-            "tokens": [
-                "mk"
-            ]
-        },
-        {
-            "name": "[>]Neck Hunter\n",
-            "tokens": [
-                "hk"
-            ]
-        },
-        {
-            "name": "Arc Step\n(Automatically activates after getting close with sprint)",
-            "tokens": []
-        },
-        {
-            "name": "[>]Bushin Izuna Otoshi",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Bushin Hojin Kick",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "Vagabond Edge\n",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Hidden Variable",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Genius at Play",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Shuriken Bomb\n(With at least 1 Shuriken Bomb stock)",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Shuriken Bomb Spread\n(With at least 2 Shuriken Bomb stocks)",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Nue Twister\n(During jump)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1 - Bunshin Beats",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>]Bushin Thunderous Beats\n(Hold button)\n(With at least 1 Shuriken Bomb stock) \n(During Bushin Beats)",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2  - Bunshin Scramble\n(Air OK)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Bunshin Ninjastar Cypher",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Water Slicer Slide",
-            "tokens": [
-                "downright",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Windmill Kick",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Hisen Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Step Up\n(After Hisen)\n",
-            "tokens": []
-        },
-        {
-            "name": "[>]",
-            "tokens": [
-                "upleft"
-            ]
-        },
-        {
-            "name": "[>]\n",
-            "tokens": [
-                "up"
-            ]
-        },
-        {
-            "name": "[>]",
-            "tokens": [
-                "upright"
-            ]
-        },
-        {
-            "name": "Elbow Drop\n(Peak of jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Bushin Tiger Fangs",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Bushin Prism Strikes",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "hp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Bushin Hellchain",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "down",
-                "plus",
-                "hp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Bushin Hellchain Throw",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "down",
-                "plus",
-                "hp",
-                "goes_into",
-                "down",
-                "plus",
-                "hk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Kimberly",
+  "slot_count": 41,
+  "slots": [
+    {
+      "name": "Step Up (neutral hop)",
+      "tokens": [
+        "right",
+        "plus",
+        "hk",
+        "goes_into",
+        "up"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Step Up (forward hop)",
+      "tokens": [
+        "right",
+        "plus",
+        "hk",
+        "goes_into",
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Step Up (backward hop)",
+      "tokens": [
+        "right",
+        "plus",
+        "hk",
+        "goes_into",
+        "upleft"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Aerial Bushin Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 214KK"
+    },
+    {
+      "name": "Vagabond Edge",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Sprint",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Sprint > Torso Cleaver",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > LK"
+    },
+    {
+      "name": "Sprint > Shadow Slide",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > MK"
+    },
+    {
+      "name": "Sprint > Neck Hunter",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > HK"
+    },
+    {
+      "name": "Sprint > Emergency Stop",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > P"
+    },
+    {
+      "name": "Sprint > Arc Step",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "proximity; OD: 236KK"
+    },
+    {
+      "name": "Arc Step > Bushin Hojin Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "proximity; OD: 236KK"
+    },
+    {
+      "name": "Arc Step > Bushin Izuna Otoshi",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "proximity; OD: 236KK"
+    },
+    {
+      "name": "Hidden Variable",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Genius at Play",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "refill; OD: 22PP"
+    },
+    {
+      "name": "Shuriken Bomb",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "1 stock; With at least 1 Shuriken Bomb stock"
+    },
+    {
+      "name": "Shuriken Bomb Spread",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "2 stock; With at least 2 Shuriken Bomb stocks"
+    },
+    {
+      "name": "Nue Twister",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 236PP; During jump"
+    },
+    {
+      "name": "Bushin Beats (0 stock)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "0 stock"
+    },
+    {
+      "name": "Bushin Beats (1 stock)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "1 stock"
+    },
+    {
+      "name": "Bushin Scramble",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Soaring Bushin Scramble (air)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "air"
+    },
+    {
+      "name": "Bushin Ninjastar Cypher",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Water Slicer Slide",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Windmill Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hisen Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Elbow Drop",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": "Peak of jump"
+    },
+    {
+      "name": "Bushin Prism Strikes 1",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Prism Strikes 2",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Prism Strikes 3",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Hellchain 1",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Hellchain 2",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Hellchain Throw",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Tiger Fangs",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Ripcord Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Bell Ringer",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Steadfast Strike",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Shapeless State",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

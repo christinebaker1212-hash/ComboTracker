@@ -1,145 +1,265 @@
 {
-    "glyph": "Default",
-    "slot_count": 14,
-    "slots": [
-        {
-            "name": "Manege Dore\n(When near opponent) \n(Effect depends on medal level)",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Rond-point",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Degage",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Renverse\n(Hold the button to feint) \n(Effect depends on medal level)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Grand Fouette\n(During Renverse)",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA1: Arabesque",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Eoile",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA3: Pas de Deux\n(When near opponent) \n(More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Reverence",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Tomoe Derriere",
-            "tokens": [
-                "downright",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "A Terre",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mk"
-            ]
-        },
-        {
-            "name": "En Haut",
-            "tokens": [
-                "left",
-                "plus",
-                "mk",
-                "goes_into",
-                "mk"
-            ]
-        },
-        {
-            "name": "Temps Lie",
-            "tokens": [
-                "hp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Allonge",
-            "tokens": [
-                "down",
-                "plus",
-                "hp",
-                "goes_into",
-                "hp"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Manon",
+  "slot_count": 22,
+  "slots": [
+    {
+      "name": "Manège Doré",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 624PP"
+    },
+    {
+      "name": "Rond-point",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Dégagé",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Renversé",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Grand Fouetté",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP > K"
+    },
+    {
+      "name": "Renversé Feint",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold; OD: 236PP"
+    },
+    {
+      "name": "Arabesque",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Étoile",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Pas de Deux",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Révérence",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tomoe Derrière",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Back MK",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "En Haut",
+      "tokens": [
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "À Terre",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Temps Lié",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Allongé",
+      "tokens": [
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Ouchi Gari",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Uchi Mata",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Glissade",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Écarté",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

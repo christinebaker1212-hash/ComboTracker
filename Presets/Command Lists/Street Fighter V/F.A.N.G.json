@@ -1,0 +1,118 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "F.A.N.G",
+  "slot_count": 10,
+  "slots": [
+    {
+      "name": "Nishikyu",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28PP"
+    },
+    {
+      "name": "Sotoja",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Ryobenda",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Ryobenda Trap",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 46K Trap; EX: 46KK Trap"
+    },
+    {
+      "name": "Nikankyaku",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Shishiruirui",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Nirenko",
+      "tokens": [
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Senpukuga > Kick",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Simonshu",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Kyoshitsugeki",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

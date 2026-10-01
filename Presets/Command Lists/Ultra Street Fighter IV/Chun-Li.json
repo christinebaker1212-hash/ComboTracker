@@ -1,0 +1,226 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Chun-Li",
+  "slot_count": 19,
+  "slots": [
+    {
+      "name": "Wall Jump",
+      "tokens": [
+        "upleft",
+        "goes_into",
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": "against wall"
+    },
+    {
+      "name": "Hyakuretsukyaku",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "mash; EX: KK"
+    },
+    {
+      "name": "Hyakuretsukyaku Ext.",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "extended mash"
+    },
+    {
+      "name": "Kikoken",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Hazanshu",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Spinning Bird Kick",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Senretsukyaku",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Rear Spin Kick",
+      "tokens": [
+        "downright",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kakukyakuraku",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kakusenshu",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kintekishu",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tenkukyaku",
+      "tokens": [
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tenshokyaku",
+      "tokens": [
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Yosokyaku 2",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Yosokyaku 3",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Koshuto",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Kirinshu",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Ryuseiraku",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

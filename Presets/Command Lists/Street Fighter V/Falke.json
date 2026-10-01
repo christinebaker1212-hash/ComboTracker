@@ -1,0 +1,119 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Falke",
+  "slot_count": 12,
+  "slots": [
+    {
+      "name": "Psycho Kugel",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: hold punch button + release (standing); EX: hold punch button + release"
+    },
+    {
+      "name": "Psycho Kanonen",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: hold punch button + release (crouch); EX: hold punch button + release"
+    },
+    {
+      "name": "Psycho Feder",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: hold punch button + release (air); EX: hold punch button + release"
+    },
+    {
+      "name": "Psycho Schneide",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: PPP"
+    },
+    {
+      "name": "Katapult",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: KKK"
+    },
+    {
+      "name": "Psycho Fluegel",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Blaukraehe",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Spitze",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Zweitrit",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Wirbel Wind",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Luftstrom",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Windstoss",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Guy",
+  "slot_count": 22,
+  "slots": [
+    {
+      "name": "Wall Jump",
+      "tokens": [
+        "upleft",
+        "goes_into",
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": "against wall"
+    },
+    {
+      "name": "Hozanto",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Bushin Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Bushin Flip",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Bushin Izuna Otoshi (Throw)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "near opp"
+    },
+    {
+      "name": "Bushin Flip Elbow Drop",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Run",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Sudden Stop",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Shadow Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > MK"
+    },
+    {
+      "name": "Neck Flip",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > HK"
+    },
+    {
+      "name": "Kaiten Izuna Otoshi (air)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Kaiten Izuna Otoshi EX (air)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Bushin Hasoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Ninja Sickle",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Neck Breaker",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusaken 2",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusaken 3",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusaken 4 (Launch)",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusaken 4 (Throw)",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Grab Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Shoulder Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

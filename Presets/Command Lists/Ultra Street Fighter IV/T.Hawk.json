@@ -1,0 +1,94 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "T.Hawk",
+  "slot_count": 8,
+  "slots": [
+    {
+      "name": "Mexican Typhoon",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268PP"
+    },
+    {
+      "name": "Tomahawk Buster",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Condor Dive",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: KKK"
+    },
+    {
+      "name": "Condor Spire",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Double Typhoon",
+      "tokens": [
+        "360",
+        "goes_into",
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Thrust Peak",
+      "tokens": [
+        "downright",
+        "plus",
+        "lp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Neck Hanging Tree",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Mexican Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

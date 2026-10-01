@@ -1,0 +1,192 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Chun-Li",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Triangle Jump",
+      "tokens": [
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": "wall"
+    },
+    {
+      "name": "Kikkoken",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236PP"
+    },
+    {
+      "name": "Hyakuretsukyaku",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: KK, KK, KK"
+    },
+    {
+      "name": "Spinning Bird Kick",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Hazan Shu",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Kikoshou",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Houyoku Sen",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2"
+    },
+    {
+      "name": "Tensei Ranka",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Sourenshou",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hakkei",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Senjoushuu",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Yokusenkyaku",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tenshin Shuukyaku",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Koshuutou",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Ryuuseiraku",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Kakushiken",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
+}

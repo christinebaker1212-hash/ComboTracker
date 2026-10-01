@@ -1,0 +1,243 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Gill",
+  "slot_count": 19,
+  "slots": [
+    {
+      "name": "Pyrokinesis",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPMP Pyrokinesis",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPHP Pyrokinesis",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MPHP Pyrokinesis",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Cryokinesis",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPMP Cryokinesis",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPHP Cryokinesis",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MPHP Cryokinesis",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Pyro Cyber Lariat",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Cryo Cyber Lariat",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Moonsault Knee Drop",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Seraphic Wing",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Cryo Drop Elbow",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Pyro Quarrel Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Cryo Rise Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Guilty Straight",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Penalty Break",
+      "tokens": [
+        "down",
+        "plus",
+        "lk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Impact Claw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Guilty Bomb",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

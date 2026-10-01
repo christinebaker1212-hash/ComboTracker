@@ -1,108 +1,187 @@
 {
-    "glyph": "SuperCombo",
-    "slot_count": 13,
-    "slots": [
-        {
-            "name": "Dashing Head Attack",
-            "tokens": [
-                "c_left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]  Hold button for overhead",
-            "tokens": []
-        },
-        {
-            "name": "Dashing Leg Attack",
-            "tokens": [
-                "c_left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "High Speed Barrage",
-            "tokens": [
-                "qcb",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Capture and Deadly Blow",
-            "tokens": [
-                "hcb",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Upwards Head Strike",
-            "tokens": [
-                "left",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Double-Armed Advance",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Inversion Head Kick",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "SA1 - Critical Combo Attack",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2 - Deadly Double Combination",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3 - Total Destruction",
-            "tokens": [
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Blow",
-            "tokens": [
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Capture",
-            "tokens": [
-                "qcf",
-                "plus",
-                "any_k"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Q",
+  "slot_count": 15,
+  "slots": [
+    {
+      "name": "Dashing Head Attack",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold; EX: 46PP"
+    },
+    {
+      "name": "Dashing Leg Attack",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "High Speed Barrage",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Capture and Deadly Blow",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Critical Combo Attack",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Deadly Double Combination",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2"
+    },
+    {
+      "name": "Total Destruction",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Total Destruction: Blow",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "during SA3"
+    },
+    {
+      "name": "Total Destruction: Capture",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "during SA3"
+    },
+    {
+      "name": "Upwards Head Strike",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Double-Armed Advance",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Inversion Head Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Grab and Knee Smash",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Depraved Impact",
+      "tokens": [
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Leap Attack",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
 }

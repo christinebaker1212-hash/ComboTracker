@@ -1,0 +1,225 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Yun",
+  "slot_count": 19,
+  "slots": [
+    {
+      "name": "Zesshou Hohou",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Tetsuzanko",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Kobokushi",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "feint; EX: 214PP"
+    },
+    {
+      "name": "Nishokyaku",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Genei Jin",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Senpukyaku",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Dakai",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Raigekishu (LK)",
+      "tokens": [
+        "downright",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Raigekishu (MK)",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Raigekishu (HK)",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 1",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 2",
+      "tokens": [
+        "down",
+        "plus",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 3",
+      "tokens": [
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 4",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Target Combo 4 Full",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "cl/far"
+    },
+    {
+      "name": "Target Combo 5",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 5 Full",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lk",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Palm Strikes",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Monkey Flip",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

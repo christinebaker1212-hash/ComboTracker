@@ -1,0 +1,258 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Evil Ryu",
+  "slot_count": 20,
+  "slots": [
+    {
+      "name": "Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Shakunetsu Hadoken",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "LP/MP/HP Shoryuken FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 623P xx FADC"
+    },
+    {
+      "name": "Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Air Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "f+MK > LK Tatsu Follow-up",
+      "tokens": [
+        "right",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "f+MK > MK Tatsu Follow-up",
+      "tokens": [
+        "right",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "f+MK > HK Tatsu Follow-up",
+      "tokens": [
+        "right",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "f+MK > EX Tatsu Follow-up",
+      "tokens": [
+        "right",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ryusokyaku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Ashura Senku (Far)",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "down",
+        "downleft",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ashura Senku (Close)",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "down",
+        "downleft",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Raging Demon",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "right",
+        "goes_into",
+        "lk",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Zugaihasatsu",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Senbukyaku",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo (close)",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo (far)",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shoulder Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Somersault Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

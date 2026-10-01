@@ -1,0 +1,309 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Lucia",
+  "slot_count": 23,
+  "slots": [
+    {
+      "name": "Gun Smoke",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Gun Smoke > Rough Chase",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP > P"
+    },
+    {
+      "name": "Gun Smoke > Tornado Spinner",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP > K"
+    },
+    {
+      "name": "Gun Smoke > Cyclone Spinner",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "VS1; EX: 236PP > MPMK"
+    },
+    {
+      "name": "Gun Smoke > Nubbing Needle",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "VS2; EX: 236PP > MPMK"
+    },
+    {
+      "name": "Gun Smoke > Braking",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP > 4"
+    },
+    {
+      "name": "Firecracker",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Flipper Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LK Flipper Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > LK"
+    },
+    {
+      "name": "MK Flipper Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > MK"
+    },
+    {
+      "name": "HK Flipper Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK > HK"
+    },
+    {
+      "name": "Fire Spinner",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Hurricane Spinner",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Hard Hit Knee",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Knee Slide",
+      "tokens": [
+        "downright",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Elbow Crush",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Drop Target",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Quick Side-Kick",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Spin Drive",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Street-Style Set",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Carry Bonus",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "German Suplex",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Back-Carry Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

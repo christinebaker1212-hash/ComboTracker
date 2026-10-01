@@ -1,0 +1,212 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Urien",
+  "slot_count": 17,
+  "slots": [
+    {
+      "name": "Chariot Tackle",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Violence Knee Drop",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Dangerous Headbutt",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28PP"
+    },
+    {
+      "name": "Metallic Sphere",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Also: hold, V-Skill 2"
+    },
+    {
+      "name": "Metallic Sphere Ground",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236LPMP or LPHP; Also: hold, V-Skill 2"
+    },
+    {
+      "name": "Metallic Sphere Air",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236MPHP; Also: hold, V-Skill 2"
+    },
+    {
+      "name": "Metallic Sphere (hold) (V-Skill 2)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold, VS2"
+    },
+    {
+      "name": "Metallic Sphere Ground (hold) (V-Skill 2)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": "hold, VS2; EX: 236LPMP or LPHP"
+    },
+    {
+      "name": "Metallic Sphere Air (hold) (V-Skill 2)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "hold, VS2; EX: 236MPHP"
+    },
+    {
+      "name": "Dominate Crush",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Quarrel Punch",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Terrible Smash",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Quarrel Kick",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Killer Straight",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Break Rush",
+      "tokens": [
+        "right",
+        "plus",
+        "mp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Spartan Bomb (fwd)",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Spartan Bomb (back)",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

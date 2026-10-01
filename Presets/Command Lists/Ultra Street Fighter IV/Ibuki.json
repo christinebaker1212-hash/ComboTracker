@@ -1,0 +1,409 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Ibuki",
+  "slot_count": 34,
+  "slots": [
+    {
+      "name": "Kunai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Tsuijigoe",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Neck Breaker",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236PP"
+    },
+    {
+      "name": "Raida",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Kasumi Gake",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Kazegiri",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Tsumuji",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK; Also: High Follow-up, Low Follow-up, Low Follow-ups 2+3, Low Follow-up 4"
+    },
+    {
+      "name": "Hien",
+      "tokens": [
+        "left",
+        "down",
+        "downleft",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 421KK; Also: recoil"
+    },
+    {
+      "name": "Kasumi Suzaku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "air"
+    },
+    {
+      "name": "Agemen",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Reverse Spin Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Spin Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hammer Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Sazan",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Bonsho Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Backhand Punch",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 1",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 2",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 3",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Target Combo 4/6 Start",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 4 Full",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 5 Start",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 5 Full",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 6 Partial",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 6 Full",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 7",
+      "tokens": [
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 8 Partial",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 8 Full",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 9 Start",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 9 Full",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Target Combo 10",
+      "tokens": [
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Yami Kazura",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Uki Yami",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tobizaru",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

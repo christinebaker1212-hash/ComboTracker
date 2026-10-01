@@ -1,0 +1,249 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Cody",
+  "slot_count": 23,
+  "slots": [
+    {
+      "name": "Bad Stone Lv1",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Bad Stone Lv2",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold Lv2"
+    },
+    {
+      "name": "Bad Stone Lv3",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold Lv3"
+    },
+    {
+      "name": "Bad Stone Lv4",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold Max"
+    },
+    {
+      "name": "Bad Stone",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Knife Throw",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Knife"
+    },
+    {
+      "name": "Fake Bad Stone",
+      "tokens": [
+        "down",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Fake Knife Throw",
+      "tokens": [
+        "down",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "Knife"
+    },
+    {
+      "name": "Criminal Upper",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Ruffian Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Zonk Knuckle Lv1",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release P Lv1"
+    },
+    {
+      "name": "Zonk Knuckle Lv2",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release P Lv1"
+    },
+    {
+      "name": "Zonk Knuckle Lv3",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release P Lv1"
+    },
+    {
+      "name": "Zonk Knuckle",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP; EX: Hold & Release PP"
+    },
+    {
+      "name": "Bad Spray (Face-up)",
+      "tokens": [
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "face-up recovery"
+    },
+    {
+      "name": "Bad Spray (Face-down)",
+      "tokens": [
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "face-down recovery"
+    },
+    {
+      "name": "Dead End Irony",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Jaw Crusher",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Stomach Blow",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hammer Hook",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Crack Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Prisoner Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Bad Stomp",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

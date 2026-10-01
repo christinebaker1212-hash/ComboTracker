@@ -1,0 +1,209 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Gen (Crane)",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Change Style: Mantis",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Jyasen",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LP+MP Jyasen",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46LPMP"
+    },
+    {
+      "name": "LP+HP Jyasen",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46LPHP"
+    },
+    {
+      "name": "MP+HP Jyasen",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46MPHP"
+    },
+    {
+      "name": "Oga",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Oga Stop",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oga Close",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oga Far",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oga Ceiling",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "up"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oga Ceiling Drop",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "up",
+        "goes_into",
+        "down"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oga Close Range",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "up",
+        "goes_into",
+        "downleft"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Jyakoha",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Shakudan",
+      "tokens": [
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Shuraku",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Hozen",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

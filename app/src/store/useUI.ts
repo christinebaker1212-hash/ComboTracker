@@ -10,6 +10,7 @@ export type Dialog =
   | { kind: 'share'; code?: string }
   | { kind: 'savePreset' }
   | { kind: 'help' }
+  | { kind: 'moves'; ref?: string }
 
 interface UIState {
   dialog: Dialog | null

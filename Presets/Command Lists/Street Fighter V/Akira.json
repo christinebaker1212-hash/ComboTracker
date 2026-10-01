@@ -1,0 +1,287 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Akira",
+  "slot_count": 22,
+  "slots": [
+    {
+      "name": "Kiko Kai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP; Also: VS1, air"
+    },
+    {
+      "name": "Kiko Kai (VS1) (air)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "VS1; EX: 236PP"
+    },
+    {
+      "name": "Urarimon",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Hotenshu",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Senshubu",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Senshubu > LK",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Senshubu > MK",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Senshubu > HK",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Kyoso Kiko Kai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Kaihosho",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kutenshu",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Totenshu",
+      "tokens": [
+        "right",
+        "plus",
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Ressenda",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tsuten Rengeki",
+      "tokens": [],
+      "section": "Target combos",
+      "notes": "Input: 5LP > 5MP > VS2"
+    },
+    {
+      "name": "Renkan Ko",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Renkan Ko 2nd",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Renkan Renkiko",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "Renkan Tsutenda",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Shintenshu",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Shin'lha",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Yoshisenrin",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Kurakusho",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

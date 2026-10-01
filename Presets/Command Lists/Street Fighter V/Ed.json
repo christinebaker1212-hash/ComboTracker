@@ -1,0 +1,103 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Ed",
+  "slot_count": 10,
+  "slots": [
+    {
+      "name": "Psycho Knuckle",
+      "tokens": [
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "hold; EX: Flicker > PP"
+    },
+    {
+      "name": "Psycho Spark",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Shot",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "after 6MP; EX: PP"
+    },
+    {
+      "name": "Psycho Upper",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: PPP"
+    },
+    {
+      "name": "Psycho Flicker",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "mash"
+    },
+    {
+      "name": "Psycho Rising",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Splash",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "after 5KK; EX: PP"
+    },
+    {
+      "name": "Psycho Barrage",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Blow",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Cheat & Smash",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

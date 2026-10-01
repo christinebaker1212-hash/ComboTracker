@@ -1,0 +1,211 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Juri",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Fuhajin",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Also: store, release"
+    },
+    {
+      "name": "LK+MK Fuhajin",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lk",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MK+HK Fuhajin",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mk",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LK+HK Fuhajin",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lk",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Shikusen",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "2nd Impact",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "3rd Strike",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Senpusha",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Kasatushi",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Kasatushi (Forward)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Kasatushi (Back)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Kasatushi (Up)",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Fuharenjin",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Sekku",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": "Also: U1"
+    },
+    {
+      "name": "Karen Kick",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Assatsu Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

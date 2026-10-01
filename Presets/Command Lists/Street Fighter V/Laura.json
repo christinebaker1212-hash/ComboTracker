@@ -1,0 +1,209 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Laura",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Bolt Charge",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Split River",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mp",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Rodeo Break",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mp",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Thunder Clap Lvl 1",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Thunder Clap Lvl 2",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "brief-hold"
+    },
+    {
+      "name": "Thunder Clap Lvl 3",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "hold"
+    },
+    {
+      "name": "LPMP Thunder Clap",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPHP Thunder Clap",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MPHP Thunder Clap",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Sunset Wheel",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Inazuma Spin Hold",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Step Elbow",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Twist Barrage",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Dual Crash",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Seoi Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Pullback Hold",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

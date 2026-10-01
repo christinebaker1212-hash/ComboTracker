@@ -1,231 +1,381 @@
 {
-    "glyph": "Default",
-    "slot_count": 24,
-    "slots": [
-        {
-            "name": "Gladius\n(Hold the button to charge the attack)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Dimachaerus",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p",
-                "goes_into",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Phalanx",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Quadriga",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Scutum\n(Hold the button to maintain stance)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "[>] Tonitrus\n(During Scutum)",
-            "tokens": [
-                "any_p",
-                "goes_into",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Procella\n(During Scutum)",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Enfold\n(When near opponent) (During Scutum)",
-            "tokens": [
-                "lp",
-                "plus",
-                "lk"
-            ]
-        },
-        {
-            "name": "SA1: Javelin of Marisa\n(Hold the button to change effect)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2: Meteorite",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3: Goddess of the Hunt\n(More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Marisa Style",
-            "tokens": []
-        },
-        {
-            "name": "[>](Hold Button)",
-            "tokens": [
-                "hp"
-            ]
-        },
-        {
-            "name": "[>](Hold Button)\n",
-            "tokens": [
-                "h_hk"
-            ]
-        },
-        {
-            "name": "Light Two Hitter",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "lp"
-            ]
-        },
-        {
-            "name": "Medium Two Hitter",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mp"
-            ]
-        },
-        {
-            "name": "Heavy Two Hitter",
-            "tokens": [
-                "hp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Volare Combo\n(During a jump)",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mp"
-            ]
-        },
-        {
-            "name": "Caelum Arc\n(During a neutral jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Magna Bunker",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Novacula Swipe",
-            "tokens": [
-                "right",
-                "plus",
-                "mp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Novacula Thrust",
-            "tokens": [
-                "right",
-                "plus",
-                "mp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Malleus Breaker",
-            "tokens": [
-                "downright",
-                "plus",
-                "hp",
-                "goes_into",
-                "downright",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Falx Crusher",
-            "tokens": [
-                "right",
-                "plus",
-                "hk",
-                "goes_into",
-                "right",
-                "plus",
-                "hk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Marisa",
+  "slot_count": 30,
+  "slots": [
+    {
+      "name": "Gladius",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP; Hold the button to charge the attack; Also: hold"
+    },
+    {
+      "name": "Dimachaerus",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Dimachaerus Follow-up",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP > 6P"
+    },
+    {
+      "name": "Phalanx",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP"
+    },
+    {
+      "name": "Quadriga",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Scutum",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK; Hold the button to maintain stance; Also: absorb"
+    },
+    {
+      "name": "Tonitrus 1",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Tonitrus 2",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Procella",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "During Scutum"
+    },
+    {
+      "name": "Enfold",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "When near opponent) (During Scutum"
+    },
+    {
+      "name": "Javelin of Marisa",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Hold, Counter"
+    },
+    {
+      "name": "Meteorite",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Goddess of the Hunt",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Novacula",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Magna Bunker",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Malleus",
+      "tokens": [
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Knee",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Caelum Arc",
+      "tokens": [
+        "up",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "During a neutral jump; Also: hold"
+    },
+    {
+      "name": "Volare Combo",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": "During a jump"
+    },
+    {
+      "name": "Novacula Swipe",
+      "tokens": [
+        "right",
+        "plus",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Novacula Thrust",
+      "tokens": [
+        "right",
+        "plus",
+        "mp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Malleus Breaker",
+      "tokens": [
+        "downright",
+        "plus",
+        "hp",
+        "goes_into",
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Falx Crusher",
+      "tokens": [
+        "right",
+        "plus",
+        "hk",
+        "goes_into",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Two Hitter",
+      "tokens": [
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Mounted Grace",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Ponte Milvio",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Secutor",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Love Tap",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

@@ -1,0 +1,181 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Oro",
+  "slot_count": 15,
+  "slots": [
+    {
+      "name": "Human Pillar Driver",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Oniyama",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28PP"
+    },
+    {
+      "name": "Sun Disk Palm",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Also: low, high"
+    },
+    {
+      "name": "Jinchu Nobori",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Air Jinchu Nobori",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 236KK"
+    },
+    {
+      "name": "Kishin Riki",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1; EX: 236236PP"
+    },
+    {
+      "name": "Ground Grab",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "ground, during SA1"
+    },
+    {
+      "name": "Air Grab",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "air, during SA1"
+    },
+    {
+      "name": "Yagyou Dama",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2; EX: 236236PP"
+    },
+    {
+      "name": "Tengu Stones",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3; EX: 236236PP"
+    },
+    {
+      "name": "Mawashihiji",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kubishime Kataguruma",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "mash"
+    },
+    {
+      "name": "Tomoe Nage",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Kuuchuu Jigoku Guruma",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Tobihiza",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
+}

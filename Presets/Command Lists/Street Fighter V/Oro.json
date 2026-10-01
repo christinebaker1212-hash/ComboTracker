@@ -1,0 +1,237 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Oro",
+  "slot_count": 19,
+  "slots": [
+    {
+      "name": "Nichirin Sho",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Oni Yanma",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28PP"
+    },
+    {
+      "name": "Nioh Riki",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Jinchu Watari",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Jinchu Nobori (air)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 236KK"
+    },
+    {
+      "name": "Tsuranekeashi",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Daishinsenriki",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Kaeshi Genkotsu",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tobi Hiza",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hane Jodan Mawashi",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Double Jump",
+      "tokens": [
+        "upleft",
+        "goes_into",
+        "up"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tsurane Uchiage",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Oi Onibi",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "Oi Minomushi",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Oi Kaki Otoshi",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Oi Eda Uchi",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Yashi Kudaki",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tomoe Nage",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Kuchu Jigoku Guruma",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

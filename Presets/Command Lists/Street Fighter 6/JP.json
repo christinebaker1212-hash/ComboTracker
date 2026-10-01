@@ -1,78 +1,330 @@
 {
-    "glyph": "Default",
-    "slot_count": 18,
-    "slots": [
-        {
-            "name": "Triglav",
-            "tokens": ["down", "down", "plus", "any_p"]
-        },
-        {
-            "name": "Stribog",
-            "tokens": ["down", "downright", "right", "plus", "any_p"]
-        },
-        {
-            "name": "Departure",
-            "tokens": ["down", "downleft", "left", "plus", "any_p"]
-        },
-        {
-            "name": "[>] Departure: Window\n(While Departure is active)",
-            "tokens": ["down", "downleft", "left", "plus", "lp"]
-        },
-        {
-            "name": "[>] Departure: Shadow\n(While Departure is active)",
-            "tokens": ["down", "downleft", "left", "plus", "hp"]
-        },
-        {
-            "name": "Amnesia",
-            "tokens": ["down", "down", "plus", "any_k"]
-        },
-        {
-            "name": "Torbalan\n(Hold the button to feint)",
-            "tokens": ["down", "downright", "right", "plus", "any_k"]
-        },
-        {
-            "name": "Embrace",
-            "tokens": ["down", "downleft", "left", "plus", "any_k"]
-        },
-        {
-            "name": "SA1: Chornobog",
-            "tokens": ["down", "downright", "right", "down", "downright", "right", "plus", "any_p"]
-        },
-        {
-            "name": "SA2: Lovushka",
-            "tokens": ["down", "downleft", "left", "down", "downleft", "left", "plus", "any_p"]
-        },
-        {
-            "name": "SA3: Interdiction\n(More powerful when vitality is at 25% or below)",
-            "tokens": ["down", "downright", "right", "down", "downright", "right", "plus", "any_k"]
-        },
-        {
-            "name": "Guillotinna",
-            "tokens": ["right", "plus", "mk"]
-        },
-        {
-            "name": "Malice",
-            "tokens": ["downright", "plus", "hp"]
-        },
-        {
-            "name": "Bylina",
-            "tokens": ["right", "plus", "hk"]
-        },
-        {
-            "name": "Grom Strelka",
-            "tokens": ["left", "plus", "mp", "goes_into", "mp"]
-        },
-        {
-            "name": "Zilant",
-            "tokens": ["hk", "goes_into", "hp"]
-        },
-        {
-            "name": "Zilant Mid",
-            "tokens": ["hk", "goes_into", "hp", "goes_into", "hp"]
-        },
-        {
-            "name": "Zilant Low",
-            "tokens": ["hk", "goes_into", "hp", "goes_into", "hk"]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "JP",
+  "slot_count": 27,
+  "slots": [
+    {
+      "name": "Triglav",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 22PP"
+    },
+    {
+      "name": "Stribog",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Departure",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Departure: Window",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": "While Departure is active"
+    },
+    {
+      "name": "Departure: Shadow",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP > 214HP; While Departure is active"
+    },
+    {
+      "name": "Torbalan",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK; Hold the button to feint; Also: Feint"
+    },
+    {
+      "name": "Embrace",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Amnesia",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 22KK"
+    },
+    {
+      "name": "Amnesia: Bomb",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "bomb; OD: 22KK"
+    },
+    {
+      "name": "Chornobog",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Lovushka",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Interdiction",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Guillotinna",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Malice",
+      "tokens": [
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Bylina",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Grom Strelka First",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Grom Strelka",
+      "tokens": [
+        "left",
+        "plus",
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Zilant",
+      "tokens": [
+        "hk",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Zilant Mid",
+      "tokens": [
+        "hk",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Zilant Low",
+      "tokens": [
+        "hk",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Ravina",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Uragan",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tornado",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Drive Impact: Espada",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Exilio",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

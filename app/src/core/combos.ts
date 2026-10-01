@@ -9,13 +9,15 @@ export interface Combo {
   pinned: boolean
   /** Shown indented under the combo above it (the old "[>]" name prefix). */
   child: boolean
+  /** Short extra info shown under the name, e.g. "OD: 236PP". */
+  notes?: string
 }
 
 export interface ComboListFile {
   glyph?: string
   theme?: string
   slot_count?: number
-  slots: { name: string; tokens: Token[] }[]
+  slots: { name: string; tokens: Token[]; notes?: string }[]
 }
 
 export const MAX_SLOTS = 250
@@ -23,7 +25,7 @@ export const MAX_SLOTS = 250
 let nextId = 0
 export const newId = () => `c${Date.now().toString(36)}${(nextId++).toString(36)}`
 
-export function makeCombo(name = '', tokens: Token[] = []): Combo {
+export function makeCombo(name = '', tokens: Token[] = [], notes?: string): Combo {
   const trimmed = name.trim()
   const child = trimmed.startsWith('[>]')
   return {
@@ -32,6 +34,7 @@ export function makeCombo(name = '', tokens: Token[] = []): Combo {
     tokens: [...tokens],
     pinned: false,
     child,
+    ...(notes ? { notes } : {}),
   }
 }
 
@@ -55,10 +58,16 @@ export function parseComboFile(json: unknown): ParsedFile {
   const data = json as Record<string, unknown>
   if (Array.isArray(data.slots)) {
     const slots = data.slots.filter(
-      (s): s is { name?: unknown; tokens?: unknown } => !!s && typeof s === 'object',
+      (s): s is { name?: unknown; tokens?: unknown; notes?: unknown } => !!s && typeof s === 'object',
     )
     const combos = slots.map((s, i) =>
-      makeCombo(typeof s.name === 'string' ? s.name : `Combo ${i + 1}`, isStringArray(s.tokens) ? s.tokens : []),
+      makeCombo(
+        typeof s.name === 'string' ? s.name.split('\n')[0] : `Combo ${i + 1}`,
+        isStringArray(s.tokens) ? s.tokens : [],
+        typeof s.notes === 'string' && s.notes
+          ? s.notes
+          : typeof s.name === 'string' ? s.name.split('\n').slice(1).map((l) => l.trim().replace(/^\((.*)\)$/, '$1')).filter(Boolean).join(' · ') : undefined,
+      ),
     )
     return {
       glyph: typeof data.glyph === 'string' ? data.glyph : undefined,
@@ -80,6 +89,6 @@ export function toComboFile(combos: Combo[], glyph: string): ComboListFile {
   return {
     glyph,
     slot_count: combos.length,
-    slots: combos.map((c) => ({ name: c.child ? `[>] ${c.name}` : c.name, tokens: c.tokens })),
+    slots: combos.map((c) => ({ name: c.child ? `[>] ${c.name}` : c.name, tokens: c.tokens, ...(c.notes ? { notes: c.notes } : {}) })),
   }
 }

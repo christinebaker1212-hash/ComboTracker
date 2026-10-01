@@ -1,0 +1,400 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Zeku (Young)",
+  "slot_count": 31,
+  "slots": [
+    {
+      "name": "Sankagu Tobi",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 6 near wall"
+    },
+    {
+      "name": "Hassou Tobi",
+      "tokens": [
+        "downleft",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Shukumyo",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Sho",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Hozanto",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Bushin Sangoku Otoshi",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 236PP"
+    },
+    {
+      "name": "Hayagake",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Hayagake EX",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Tozetsu",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ashikari",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Gekkou",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Tozetsu EX",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ashikari EX",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Gekkou EX",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Batsuzan Gaisei",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Kubi Kudaki",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Shidenkyaku",
+      "tokens": [
+        "downleft",
+        "plus",
+        "any_k"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kaeshi Hayabusa",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kaeshi Saiha",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kaeshi Urasaiha",
+      "tokens": [
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kagerou",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "Urakagerou",
+      "tokens": [
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "Sekibu No Jin",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Hakuso No Jin",
+      "tokens": [
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Bushin Soukosou",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusanken - Ni",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusanken - San",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusanken - Shu",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bushin Gokusanage",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tesso",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Raiju",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

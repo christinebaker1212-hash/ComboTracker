@@ -1,0 +1,147 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Zangief",
+  "slot_count": 13,
+  "slots": [
+    {
+      "name": "Double Lariat",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Screw Pile Driver",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268PP"
+    },
+    {
+      "name": "Siberian Express",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 624KK"
+    },
+    {
+      "name": "Borscht Dynamite",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 4268PP"
+    },
+    {
+      "name": "Tundra Storm",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Bolshoi Russian Suplex",
+      "tokens": [
+        "360",
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Knee Hammer",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Head Butt",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Flying Body Press",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Flying Headbutt",
+      "tokens": [
+        "up",
+        "goes_into",
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Atomic Drop",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Horosho Chokeslam",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "on crouching"
+    },
+    {
+      "name": "Captured",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

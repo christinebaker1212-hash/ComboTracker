@@ -1,0 +1,104 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Dee Jay",
+  "slot_count": 9,
+  "slots": [
+    {
+      "name": "Air Slasher",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Double Rolling Sobat",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Double Rolling Sobat FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 46MK xx FADC"
+    },
+    {
+      "name": "Jackknife Maximum",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Machinegun Upper",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "no mash; Also: mash 2, no mash, with mash"
+    },
+    {
+      "name": "Machinegun Upper (mash 1)",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": "mash 1"
+    },
+    {
+      "name": "Sobat Carnival",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Swing Over Launch",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Flip Launch",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

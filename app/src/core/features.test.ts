@@ -7,6 +7,7 @@ import { defaultElement, layoutBody, layoutPicture, layoutTrace, parseLayout } f
 import { feedPractice, startPractice, stepsFor } from './practice'
 import { decodeShare, encodeShare } from './share'
 import { compileTheme, upgradeTheme } from './theme'
+import { filterMoves, parseMoveList } from './movelist'
 
 const press = (it: InputInterpreter, t: number, ...b: PadButton[]) => it.update({ time: t, dir: null, buttons: new Set(b) })
 const inserts = (evs: ReturnType<InputInterpreter['update']>) => evs.filter((e) => e.type === 'insert').map((e) => e.tokens)
@@ -115,5 +116,22 @@ describe('share codes and themes', () => {
     expect(t.gradStandard).toBe(false) // no gradient colours, so no gradient
     const old = upgradeTheme({ name: 'Old', bg: '#000000', font: '#ffffff', highlight: '#333333', entryBg: '#111111', btnBg: '#111111', gradient: null } as never)
     expect(old.source.bg).toBe('#000000')
+  })
+})
+
+describe('move lists', () => {
+  it('reads sectioned lists and older hand-made ones', () => {
+    const fresh = parseMoveList({ slots: [
+      { name: 'Hadoken', tokens: ['qcf', 'plus', 'any_p'], section: 'Special moves', notes: 'OD: 236PP' },
+      { name: 'Shinku Hadoken', tokens: ['qcf', 'qcf', 'plus', 'any_p'], section: 'Super Arts', notes: '' },
+    ] })
+    expect(fresh.sections.map((s) => s.title)).toEqual(['Special moves', 'Super Arts'])
+    const old = parseMoveList({ slots: [
+      { name: 'Fuumajin', tokens: ['lp'] },
+      { name: '[>] Cut projectile\n(1 Magatama)', tokens: [] },
+    ] })
+    expect(old.sections[0].title).toBe('Moves')
+    expect(old.sections[0].moves[1]).toMatchObject({ name: 'Cut projectile', followUp: true, notes: '1 Magatama' })
+    expect(filterMoves(fresh, 'od')[0].moves[0].name).toBe('Hadoken')
   })
 })

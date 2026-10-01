@@ -1,0 +1,387 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Sagat",
+  "slot_count": 30,
+  "slots": [
+    {
+      "name": "Low Tiger Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236LPMP or LPHP"
+    },
+    {
+      "name": "High Tiger Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236MPHP"
+    },
+    {
+      "name": "Tiger Uppercut",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP"
+    },
+    {
+      "name": "Tiger Uppercut (hold)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "hold"
+    },
+    {
+      "name": "Tiger Knee Crush",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Tiger Nexus",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Mighty Tiger",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK > 6LK"
+    },
+    {
+      "name": "Greedy Tiger",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK > 6MK"
+    },
+    {
+      "name": "Nova Tiger",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK > 6HK"
+    },
+    {
+      "name": "Tiger Cannon",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Savage Tiger",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Savage Tiger Raid",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "then return the stick to neutral"
+    },
+    {
+      "name": "Savage Tiger Zenith",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "right"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Savage Tiger Pendulum",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "left"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Savage Tiger Stomp",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "down"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Vanquisher",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Tiger Heavy Elbow",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Monolith",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step Low Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step High Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step Middle Kick",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Sting",
+      "tokens": [
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Slash",
+      "tokens": [
+        "down",
+        "plus",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Rise",
+      "tokens": [
+        "down",
+        "plus",
+        "mp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Hang",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tiger Carry",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Tiger Punishment",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Tiger Twin Babel",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
+}

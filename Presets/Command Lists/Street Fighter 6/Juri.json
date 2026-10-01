@@ -1,155 +1,308 @@
 {
-    "glyph": "Default",
-    "slot_count": 15,
-    "slots": [
-        {
-            "name": "Fuhajin",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Saihasho\n(Can be followed up with an Ankensatsu or \nGo Ohsatsu when a Fuha is stocked)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "lk"
-            ]
-        },
-        {
-            "name": "Ankensatsu\n(Can be followed up with a Saihasho or \nGo Ohsatsu when a Fuha is stocked)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Go Ohsatsu\n(Can be followed up with a Saihasho or \nAnkensatsu when a Fuha is stocked)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Tensenrin",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Shiku-sen (During a forward jump)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Shiren-sen (After Shiku-sen)",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA1: Sakkai Fuhazan",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Feng Shui Engine",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3: Kaisen Dankai Raku",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Kyosesho",
-            "tokens": [
-                "right",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Senkai Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Renko Kicks",
-            "tokens": [
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Korenzan",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Death Crest",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "left",
-                "plus",
-                "hp",
-                "goes_into",
-                "hp"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Juri",
+  "slot_count": 25,
+  "slots": [
+    {
+      "name": "Fuhajin",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Saihasho",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236LKMK; Can be followed up with an Ankensatsu or Go Ohsatsu when a Fuha is stocked; Also: stock"
+    },
+    {
+      "name": "Ankensatsu",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236LKHK; Can be followed up with a Saihasho or Go Ohsatsu when a Fuha is stocked; Also: stock"
+    },
+    {
+      "name": "Go Ohsatsu",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236MKHK; Can be followed up with a Saihasho or Ankensatsu when a Fuha is stocked; Also: stock"
+    },
+    {
+      "name": "Tenserin",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP"
+    },
+    {
+      "name": "Shiku-sen",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 214KK"
+    },
+    {
+      "name": "> Shiren-sen",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "> OD Shiren-sen",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Sakkai Fuhazan (0 stock)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Sakkai Fuhazan (1 stock)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "hold"
+    },
+    {
+      "name": "Feng Shui Engine",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: dash"
+    },
+    {
+      "name": "Kaisen Dankai Raku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Kyosesho",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Senkai Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Renko Kicks",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Korenzan",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Death Crest 1",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Death Crest 2",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "left",
+        "plus",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Spider Fang Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Shadow Kick Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Zanka-sen",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Drive Impact: Sekkan Kick",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Kaita Raid",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

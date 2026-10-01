@@ -1,176 +1,356 @@
 {
-    "glyph": "Default",
-    "slot_count": 18,
-    "slots": [
-        {
-            "name": "Double Lariat",
-            "tokens": [
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Screw Piledriver\n(When near opponent)",
-            "tokens": [
-                "360",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Borscht Dynamite\n(During a jump) (When near opponent)",
-            "tokens": [
-                "360",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Russian Suplex\n(When near opponent)",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Siberian Express\n(When far from opponent)",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Tundra Storm",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "SA1: Aerial Russian Slam",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Cyclone Lariat\n(Hold the button to change effect)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3: Bolshoi Storm Buster\n(When near opponent) (More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "360",
-                "360",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Hellstab",
-            "tokens": [
-                "downright",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Knee Hammer",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Headbutt",
-            "tokens": [
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Cyclone Wheel Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Smetana Dropkick",
-            "tokens": [
-                "downright",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Flying Body Press\n(During a jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Flying Headbutt\n(During a neutral jump)",
-            "tokens": [
-                "up",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Machine Gun Chops",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "mp"
-            ]
-        },
-        {
-            "name": "Power Stomps",
-            "tokens": [
-                "down",
-                "down",
-                "plus",
-                "mk",
-                "goes_into",
-                "mk",
-                "goes_into",
-                "mk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Zangief",
+  "slot_count": 31,
+  "slots": [
+    {
+      "name": "Double Lariat",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: PPP"
+    },
+    {
+      "name": "Screw Piledriver",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 4268PP; When near opponent"
+    },
+    {
+      "name": "Borscht Dynamite",
+      "tokens": [
+        "360",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 4268KK; During a jump) (When near opponent"
+    },
+    {
+      "name": "Russian Suplex (close)",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "close; OD: 624KK"
+    },
+    {
+      "name": "Siberian Express (near)",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "near; OD: 624KK"
+    },
+    {
+      "name": "Siberian Express (far)",
+      "tokens": [
+        "right",
+        "down",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 624KK"
+    },
+    {
+      "name": "Tundra Storm",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Aerial Russian Slam",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Cyclone Lariat",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Bolshoi Storm Buster",
+      "tokens": [
+        "360",
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Hellstab",
+      "tokens": [
+        "downright",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Knee Hammer",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Headbutt",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Cyclone Wheel Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Smetana Dropkick",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Flying Body Press",
+      "tokens": [
+        "upleft"
+      ],
+      "section": "Target combos",
+      "notes": "During a jump"
+    },
+    {
+      "name": "Flying Headbutt",
+      "tokens": [
+        "up",
+        "goes_into",
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "During a neutral jump"
+    },
+    {
+      "name": "Machine Gun Chops 1",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Machine Gun Chops 2",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Power Stomps 1",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Power Stomps 2",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bodyslam",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "German Suplex",
+      "tokens": [
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Capture Suplex",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Brain Buster",
+      "tokens": [
+        "down",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Spinebuster",
+      "tokens": [
+        "downright",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Russian Drop",
+      "tokens": [
+        "downleft",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Double Russian Chop",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Reverse Russian Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

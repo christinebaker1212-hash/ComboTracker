@@ -1,0 +1,110 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Zangief",
+  "slot_count": 10,
+  "slots": [
+    {
+      "name": "Spinning Piledriver",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268PP"
+    },
+    {
+      "name": "Banishing Flat",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Double Lariat",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Quick Double Lariat",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Atomic Suplex",
+      "tokens": [
+        "360",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "close; EX: 4268KK"
+    },
+    {
+      "name": "Flying Power Bomb",
+      "tokens": [
+        "360",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268KK"
+    },
+    {
+      "name": "Final Atomic Buster",
+      "tokens": [
+        "360",
+        "goes_into",
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Long Kick",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Bodyslam",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Brain Buster",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

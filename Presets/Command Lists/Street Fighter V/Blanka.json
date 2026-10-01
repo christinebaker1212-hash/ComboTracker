@@ -1,0 +1,200 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Blanka",
+  "slot_count": 17,
+  "slots": [
+    {
+      "name": "Raging Bash > Surprise Forward",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Raging Bash > Surprise Back",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Surprise Forward",
+      "tokens": [
+        "right"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Surprise Back",
+      "tokens": [
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Rolling Attack",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Back Step Rolling",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Vertical Rolling",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Wild Hunt",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Electric Thunder",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "mash; EX: PP"
+    },
+    {
+      "name": "Dynamic Rolling",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Rock Crusher",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Amazon River Run",
+      "tokens": [
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Raging Bash 1st",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Raging Bash 2nd",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Lightning Dance",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Wild Fang",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Jungle Wheel",
+      "tokens": [
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

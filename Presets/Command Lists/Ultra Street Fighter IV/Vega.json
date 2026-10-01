@@ -1,0 +1,245 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Vega",
+  "slot_count": 22,
+  "slots": [
+    {
+      "name": "Piece of Mercury",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Cosmic Heel",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Back Slash",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Short Back Slash",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Wall Jump",
+      "tokens": [
+        "upleft",
+        "goes_into",
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": "against wall"
+    },
+    {
+      "name": "Rolling Crystal Flash",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "LP/HP Rolling Crystal Flash FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 46P xx FADC"
+    },
+    {
+      "name": "Rolling Crystal Flash FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 46PP xx FADC; EX: 46PP xx FADC"
+    },
+    {
+      "name": "Scarlet Terror",
+      "tokens": [
+        "downleft",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 16KK"
+    },
+    {
+      "name": "Sky High Claw",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28PP"
+    },
+    {
+      "name": "Flying Barcelona Attack",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Flying Barcelona Attack Punch",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK > P"
+    },
+    {
+      "name": "Izuna Drop",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "close"
+    },
+    {
+      "name": "Claw Throw",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Mask Throw",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Pick Up Mask",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Flying Barcelona Special",
+      "tokens": [
+        "downleft",
+        "downright",
+        "downleft",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Claw Attack Special",
+      "tokens": [
+        "downleft",
+        "downright",
+        "downleft",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Rolling Izuna Drop",
+      "tokens": [
+        "downleft",
+        "downright",
+        "downleft",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "close"
+    },
+    {
+      "name": "Rainbow Suplex",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Crescent Line",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Stardust Drop",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

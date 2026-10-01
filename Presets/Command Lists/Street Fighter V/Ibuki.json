@@ -1,0 +1,335 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Ibuki",
+  "slot_count": 31,
+  "slots": [
+    {
+      "name": "Nobusuma",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Kasumigake",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Kazekiri",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Raida",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Kunai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Airborne Kunai",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 236PP"
+    },
+    {
+      "name": "Kunai Ikkinage",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold + Release P"
+    },
+    {
+      "name": "Airborne Kunai Ikkinage",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold + Release K (air)"
+    },
+    {
+      "name": "Kunai Hoju Lvl 1",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Kunai Hoju Lvl 2",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold 63214K; EX: Hold 63214KK"
+    },
+    {
+      "name": "Kunai Hoju Lvl 3",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold 63214K; EX: Hold 63214KK"
+    },
+    {
+      "name": "Kunai Hoju Lvl 4",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold 63214K; EX: Hold 63214KK"
+    },
+    {
+      "name": "Kunai Hoju Lvl 5",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold 63214K"
+    },
+    {
+      "name": "Kunai Hoju Lvl 6",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold 63214K"
+    },
+    {
+      "name": "Kachofugetsu",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Kobekudaki",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Bonshogeri",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Sazan",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Agemen",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tobikura",
+      "tokens": [
+        "up",
+        "plus",
+        "lp",
+        "goes_into",
+        "up",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Aoji",
+      "tokens": [
+        "up",
+        "plus",
+        "hp",
+        "goes_into",
+        "up",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shinten 1",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shinten 2",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Yagurakuzushi",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Gogasha 1",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Gogasha 2",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shakunage",
+      "tokens": [
+        "down",
+        "plus",
+        "mp",
+        "goes_into",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Sasanaki",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Yamikazura",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Kubiori",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Tobizaru",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

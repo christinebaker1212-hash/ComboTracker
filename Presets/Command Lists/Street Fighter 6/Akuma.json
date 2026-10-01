@@ -1,258 +1,504 @@
 {
-    "glyph": "Default",
-    "slot_count": 26,
-    "slots": [
-        {
-            "name": "Gou Hadoken\n(Hold the button to change effect)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Zanku Hadoken\n(During a forward jump)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Gou Shoryuken",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Tatsumaki Zanku-kyaku",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Aerial Tatsumaki Zanku-kyaku\n(During a jump)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Adamant Flame",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p",
-                "goes_into",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Demon Raid",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Demon Low Slash\n(No input) (During Demon Raid)",
-            "tokens": []
-        },
-        {
-            "name": "[>] Demon Guillotine\n(During Demon Raid)",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Demon Blade Kick\n(During Demon Raid)",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Demon Swoop\n(During Demon Raid)",
-            "tokens": [
-                "c_down"
-            ]
-        },
-        {
-            "name": "[>] Demon Gou Zanku\n(During Overdrive Demon Raid)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Demon Gou Rasen\n(During Overdrive Demon Raid)\n",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Ashura Senku",
-            "tokens": [
-                "any_p",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1: Messatsu Gohado",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1: Tenma Gozanku\n(During a neutral or forward jump)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Empyrean's End",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3: Sip of Calamity\n(More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Shun Goku Satsu\n(Only when vitality is at 25% or below)",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "lp",
-                "goes_into",
-                "right",
-                "goes_into",
-                "lk",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Skull Splitter",
-            "tokens": [
-                "right",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Resso Snap Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Rago High Kick",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Viscera Piercer",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mp"
-            ]
-        },
-        {
-            "name": "Bone Crusher Axe Kick",
-            "tokens": [
-                "mk",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Kikoku Combination",
-            "tokens": [
-                "right",
-                "plus",
-                "hp",
-                "goes_into",
-                "right",
-                "plus",
-                "hp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Tenmaku Blade Kick\n(During a forward jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "mk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Akuma",
+  "slot_count": 40,
+  "slots": [
+    {
+      "name": "Gou Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP; Hold the button to change effect; Also: lvl 2, lvl 3, hold"
+    },
+    {
+      "name": "Zanku Hadoken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 236PP; During a forward jump"
+    },
+    {
+      "name": "Gou Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP"
+    },
+    {
+      "name": "Adamant Flame",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Adamant Flame follow-up",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP > 6P"
+    },
+    {
+      "name": "Tatsumaki Zanku-kyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214KK"
+    },
+    {
+      "name": "Aerial Tatsumaki Zanku-kyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 214KK; During a jump"
+    },
+    {
+      "name": "Demon Raid",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Demon Raid > Demon Low Slash",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "then return the stick to neutral; OD: 236KK > 5"
+    },
+    {
+      "name": "Demon Raid > Demon Guillotine",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > P"
+    },
+    {
+      "name": "Demon Raid > Demon Blade Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > K"
+    },
+    {
+      "name": "Demon Raid > Demon Swoop",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 236K > 1/2/3 (hold); OD: 236KK > 1/2/3"
+    },
+    {
+      "name": "Demon Raid > OD Demon Gou Zanku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 236P"
+    },
+    {
+      "name": "Demon Raid > OD Demon Gou Rasen",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > 214K"
+    },
+    {
+      "name": "Ashura Senku (backward)",
+      "tokens": [
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ashura Senku (forward)",
+      "tokens": [
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ashura Senku (forward) > Oboro Throw",
+      "tokens": [
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Double Zanku Hadoken",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Messatsu Gohado",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Tenma Gozanku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "air"
+    },
+    {
+      "name": "Empyrean's End",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Sip of Calamity",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Shun Goku Satsu",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp",
+        "goes_into",
+        "right",
+        "plus",
+        "lk",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Super Arts",
+      "notes": "Only when vitality is at 25% or below"
+    },
+    {
+      "name": "Kongou Kokuretsuzan (KKZ)",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Misogi",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Skull Splitter",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Resso Snap Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Kikoku",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Rago High Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Tenmaku Blade Kick",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "During a forward jump"
+    },
+    {
+      "name": "Viscera Piercer",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bone Crusher Axe Kick",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kikoku Combination 1",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Kikoku Combination 2",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Goshoha",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Shuretto",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Oni Goroshi",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Souha Double Palm",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

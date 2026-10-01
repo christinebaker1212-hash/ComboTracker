@@ -1,182 +1,371 @@
 {
-    "theme": "Dark",
-    "glyph": "Default",
-    "slot_count": 15,
-    "slots": [
-        {
-            "name": "Sand Blast / Fatal Shot\n(Extension after OD)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p",
-                "newline",
-                "plus",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Flash Knuckle / DDT\n(Extension after OD)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p",
-                "newline",
-                "plus",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Aerial Flash Knuckle\n(Vertical or forward jump)\n(Hold button to change effect)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Avenger",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k",
-                "newline",
-                "plus",
-                "any_p",
-                "newline",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Rising Uppercut\n(Extension after OD)\n",
-            "tokens": [
-                "right",
-                "down",
-                "downright",
-                "plus",
-                "any_p",
-                "newline",
-                "plus",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1 - Vulcan Blast",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2 - Eraser",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3 - Pale Rider",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Rawhide",
-            "tokens": [
-                "right",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Supressor",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Outlaw Kick",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Double Impact",
-            "tokens": [
-                "right",
-                "plus",
-                "hp",
-                "goes_into",
-                "hk"
-            ]
-        },
-        {
-            "name": "Triple Impact",
-            "tokens": [
-                "lp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "Nose Breaker",
-            "tokens": [
-                "down",
-                "plus",
-                "mp",
-                "goes_into",
-                "down",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Snapback Combo",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "mp"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Luke",
+  "slot_count": 30,
+  "slots": [
+    {
+      "name": "Sand Blast",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Fatal Shot",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Rising Uppercut",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623PP; Extension after OD"
+    },
+    {
+      "name": "Slam Dunk",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Flash Knuckle",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP; Also: hold"
+    },
+    {
+      "name": "DDT",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Aerial Flash Knuckle",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air; OD: 214PP; Vertical or forward jump Hold button to change effect; Also: hold"
+    },
+    {
+      "name": "Avenger",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Avenger > No Chaser",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > P"
+    },
+    {
+      "name": "Avenger > Impaler",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK > K"
+    },
+    {
+      "name": "Vulcan Blast",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Eraser",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Pale Rider",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Rawhide",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Suppressor",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Outlaw Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Brutal Spike",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Double Impact",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Nose Breaker",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Triple Impact",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Triple Impact 2",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Snapback Combo",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Snapback Combo 2",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Snapback Combo 3",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Sweeper",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Scrapper",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Muzzle Flash",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Battering Ram",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

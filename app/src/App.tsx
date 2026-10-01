@@ -6,6 +6,7 @@ import { GlyphEditor } from './components/GlyphEditor'
 import { HelpDialog } from './components/HelpDialog'
 import { InputViewer } from './components/InputViewer'
 import { LayoutEditor } from './components/LayoutEditor'
+import { MoveListPanel } from './components/MoveListPanel'
 import { Overlay } from './components/Overlay'
 import { Palette } from './components/Palette'
 import { PracticeOverlay } from './components/PracticeOverlay'
@@ -47,6 +48,7 @@ function Dialogs() {
     case 'share': return <ShareDialog code={d.code} />
     case 'savePreset': return <SavePresetDialog />
     case 'help': return <HelpDialog />
+    case 'moves': return <MoveListPanel initial={d.ref} />
   }
 }
 

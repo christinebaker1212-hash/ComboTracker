@@ -1,0 +1,209 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Poison",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Avant Line",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Heart Raid",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Heart Raid Release",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 214P > Release"
+    },
+    {
+      "name": "Heart Raid Cancel",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Heart Raid Step",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPMP EX Heart Raid",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPHP EX Heart Raid",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MPHP EX Heart Raid",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Shocking Heel",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Love Me Tender",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Love Hurricane",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Whiplash",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Slap & Smash",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Slap & Slash",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Slap Shot",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Frankensteiner",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

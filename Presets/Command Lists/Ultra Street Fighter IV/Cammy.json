@@ -1,0 +1,175 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Cammy",
+  "slot_count": 13,
+  "slots": [
+    {
+      "name": "Cannon Spike",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Spiral Arrow",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Spiral Arrow FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 236HK FADC"
+    },
+    {
+      "name": "Spin Knuckle",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Hooligan Combination",
+      "tokens": [
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "upright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 12369PP"
+    },
+    {
+      "name": "Razor's Edge Slicer",
+      "tokens": [
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "upright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "then return the stick to neutral; EX: 12369KK > 5"
+    },
+    {
+      "name": "Fatal Leg Twister",
+      "tokens": [
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "upright",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Crossed Scissors",
+      "tokens": [
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "upright",
+        "plus",
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Cannon Strike",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Spin Drive Smasher",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Hooligan Suplex",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Frakensteiner",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Flying Neck Breaker",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

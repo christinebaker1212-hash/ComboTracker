@@ -1,0 +1,193 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Rose",
+  "slot_count": 16,
+  "slots": [
+    {
+      "name": "Soul Spark",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Airborne LP Soul Spark",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "lp"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Airborne MP Soul Spark",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Airborne HP Soul Spark",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Airborne EX Soul Spark",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Soul Bind",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Soul Spiral",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "Soul Punish",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Fate Aura Spark",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Soul Presa",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Slide",
+      "tokens": [
+        "downright",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Soul Piede",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Soul Pilastro",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Soul Levare",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Soul Fall",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Soul Drain",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

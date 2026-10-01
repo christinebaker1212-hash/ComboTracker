@@ -1,0 +1,150 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Adon",
+  "slot_count": 13,
+  "slots": [
+    {
+      "name": "Jaguar Kick",
+      "tokens": [
+        "left",
+        "down",
+        "downleft",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 421KK"
+    },
+    {
+      "name": "Air Jaguar Kick",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Rising Jaguar",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "Rising Jaguar FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 623LK xx FADC"
+    },
+    {
+      "name": "MK/HK Rising Jaguar FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 623MK/HK xx FADC"
+    },
+    {
+      "name": "Jaguar Tooth",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Jaguar Varied Assault",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Thousand Jaguar",
+      "tokens": [],
+      "section": "Super Arts",
+      "notes": "Input: 236236P > Mash P"
+    },
+    {
+      "name": "Assassin Jaguar",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Jaguar Crunch (vs. stand)",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": "vs. stand"
+    },
+    {
+      "name": "Jaguar Crunch (vs. crouch)",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": "vs. crouch"
+    },
+    {
+      "name": "Jaguar Carry",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Jaguar Slam",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

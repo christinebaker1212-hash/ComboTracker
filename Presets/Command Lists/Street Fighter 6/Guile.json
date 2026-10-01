@@ -1,192 +1,323 @@
 {
-    "glyph": "Default",
-    "slot_count": 20,
-    "slots": [
-        {
-            "name": "Sonic Boom",
-            "tokens": [
-                "c_left",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Somersault Kick (Flash Kick)",
-            "tokens": [
-                "c_down",
-                "up",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Sonic Blade",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Sonic Cross (During Sonic Blade)",
-            "tokens": [
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Sonic Break (During Solid Puncher)",
-            "tokens": [
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Sonic Break (During Solid Puncher)\n",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1: Sonic Hurricane",
-            "tokens": [
-                "c_left",
-                "right",
-                "left",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2: Solid Puncher",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3: Crossfire Somersault",
-            "tokens": [
-                "c_left",
-                "right",
-                "left",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Full Bullet Magnum",
-            "tokens": [
-                "right",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Burning Straight",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Spinning Back Knuckle",
-            "tokens": [
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Knee Bazooka",
-            "tokens": [
-                "left",
-                "plus",
-                "lk"
-            ]
-        },
-        {
-            "name": "Rolling Sobat",
-            "tokens": [
-                "left",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Reverse Spin Kick",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Guile High Kick",
-            "tokens": [
-                "downright",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Recoil Cannon",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Double Shot",
-            "tokens": [
-                "down",
-                "plus",
-                "mp",
-                "goes_into",
-                "down",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Drake Fang",
-            "tokens": [
-                "down",
-                "plus",
-                "mk",
-                "goes_into",
-                "right",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Phantom Cutter",
-            "tokens": [
-                "down",
-                "plus",
-                "hk",
-                "goes_into",
-                "downright",
-                "plus",
-                "hk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Guile",
+  "slot_count": 27,
+  "slots": [
+    {
+      "name": "Sonic Boom",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 46PP"
+    },
+    {
+      "name": "Somersault Kick",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 28KK"
+    },
+    {
+      "name": "Sonic Blade",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP"
+    },
+    {
+      "name": "Sonic Blade > Sonic Cross",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP > 6PP"
+    },
+    {
+      "name": "Sonic Blade > OD Sonic Cross",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP > 6PP"
+    },
+    {
+      "name": "Sonic Hurricane",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Solid Puncher",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Crossfire Somersault",
+      "tokens": [
+        "left",
+        "right",
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Full Bullet Magnum",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Spinning Back Knuckle",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Burning Straight",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Knee Bazooka",
+      "tokens": [
+        "left",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Rolling Sobat",
+      "tokens": [
+        "left"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Reverse Spin Kick",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Guile High Kick",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Recoil Cannon",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Double Shot",
+      "tokens": [
+        "down",
+        "plus",
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Drake Fang",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Phantom Cutter",
+      "tokens": [
+        "down",
+        "plus",
+        "hk",
+        "goes_into",
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Dragon Suplex",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Judo Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Flying Mare",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Flying Buster Drop",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    },
+    {
+      "name": "Drive Impact: Blitz Combination",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Strike Eagle",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

@@ -1,0 +1,433 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Kolin",
+  "slot_count": 32,
+  "slots": [
+    {
+      "name": "Frost Touch",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPMP Frost Touch",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPHP Frost Touch",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MPHP Frost Touch",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Parabellum",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP or mash PP"
+    },
+    {
+      "name": "Hailstorm",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Hailstorm Projectile",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "LPMP Hailstorm",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "lp",
+        "plus",
+        "mp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LPHP Hailstorm",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "lp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MPHP Hailstorm",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "mp",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Vanity Step",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "> Silver Edge",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lk",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LKMK Vanity Step",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lk",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "> EX Silver Edge",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lk",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "LKHK Vanity Step",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "lk",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "MKHK Vanity Step",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mk",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Frost Tower",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Blizzard Heel",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Sniping Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Icicle Stamp",
+      "tokens": [
+        "up"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Frost Spike 1st",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Frost Spike 2nd",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "White Out 1st",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "White Out 2nd",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "White Pressure",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "> Cold Low",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "lk",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "> Brinicle",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "lk",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "> Snow Grain",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "> White Spear",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "hk",
+        "goes_into",
+        "lk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Pressure Ridge",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Sublimation",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Avalanche Lock",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "air"
+    }
+  ]
+}

@@ -31,6 +31,7 @@ export function Overlay({ player, comboId }: { player: Player; comboId?: string 
             {combos.map((c) => (
               <li key={c.id} className={c.child && !comboId ? 'is-child' : ''} style={{ ['--s' as string]: scale }}>
                 {c.name && <div className="overlay-name" style={{ fontSize: Math.max(11, size * 0.42) }}>{c.name}</div>}
+                {c.notes && <div className="overlay-notes" style={{ fontSize: Math.max(10, size * 0.3) }}>{c.notes}</div>}
                 <div className="overlay-tokens">
                   {c.tokens.map((t, i) =>
                     t === 'newline' ? <span key={i} className="tok-break" /> : <TokenView key={i} token={t} glyph={glyph} size={size} />,

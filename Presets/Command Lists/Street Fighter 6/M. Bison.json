@@ -1,153 +1,310 @@
 {
-    "glyph": "Default",
-    "slot_count": 16,
-    "slots": [
-        {
-            "name": "Psycho Crusher Attack",
-            "tokens": [
-                "c_left",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Double Knee Press",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Backfist Combo\n(Plants a Psycho Mine on hit)",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Shadow Rise",
-            "tokens": [
-                "c_down",
-                "up",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Head Press\n(During Shadow Rise)",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>] Devil Reverse\n(During Shadow Rise)",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>] Somersault Skull Diver\n(After Head Press hits)",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1: Knee Press Nightmare",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA2: Psycho Punisher",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA3: Ultimate Psycho Crusher\n(More powerful when vitality is at 25% or below)",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Psycho Hammer",
-            "tokens": [
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Evil Knee",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Hover Kick",
-            "tokens": [
-                "downright",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Shadow Hammer",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Shadow Spear",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "down",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Hell Attack\n(During a jump)",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "mp"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "M. Bison",
+  "slot_count": 26,
+  "slots": [
+    {
+      "name": "Backfist Combo",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 214PP; Plants a Psycho Mine on hit; Also: bomb"
+    },
+    {
+      "name": "Psycho Crusher",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 46PP; Also: bomb"
+    },
+    {
+      "name": "Double Knee Press",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236KK"
+    },
+    {
+      "name": "Shadow Rise",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 28KK"
+    },
+    {
+      "name": "Head Press",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 28K > KK / 28KK > K; During Shadow Rise"
+    },
+    {
+      "name": "Somersault Skull Diver",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: P after Head Press; After Head Press hits"
+    },
+    {
+      "name": "Devil Reverse",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 28K > PP / 28KK > P; During Shadow Rise; Also: bomb"
+    },
+    {
+      "name": "Bison Warp (forward)",
+      "tokens": [
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Bison Warp (back)",
+      "tokens": [
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Burst",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Knee Press Nightmare",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Punisher",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Unlimited Psycho Crusher",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Final Psycho Crusher",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Hammer",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Evil Knee",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hover Kick",
+      "tokens": [
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hell Attack",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": "During a jump"
+    },
+    {
+      "name": "Shadow Hammer",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shadow Spear",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Deadly Throw",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Death Tower",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Hell Twist",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Hell Drive",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }

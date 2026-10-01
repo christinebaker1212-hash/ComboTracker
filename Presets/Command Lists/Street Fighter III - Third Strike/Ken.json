@@ -1,97 +1,175 @@
 {
-    "glyph": "SuperCombo",
-    "slot_count": 12,
-    "slots": [
-        {
-            "name": "Hadoken",
-            "tokens": [
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Shoryuken",
-            "tokens": [
-                "dp",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Tstsumaki Senpukyaku",
-            "tokens": [
-                "qcb",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Inazuma Kakato Wari",
-            "tokens": [
-                "left",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "[>]Hold changes effect",
-            "tokens": []
-        },
-        {
-            "name": "Fumikomi Maegeri",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Shiden Kakato Otoshi",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "[>]Hold to feint",
-            "tokens": []
-        },
-        {
-            "name": "Target Combo",
-            "tokens": [
-                "mp",
-                "goes_into",
-                "hp"
-            ]
-        },
-        {
-            "name": "SA1 Shoryureppa",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2 - Shinryuken",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA3 - Shippu Jinraikyaku",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_k"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Ken",
+  "slot_count": 14,
+  "slots": [
+    {
+      "name": "Hadouken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Air Tatsumaki Senpukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air; EX: 214KK"
+    },
+    {
+      "name": "Shoryureppa",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Shinryuken",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA2"
+    },
+    {
+      "name": "Shipuujinrai Kyaku",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Inazuma Kakato Wari (Short)",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Fumikomi Maegeri",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Shiden Kakato Otoshi",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hizageri",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "mash"
+    },
+    {
+      "name": "Jigoku Kuruma",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Seoi Nage",
+      "tokens": [
+        "right",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Straight Hit",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
 }

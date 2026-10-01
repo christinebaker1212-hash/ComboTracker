@@ -1,0 +1,161 @@
+{
+  "glyph": "Default",
+  "game": "Ultra Street Fighter IV",
+  "character": "Seth",
+  "slot_count": 13,
+  "slots": [
+    {
+      "name": "Wall Jump",
+      "tokens": [
+        "upleft",
+        "goes_into",
+        "upright"
+      ],
+      "section": "Special moves",
+      "notes": "against wall"
+    },
+    {
+      "name": "Sonic Boom",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Shoryuken",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP; Also: Followups"
+    },
+    {
+      "name": "LP/MP/HP Shoryuken FADC",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 623P xx FADC"
+    },
+    {
+      "name": "Hyakuretsukyaku",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214KK"
+    },
+    {
+      "name": "Tanden Engine",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Spinning Piledriver",
+      "tokens": [
+        "360",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 4268PP"
+    },
+    {
+      "name": "Yoga Teleport",
+      "tokens": [
+        "right",
+        "down",
+        "downright"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Tanden Storm",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Yosokyaku 2",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Yosokyaku 3",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "air"
+    },
+    {
+      "name": "Genocide Shot",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Death Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

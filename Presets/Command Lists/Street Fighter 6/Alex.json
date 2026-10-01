@@ -1,0 +1,453 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Alex",
+  "slot_count": 37,
+  "slots": [
+    {
+      "name": "Prowler Stance",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Prowler Stance Exit",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 2PP > 7/8/9"
+    },
+    {
+      "name": "Dangerous Armbar",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "down",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Flash Axe",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Flash Chop",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP"
+    },
+    {
+      "name": "Aerial Knee Smash",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 623KK"
+    },
+    {
+      "name": "Power Bomb",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 63214PP"
+    },
+    {
+      "name": "Power Drop",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "back turn; OD: 63214PP"
+    },
+    {
+      "name": "Hyper Bomb",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right"
+      ],
+      "section": "Special moves",
+      "notes": "back turn; OD: 63214PP > 6"
+    },
+    {
+      "name": "Collapsing Driver",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "back turn"
+    },
+    {
+      "name": "Raging Spear",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Sledgecross Hammer",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Omega Wing Buster",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "after OD Power Drop"
+    },
+    {
+      "name": "The Final Prison",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Chop",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Oblique Stomp",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Flying Cross Chop",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Palm Strikes",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Twisted Drop",
+      "tokens": [
+        "down",
+        "plus",
+        "lk",
+        "goes_into",
+        "down",
+        "plus",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Low Rush",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Low Retreat",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "left"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Slashing Elbow",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Palm Jab",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "lp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shoulder Launcher",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Lariat",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Tactical Hop",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "lk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Air Stampede",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Sweep Combination 1",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Sweep Combination 2",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "hk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Hyper Takedown",
+      "tokens": [
+        "down",
+        "plus",
+        "any_p",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Arm Lock",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Guillotine Hammer",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Illegal Knees",
+      "tokens": [
+        "down",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Lariat Kick",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Headbutt",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
+}

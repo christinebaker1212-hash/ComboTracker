@@ -1,0 +1,279 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Balrog",
+  "slot_count": 27,
+  "slots": [
+    {
+      "name": "KKB > Buffalo Swing",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "VS1"
+    },
+    {
+      "name": "KKB > Buffalo Pressure",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "VS1"
+    },
+    {
+      "name": "FFB",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": "VS2"
+    },
+    {
+      "name": "Dash Straight",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP; Also: V-Skill 2"
+    },
+    {
+      "name": "Dash Grand Blow",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Screw Smash",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "TAP lvl 1",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl1"
+    },
+    {
+      "name": "TAP lvl 2",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl2"
+    },
+    {
+      "name": "TAP lvl 3",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl3"
+    },
+    {
+      "name": "TAP lvl 4",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl4"
+    },
+    {
+      "name": "TAP lvl 5",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl5"
+    },
+    {
+      "name": "TAP lvl 6",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl6"
+    },
+    {
+      "name": "TAP lvl 7",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl7"
+    },
+    {
+      "name": "TAP lvl 8",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl8"
+    },
+    {
+      "name": "TAP lvl 9",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK lvl9"
+    },
+    {
+      "name": "TAP lvl 10",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: Hold & Release PP/KK Max"
+    },
+    {
+      "name": "Gigaton Blow",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Hard Lead In",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Hard KKB",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "OTB",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Hard Smasher",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "Hard Pressure",
+      "tokens": [
+        "mk",
+        "goes_into",
+        "mp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Target combos",
+      "notes": "VS1"
+    },
+    {
+      "name": "Under Impact 1",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Under Impact 2",
+      "tokens": [
+        "lk",
+        "goes_into",
+        "mk",
+        "goes_into",
+        "hk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Stomping Combo",
+      "tokens": [
+        "down",
+        "plus",
+        "mk",
+        "goes_into",
+        "down",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Dirty Bomber",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Dirty Shot",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

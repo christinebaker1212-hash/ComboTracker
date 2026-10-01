@@ -1,0 +1,409 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "G",
+  "slot_count": 34,
+  "slots": [
+    {
+      "name": "Neutral Attack",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: 5"
+    },
+    {
+      "name": "Message To The People (Speech 1)",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "lk",
+        "plus",
+        "mk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Message To The People (Speech 2)",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "mk",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Message To The People (Speech 3)",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "lk",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "G Charge",
+      "tokens": [
+        "down",
+        "down",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Also: Hold"
+    },
+    {
+      "name": "G Charge (Cancel)",
+      "tokens": [
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Cancel"
+    },
+    {
+      "name": "G Smash Over (Level 1)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Level 1"
+    },
+    {
+      "name": "G Smash Over (Level 2)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Level 2"
+    },
+    {
+      "name": "G Smash Over (Level 3)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Special moves",
+      "notes": "Level 3"
+    },
+    {
+      "name": "G Smash Over",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "G Smash Under (Level 1)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 1"
+    },
+    {
+      "name": "G Smash Under (Level 2)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 2"
+    },
+    {
+      "name": "G Smash Under (Level 3)",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "hk"
+      ],
+      "section": "Special moves",
+      "notes": "Level 3"
+    },
+    {
+      "name": "G Smash Under",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623KK"
+    },
+    {
+      "name": "G Burst (Level 1)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Level 1"
+    },
+    {
+      "name": "G Burst (Level 2)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Level 2"
+    },
+    {
+      "name": "G Burst (Level 3)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Level 3"
+    },
+    {
+      "name": "G Burst",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "G Spin Kick (Level 1)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 1"
+    },
+    {
+      "name": "G Spin Kick (Level 2)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 2"
+    },
+    {
+      "name": "G Spin Kick (Level 3)",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 3"
+    },
+    {
+      "name": "G Spin Kick",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236KK"
+    },
+    {
+      "name": "G Impact (Level 1)",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 1"
+    },
+    {
+      "name": "G Impact (Level 2)",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 2"
+    },
+    {
+      "name": "G Impact (Level 3)",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Level 3"
+    },
+    {
+      "name": "G Impact",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Pangaea Burst",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Wild President",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Strong President",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Crash President",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Flying President",
+      "tokens": [
+        "upright",
+        "goes_into",
+        "down",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Violence President",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Destroy President",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Shining President",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "on crouching"
+    }
+  ]
+}

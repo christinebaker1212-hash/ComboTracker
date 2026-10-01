@@ -1,147 +1,235 @@
 {
-    "glyph": "SuperCombo",
-    "slot_count": 17,
-    "slots": [
-        {
-            "name": "Jet Uppercut",
-            "tokens": [
-                "dp",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Machine Gun Blow",
-            "tokens": [
-                "hcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Ducking Rush",
-            "tokens": [
-                "hcf",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "[>]Ducking Straight",
-            "tokens": [
-                "any_p"
-            ]
-        },
-        {
-            "name": "[>]Ducking Upper",
-            "tokens": [
-                "any_k"
-            ]
-        },
-        {
-            "name": "Cross Counter",
-            "tokens": [
-                "hcb",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Short Swing Blow",
-            "tokens": [
-                "hcb",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA1 - Rocket Uppercut",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2 - Rolling Thunder\n(Hold OK)",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA3 - Corkscrew Blow",
-            "tokens": [
-                "qcf",
-                "qcf",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Slipping Jab",
-            "tokens": [
-                "right",
-                "plus",
-                "lp"
-            ]
-        },
-        {
-            "name": "Stomach Blow",
-            "tokens": [
-                "right",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Step Straight",
-            "tokens": [
-                "right",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Liver Blow",
-            "tokens": [
-                "right",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Dart Shot",
-            "tokens": [
-                "right",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Target Combo",
-            "tokens": [
-                "right",
-                "plus",
-                "lp",
-                "goes_into",
-                "mp",
-                "goes_into",
-                "mk"
-            ]
-        },
-        {
-            "name": "Target Combo\n",
-            "tokens": [
-                "down",
-                "plus",
-                "lk",
-                "goes_into",
-                "mk"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter III - Third Strike",
+  "character": "Dudley",
+  "slot_count": 18,
+  "slots": [
+    {
+      "name": "Jet Uppercut",
+      "tokens": [
+        "right",
+        "down",
+        "downright",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 623PP"
+    },
+    {
+      "name": "Machine Gun Blow",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 41236PP"
+    },
+    {
+      "name": "Ducking Rush",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ducking Straight",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ducking Upper",
+      "tokens": [
+        "left",
+        "downleft",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Cross Counter",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Short Swing Blow",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Rocket Uppercut",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA1"
+    },
+    {
+      "name": "Rolling Thunder",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "mash P, SA2; Also: Hold"
+    },
+    {
+      "name": "Corkscrew Blow",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": "SA3"
+    },
+    {
+      "name": "Slipping Jab",
+      "tokens": [
+        "right",
+        "plus",
+        "lp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Stomach Blow",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Step Straight",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Liver Blow",
+      "tokens": [
+        "right",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Dart Shot",
+      "tokens": [
+        "right",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Liver Crusher",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": "mash"
+    },
+    {
+      "name": "Dynamite Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Jumping Elbow",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    }
+  ]
 }

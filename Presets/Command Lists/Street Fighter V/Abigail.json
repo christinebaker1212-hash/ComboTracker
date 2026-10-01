@@ -1,0 +1,265 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "Abigail",
+  "slot_count": 23,
+  "slots": [
+    {
+      "name": "Abigail Punch",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 236PP"
+    },
+    {
+      "name": "Giant Flip",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214PP"
+    },
+    {
+      "name": "Giant Flip Mash",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "mash; EX: 63214PP"
+    },
+    {
+      "name": "Abigail Smash",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 63214KK"
+    },
+    {
+      "name": "Nitro Blitz",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Nitro Charge",
+      "tokens": [
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "hold; EX: KKK"
+    },
+    {
+      "name": "Nitro Blitz  > Drop Back",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": "hold"
+    },
+    {
+      "name": "Nitro Blitz  > Dynamite Punch",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Nitro Blitz  > Avalanche Press",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Nitro Blitz  > Bay Area Sunrise",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Nitro Charge > EX Dynamite Punch",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: KKK > P"
+    },
+    {
+      "name": "Nitro Charge > EX Avalanche Press",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: KKK > K"
+    },
+    {
+      "name": "Nitro Charge > EX Bay Area Sunrise",
+      "tokens": [
+        "any_k",
+        "goes_into",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Special moves",
+      "notes": "EX: KKK > LPLK"
+    },
+    {
+      "name": "Abigail Special",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Abi Hammer",
+      "tokens": [
+        "right",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Abi Lift",
+      "tokens": [
+        "right",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Abi Blaster",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Abi Scissor",
+      "tokens": [
+        "downleft",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Abi Twist",
+      "tokens": [
+        "left",
+        "plus",
+        "hp",
+        "goes_into",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Vroom Vroom",
+      "tokens": [
+        "lp",
+        "goes_into",
+        "lp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Bang Bang",
+      "tokens": [
+        "down",
+        "plus",
+        "lp",
+        "goes_into",
+        "down",
+        "plus",
+        "lp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Red Leaf",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Hit & Run",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,163 @@
+{
+  "glyph": "Default",
+  "game": "Street Fighter V",
+  "character": "M. Bison",
+  "slot_count": 14,
+  "slots": [
+    {
+      "name": "Psycho Blast",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46PP"
+    },
+    {
+      "name": "Double Knee Press",
+      "tokens": [
+        "left",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 46KK"
+    },
+    {
+      "name": "Head Press",
+      "tokens": [
+        "down",
+        "up",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 28KK"
+    },
+    {
+      "name": "Somersault Skull Diver",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: P after head press"
+    },
+    {
+      "name": "Devil Reverse",
+      "tokens": [],
+      "section": "Special moves",
+      "notes": "Input: P before head press; EX: PP before head press"
+    },
+    {
+      "name": "Psycho Inferno",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "EX: 214PP"
+    },
+    {
+      "name": "Forward Dash",
+      "tokens": [
+        "right",
+        "right"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Ultimate Psycho Crusher",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Axe",
+      "tokens": [
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Hell Attack",
+      "tokens": [
+        "up",
+        "plus",
+        "mp",
+        "goes_into",
+        "up",
+        "plus",
+        "mp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shadow Axe",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "downright",
+        "plus",
+        "hp"
+      ],
+      "section": "Target combos",
+      "notes": ""
+    },
+    {
+      "name": "Shadow Pressure",
+      "tokens": [
+        "mp",
+        "goes_into",
+        "downright",
+        "plus",
+        "hp",
+        "goes_into",
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "Target combos",
+      "notes": "VS2"
+    },
+    {
+      "name": "Psycho Impact",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Psycho Fall",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    }
+  ]
+}

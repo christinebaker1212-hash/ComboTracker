@@ -1,219 +1,317 @@
 {
-    "glyph": "Default",
-    "slot_count": 22,
-    "slots": [
-        {
-            "name": "Yoga Fire",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Yoga Arch",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Yoga Flame",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Yoga Blast",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Yoga Comet\n(During a forward jump)",
-            "tokens": [
-                "right",
-                "downright",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Yoga Float",
-            "tokens": [
-                "down",
-                "plus",
-                "any_k",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Aerial Yoga Float\n(During a jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "any_k",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Yoga Teleport ",
-            "tokens": [
-                "right",
-                "plus",
-                "any_p",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "Aerial Yoga Teleport \n(During a jump)",
-            "tokens": [
-                "right",
-                "plus",
-                "any_p",
-                "any_p",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA1: Yoga Inferno",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_p"
-            ]
-        },
-        {
-            "name": "SA2: Yoga Sunburst",
-            "tokens": [
-                "down",
-                "downleft",
-                "left",
-                "down",
-                "downleft",
-                "left",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "SA3: Merciless Yoga",
-            "tokens": [
-                "down",
-                "downright",
-                "right",
-                "down",
-                "downright",
-                "right",
-                "plus",
-                "any_k"
-            ]
-        },
-        {
-            "name": "Yoga Uppercut",
-            "tokens": [
-                "left",
-                "plus",
-                "mp"
-            ]
-        },
-        {
-            "name": "Yoga Lance",
-            "tokens": [
-                "left",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Nirvana Punch",
-            "tokens": [
-                "downleft",
-                "plus",
-                "hp"
-            ]
-        },
-        {
-            "name": "Agile Kick",
-            "tokens": [
-                "downleft",
-                "plus",
-                "lk"
-            ]
-        },
-        {
-            "name": "Divine Kick",
-            "tokens": [
-                "left",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Thrust Kick",
-            "tokens": [
-                "downleft",
-                "plus",
-                "mk"
-            ]
-        },
-        {
-            "name": "Yoga Mountain",
-            "tokens": [
-                "left",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Karma Kick",
-            "tokens": [
-                "downleft",
-                "plus",
-                "hk"
-            ]
-        },
-        {
-            "name": "Yoga Mummy\n(During a jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "lp"
-            ]
-        },
-        {
-            "name": "Drill Kick\n(During a jump)",
-            "tokens": [
-                "down",
-                "plus",
-                "any_k"
-            ]
-        }
-    ]
+  "glyph": "Default",
+  "game": "Street Fighter 6",
+  "character": "Dhalsim",
+  "slot_count": 28,
+  "slots": [
+    {
+      "name": "Yoga Float",
+      "tokens": [
+        "down"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Aerial Yoga Float (air)",
+      "tokens": [
+        "down",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Yoga Teleport",
+      "tokens": [
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": ""
+    },
+    {
+      "name": "Aerial Yoga Teleport (air)",
+      "tokens": [
+        "left"
+      ],
+      "section": "Special moves",
+      "notes": "air"
+    },
+    {
+      "name": "Yoga Fire",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 236PP; Also: hold"
+    },
+    {
+      "name": "Yoga Arch",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "Arch; OD: 236KK"
+    },
+    {
+      "name": "Yoga Flame",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 63214PP"
+    },
+    {
+      "name": "Yoga Blast",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Special moves",
+      "notes": "OD: 63214KK"
+    },
+    {
+      "name": "Yoga Comet (air)",
+      "tokens": [
+        "right",
+        "downright",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_p"
+      ],
+      "section": "Special moves",
+      "notes": "Air; OD: 63214PP"
+    },
+    {
+      "name": "Yoga Inferno",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_p"
+      ],
+      "section": "Super Arts",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Sunburst",
+      "tokens": [
+        "down",
+        "downleft",
+        "left",
+        "down",
+        "downleft",
+        "left",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: hold"
+    },
+    {
+      "name": "Merciless Yoga",
+      "tokens": [
+        "down",
+        "downright",
+        "right",
+        "down",
+        "downright",
+        "right",
+        "plus",
+        "any_k"
+      ],
+      "section": "Super Arts",
+      "notes": "Also: Critical Art (low health)"
+    },
+    {
+      "name": "Drill Kick",
+      "tokens": [
+        "downleft"
+      ],
+      "section": "Unique attacks",
+      "notes": "air; During a jump"
+    },
+    {
+      "name": "Yoga Uppercut",
+      "tokens": [
+        "left",
+        "plus",
+        "mp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Lance",
+      "tokens": [
+        "left",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Nirvana Punch",
+      "tokens": [
+        "downleft",
+        "plus",
+        "hp"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Agile Kick",
+      "tokens": [
+        "downleft",
+        "plus",
+        "lk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Divine Kick",
+      "tokens": [
+        "left",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Thrust Kick",
+      "tokens": [
+        "downleft",
+        "plus",
+        "mk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Mountain",
+      "tokens": [
+        "left",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Karma Kick",
+      "tokens": [
+        "downleft",
+        "plus",
+        "hk"
+      ],
+      "section": "Unique attacks",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Smash",
+      "tokens": [
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Throw",
+      "tokens": [
+        "left",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Yoga Splash",
+      "tokens": [
+        "down",
+        "plus",
+        "lp",
+        "plus",
+        "lk"
+      ],
+      "section": "Throws",
+      "notes": ""
+    },
+    {
+      "name": "Drive Impact: Yoga Rise",
+      "tokens": [
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Reversal: Yoga Illusion",
+      "tokens": [
+        "right",
+        "plus",
+        "hp",
+        "plus",
+        "hk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Parry",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": ""
+    },
+    {
+      "name": "Drive Rush",
+      "tokens": [
+        "mp",
+        "plus",
+        "mk"
+      ],
+      "section": "System",
+      "notes": "cancel"
+    }
+  ]
 }
