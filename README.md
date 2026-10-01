@@ -20,34 +20,55 @@ on stream.
   between setups in one click (or Ctrl+Alt+1–9).
 - **Hotkeys that work in-game:** Ctrl+Alt+O shows or hides the overlay,
   Ctrl+Alt+L locks it, Ctrl+Alt+R restarts practice, Ctrl+Alt+V toggles the
-  input viewer.
-- **Stream-ready:** switch the overlay to a green-screen backdrop and key it out in OBS.
+  input viewer, Ctrl+Alt+H the input history, and Ctrl+Alt+C records a combo.
+- **Stream links for OBS:** turn them on in Settings and add the overlay, input
+  viewer or input history to OBS as a Browser Source: see-through, crisp at
+  any size, live, no window capture or green screen needed.
 - **Move lists for 140+ characters:** every character in Street Fighter 6,
   Street Fighter V, Ultra Street Fighter IV and SF III: 3rd Strike, plus
   selections for SF EX Plus α, Tekken 3, BlazBlue and Persona 4 Arena. Read
   them like the in-game command list, search them, and add, pin or practise
   any move in one click.
+- **Frame data:** startup, active, recovery and advantage on block and hit
+  (plus punish counter in SF6) for every move in the SF6, SFV, USF4 and 3rd
+  Strike lists, normals included. Combos added from a move list can show it
+  on the overlay.
 - **Set up in seconds:** on first launch, pick your game, your character and
   your controller; ComboTracker picks matching button icons and opens their
   moves. Plug in a different controller later and it offers to switch.
 - **Themes:** 38 colour themes, including gradients, or make your own.
 - **Controller support:** Xbox, PlayStation, Switch and most others. Hold a
   direction for a charge input, or a button for a held press. On the desktop
-  app, Xbox-style (XInput) and PlayStation controllers (DualShock 4,
-  DualSense, PS4-mode sticks) keep working in the input viewer, practice mode
-  and editor while your game has focus.
+  app every controller (Xbox, PlayStation, Switch Pro, 8BitDo, DirectInput
+  arcade sticks) keeps working in the input viewer, practice mode and editor
+  while your game has focus.
+- **Keyboard and hitbox play:** use the keyboard (or a leverless in keyboard
+  mode) like a controller, in-game too, with remappable keys and SOCD
+  cleaning.
 - **Every kind of input:** held presses `[HP]`, releases `]HP[` (negative
   edge), charge, neutral (`5`, Tekken's ★), and notes like `j.`, `CH`, `dl.`
   or any text you like. Each icon style uses its game's own button names
   (Tekken `1+2`, BlazBlue `C`, Guilty Gear `HS`) in tooltips and when typing.
 - **Two players:** separate combo lists for P1 and P2.
 - **Practice mode:** a window on top of your game that checks your controller
-  inputs against a combo as you play, tells you exactly where you dropped it,
-  and shows your timing in frames. Your success rate and best streak are kept
-  over time, and each practised combo shows its success rate in the list.
+  inputs against a combo as you play and tells you exactly where you dropped
+  it. Your success rate and best streak are kept over time, and each practised
+  combo shows its success rate in the list.
+- **Timing trainer:** each link is marked on time, or early/late by how many
+  frames, against a reference rhythm; hear the rhythm, and get a tick, chime
+  or buzz as you play.
+- **Record a combo:** press Record (or Ctrl+Alt+C in-game), do the combo, and
+  it's written out with `dl.` where you paused and your timing saved as the
+  reference.
+- **Drills:** practise several combos in a row, each a set number of times,
+  in order or shuffled, then see a summary.
 - **Input viewer:** shows your controller on screen and lights up buttons as you
   press them. Comes with 20+ layouts (pads, arcade sticks, leverless), drawn in
-  your theme's colours as clean line art, or design your own by dragging buttons around.
+  your theme's colours as clean line art, or design your own by dragging buttons
+  around. Optional effects: release glow, stick trail, colour by strength,
+  fade when idle.
+- **Input history:** a training-mode style list of your inputs with frame
+  counts, in its own window or next to the input viewer.
 - **Make it yours:** build your own icon styles (mix icons from any style or
   upload pictures, and map controller buttons by pressing them), themes with a
   live preview, and controller layouts.
@@ -63,7 +84,8 @@ on stream.
 
 **[Download the latest Windows build](https://github.com/christinebaker1212-hash/ComboTracker/releases/tag/latest)**:
 grab `ComboTracker-windows-portable.zip`, unzip it and run `ComboTracker.exe`;
-there's nothing to install. This download updates automatically with every change.
+there's nothing to install. The app checks for new versions when it starts and
+updates itself in one click.
 
 > **"Windows protected your PC"?** The app isn't code-signed yet. Click
 > **More info → Run anyway**.
@@ -180,10 +202,9 @@ See [`app/README.md`](app/README.md) for the code layout.
 Move lists for Street Fighter 6, Street Fighter V, Ultra Street Fighter IV and
 Street Fighter III: 3rd Strike are built from move names and inputs in
 [FAT (Frame Assistant Tool)](https://github.com/D4RKONION/FAT) by D4RKONION
-(GPL-3.0), using `app/scripts/build-command-lists.py`.
+(GPL-3.0), using `app/scripts/build-command-lists.py`, and so is their frame data.
 
 ## Roadmap
 
-- Keyboard and hitbox input without a controller driver
-- Frame data overlays
-- Auto-update inside the app
+- Guilty Gear Strive move lists and frame data (FAT has the data)
+- Code signing, so Windows stops warning about the download
