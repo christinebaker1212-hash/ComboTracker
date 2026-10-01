@@ -41,6 +41,11 @@ jobs:
 
       - run: npm ci
       - run: npm test
+      - name: Controller decoding tests
+        working-directory: app/src-tauri
+        run: |
+          rustc --edition 2024 --test src/hid_decode.rs -o "$env:RUNNER_TEMP/hid_decode.exe"
+          & "$env:RUNNER_TEMP/hid_decode.exe"
       - run: npx tauri build
 
       - name: Package for itch.io
