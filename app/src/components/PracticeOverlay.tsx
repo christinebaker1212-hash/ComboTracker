@@ -1,7 +1,7 @@
 import { ArrowLeftRight, RotateCcw } from 'lucide-react'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { feedPractice, startPractice, stepsFor, toFrames } from '../core/practice'
-import { tokenLabel } from '../core/tokens'
+import { labelFor } from '../core/glyphs'
 import { usePadEvents } from '../hooks/usePadEvents'
 import { useShared } from '../hooks/useShared'
 import { onPracticeRestart, PRACTICE_HEARTBEAT_KEY } from '../platform'
@@ -41,7 +41,7 @@ export function PracticeOverlay({ player, comboId }: { player: Player; comboId: 
   const { lists, glyph, theme, settings } = useShared()
   const combo = lists[player]?.find((c) => c.id === comboId)
   const [side, setSide] = useState<'left' | 'right'>('left')
-  const steps = useMemo(() => stepsFor(combo?.tokens ?? [], side === 'right'), [combo?.tokens, side])
+  const steps = useMemo(() => stepsFor(combo?.tokens ?? [], side === 'right', glyph), [combo?.tokens, side, glyph])
   const [state, setState] = useState(() => startPractice(steps))
   const [stepsKey, setStepsKey] = useState(steps)
   if (stepsKey !== steps) {
@@ -125,8 +125,8 @@ export function PracticeOverlay({ player, comboId }: { player: Player; comboId: 
             <div className="practice-bar"><span style={{ width: `${(state.index / steps.length) * 100}%` }} /></div>
             <div className={`practice-status${state.mistake ? ' is-miss' : ''}`}>
               {state.mistake
-                ? `Dropped: expected ${tokenLabel(state.mistake.expected)}, got ${tokenLabel(state.mistake.got)}`
-                : state.index === 0 && state.completions ? 'Clean! Go again.' : `Next: ${current ? tokenLabel(current.token) : ''}`}
+                ? `Dropped: expected ${labelFor(state.mistake.expected, glyph)}, got ${labelFor(state.mistake.got, glyph)}`
+                : state.index === 0 && state.completions ? 'Clean! Go again.' : `Next: ${current ? labelFor(current.token, glyph) : ''}`}
             </div>
             {gaps.length > 0 && <div className="practice-gaps">Frames between inputs: {gaps.join(' · ')}</div>}
             {stats && <PracticeHistory stats={stats} />}

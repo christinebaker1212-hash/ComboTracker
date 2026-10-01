@@ -38,6 +38,11 @@ export interface InputProfile {
   /** Sequence-based extras that need input history. */
   special?: 'soulcalibur' | 'snk'
   /**
+   * Record a quick return to neutral between two different directions, as in
+   * Tekken's f,n,d,d/f (the ★ in its move lists).
+   */
+  neutral?: boolean
+  /**
    * Custom glyph packs: token → controller buttons pressed together. When set,
    * this replaces the default button map entirely.
    */
@@ -71,6 +76,7 @@ export function profileFromMappings(mappings: Record<string, string>): InputProf
 const PLAIN: InputProfile = { ignore: [], chords: [] }
 
 const TEKKEN: InputProfile = {
+  neutral: true,
   ignore: ['hp', 'hk', 'any_p', 'any_k'],
   chords: [
     { buttons: ['lk', 'mk', 'mp'], emit: 'hcf', group: 'motion' },
@@ -96,10 +102,11 @@ export const INPUT_PROFILES: Record<string, InputProfile> = {
       { buttons: ['lp', 'mp', 'mk'], emit: 'any_p', group: 'a' },
     ],
   },
+  // The icons are A (LP), C (MP), B (LK), D (MK): Any P is drawn as A+B+C, Any K as A+C+D.
   'Persona 4': {
     ignore: ['any_p', 'any_k'],
     chords: [
-      { buttons: ['lp', 'lk', 'mk'], emit: 'any_p', group: 'a' },
+      { buttons: ['lp', 'mp', 'lk'], emit: 'any_p', group: 'a' },
       { buttons: ['lp', 'mp', 'mk'], emit: 'any_k', group: 'a' },
     ],
   },
@@ -167,6 +174,8 @@ export const TIMING = {
   chordWindowMs: 83,
   /** Holding this long turns a direction into a charge input, or a button into a hold input. */
   holdMs: 750,
+  /** A return to neutral this short, between two directions, is recorded (Tekken f,n,d). */
+  neutralMs: 120,
 }
 
 export class InputInterpreter {
@@ -175,6 +184,9 @@ export class InputInterpreter {
   private committedDir: Direction | null = null
   private dirHeldSince: number | null = null
   private dirCharged = false
+  /** When the stick last came back to the middle, and from which direction. */
+  private neutralSince: number | null = null
+  private dirBeforeNeutral: Direction | null = null
 
   private lastButtons = new Set<PadButton>()
   private chordBuffer = new Set<PadButton>()
@@ -199,6 +211,8 @@ export class InputInterpreter {
     this.committedDir = null
     this.dirHeldSince = null
     this.dirCharged = false
+    this.neutralSince = null
+    this.dirBeforeNeutral = null
     this.lastButtons.clear()
     this.chordBuffer.clear()
     this.chordStart = null
@@ -268,6 +282,10 @@ export class InputInterpreter {
 
     // --- Directions ---
     if (f.dir !== this.lastDir) {
+      if (!f.dir && this.committedDir) {
+        this.neutralSince = f.time
+        this.dirBeforeNeutral = this.committedDir
+      }
       this.dirStableSince = f.dir ? f.time : null
       this.committedDir = null
       this.dirHeldSince = f.dir ? f.time : null
@@ -276,6 +294,12 @@ export class InputInterpreter {
     }
     if (f.dir && this.dirStableSince !== null && this.committedDir !== f.dir &&
         f.time - this.dirStableSince >= TIMING.dirSettleMs) {
+      const n = this.neutralSince
+      if (this.profile.neutral && n !== null && this.dirBeforeNeutral !== f.dir &&
+          this.dirStableSince - n >= TIMING.dirSettleMs && this.dirStableSince - n <= TIMING.neutralMs) {
+        events.push({ type: 'insert', tokens: ['neutral'] })
+      }
+      this.neutralSince = null
       events.push({ type: 'insert', tokens: [f.dir] })
       this.committedDir = f.dir
       this.dirHistory = [...this.dirHistory, { dir: f.dir, time: f.time }].slice(-30)
@@ -330,8 +354,17 @@ export function dirFrom(up: boolean, down: boolean, left: boolean, right: boolea
   return null
 }
 
+/** The parts of a browser Gamepad the app reads, so natively read pads can stand in for one. */
+export interface PadLike {
+  id: string
+  index: number
+  connected: boolean
+  buttons: readonly { pressed: boolean; value: number }[]
+  axes: readonly number[]
+}
+
 /** Reads a browser Gamepad into a Frame: D-pad or left stick for directions. */
-export function frameFromGamepad(pad: Gamepad, time: number): Frame {
+export function frameFromGamepad(pad: PadLike, time: number): Frame {
   const pressed = (i: number) => !!pad.buttons[i]?.pressed || (pad.buttons[i]?.value ?? 0) > 0.5
   const [lx = 0, ly = 0] = pad.axes
   const dir = dirFrom(
@@ -359,7 +392,7 @@ const VIEWER_BUTTONS: Record<number, string> = {
   12: 'DPAD_UP', 13: 'DPAD_DOWN', 14: 'DPAD_LEFT', 15: 'DPAD_RIGHT', 17: 'TOUCHPAD',
 }
 
-export function padStateFromGamepad(pad: Gamepad): PadState {
+export function padStateFromGamepad(pad: PadLike): PadState {
   const pressed = new Set<string>()
   pad.buttons.forEach((b, i) => {
     if ((b.pressed || b.value > 0.5) && VIEWER_BUTTONS[i]) pressed.add(VIEWER_BUTTONS[i])
@@ -380,15 +413,4 @@ export function padStateFromGamepad(pad: Gamepad): PadState {
     pressed.has('DPAD_RIGHT') || lx > 0.5,
   )
   return { pressed, left: [lx, ly], right: [rx, ry], dir }
-}
-
-/** Pads the Gamepad API currently reports, for the controller picker. */
-export function connectedPads(): Gamepad[] {
-  return [...(navigator.getGamepads?.() ?? [])].filter((p): p is Gamepad => !!p && p.connected)
-}
-
-/** Picks the chosen pad, or the first connected one when set to automatic. */
-export function pickPad(index: number | null): Gamepad | null {
-  const pads = connectedPads()
-  return (index === null ? pads[0] : pads.find((p) => p.index === index)) ?? null
 }

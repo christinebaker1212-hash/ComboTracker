@@ -16,7 +16,7 @@ import { pickFile, readImageFile } from '../files'
 
 const SECTIONS: { title: string; tokens: Token[] }[] = [
   { title: 'Buttons', tokens: ['lp', 'mp', 'hp', 'any_p', 'lk', 'mk', 'hk', 'any_k'] },
-  { title: 'Directions', tokens: ['upleft', 'up', 'upright', 'left', 'right', 'downleft', 'down', 'downright'] },
+  { title: 'Directions', tokens: ['upleft', 'up', 'upright', 'left', 'neutral', 'right', 'downleft', 'down', 'downright'] },
   { title: 'Motions', tokens: ['qcf', 'qcb', 'hcf', 'hcb', 'dp', 'rdp', '360'] },
   { title: 'Symbols', tokens: ['plus', 'goes_into', 'newline'] },
 ]

@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import type { GlyphPack } from '../core/glyphs'
-import { frameFromGamepad, InputInterpreter, pickPad, profileFor, profileFromMappings, type InputEvent } from '../core/input'
+import { frameFromGamepad, InputInterpreter, profileFor, profileFromMappings, type InputEvent } from '../core/input'
+import { onNativePads, pickPad } from '../nativePads'
 
 /**
  * Runs its own controller interpreter, for windows that aren't the main editor
@@ -18,12 +19,18 @@ export function usePadEvents(padIndex: number | null, glyph: GlyphPack, onEvent:
     interp.current.reset()
   }, [glyph])
   useEffect(() => {
-    const timer = setInterval(() => {
+    const tick = () => {
       const pad = pickPad(padIndex)
       if (!pad) return
       const now = performance.now()
       for (const ev of interp.current.update(frameFromGamepad(pad, now))) handler.current(ev, now)
-    }, 4)
-    return () => clearInterval(timer)
+    }
+    const timer = setInterval(tick, 4)
+    // Native pads push each change, which keeps input flowing even if timers are slowed down.
+    const off = onNativePads(tick)
+    return () => {
+      clearInterval(timer)
+      off()
+    }
   }, [padIndex])
 }

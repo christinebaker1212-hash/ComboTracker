@@ -6,6 +6,7 @@ import { BUILTIN_GLYPHS } from '../core/glyphs'
 import type { Token } from '../core/tokens'
 import { applyPadFamily } from '../hooks/usePadSuggest'
 import { allRefs, readPreset } from '../store/useLibrary'
+import { connectedPads } from '../nativePads'
 import { useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
 import { markSetupDone } from '../setup'
@@ -27,8 +28,8 @@ const FAMILY_ICON: Record<Family, ReactNode> = {
 const SAMPLE: Token[] = ['down', 'mk', 'goes_into', 'qcf', 'hp']
 
 function detectFamily(): Family | null {
-  for (const p of navigator.getGamepads?.() ?? []) {
-    const f = p && padFamily(p.id)
+  for (const p of connectedPads()) {
+    const f = padFamily(p.id)
     if (f && f !== 'generic') return f
   }
   return null

@@ -1,5 +1,6 @@
 // Practice mode: compares live controller input against a combo, step by step.
-import { MOTION_EXPANSIONS, SYMBOLS, type Token } from './tokens'
+import { BUTTON_MOTIONS, type GlyphPack } from './glyphs'
+import { isNote, MOTION_EXPANSIONS, NEUTRAL, SYMBOLS, type Token } from './tokens'
 
 const MIRROR: Record<string, string> = {
   left: 'right', right: 'left', upleft: 'upright', upright: 'upleft', downleft: 'downright', downright: 'downleft',
@@ -15,16 +16,18 @@ export interface Step {
 const base = (t: Token) => (/^[ch]_/.test(t) ? t.slice(2) : t)
 
 /**
- * Turns a combo into the inputs to perform: separators are dropped, motion
- * icons expand to their directions, charge/hold markers match the plain input,
- * and everything is mirrored when playing from the right side.
+ * Turns a combo into the inputs to perform: separators, notes, neutral and
+ * releases are dropped, motion icons expand to their directions, charge/hold
+ * markers match the plain input, and everything is mirrored when playing from
+ * the right side. In Tekken-style packs the motion icons are button combos
+ * (2+4 and so on), so they stay as one step.
  */
-export function stepsFor(tokens: Token[], facingLeft = false): Step[] {
+export function stepsFor(tokens: Token[], facingLeft = false, g?: GlyphPack): Step[] {
   const steps: Step[] = []
   tokens.forEach((t, source) => {
-    if (SYMBOLS.has(t)) return
+    if (SYMBOLS.has(t) || isNote(t) || t === NEUTRAL || t.startsWith('r_')) return
     const plain = base(t)
-    const dirs = MOTION_EXPANSIONS[plain]
+    const dirs = g?.motionsAreButtons && BUTTON_MOTIONS.has(plain) ? undefined : MOTION_EXPANSIONS[plain]
     if (dirs) for (const d of dirs) steps.push({ token: facingLeft ? (MIRROR[d] ?? d) : d, source })
     else if (plain !== '360') steps.push({ token: facingLeft ? (MIRROR[plain] ?? plain) : plain, source })
   })
@@ -54,7 +57,7 @@ const isDirection = (t: Token) => ['up', 'down', 'left', 'right', 'upleft', 'upr
  * neighbours), but a wrong button is a drop and the attempt restarts.
  */
 export function feedPractice(s: PracticeState, input: Token, time: number): PracticeState {
-  if (SYMBOLS.has(input)) return s
+  if (SYMBOLS.has(input) || input === NEUTRAL) return s
   const got = base(input)
   const expected = s.steps[s.index]?.token
   if (!expected) return s

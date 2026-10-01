@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
 import { FAMILIES, PAD_GLYPHS, padFamily } from '../core/controllers'
 import { BUILTIN_GLYPHS } from '../core/glyphs'
+import type { PadLike } from '../core/input'
+import { connectedPads } from '../nativePads'
 import { useStore } from '../store/useStore'
 import { useUI } from '../store/useUI'
 
@@ -29,7 +31,7 @@ export function applyPadFamily(family: keyof typeof FAMILIES) {
  */
 export function usePadSuggest() {
   useEffect(() => {
-    const check = (pad: Gamepad | null) => {
+    const check = (pad: PadLike | null) => {
       if (!pad || useUI.getState().dialog?.kind === 'setup') return
       const family = padFamily(pad.id)
       if (family === 'generic' || family === 'keyboard') return
@@ -50,10 +52,15 @@ export function usePadSuggest() {
         { label: glyphFits ? 'Yes' : 'Use them', run: () => applyPadFamily(family) },
       )
     }
-    const onConnect = (e: GamepadEvent) => check(e.gamepad)
-    window.addEventListener('gamepadconnected', onConnect)
+    // Goes through the merged list so a pad read both natively and by the browser is offered once.
+    const checkAll = () => connectedPads().forEach(check)
+    window.addEventListener('gamepadconnected', checkAll)
+    window.addEventListener('nativepadschanged', checkAll)
     // Pads already connected show up on first button press in most browsers.
-    for (const p of navigator.getGamepads?.() ?? []) check(p)
-    return () => window.removeEventListener('gamepadconnected', onConnect)
+    checkAll()
+    return () => {
+      window.removeEventListener('gamepadconnected', checkAll)
+      window.removeEventListener('nativepadschanged', checkAll)
+    }
   }, [])
 }

@@ -1,7 +1,8 @@
 import { Command, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp, Pencil, Wand2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { presetName } from '../assets'
-import { connectedPads, type PadButton } from '../core/input'
+import type { PadButton } from '../core/input'
+import { connectedPads, NATIVE_INDEX_BASE } from '../nativePads'
 import { inputBus } from '../inputBus'
 import { isDesktop, openViewer } from '../platform'
 import { allRefs, splitRef } from '../store/useLibrary'
@@ -52,10 +53,12 @@ export function SettingsPanel() {
     const update = () => setPads(connectedPads())
     window.addEventListener('gamepadconnected', update)
     window.addEventListener('gamepaddisconnected', update)
+    window.addEventListener('nativepadschanged', update)
     void allRefs('layouts').then(setLayouts)
     return () => {
       window.removeEventListener('gamepadconnected', update)
       window.removeEventListener('gamepaddisconnected', update)
+      window.removeEventListener('nativepadschanged', update)
     }
   }, [])
 
@@ -70,7 +73,12 @@ export function SettingsPanel() {
             onChange={(e) => setSettings({ padIndex: e.target.value === 'auto' ? null : Number(e.target.value) })}
           >
             <option value="auto">First one connected</option>
-            {pads.map((p) => <option key={p.index} value={p.index}>{p.index + 1}: {p.id.replace(/\(.*?\)/g, '').trim() || 'Controller'}</option>)}
+            {pads.map((p, i) => (
+              <option key={p.index} value={p.index}>
+                {i + 1}: {p.id.replace(/\(.*?\)/g, '').trim() || 'Controller'}
+                {p.index >= NATIVE_INDEX_BASE ? ` · player ${p.index - NATIVE_INDEX_BASE + 1}, works while your game has focus` : ''}
+              </option>
+            ))}
           </select>
         </Field>
         <Toggle

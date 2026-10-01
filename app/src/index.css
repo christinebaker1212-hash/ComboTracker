@@ -202,11 +202,14 @@ button:disabled { cursor: default; opacity: 0.4; }
 .pad-key .tok { pointer-events: none; }
 
 .attack-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-.attack-grid .pad-key:nth-last-child(-n + 3) { height: 34px; }
+.sep-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-top: 6px; }
+.sep-grid .pad-key { height: 34px; }
+.press-mode { margin-bottom: 8px; }
+.press-mode button { padding: 4px 10px; font-size: 12px; }
+.chip-note { font-style: italic; border-style: dashed; }
 
 .dir-area { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; }
 .dpad { display: grid; grid-template-columns: repeat(3, 44px); gap: 5px; }
-.dpad-center { width: 44px; height: 44px; border-radius: 50%; border: 1px dashed var(--border); }
 .motion-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px; }
 .motion-grid .pad-key { height: 34px; }
 
@@ -236,6 +239,17 @@ button:disabled { cursor: default; opacity: 0.4; }
 .tok-atk { background: var(--hl); }
 .tok-dir { border: none; background: transparent; font-weight: 900; font-size: 1.9em !important; padding: 0 0.1em; line-height: 1; }
 .tok-sep { border: none; color: var(--muted); padding: 0 0.2em; }
+.tok-note {
+  border: 1px dashed var(--border); background: transparent; color: var(--muted);
+  font-style: italic; font-weight: 600; padding: 0 0.4em;
+}
+.tok-release { position: relative; }
+.tok-release::after {
+  content: '↑'; position: absolute; top: -4px; right: -4px; width: 13px; height: 13px;
+  display: grid; place-items: center; border-radius: 50%;
+  font-size: 10px; font-weight: 900; line-height: 1;
+  background: var(--accent); color: var(--bg);
+}
 
 /* ---------- Combo list ---------- */
 .combos { display: flex; flex-direction: column; min-height: 0; padding: 14px 18px 0; }

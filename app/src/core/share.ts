@@ -1,9 +1,15 @@
 // Share codes: a combo (or a whole list) as a short text you can paste in chat.
 // Format: "CT1:" + base64url(deflate-free compact JSON). Tokens are packed as
 // indices into a fixed table so codes stay short.
-import { ATTACKS, DIRECTIONS, SYMBOLS, type Token } from './tokens'
+import {
+  BASE_ATTACKS, CARDINALS, CHARGE_DIRS, HOLD_ATTACKS, MOTIONS, NEUTRAL, RELEASE_ATTACKS, SYMBOLS, type Token,
+} from './tokens'
 
-const TABLE: Token[] = [...SYMBOLS, ...ATTACKS, ...DIRECTIONS]
+// Order matters: codes store positions in this table. New tokens only ever go on the end.
+const TABLE: Token[] = [
+  ...SYMBOLS, ...BASE_ATTACKS, ...HOLD_ATTACKS, ...CARDINALS, ...CHARGE_DIRS, ...MOTIONS,
+  NEUTRAL, ...RELEASE_ATTACKS,
+]
 const INDEX = new Map(TABLE.map((t, i) => [t, i]))
 const PREFIX = 'CT1:'
 

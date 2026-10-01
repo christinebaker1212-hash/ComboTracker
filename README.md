@@ -32,7 +32,13 @@ on stream.
   moves. Plug in a different controller later and it offers to switch.
 - **Themes:** 38 colour themes, including gradients, or make your own.
 - **Controller support:** Xbox, PlayStation, Switch and most others. Hold a
-  direction for a charge input, or a button for a held press.
+  direction for a charge input, or a button for a held press. On the desktop
+  app, Xbox-style (XInput) controllers keep working in the input viewer,
+  practice mode and editor while your game has focus.
+- **Every kind of input:** held presses `[HP]`, releases `]HP[` (negative
+  edge), charge, neutral (`5`, Tekken's ★), and notes like `j.`, `CH`, `dl.`
+  or any text you like. Each icon style uses its game's own button names
+  (Tekken `1+2`, BlazBlue `C`, Guilty Gear `HS`) in tooltips and when typing.
 - **Two players:** separate combo lists for P1 and P2.
 - **Practice mode:** a window on top of your game that checks your controller
   inputs against a combo as you play, tells you exactly where you dropped it,
@@ -82,12 +88,19 @@ exclusive fullscreen.
 | `2MK > 236HP` | ↓+MK ➔ QCF+HP |
 | `[4]6HP` | charge ←, then →+HP |
 | `623P` | DP + any punch |
-| `j.HK` | jumping HK |
+| `j.HK`, `cr.MK`, `st.HP` | jumping HK (with a `j.` note), ↓+MK, HP |
 | `5LP 5LP, 2LP xx 214K` | steps split by spaces, `>`, `,` or `xx` |
 | `qcf+lp` | words work too |
 | `DRC` | shortcut names from the current icon style |
+| `]HP[` | release HP (negative edge) |
+| `CH 5HP`, `dl.5MP`, `"Drive Rush"` | notes: counter hit, delay, or any text in quotes |
+| `6 5 6` | `5` (or `n`) on its own is neutral |
+| `2B > 5C` | the icon style's own button names (BlazBlue here) |
+| `f,n,d,d/f+2`, `df+1, 2` | Tekken notation, in the Tekken styles |
 
-Buttons: `LP MP HP LK MK HK`, `P`/`K` for any punch/kick, and `[HP]` for a held press.
+Buttons: `LP MP HP LK MK HK`, `P`/`K` for any punch/kick, `[HP]` for a held
+press and `]HP[` for a release. The palette's **Press / Hold / Release** switch
+does the same with clicks.
 
 ### Keyboard shortcuts
 

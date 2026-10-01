@@ -1,6 +1,6 @@
 import { iconUrl, useAssets } from '../assets'
-import { iconSource, isAtk, type GlyphPack } from '../core/glyphs'
-import { tokenLabel, type Token } from '../core/tokens'
+import { iconSource, isAtk, labelFor, needsMarker, type GlyphPack } from '../core/glyphs'
+import { isNote, type Token } from '../core/tokens'
 
 interface Props {
   token: Token
@@ -14,18 +14,20 @@ interface Props {
 export function TokenView({ token, glyph, size = 28, macroArt, gamepad }: Props) {
   const { icons } = useAssets()
   const src = iconSource(token, glyph, icons, iconUrl, { macroArt, gamepad })
-  const hold = token.startsWith('h_') || token.startsWith('c_')
+  const label = labelFor(token, glyph)
   if (src) {
+    // Hold/charge/release drawn with the plain icon: mark it (held underline, release arrow).
+    const marker = needsMarker(token, glyph, icons) ? (token.startsWith('r_') ? ' tok-release' : ' tok-hold') : ''
     return (
-      <span className={`tok tok-icon${hold ? ' tok-hold' : ''}`} style={{ height: size }} title={tokenLabel(token)}>
-        <img src={src} alt={tokenLabel(token)} height={size} draggable={false} />
+      <span className={`tok tok-icon${marker}`} style={{ height: size }} title={label}>
+        <img src={src} alt={label} height={size} draggable={false} />
       </span>
     )
   }
-  const kind = token === 'plus' || token === 'goes_into' ? 'sep' : isAtk(token, glyph) ? 'atk' : 'dir'
+  const kind = isNote(token) ? 'note' : token === 'plus' || token === 'goes_into' ? 'sep' : isAtk(token, glyph) ? 'atk' : 'dir'
   return (
-    <span className={`tok tok-text tok-${kind}`} style={{ height: size, fontSize: size * 0.42 }}>
-      {tokenLabel(token)}
+    <span className={`tok tok-text tok-${kind}`} style={{ height: size, fontSize: size * 0.42 }} title={label}>
+      {label}
     </span>
   )
 }

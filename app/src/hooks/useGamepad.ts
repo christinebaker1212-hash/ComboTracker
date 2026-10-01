@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
 import { insertTokens, mutateLast } from '../core/editor'
-import { frameFromGamepad, InputInterpreter, pickPad, profileFor, profileFromMappings } from '../core/input'
+import { frameFromGamepad, InputInterpreter, profileFor, profileFromMappings } from '../core/input'
 import { inputBus } from '../inputBus'
+import { onNativePads, pickPad } from '../nativePads'
 import { practiceActive } from '../platform'
 import { useStore } from '../store/useStore'
 
@@ -62,12 +63,17 @@ export function useGamepad(): string | null {
 
     window.addEventListener('gamepadconnected', start)
     window.addEventListener('gamepaddisconnected', start)
+    window.addEventListener('nativepadschanged', start)
+    // Native pads push each change, which keeps input flowing even if timers are slowed down.
+    const offNative = onNativePads(() => active && loop())
     start()
     return () => {
+      offNative()
       clearInterval(timer)
       active = false
       window.removeEventListener('gamepadconnected', start)
       window.removeEventListener('gamepaddisconnected', start)
+      window.removeEventListener('nativepadschanged', start)
     }
   }, [padIndex])
 

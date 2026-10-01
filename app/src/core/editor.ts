@@ -2,7 +2,7 @@
 // the current slot state and returns a new one, which makes undo/redo trivial
 // and keeps the rules testable without any UI.
 import { isAtk, isDir, type GlyphPack } from './glyphs'
-import { MOTION_EXPANSIONS, type Token } from './tokens'
+import { isNote, MOTION_EXPANSIONS, type Token } from './tokens'
 
 export interface EditState {
   tokens: Token[]
@@ -18,7 +18,7 @@ function commit(s: EditState, tokens: Token[], pos: number): EditState {
 
 /**
  * Inserts tokens at the caret, adding the separator the previous token needs:
- * attack → direction gets "➔", direction → attack gets "+", attack → attack gets "➔".
+ * attack → direction or note gets "➔", direction → attack gets "+", attack → attack gets "➔".
  */
 export function insertTokens(s: EditState, toInsert: Token[], g?: GlyphPack): EditState {
   if (!toInsert.length) return s
@@ -27,7 +27,8 @@ export function insertTokens(s: EditState, toInsert: Token[], g?: GlyphPack): Ed
   if (pos > 0) {
     const prev = tokens[pos - 1]
     const first = toInsert[0]
-    if (isDir(first, g)) {
+    // Notes like "j." or "CH" lead into what follows, so they start a new step like a direction.
+    if (isDir(first, g) || isNote(first)) {
       if (isAtk(prev, g)) tokens.splice(pos++, 0, 'goes_into')
     } else if (isAtk(first, g)) {
       if (isDir(prev, g)) tokens.splice(pos++, 0, 'plus')

@@ -74,10 +74,14 @@ src/
   hooks/        Controller, keyboard, shared state for floating windows
   userdata.ts   The user's saved files (Documents\ComboTracker on desktop)
   platform.ts   Browser vs desktop differences (windows, files)
+  nativePads.ts Controllers read by the desktop app (work while the game has focus), merged with the browser's
   overlays.ts   Show/hide/lock overlays and saved scenes
   hotkeys.ts    Global hotkeys (desktop)
+src-tauri/src/
+  pads.rs       XInput polling on a background thread, sent to every window
 scripts/
   sync-assets.mjs           Copies icons/ and Presets/ into public/ (skips User folders)
+  derive-icons.py           Makes the left shoulder/trigger and other derived icons from existing art
   trace-controllers.py      Controller photos → line-art tracings
   build-command-lists.py    FAT frame data → Command Lists presets
 ```
@@ -87,4 +91,6 @@ and run `python3 scripts/build-command-lists.py <path to FAT>`. Notes written by
 hand in those files are kept.
 
 Per-game controller chords (Tekken 1+2 and so on) are data in `core/input.ts`
-(`INPUT_PROFILES`), not code, so adding a game means adding an entry.
+(`INPUT_PROFILES`), not code, so adding a game means adding an entry. What each
+style calls its buttons (Tekken's `1+2`, BlazBlue's `C`) is the `labels` field
+of its pack in `core/glyphs.ts`; it drives tooltips and typed notation.

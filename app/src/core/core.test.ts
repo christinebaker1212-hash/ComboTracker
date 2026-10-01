@@ -81,7 +81,7 @@ describe('notation', () => {
 
   it('handles charge, jump, any-button and holds', () => {
     expect(parse('[4]6HP').state.tokens).toEqual(['c_left', 'right', 'plus', 'hp'])
-    expect(parse('j.HK').state.tokens).toEqual(['up', 'plus', 'hk'])
+    expect(parse('j.HK').state.tokens).toEqual(['note:j.', 'hk'])
     expect(parse('623P').state.tokens).toEqual(['dp', 'plus', 'any_p'])
     expect(parse('[HP]').state.tokens).toEqual(['h_hp'])
   })
