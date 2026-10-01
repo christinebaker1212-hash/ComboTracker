@@ -46,13 +46,18 @@ jobs:
         run: |
           rustc --edition 2024 --test src/hid_decode.rs -o "$env:RUNNER_TEMP/hid_decode.exe"
           & "$env:RUNNER_TEMP/hid_decode.exe"
+      # The build number lets the app tell whether a newer build exists (in-app updates).
       - run: npx tauri build
+        env:
+          VITE_BUILD: ${{ github.run_number }}
+          VITE_COMMIT: ${{ github.sha }}
 
       - name: Package for itch.io
         shell: pwsh
         run: |
           New-Item -ItemType Directory -Force out/ComboTracker | Out-Null
           Copy-Item src-tauri/target/release/combotracker.exe out/ComboTracker/ComboTracker.exe
+          Copy-Item src-tauri/target/release/combotracker.exe out/ComboTracker.exe
           Compress-Archive -Path out/ComboTracker -DestinationPath out/ComboTracker-windows-portable.zip
           Copy-Item src-tauri/target/release/bundle/nsis/*.exe out/
 
@@ -73,8 +78,10 @@ jobs:
           $sha = "${{ github.sha }}".Substring(0, 7)
           $notes = "Automatic build of ComboTracker $version from ``$sha`` on ${{ github.ref_name }}.`n`n**ComboTracker-windows-portable.zip**: unzip and run ComboTracker.exe, no install.`n**-setup.exe**: regular installer.`n`nIf Windows shows 'Windows protected your PC', click More info, then Run anyway."
           gh release delete latest --yes --cleanup-tag 2>$null
-          $files = @("out/ComboTracker-windows-portable.zip") + (Get-ChildItem out/*-setup.exe).FullName
-          gh release create latest @files --title "ComboTracker $version (latest build)" --notes $notes --target ${{ github.sha }} --latest
+          # ComboTracker.exe on its own is what the app downloads when it updates itself;
+          # "(build N)" in the title is how it knows this build is newer.
+          $files = @("out/ComboTracker-windows-portable.zip", "out/ComboTracker.exe") + (Get-ChildItem out/*-setup.exe).FullName
+          gh release create latest @files --title "ComboTracker $version (build ${{ github.run_number }})" --notes $notes --target ${{ github.sha }} --latest
 
       # Optional: pushes the portable build to itch.io. Set it up once:
       #   1. Get an API key at https://itch.io/user/settings/api-keys

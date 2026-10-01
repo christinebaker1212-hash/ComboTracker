@@ -1,4 +1,4 @@
-import { Command, Copy, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp, Pencil, Radio, Wand2 } from 'lucide-react'
+import { Command, Copy, Download, FolderOpen, Gamepad2, Keyboard, Lightbulb, Monitor, MonitorUp, Pencil, Radio, Wand2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { presetName } from '../assets'
 import type { PadButton } from '../core/input'
@@ -14,6 +14,8 @@ import { SHORTCUTS } from '../shortcuts'
 import { HOTKEYS, hotkeyLabel } from '../hotkeys'
 import { useTips } from '../store/useTips'
 import { DEFAULT_OBS, useObsStatus } from '../hooks/useObsHost'
+import { offerUpdate } from '../hooks/useUpdateCheck'
+import { BUILD, checkForUpdate, COMMIT, RELEASE_PAGE } from '../updates'
 import { Field, Modal, Segmented, Toggle } from './ui'
 
 
@@ -177,6 +179,43 @@ function StreamSection() {
   )
 }
 
+/** Which build this is, and checking for a newer one. */
+function UpdatesSection() {
+  const enabled = useStore((s) => s.settings.updateCheck ?? true)
+  const setSettings = useStore((s) => s.setSettings)
+  const notify = useStore((s) => s.notify)
+  const [checking, setChecking] = useState(false)
+  if (!isDesktop) return null
+  const check = () => {
+    setChecking(true)
+    checkForUpdate()
+      .then((info) => (info ? offerUpdate(info) : notify('You have the newest version.')))
+      .catch((e: Error) => notify(e.message, 'error'))
+      .finally(() => setChecking(false))
+  }
+  return (
+    <section className="form-section">
+      <h3><Download size={16} /> Updates</h3>
+      {BUILD ? (
+        <>
+          <p className="field-hint">This is build {BUILD}{COMMIT ? ` (${COMMIT.slice(0, 7)})` : ''}.</p>
+          <Toggle
+            label="Check for updates when ComboTracker starts"
+            hint="If there's a newer version, you'll get a one-click update. Nothing is downloaded until you say so."
+            checked={enabled}
+            onChange={(v) => setSettings({ updateCheck: v })}
+          />
+          <button className="btn" onClick={check} disabled={checking}>{checking ? 'Checking…' : 'Check now'}</button>
+        </>
+      ) : (
+        <p className="field-hint">
+          This copy was built on your own computer, so it doesn't update itself. Release builds are at <code>{RELEASE_PAGE}</code>.
+        </p>
+      )}
+    </section>
+  )
+}
+
 export function SettingsPanel() {
   const close = useUI((s) => s.close)
   const open = useUI((s) => s.open)
@@ -229,6 +268,7 @@ export function SettingsPanel() {
 
       <KeyboardSection />
       <StreamSection />
+      <UpdatesSection />
 
       <section className="form-section">
         <h3><MonitorUp size={16} /> Overlay</h3>

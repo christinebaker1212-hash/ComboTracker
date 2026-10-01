@@ -25,6 +25,7 @@ import { useKeyboard } from './hooks/useKeyboard'
 import { useGlobalHotkeys } from './hooks/useGlobalHotkeys'
 import { useObsHost } from './hooks/useObsHost'
 import { usePadSuggest } from './hooks/usePadSuggest'
+import { useUpdateCheck } from './hooks/useUpdateCheck'
 import { DEFAULT_KEYBOARD } from './core/keyboard'
 import { setKeyboardConfig } from './nativePads'
 import { onMainMessage } from './platform'
@@ -38,7 +39,7 @@ function Toast() {
   useEffect(() => {
     if (!toast) return
     // Undo offers stay up a little longer so there's time to reach the button.
-    const t = setTimeout(() => useStore.setState({ toast: null }), toast.tone === 'error' ? 7000 : toast.action ? 6500 : 4000)
+    const t = setTimeout(() => useStore.setState({ toast: null }), toast.action?.linger ? 20000 : toast.tone === 'error' ? 7000 : toast.action ? 6500 : 4000)
     return () => clearTimeout(t)
   }, [toast])
   if (!toast) return null
@@ -107,6 +108,7 @@ function Editor() {
   useGlobalHotkeys(settings.hotkeys)
   usePadSuggest()
   useObsHost()
+  useUpdateCheck()
   useEffect(() => {
     if (needsSetup()) open({ kind: 'setup' })
   }, [open])

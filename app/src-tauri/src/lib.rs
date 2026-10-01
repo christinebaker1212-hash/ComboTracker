@@ -1,6 +1,7 @@
 mod hid_decode;
 mod obs;
 mod pads;
+mod update;
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
@@ -18,9 +19,12 @@ pub fn run() {
       obs::obs_state,
       obs::obs_start,
       obs::obs_stop,
-      obs::obs_port
+      obs::obs_port,
+      update::update_install
     ])
     .setup(|app| {
+      // Tidy up after an in-app update.
+      update::cleanup();
       // Controller input that keeps working while the game has focus.
       pads::start(app.handle());
       // Stream links for OBS (off until turned on in Settings).

@@ -63,7 +63,12 @@ export interface State {
   notifyUndo(text: string): void
 }
 
-export interface ToastAction { label: string; run: () => void }
+export interface ToastAction {
+  label: string
+  run: () => void
+  /** Stays up longer, for offers worth reading (like an update). */
+  linger?: boolean
+}
 export interface Toast { text: string; tone: 'info' | 'error'; action?: ToastAction; id: number }
 let toastId = 0
 
@@ -86,6 +91,8 @@ export interface Settings {
   keyboard: KeyboardSettings
   /** Show a combo's frame data (from the move list) under it on the overlay. */
   overlayFrames: boolean
+  /** Look for a newer version on launch (desktop). */
+  updateCheck: boolean
   /** Stream links: a local server OBS can load the overlay, viewer and history from (desktop). */
   obs: { enabled: boolean; port: number }
 }
@@ -101,6 +108,7 @@ export const DEFAULT_SETTINGS: Settings = {
   keyboard: DEFAULT_KEYBOARD,
   obs: { enabled: false, port: 7777 },
   overlayFrames: false,
+  updateCheck: true,
 }
 
 const STORAGE_KEY = 'combotracker:v1'
